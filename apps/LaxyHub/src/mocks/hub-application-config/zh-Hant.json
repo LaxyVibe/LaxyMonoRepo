@@ -3,34 +3,34 @@
         "id": 3,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:16.469Z",
-        "updatedAt": "2025-06-23T07:29:11.046Z",
-        "publishedAt": "2025-06-23T07:29:10.844Z",
+        "updatedAt": "2025-06-23T07:47:56.658Z",
+        "publishedAt": "2025-06-23T07:47:56.438Z",
         "locale": "zh-Hant",
         "universalConfig": {
-            "id": 93,
+            "id": 107,
             "releasedLanguages": [
                 {
-                    "id": 362,
+                    "id": 432,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 363,
+                    "id": 433,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 364,
+                    "id": 434,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 365,
+                    "id": 435,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 366,
+                    "id": 436,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -44,7 +44,7 @@
             "poweredByLabel": "由{{value}}提供",
             "speechButton": {
                 "id": 65,
-                "label": "以當地語言朗讀",
+                "label": "用日文朗讀",
                 "icon": {
                     "id": 42,
                     "documentId": "mticwymvi5wqs4bdz0lobe4s",
@@ -200,8 +200,8 @@
         },
         "pageWiFi": {
             "id": 3,
-            "networkLabel": null,
-            "passwordLabel": null,
+            "networkLabel": "網路",
+            "passwordLabel": "密碼",
             "scanQRButton": {
                 "id": 66,
                 "label": "掃描 QR 碼連線"
