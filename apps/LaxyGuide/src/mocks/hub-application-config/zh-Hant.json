@@ -1,0 +1,240 @@
+{
+    "data": {
+        "id": 3,
+        "documentId": "au3e8t9cegnebahml864mmss",
+        "createdAt": "2025-06-15T13:47:16.469Z",
+        "updatedAt": "2025-06-23T07:47:56.658Z",
+        "publishedAt": "2025-06-23T07:47:56.438Z",
+        "locale": "zh-Hant",
+        "universalConfig": {
+            "id": 107,
+            "releasedLanguages": [
+                {
+                    "id": 432,
+                    "label": "English",
+                    "value": "en"
+                },
+                {
+                    "id": 433,
+                    "label": "繁體中文",
+                    "value": "zh-Hant"
+                },
+                {
+                    "id": 434,
+                    "label": "简体中文",
+                    "value": "zh-Hans"
+                },
+                {
+                    "id": 435,
+                    "label": "日本語",
+                    "value": "ja"
+                },
+                {
+                    "id": 436,
+                    "label": "한국어",
+                    "value": "ko"
+                }
+            ]
+        },
+        "globalComponent": {
+            "id": 3,
+            "readMoreLabel": "閱讀更多",
+            "readLessLabel": "收起",
+            "hostTagLabel": "房東推介",
+            "poweredByLabel": "由{{value}}提供",
+            "speechButton": {
+                "id": 65,
+                "label": "用日文朗讀",
+                "icon": {
+                    "id": 42,
+                    "documentId": "mticwymvi5wqs4bdz0lobe4s",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993196/volume_05_0df3287e92.svg"
+                }
+            }
+        },
+        "header": {
+            "id": 3,
+            "leftRoute": "/language",
+            "rightRoute": "/search",
+            "leftIcon": {
+                "id": 50,
+                "documentId": "hkuhf9x3sdxvk6ze7jvq08t4",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993225/language_d9b073e167.svg"
+            },
+            "rightIcon": {
+                "id": 51,
+                "documentId": "jvchy61ioa80jed127o3frn8",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993228/Thin_23221aaa82.svg"
+            }
+        },
+        "pageLanding": {
+            "id": 3,
+            "recommendationHeading": "我們的推薦",
+            "naviagtion": [
+                {
+                    "id": 48,
+                    "label": "資訊",
+                    "route": "/info",
+                    "icon": {
+                        "id": 45,
+                        "documentId": "b2zhi98woacgvlwrhqp9uin6",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993207/Travel_43_d900d08ec4.svg"
+                    }
+                },
+                {
+                    "id": 49,
+                    "label": "Wi-Fi",
+                    "route": "/info/wifi",
+                    "icon": {
+                        "id": 48,
+                        "documentId": "kkb9gay0ml8pvpadtif2ctze",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993218/wifi_02_6e96d6b5d7.svg"
+                    }
+                },
+                {
+                    "id": 50,
+                    "label": "景點",
+                    "route": "/nearby-attractions",
+                    "icon": {
+                        "id": 46,
+                        "documentId": "wywjk07k8u0mccx2vblhyh99",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993211/Travel_09_b79b076d3a.svg"
+                    }
+                },
+                {
+                    "id": 51,
+                    "label": "飲食",
+                    "route": "/nearby-restaurants",
+                    "icon": {
+                        "id": 49,
+                        "documentId": "g94ao3prng3aura1zq9fhctg",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993221/Travel_24_98232d72ac.svg"
+                    }
+                },
+                {
+                    "id": 52,
+                    "label": "導覽團",
+                    "route": "/tours",
+                    "icon": null
+                }
+            ]
+        },
+        "pageLanguage": {
+            "id": 3,
+            "heading": "語言",
+            "applyButton": {
+                "id": 53,
+                "label": "選擇語言"
+            }
+        },
+        "pageSearch": {
+            "id": 3,
+            "searchInputPlaceholder": "發掘您的下一個體驗",
+            "searchResultHeading": "{{value}}的搜尋結果",
+            "noResultsFound": "沒有結果",
+            "defaultListHeading": "最多搜尋",
+            "highlightedListHeading": "我們的推薦",
+            "defaultList": [
+                {
+                    "id": 59,
+                    "label": "溫泉",
+                    "value": "温泉"
+                }
+            ]
+        },
+        "pageInfo": {
+            "id": 3,
+            "heading": "房間資訊",
+            "navigation": [
+                {
+                    "id": 60,
+                    "label": "地址",
+                    "route": "/info/address",
+                    "icon": {
+                        "id": 35,
+                        "documentId": "zuctd71mj1t3ewbflg06qhp9",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993169/Icon_3ae9a348e8.svg"
+                    }
+                },
+                {
+                    "id": 61,
+                    "label": "入住 & 退房",
+                    "route": "/info/check-in-out",
+                    "icon": {
+                        "id": 44,
+                        "documentId": "qxbgqr0zdns48sbirwymeswz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993203/clock_01_75afb297c8.svg"
+                    }
+                },
+                {
+                    "id": 62,
+                    "label": "房間規則",
+                    "route": "/info/house-rules",
+                    "icon": {
+                        "id": 41,
+                        "documentId": "aeq3xauun70rod09urg9x2eo",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993191/book_03_2384005118.svg"
+                    }
+                },
+                {
+                    "id": 63,
+                    "label": "設施",
+                    "route": "/info/amenities",
+                    "icon": {
+                        "id": 38,
+                        "documentId": "mfzomycxw1znjegg0x8mewu5",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993180/Group_e881416c53.svg"
+                    }
+                },
+                {
+                    "id": 64,
+                    "label": "常見問題",
+                    "route": "/info/faq",
+                    "icon": {
+                        "id": 47,
+                        "documentId": "qcmz642lrze1motca93rn3vz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
+                    }
+                }
+            ]
+        },
+        "pageWiFi": {
+            "id": 3,
+            "networkLabel": "網路",
+            "passwordLabel": "密碼",
+            "scanQRButton": {
+                "id": 66,
+                "label": "掃描 QR 碼連線"
+            },
+            "clipboardButton": {
+                "id": 67,
+                "label": "複製密碼"
+            },
+            "showQRButton": {
+                "id": 68,
+                "label": "顯示 QR 碼以供分享"
+            }
+        },
+        "pagPoiDetail": {
+            "id": 3,
+            "recommendationHeading": "我們的推薦",
+            "highlightHeading": "特點",
+            "addressIcon": {
+                "id": 35,
+                "documentId": "zuctd71mj1t3ewbflg06qhp9",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993169/Icon_3ae9a348e8.svg"
+            },
+            "urlIcon": {
+                "id": 36,
+                "documentId": "fq6hs0uj0pnuexhotksn5iul",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993174/globe_03_259a84a02e.svg"
+            },
+            "dialIcon": {
+                "id": 39,
+                "documentId": "m9x1fxtptmqivknkiaxi974h",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993184/phone_01ff591bbc.svg"
+            }
+        }
+    },
+    "meta": {}
+}

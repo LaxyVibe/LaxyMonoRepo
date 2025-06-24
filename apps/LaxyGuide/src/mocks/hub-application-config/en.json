@@ -1,0 +1,244 @@
+{
+    "data": {
+        "id": 1,
+        "documentId": "au3e8t9cegnebahml864mmss",
+        "createdAt": "2025-06-15T13:47:10.324Z",
+        "updatedAt": "2025-06-23T07:47:56.857Z",
+        "publishedAt": "2025-06-23T07:46:22.494Z",
+        "locale": "en",
+        "universalConfig": {
+            "id": 115,
+            "releasedLanguages": [
+                {
+                    "id": 480,
+                    "label": "English",
+                    "value": "en"
+                },
+                {
+                    "id": 484,
+                    "label": "繁體中文",
+                    "value": "zh-Hant"
+                },
+                {
+                    "id": 482,
+                    "label": "简体中文",
+                    "value": "zh-Hans"
+                },
+                {
+                    "id": 481,
+                    "label": "日本語",
+                    "value": "ja"
+                },
+                {
+                    "id": 485,
+                    "label": "한국어",
+                    "value": "ko"
+                }
+            ]
+        },
+        "globalComponent": {
+            "id": 1,
+            "readMoreLabel": "Read more",
+            "readLessLabel": "Read less",
+            "hostTagLabel": "Host",
+            "poweredByLabel": "Powered by {{value}}",
+            "speechButton": {
+                "id": 18,
+                "label": "Speak Address in Japanese",
+                "icon": {
+                    "id": 42,
+                    "documentId": "mticwymvi5wqs4bdz0lobe4s",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993196/volume_05_0df3287e92.svg"
+                }
+            }
+        },
+        "header": {
+            "id": 1,
+            "leftRoute": "/language",
+            "rightRoute": "/search",
+            "leftIcon": {
+                "id": 50,
+                "documentId": "hkuhf9x3sdxvk6ze7jvq08t4",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993225/language_d9b073e167.svg"
+            },
+            "rightIcon": {
+                "id": 51,
+                "documentId": "jvchy61ioa80jed127o3frn8",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993228/Thin_23221aaa82.svg"
+            }
+        },
+        "pageLanding": {
+            "id": 1,
+            "recommendationHeading": "Explore Host Recommendations",
+            "naviagtion": [
+                {
+                    "id": 1,
+                    "label": "Info",
+                    "route": "/info",
+                    "icon": {
+                        "id": 45,
+                        "documentId": "b2zhi98woacgvlwrhqp9uin6",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993207/Travel_43_d900d08ec4.svg"
+                    }
+                },
+                {
+                    "id": 2,
+                    "label": "WiFi",
+                    "route": "/info/wifi",
+                    "icon": {
+                        "id": 48,
+                        "documentId": "kkb9gay0ml8pvpadtif2ctze",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993218/wifi_02_6e96d6b5d7.svg"
+                    }
+                },
+                {
+                    "id": 3,
+                    "label": "Attractions",
+                    "route": "/nearby-attractions",
+                    "icon": {
+                        "id": 46,
+                        "documentId": "wywjk07k8u0mccx2vblhyh99",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993211/Travel_09_b79b076d3a.svg"
+                    }
+                },
+                {
+                    "id": 4,
+                    "label": "Foods",
+                    "route": "/nearby-restaurants",
+                    "icon": {
+                        "id": 49,
+                        "documentId": "g94ao3prng3aura1zq9fhctg",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993221/Travel_24_98232d72ac.svg"
+                    }
+                },
+                {
+                    "id": 5,
+                    "label": "Tours",
+                    "route": "/tours",
+                    "icon": {
+                        "id": 40,
+                        "documentId": "zbe6m7jmqfrdhpvk1zenucyo",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993187/map_02_627a502bcc.svg"
+                    }
+                }
+            ]
+        },
+        "pageLanguage": {
+            "id": 1,
+            "heading": "Language",
+            "applyButton": {
+                "id": 6,
+                "label": "Select Language"
+            }
+        },
+        "pageSearch": {
+            "id": 1,
+            "searchInputPlaceholder": "Find Your Next Experience",
+            "searchResultHeading": "Result of {{value}}",
+            "noResultsFound": "No Results",
+            "defaultListHeading": "Most Searched",
+            "highlightedListHeading": "Our Recommendations",
+            "defaultList": [
+                {
+                    "id": 12,
+                    "label": "Onsen",
+                    "value": "onsen"
+                }
+            ]
+        },
+        "pageInfo": {
+            "id": 1,
+            "heading": "Room Information",
+            "navigation": [
+                {
+                    "id": 13,
+                    "label": "Address",
+                    "route": "/info/address",
+                    "icon": {
+                        "id": 35,
+                        "documentId": "zuctd71mj1t3ewbflg06qhp9",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993169/Icon_3ae9a348e8.svg"
+                    }
+                },
+                {
+                    "id": 14,
+                    "label": "Check-in & Check-out",
+                    "route": "/info/check-in-out",
+                    "icon": {
+                        "id": 44,
+                        "documentId": "qxbgqr0zdns48sbirwymeswz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993203/clock_01_75afb297c8.svg"
+                    }
+                },
+                {
+                    "id": 15,
+                    "label": "House Rules",
+                    "route": "/info/house-rules",
+                    "icon": {
+                        "id": 41,
+                        "documentId": "aeq3xauun70rod09urg9x2eo",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993191/book_03_2384005118.svg"
+                    }
+                },
+                {
+                    "id": 16,
+                    "label": "Amenities",
+                    "route": "/info/amenities",
+                    "icon": {
+                        "id": 38,
+                        "documentId": "mfzomycxw1znjegg0x8mewu5",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993180/Group_e881416c53.svg"
+                    }
+                },
+                {
+                    "id": 17,
+                    "label": "FAQ",
+                    "route": "/info/faq",
+                    "icon": {
+                        "id": 47,
+                        "documentId": "qcmz642lrze1motca93rn3vz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
+                    }
+                }
+            ]
+        },
+        "pageWiFi": {
+            "id": 1,
+            "networkLabel": "Network",
+            "passwordLabel": "Password",
+            "scanQRButton": {
+                "id": 19,
+                "label": "Scan QR Code to Connect"
+            },
+            "clipboardButton": {
+                "id": 20,
+                "label": "Copy Password for \"{{value}}\""
+            },
+            "showQRButton": {
+                "id": 21,
+                "label": "Show QR Code to share"
+            }
+        },
+        "pagPoiDetail": {
+            "id": 1,
+            "recommendationHeading": "Our Recommendations",
+            "highlightHeading": "Highlight",
+            "addressIcon": {
+                "id": 35,
+                "documentId": "zuctd71mj1t3ewbflg06qhp9",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993169/Icon_3ae9a348e8.svg"
+            },
+            "urlIcon": {
+                "id": 36,
+                "documentId": "fq6hs0uj0pnuexhotksn5iul",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993174/globe_03_259a84a02e.svg"
+            },
+            "dialIcon": {
+                "id": 39,
+                "documentId": "m9x1fxtptmqivknkiaxi974h",
+                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993184/phone_01ff591bbc.svg"
+            }
+        }
+    },
+    "meta": {}
+}
