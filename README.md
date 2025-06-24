@@ -8,16 +8,24 @@
 
 ## Run tasks
 
-To run the dev server for your app, use:
+To run the dev server for the main app, use:
 
 ```sh
 npx nx serve LaxyMonoRepo
+```
+
+To run the LaxyHub travel app, use:
+
+```sh
+npx nx serve laxy-hub
 ```
 
 To create a production bundle:
 
 ```sh
 npx nx build LaxyMonoRepo
+# or for LaxyHub
+npx nx build laxy-hub
 ```
 
 To see all available targets to run for a project, run:

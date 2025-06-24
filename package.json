@@ -5,8 +5,18 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.2",
+    "@mui/material": "^7.1.2",
+    "@tailwindcss/postcss": "^4.1.10",
+    "gtag": "^1.0.1",
+    "msw": "^2.10.2",
+    "qrcode.react": "^4.2.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-qr-code": "^2.0.16",
     "react-router-dom": "6.29.0"
   },
   "devDependencies": {
