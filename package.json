@@ -2,7 +2,12 @@
   "name": "@laxy-mono-repo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "install:legacy": "npm install --legacy-peer-deps",
+    "build:hub": "cd apps/LaxyHub && npm run build",
+    "start:hub": "cd apps/LaxyHub && npm run start",
+    "test": "nx test"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
