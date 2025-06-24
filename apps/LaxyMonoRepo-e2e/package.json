@@ -1,0 +1,10 @@
+{
+  "name": "@laxy-mono-repo/LaxyMonoRepo-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@laxy-mono-repo/LaxyMonoRepo"
+    ]
+  }
+}
