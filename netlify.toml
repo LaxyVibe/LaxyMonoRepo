@@ -4,7 +4,7 @@
   command = "cd ../../ && npm install --legacy-peer-deps && npm run build:hub"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
 
 # Only build when LaxyHub or shared dependencies change
