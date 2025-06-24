@@ -30,7 +30,7 @@ const translations = {
   "English": {
     title: 'Select Your Suite',
     availableSuites: 'Available Suites',
-    suiteDescription: 'Please select a suite from the list below.'
+    suiteDescription: 'Please select a suite from the list below!'
   },
   "日本語": {
     title: 'スイートを選択',
