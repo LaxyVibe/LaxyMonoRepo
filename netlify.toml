@@ -1,11 +1,10 @@
 [build]
   base = "apps/LaxyHub/"
-  publish = "apps/LaxyHub/build"
-  command = "npm config set legacy-peer-deps true && cd ../../ && npm install --legacy-peer-deps && cd apps/LaxyHub && npm run build"
+  publish = "build"
+  command = "cd ../../ && npm install --legacy-peer-deps && npm run build:hub"
 
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
 
 # Only build when LaxyHub or shared dependencies change
@@ -17,7 +16,7 @@
 
 # Branch-specific builds
 [context.develop]
-  command = "npm config set legacy-peer-deps true && cd ../../ && npm install --legacy-peer-deps && cd apps/LaxyHub && npm run build"
+  command = "cd ../../ && npm install --legacy-peer-deps && npm run build:hub"
   
 [[redirects]]
   from = "/*"
