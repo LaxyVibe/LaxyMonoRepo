@@ -1,0 +1,47 @@
+import React from 'react';
+import {
+  Container,
+  Box
+} from '@mui/material';
+import { useParams } from 'react-router-dom';
+import PageHeader from '../common/PageHeader';
+import { useLanguage } from '../../context/LanguageContext';
+import { getSuiteData } from '../../utils/suiteUtils';
+import { getHubConfigByLanguage } from '../../mocks/hub-application-config';
+import { PAGE_LAYOUTS, CONTENT_PADDING } from '../../config/layout';
+
+const HouseRulesInfo = () => {
+  const params = useParams();
+  const { language } = useLanguage();
+  
+  const suiteId = params.suiteId;
+  
+  // Get suite data
+  const suiteData = getSuiteData(suiteId, language);
+  const suite = suiteData?.details?.data?.[0];
+
+  // Get hub configuration and find the House Rules navigation item
+  const hubConfig = getHubConfigByLanguage(language);
+  const houseRulesNavItem = hubConfig?.data?.pageInfo?.navigation?.find(item => item.route === "/info/house-rules");
+  const pageTitle = houseRulesNavItem?.label;
+
+  return (
+    <Container {...PAGE_LAYOUTS.HouseRulesInfo}>
+      <PageHeader title={pageTitle} />
+      <Box sx={{ ...CONTENT_PADDING.standard }}>
+        <Box 
+          sx={{ 
+            lineHeight: 1.8,
+            '& p': { mb: 2 },
+            '& strong': { fontWeight: 'bold', color: 'primary.main' },
+            '& ul, & ol': { pl: 2, mb: 2 },
+            '& li': { mb: 1 }
+          }}
+          dangerouslySetInnerHTML={{ __html: suite.houseRules || 'No house rules information available.' }}
+        />
+      </Box>
+    </Container>
+  );
+};
+
+export default HouseRulesInfo;
