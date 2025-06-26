@@ -3,34 +3,34 @@
         "id": 2,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:13.423Z",
-        "updatedAt": "2025-06-23T07:47:56.859Z",
-        "publishedAt": "2025-06-22T14:09:42.729Z",
+        "updatedAt": "2025-06-24T13:13:26.726Z",
+        "publishedAt": "2025-06-24T13:11:10.337Z",
         "locale": "zh-Hans",
         "universalConfig": {
-            "id": 117,
+            "id": 215,
             "releasedLanguages": [
                 {
-                    "id": 476,
+                    "id": 906,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 475,
+                    "id": 907,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 474,
+                    "id": 909,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 483,
+                    "id": 908,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 478,
+                    "id": 910,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -39,12 +39,12 @@
         "globalComponent": {
             "id": 2,
             "readMoreLabel": "阅读更多",
-            "readLessLabel": null,
-            "hostTagLabel": null,
-            "poweredByLabel": null,
+            "readLessLabel": "收起",
+            "hostTagLabel": "推荐",
+            "poweredByLabel": "Powered by{{value}}",
             "speechButton": {
                 "id": 39,
-                "label": "用当地语言朗读",
+                "label": " 用当地语言说出",
                 "icon": {
                     "id": 42,
                     "documentId": "mticwymvi5wqs4bdz0lobe4s",
@@ -130,8 +130,8 @@
         "pageSearch": {
             "id": 2,
             "searchInputPlaceholder": "发掘您的下一个体验",
-            "searchResultHeading": null,
-            "noResultsFound": null,
+            "searchResultHeading": "{{value}}的搜索结果",
+            "noResultsFound": "没有搜索结果",
             "defaultListHeading": "最多搜索",
             "highlightedListHeading": "我们的推荐",
             "defaultList": [
@@ -200,8 +200,8 @@
         },
         "pageWiFi": {
             "id": 2,
-            "networkLabel": null,
-            "passwordLabel": null,
+            "networkLabel": "网络",
+            "passwordLabel": "密码",
             "scanQRButton": {
                 "id": 40,
                 "label": "扫描 QR 码连接"

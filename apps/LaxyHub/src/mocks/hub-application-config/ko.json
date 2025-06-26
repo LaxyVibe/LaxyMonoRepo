@@ -3,34 +3,34 @@
         "id": 4,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:19.467Z",
-        "updatedAt": "2025-06-23T07:47:56.858Z",
-        "publishedAt": "2025-06-22T14:10:00.181Z",
+        "updatedAt": "2025-06-24T13:13:26.722Z",
+        "publishedAt": "2025-06-24T13:11:36.258Z",
         "locale": "ko",
         "universalConfig": {
-            "id": 118,
+            "id": 213,
             "releasedLanguages": [
                 {
-                    "id": 487,
+                    "id": 899,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 488,
+                    "id": 896,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 489,
+                    "id": 900,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 491,
+                    "id": 897,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 490,
+                    "id": 898,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -38,13 +38,13 @@
         },
         "globalComponent": {
             "id": 4,
-            "readMoreLabel": "자세히 보기",
-            "readLessLabel": null,
-            "hostTagLabel": null,
-            "poweredByLabel": null,
+            "readMoreLabel": "더 보기",
+            "readLessLabel": "간단히 보기",
+            "hostTagLabel": "추천",
+            "poweredByLabel": "Powered by{{value}}",
             "speechButton": {
                 "id": 96,
-                "label": "현지 언어로 말하기",
+                "label": "현지 언어로 주소 말하기",
                 "icon": {
                     "id": 42,
                     "documentId": "mticwymvi5wqs4bdz0lobe4s",
@@ -130,8 +130,8 @@
         "pageSearch": {
             "id": 4,
             "searchInputPlaceholder": "다음 경험 찾아보기",
-            "searchResultHeading": null,
-            "noResultsFound": null,
+            "searchResultHeading": "{{value}}의 검색 결과",
+            "noResultsFound": "검색 결과 없음",
             "defaultListHeading": "인기 검색어",
             "highlightedListHeading": "추천 목록",
             "defaultList": [
@@ -200,8 +200,8 @@
         },
         "pageWiFi": {
             "id": 4,
-            "networkLabel": null,
-            "passwordLabel": null,
+            "networkLabel": "네트워크",
+            "passwordLabel": "비밀번호",
             "scanQRButton": {
                 "id": 97,
                 "label": "QR 코드 스캔하여 연결하기"

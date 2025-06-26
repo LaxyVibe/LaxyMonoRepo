@@ -2,13 +2,14 @@
  * Application constants - dynamic configuration from API discovery
  */
 
-// Import discovered configuration from API
+// Import discovered configuration from API using ES modules
+import discoveredConfig from './discovered.json';
+
 let DEFAULT_CLIENT_ID;
 let DEFAULT_SUITE_ID;
 let AVAILABLE_SUITES;
 
 try {
-  const discoveredConfig = require('./discovered.json');
   DEFAULT_CLIENT_ID = discoveredConfig.clientId;
   DEFAULT_SUITE_ID = discoveredConfig.currentSuite || discoveredConfig.suiteId; // Support both old and new structure
   AVAILABLE_SUITES = discoveredConfig.availableSuites || [DEFAULT_SUITE_ID]; // Support both old and new structure

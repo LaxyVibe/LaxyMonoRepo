@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Dynamic API Data Fetcher
+ * API Data Fetcher for LaxyGuide
  * 
- * This script dynamically discovers available suites for a client and fetches all necessary data.
- * Instead of hardcoding suite IDs, it queries the API to find available suites and uses the first one.
+ * This script fetches guide configuration and POI guide data for the LaxyGuide application.
  * 
  * Features:
- * - Dynamic suite discovery via API
- * - Automatic configuration generation for frontend
- * - Fail-fast approach with clear error messages
+ * - Fetches guide application configuration
+ * - Fetches POI guides
  * - Multi-language support
  * - Configurable API parameters for maintainability
  * 
@@ -19,10 +17,13 @@
  * Environment Variables (optional):
  *   CLIENT_ID - Override the default client ID (default: beppu-story)
  * 
- * Customizing Hub Config Parameters:
- *   To modify what data is fetched from the hub-application-config endpoint,
- *   edit the HUB_CONFIG_PARAMS object below. The structure follows Strapi's
- *   populate and fields conventions:
+ * Customizing API Parameters:
+ *   To modify what data is fetched from the endpoints, edit the configuration objects:
+ *   
+ *   - GUIDE_CONFIG_PARAMS: for guide-application-config endpoint
+ *   - POI_GUIDES_PARAMS: for poi-guides endpoint
+ *   
+ *   Both follow Strapi's populate and fields conventions:
  *   
  *   - fields: Array of field names to fetch
  *   - populate: Object containing nested relations to populate
@@ -41,7 +42,7 @@
  * 
  * Output:
  *   - Updates mock data files in src/mocks/
- *   - Generates discovered.json with dynamic configuration
+ *   - Generates discovered.json with client configuration
  */
 
 const fs = require('fs');
@@ -62,15 +63,15 @@ const LANGUAGES = ['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant'];
 const BASE_MOCK_PATH = path.join(__dirname, '..', 'src', 'mocks');
 
 /**
- * Hub Application Config API Parameters Configuration
- * This configuration object defines what data to fetch from the hub-application-config endpoint.
+ * Guide Application Config API Parameters Configuration
+ * This configuration object defines what data to fetch from the guide-application-config endpoint.
  * Each section represents a different component/page of the application.
  * 
  * Structure:
  * - Key: The component/section name
  * - Value: Array of field configurations or nested populate configurations
  */
-const HUB_CONFIG_PARAMS = {
+const GUIDE_CONFIG_PARAMS = {
   universalConfig: {
     populate: {
       releasedLanguages: {
@@ -78,107 +79,47 @@ const HUB_CONFIG_PARAMS = {
       }
     }
   },
-  globalComponent: {
-    fields: [
-      'readMoreLabel',
-      'readLessLabel',
-      'hostTagLabel',
-      'poweredByLabel'
-    ],
-    populate: {
-      speechButton: {
-        fields: ['label'],
-        populate: {
-          icon: {
-            fields: ['url']
-          }
+  // globalComponent: {
+  //   fields: [
+  //     'readMoreLabel',
+  //     'readLessLabel',
+  //     'hostTagLabel',
+  //     'poweredByLabel'
+  //   ],
+  // },
+};
+
+/**
+ * POI Guides API Parameters Configuration
+ * This configuration object defines what data to fetch from the poi-guides endpoint.
+ * 
+ * For POI guides, we use a simpler structure since it's a direct endpoint query.
+ */
+const POI_GUIDES_PARAMS = {
+  fields: [
+    'legacyTourCode',
+  ],
+  populate: {
+    poi: {
+      fields: [
+        'slug',
+        'label', 
+        'address',
+        'highlight',
+        'externalURL',
+        'type',
+        'nativeLanguageCode',
+        'addressEmbedHTML',
+        'dial',
+        'addressURL'
+      ],
+      populate: {
+        tag_labels: {
+          fields: ['name', 'color']
+        },
+        coverPhoto: {
+          fields: ['url']
         }
-      }
-    }
-  },
-  header: {
-    fields: ['leftRoute', 'rightRoute'],
-    populate: {
-      leftIcon: {
-        fields: ['url']
-      },
-      rightIcon: {
-        fields: ['url']
-      }
-    }
-  },
-  pageLanding: {
-    fields: ['recommendationHeading'],
-    populate: {
-      naviagtion: { // Note: keeping original typo for API compatibility
-        fields: ['label', 'route'],
-        populate: {
-          icon: {
-            fields: ['url']
-          }
-        }
-      }
-    }
-  },
-  pageLanguage: {
-    fields: ['heading'],
-    populate: {
-      applyButton: {
-        fields: ['label']
-      }
-    }
-  },
-  pageSearch: {
-    fields: [
-      'searchInputPlaceholder',
-      'searchResultHeading',
-      'noResultsFound',
-      'defaultListHeading',
-      'highlightedListHeading'
-    ],
-    populate: {
-      defaultList: {
-        fields: ['label', 'value']
-      }
-    }
-  },
-  pageInfo: {
-    fields: ['heading'],
-    populate: {
-      navigation: {
-        fields: ['label', 'route'],
-        populate: {
-          icon: {
-            fields: ['url']
-          }
-        }
-      }
-    }
-  },
-  pageWiFi: {
-    populate: {
-      scanQRButton: {
-        fields: ['label']
-      },
-      clipboardButton: {
-        fields: ['label']
-      },
-      showQRButton: {
-        fields: ['label']
-      }
-    }
-  },
-  pagPoiDetail: { // Note: keeping original typo for API compatibility
-    fields: ['recommendationHeading', 'highlightHeading'],
-    populate: {
-      addressIcon: {
-        fields: ['url']
-      },
-      urlIcon: {
-        fields: ['url']
-      },
-      dialIcon: {
-        fields: ['url']
       }
     }
   }
@@ -187,52 +128,16 @@ const HUB_CONFIG_PARAMS = {
 /**
  * Write the discovered configuration to a JSON file for frontend use
  */
-function writeDiscoveredConfig(clientId, suiteIds, currentSuite = null) {
+function writeDiscoveredConfig(clientId) {
   const configPath = path.join(__dirname, '..', 'src', 'config', 'discovered.json');
   const configData = {
     clientId: clientId,
-    availableSuites: Array.isArray(suiteIds) ? suiteIds : [suiteIds],
-    currentSuite: currentSuite || (Array.isArray(suiteIds) ? suiteIds[0] : suiteIds),
     discoveredAt: new Date().toISOString()
   };
 
   ensureDirectoryExists(path.dirname(configPath));
   fs.writeFileSync(configPath, JSON.stringify(configData, null, 2));
-  if (currentSuite) {
-    console.log(`  📝 Updated configuration for suite: ${currentSuite}`);
-  } else {
-    console.log(`  📝 Updated configuration: ${path.relative(path.join(__dirname, '..'), configPath)}`);
-  }
-}
-
-/**
- * Fetch available suites for a client
- */
-async function fetchAvailableSuites(clientId) {
-  const url = `${API_BASE_URL}/api/suites?filters[ownedBy][slug][$eq]=${clientId}&fields[0]=name`;
-  
-  console.log(`🔍 Fetching available suites for client: ${clientId}`);
-  
-  try {
-    const data = await makeRequest(url);
-    const suites = data.data || [];
-    
-    if (suites.length === 0) {
-      throw new Error(`No suites found for client: ${clientId}`);
-    }
-    
-    const suiteNames = suites.map(s => s.name);
-    console.log(`  ✓ Found ${suites.length} suite(s): ${suiteNames.join(', ')}`);
-    
-    if (suites.length > 1) {
-      console.log(`  ℹ️  Multiple suites available. Fetching data for all suites.`);
-    }
-    
-    return suiteNames; // Return all suite names
-  } catch (error) {
-    console.error(`  ✗ Failed to fetch suites: ${error.message}`);
-    throw error;
-  }
+  console.log(`  📝 Updated configuration: ${path.relative(path.join(__dirname, '..'), configPath)}`);
 }
 
 /**
@@ -351,22 +256,78 @@ function buildUrlParams(config, basePath = '') {
 }
 
 /**
- * Build hub application config endpoint with dynamic parameters
+ * Build URL parameters for direct endpoint queries (like poi-guides)
+ * This handles simpler structures without nested component configurations
  */
-function buildHubConfigEndpoint() {
-  const params = buildUrlParams(HUB_CONFIG_PARAMS);
+function buildDirectUrlParams(config) {
+  const params = [];
+  
+  function processConfig(obj, basePath = '') {
+    if (obj.fields && Array.isArray(obj.fields)) {
+      obj.fields.forEach((field, index) => {
+        const path = basePath ? `${basePath}[fields][${index}]` : `fields[${index}]`;
+        params.push(`${path}=${field}`);
+      });
+    }
+    
+    if (obj.populate) {
+      Object.keys(obj.populate).forEach(key => {
+        const populatePath = basePath ? `${basePath}[populate][${key}]` : `populate[${key}]`;
+        processConfig(obj.populate[key], populatePath);
+      });
+    }
+  }
+  
+  processConfig(config);
+  return params.join('&');
+}
+
+/**
+ * Build guide application config endpoint with dynamic parameters
+ */
+function buildGuideConfigEndpoint() {
+  const params = buildUrlParams(GUIDE_CONFIG_PARAMS);
   
   // Optional: Log the generated parameters for debugging
   if (process.env.DEBUG_PARAMS) {
-    console.log('🔧 Generated hub config parameters:');
+    console.log('🔧 Generated guide config parameters:');
     console.log(params);
   }
   
   return {
-    hubApplicationConfig: {
-      path: '/api/hub-application-config',
+    guideApplicationConfig: {
+      path: '/api/guide-application-config',
       params: params,
-      outputDir: 'hub-application-config'
+      outputDir: 'guide-application-config'
+    }
+  };
+}
+
+/**
+ * Build POI guides endpoint with dynamic parameters
+ */
+function buildPoiGuidesEndpoint() {
+  const params = buildDirectUrlParams(POI_GUIDES_PARAMS);
+  
+  // Add pagination
+  const additionalParams = [
+    'pagination[page]=1',
+    'pagination[pageSize]=10000'
+  ];
+  
+  const finalParams = additionalParams.concat(params.split('&')).join('&');
+  
+  // Optional: Log the generated parameters for debugging
+  if (process.env.DEBUG_PARAMS) {
+    console.log('🔧 Generated POI guides parameters:');
+    console.log(finalParams);
+  }
+  
+  return {
+    poiGuides: {
+      path: '/api/poi-guides',
+      params: finalParams,
+      outputDir: 'poi-guides'
     }
   };
 }
@@ -383,25 +344,21 @@ async function fetchAllData() {
   console.log(`🗣️  Languages: ${LANGUAGES.join(', ')}`);
   
   try {
-    // First, dynamically fetch all available suite IDs
-    const suiteIds = await fetchAvailableSuites(DEFAULT_CLIENT_ID);
-    console.log(`📋 Processing ${suiteIds.length} suite(s): ${suiteIds.join(', ')}`);
-    
-    // Write initial discovered configuration
-    writeDiscoveredConfig(DEFAULT_CLIENT_ID, suiteIds);
+    // Write client configuration
+    writeDiscoveredConfig(DEFAULT_CLIENT_ID);
     
     let totalRequests = 0;
     let successfulRequests = 0;
     let skippedRequests = 0;
     let failedRequests = 0;
     
-    // Process hub application config (only once, not per suite)
-    console.log(`📋 Processing hubApplicationConfig:`);
-    const hubConfigEndpoint = buildHubConfigEndpoint();
-    
+    // Process guide application config
+    console.log(`📋 Processing guideApplicationConfig:`);
+    const guideConfigEndpoint = buildGuideConfigEndpoint();
+
     for (const language of LANGUAGES) {
       totalRequests++;
-      const result = await fetchEndpointData('hubApplicationConfig', language, hubConfigEndpoint);
+      const result = await fetchEndpointData('guideApplicationConfig', language, guideConfigEndpoint);
       if (result === true) {
         successfulRequests++;
       } else if (result === 'skipped') {
@@ -412,49 +369,13 @@ async function fetchAllData() {
       await new Promise(resolve => setTimeout(resolve, 300));
     }
     
-    // Process each suite
-    for (const suiteId of suiteIds) {
-      console.log(`📋 Processing suite: ${suiteId}`);
-      
-      // Write the discovered configuration for frontend use (update with current suite)
-      writeDiscoveredConfig(DEFAULT_CLIENT_ID, suiteIds, suiteId);
-      
-      // Generate API endpoints with the current suite ID
-      const suiteEndpoints = {
-        suites: {
-          path: '/api/suites',
-          params: `filters[ownedBy][slug][$eq]=${DEFAULT_CLIENT_ID}&filters[name][$eq]=${suiteId}&fields[0]=name&fields[1]=label&fields[2]=headline&fields[3]=address&fields[4]=addressURL&fields[5]=addressEmbedHTML&fields[6]=checkInOut&fields[7]=amenities&fields[8]=houseRules&populate[slider][fields][0]=url&populate[faq][fields][0]=question&populate[faq][fields][1]=answer&populate[wifi][fields][0]=network&populate[wifi][fields][1]=password&populate[ownedBy][fields][0]=slug&populate[ownedBy][fields][1]=label&populate[ownedBy][fields][2]=greeting&populate[ownedBy][fields][3]=nativeLanguageCode&populate[ownedBy][populate][avatar][fields][0]=url&populate[ownedBy][populate][pickedPOIs][fields][0]=slug&populate[ownedBy][populate][pickedPOIs][fields][1]=label&populate[ownedBy][populate][pickedPOIs][fields][2]=address&populate[ownedBy][populate][pickedPOIs][fields][3]=addressURL&populate[ownedBy][populate][pickedPOIs][fields][4]=addressEmbedHTML&populate[ownedBy][populate][pickedPOIs][fields][5]=dial&populate[ownedBy][populate][pickedPOIs][fields][6]=highlight&populate[ownedBy][populate][pickedPOIs][fields][7]=externalURL&populate[ownedBy][populate][pickedPOIs][fields][8]=type&populate[ownedBy][populate][pickedPOIs][fields][9]=nativeLanguageCode&populate[ownedBy][populate][pickedPOIs][fields][10]=laxyURL&populate[ownedBy][populate][pickedPOIs][populate][tag_labels][fields][0]=name&populate[ownedBy][populate][pickedPOIs][populate][tag_labels][fields][1]=color&populate[ownedBy][populate][pickedPOIs][populate][coverPhoto][fields][0]=url`,
-          outputDir: `suites/${DEFAULT_CLIENT_ID}/${suiteId}`
-        }
-      };
-      
-      for (const language of LANGUAGES) {
-        totalRequests++;
-        const result = await fetchEndpointData('suites', language, suiteEndpoints);
-        if (result === true) {
-          successfulRequests++;
-        } else if (result === 'skipped') {
-          skippedRequests++;
-        } else {
-          failedRequests++;
-        }
-        await new Promise(resolve => setTimeout(resolve, 300));
-      }
-    }
-    
-    // Process POI recommendations (only once, not per suite)
-    console.log(`📋 Processing poiRecommendations:`);
-    const poiEndpoints = {
-      poiRecommendations: {
-        path: '/api/poi-recommendations',
-        params: `filters[recommended_by][slug][$eq]=${DEFAULT_CLIENT_ID}&fields[0]=recommendation&fields[1]=kmFromStay&fields[2]=weightInNearbyRestaurants&fields[3]=weightInNearbyAttractions&fields[4]=weightInHighlight&populate[poi][fields][0]=slug&populate[poi][fields][1]=label&populate[poi][fields][2]=address&populate[poi][fields][3]=highlight&populate[poi][fields][4]=externalURL&populate[poi][fields][5]=type&populate[poi][populate][tag_labels][fields][0]=name&populate[poi][populate][tag_labels][fields][1]=color&populate[poi][populate][coverPhoto][fields][0]=url&pagination[page]=1&pagination[pageSize]=10000`,
-        outputDir: 'poi-recommendations'
-      }
-    };
+    // Process POI guides
+    console.log(`📋 Processing poiGuides:`);
+    const poiEndpoints = buildPoiGuidesEndpoint();
     
     for (const language of LANGUAGES) {
       totalRequests++;
-      const result = await fetchEndpointData('poiRecommendations', language, poiEndpoints);
+      const result = await fetchEndpointData('poiGuides', language, poiEndpoints);
       if (result === true) {
         successfulRequests++;
       } else if (result === 'skipped') {
@@ -478,7 +399,7 @@ async function fetchAllData() {
       console.log(`\n✅ All available data fetched successfully!`);
     }
   } catch (error) {
-    console.error(`💥 Failed to fetch suite information: ${error.message}`);
+    console.error(`💥 Failed to fetch data: ${error.message}`);
     process.exit(1);
   }
 }

@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@laxy/components": "file:../../packages/LaxyComponents",
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@tailwindcss/postcss": "^4.1.4",
@@ -15,15 +16,15 @@
     "react-dom": "^18.2.0",
     "react-material-ui-carousel": "^3.4.2",
     "react-qr-code": "^2.0.15",
-    "react-router-dom": "^7.6.0",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^7.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "vite",
+    "start": "vite",
     "prebuild": "node scripts/fetch-api-data.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
     "fetch-api": "node scripts/fetch-api-data.js"
   },
   "eslintConfig": {
@@ -50,7 +51,9 @@
     ]
   },
   "devDependencies": {
-    "msw": "^2.8.2"
+    "@vitejs/plugin-react": "^4.3.1",
+    "msw": "^2.8.2",
+    "vite": "^5.4.0"
   },
   "msw": {
     "workerDirectory": [

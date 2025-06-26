@@ -1,71 +1,58 @@
 // Import dynamic configuration
 import { DEFAULT_CLIENT_ID } from '../config/constants';
 
-// Use webpack's require.context to dynamically import suite data
-// Note: The path structure is built by the fetch-api-data.js script based on discovered configuration
-const createSuitesContext = () => {
+// Use Vite's import.meta.glob to dynamically import suite data
+const getSuitesData = () => {
   try {
-    // Try to create context for the discovered client path
-    return require.context('../mocks/suites', true, /\.json$/);
+    const suiteModules = import.meta.glob('../mocks/suites/**/*.json', { eager: true });
+    return suiteModules;
   } catch (error) {
-    console.warn('Could not create suites context, falling back to empty context');
-    return {
-      keys: () => [],
-      resolve: () => {},
-      id: 'empty'
-    };
+    console.error('Error loading suite data:', error);
+    return {};
   }
 };
-
-const suitesContext = createSuitesContext();
 
 // Discover available suites based on the folder structure
 const discoverAvailableSuites = () => {
   try {
+    const suiteModules = getSuitesData();
     const suites = {};
-    const suiteKeys = suitesContext.keys();
     
-    // Extract unique suite IDs from the file paths
-    // File paths will be like './client-id/suite-id/en.json'
-    const suiteIds = [...new Set(
-      suiteKeys
-        .map(key => {
-          const pathParts = key.split('/');
-          // Check if this is a valid client/suite/language structure
-          if (pathParts.length >= 3 && pathParts[1] === DEFAULT_CLIENT_ID) {
-            return pathParts[2];
-          }
-          return null;
-        })
-        .filter(Boolean)
-    )];
+    // Extract suite information from file paths and content
+    Object.entries(suiteModules).forEach(([filePath, moduleData]) => {
+      // Parse file path: '../mocks/suites/client-id/suite-id/language.json'
+      const pathParts = filePath.split('/');
+      const fileName = pathParts[pathParts.length - 1]; // 'en.json'
+      const suiteId = pathParts[pathParts.length - 2]; // 'family-room-01'
+      const clientId = pathParts[pathParts.length - 3]; // 'beppu-story'
+      const langCode = fileName.replace('.json', ''); // 'en'
+      
+      // Only process files for the current client
+      if (clientId === DEFAULT_CLIENT_ID) {
+        // Initialize suite object if it doesn't exist
+        if (!suites[suiteId]) {
+          suites[suiteId] = {
+            id: suiteId,
+            data: {}
+          };
+        }
+        
+        // Add language data
+        suites[suiteId].data[langCode] = moduleData.default || moduleData;
+      }
+    });
     
-    // Process each suite
-    suiteIds.forEach(suiteId => {
-      const suiteData = {};
-      
-      // Find all language files for this suite
-      const suiteFiles = suiteKeys.filter(key => key.includes(`/${DEFAULT_CLIENT_ID}/${suiteId}/`));
-      
-      // Load language data
-      suiteFiles.forEach(filePath => {
-        // Extract language code from filename (e.g., './client-id/suite-id/en.json' -> 'en')
-        const langCode = filePath.split('/').pop().replace('.json', '');
-        const langData = suitesContext(filePath);
-        suiteData[langCode] = langData;
-      });
+    // Add metadata for each suite
+    Object.keys(suites).forEach(suiteId => {
+      const suite = suites[suiteId];
       
       // Extract name and description from English data if available, or first available language
-      const defaultLangData = suiteData.en || Object.values(suiteData)[0];
+      const defaultLangData = suite.data.en || Object.values(suite.data)[0];
       
-      suites[suiteId] = {
-        id: suiteId,
-        name: defaultLangData?.data?.[0]?.label || `Suite ${suiteId}`,
-        description: defaultLangData?.data?.[0]?.headline || 'A comfortable suite for your stay',
-        // Use the first image from slider if available, otherwise use placeholder
-        image: defaultLangData?.data?.[0]?.slider?.[0]?.url || 'https://source.unsplash.com/random/800x600/?hotel-room',
-        data: suiteData
-      };
+      suite.name = defaultLangData?.data?.[0]?.label || `Suite ${suiteId}`;
+      suite.description = defaultLangData?.data?.[0]?.headline || 'A comfortable suite for your stay';
+      // Use the first image from slider if available, otherwise use placeholder
+      suite.image = defaultLangData?.data?.[0]?.slider?.[0]?.url || 'https://source.unsplash.com/random/800x600/?hotel-room';
     });
     
     return suites;
@@ -83,7 +70,62 @@ const availableSuites = discoverAvailableSuites();
  * @returns {Array} Array of suite objects
  */
 export const getAllSuites = () => {
-  return Object.values(availableSuites);
+  // Try to load real data first
+  const suiteModules = getSuitesData();
+  
+  if (Object.keys(suiteModules).length > 0) {
+    // Process real data using the discovery logic
+    const suites = {};
+    
+    Object.entries(suiteModules).forEach(([filePath, moduleData]) => {
+      const pathParts = filePath.split('/');
+      const fileName = pathParts[pathParts.length - 1];
+      const suiteId = pathParts[pathParts.length - 2];
+      const clientId = pathParts[pathParts.length - 3];
+      const langCode = fileName.replace('.json', '');
+      
+      if (clientId === DEFAULT_CLIENT_ID) {
+        if (!suites[suiteId]) {
+          suites[suiteId] = {
+            id: suiteId,
+            data: {}
+          };
+        }
+        suites[suiteId].data[langCode] = moduleData.default || moduleData;
+      }
+    });
+    
+    // Add metadata for each suite
+    Object.keys(suites).forEach(suiteId => {
+      const suite = suites[suiteId];
+      const defaultLangData = suite.data.en || Object.values(suite.data)[0];
+      
+      suite.name = defaultLangData?.data?.[0]?.label || `Suite ${suiteId}`;
+      suite.description = defaultLangData?.data?.[0]?.headline || 'A comfortable suite for your stay';
+      suite.image = defaultLangData?.data?.[0]?.slider?.[0]?.url || 'https://source.unsplash.com/random/800x600/?hotel-room';
+    });
+    
+    const result = Object.values(suites);
+    return result;
+  }
+  
+  // Fallback to hardcoded test data
+  const testSuites = [
+    {
+      id: 'family-room-01',
+      name: 'Family Room 1',
+      description: 'A comfortable family room for your stay',
+      image: 'https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993145/familyroom01_beppu_airbnb_f31309b7bc.webp'
+    },
+    {
+      id: 'family-room-02',  
+      name: 'Family Room 2',
+      description: 'Another comfortable family room',
+      image: 'https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993145/familyroom01_beppu_airbnb_f31309b7bc.webp'
+    }
+  ];
+  
+  return testSuites;
 };
 
 /**
