@@ -1,3 +1,6 @@
+# Netlify Configuration for LaxyHub
+# This is the default netlify.toml file used by the LaxyHub Netlify project
+
 [build]
   base = "apps/LaxyHub/"
   publish = "build"
