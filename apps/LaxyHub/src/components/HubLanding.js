@@ -87,7 +87,8 @@ const HubLanding = ({ clientInfo: initialClientInfo }) => {
       loadClientInfo();
     } else {
       // If we have initialClientInfo, still load the suites
-      setSuites(getAllSuites());
+      const availableSuites = getAllSuites();
+      setSuites(availableSuites);
     }
   }, [initialClientInfo, language]);
 

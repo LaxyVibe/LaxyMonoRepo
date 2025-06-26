@@ -1,0 +1,64 @@
+{
+  "name": "laxy-guide",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/LaxyGuide/src",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "command": "react-scripts build",
+        "cwd": "apps/LaxyGuide",
+        "outputPath": "apps/LaxyGuide/build"
+      },
+      "configurations": {
+        "development": {
+          "command": "react-scripts build",
+          "cwd": "apps/LaxyGuide"
+        },
+        "production": {
+          "command": "react-scripts build",
+          "cwd": "apps/LaxyGuide"
+        }
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "development",
+      "options": {
+        "command": "BROWSER=none react-scripts start",
+        "cwd": "apps/LaxyGuide"
+      },
+      "configurations": {
+        "development": {
+          "command": "BROWSER=none PORT=4200 react-scripts start",
+          "cwd": "apps/LaxyGuide"
+        },
+        "production": {
+          "command": "BROWSER=none PORT=4200 react-scripts start",
+          "cwd": "apps/LaxyGuide"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/LaxyGuide/jest.config.ts"
+      }
+    },
+    "fetch-api": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node scripts/fetch-api-data.js",
+        "cwd": "apps/LaxyGuide"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:laxyguide"]
+}

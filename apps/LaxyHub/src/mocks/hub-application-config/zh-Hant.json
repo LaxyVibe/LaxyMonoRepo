@@ -3,34 +3,34 @@
         "id": 3,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:16.469Z",
-        "updatedAt": "2025-06-23T07:47:56.658Z",
-        "publishedAt": "2025-06-23T07:47:56.438Z",
+        "updatedAt": "2025-06-24T13:13:26.732Z",
+        "publishedAt": "2025-06-24T13:11:20.321Z",
         "locale": "zh-Hant",
         "universalConfig": {
-            "id": 107,
+            "id": 216,
             "releasedLanguages": [
                 {
-                    "id": 432,
+                    "id": 911,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 433,
+                    "id": 913,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 434,
+                    "id": 912,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 435,
+                    "id": 914,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 436,
+                    "id": 915,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -40,11 +40,11 @@
             "id": 3,
             "readMoreLabel": "閱讀更多",
             "readLessLabel": "收起",
-            "hostTagLabel": "房東推介",
-            "poweredByLabel": "由{{value}}提供",
+            "hostTagLabel": "推薦",
+            "poweredByLabel": "Powered by{{value}}",
             "speechButton": {
                 "id": 65,
-                "label": "用日文朗讀",
+                "label": " 用當地語言說出",
                 "icon": {
                     "id": 42,
                     "documentId": "mticwymvi5wqs4bdz0lobe4s",
@@ -131,7 +131,7 @@
             "id": 3,
             "searchInputPlaceholder": "發掘您的下一個體驗",
             "searchResultHeading": "{{value}}的搜尋結果",
-            "noResultsFound": "沒有結果",
+            "noResultsFound": "沒有搜尋結果",
             "defaultListHeading": "最多搜尋",
             "highlightedListHeading": "我們的推薦",
             "defaultList": [

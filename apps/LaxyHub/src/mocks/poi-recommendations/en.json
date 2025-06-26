@@ -178,7 +178,7 @@
                 "id": 9,
                 "documentId": "ufvfj53ool114vx4qoajv07p",
                 "slug": "Gusto-Family-Restaurant",
-                "label": "ガスト 別府店",
+                "label": "Gusto Family Restaurant",
                 "address": "5-23 Minamikitamachō, Beppu, Oita 874-0929, Japan",
                 "highlight": "Gusto Beppu Store is a branch of the well-known Japanese family restaurant chain Gusto located in Beppu. This restaurant offers a diverse menu, ranging from Japanese to Western dishes, including hamburg steaks, pasta, salads, and various desserts. It's a great place for locals and tourists to enjoy a casual meal, whether it's breakfast, lunch, or dinner. The restaurant typically has long operating hours, catering to different dining needs and providing a comfortable and convenient dining environment. You can enjoy delicious and affordable family-style cuisine here.",
                 "externalURL": "https://www.skylark.co.jp/gusto/?utm_source=gt&utm_medium=gmb&utm_campaign=brandtop-Oita",
@@ -1003,6 +1003,38 @@
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993294/Enjoy_Christmas_in_Beppu_5d77d68805.jpg"
                 }
             }
+        },
+        {
+            "id": 199,
+            "documentId": "nvfap9j03br6xkxkpxb6yjp2",
+            "recommendation": "123",
+            "kmFromStay": null,
+            "weightInNearbyRestaurants": 0,
+            "weightInNearbyAttractions": 0,
+            "weightInHighlight": -1,
+            "poi": {
+                "id": 2,
+                "documentId": "lxxj4eydfyx81d25fx4623yv",
+                "slug": "African-Safari",
+                "label": "African Safari",
+                "address": "2-1755-1 Minamihatsu, Ajimu-machi, Usa, Oita 872-0722, Japan",
+                "highlight": "Kyushu Natural Zoological Park, also known as African Safari, is a vast wild animal park located in Usa City, Oita Prefecture. It features an African savanna-style animal ecosystem with free-roaming animals, making it a must-visit highlight for families and animal lovers.\n\nThe park's main feature is the Jungle Bus, an armored cage bus that allows close-up observation of animals like lions, elephants, giraffes, zebras, and camels along a dedicated route. Visitors can even feed the animals by hand, providing an immersive and interactive wildlife experience. In addition to the Jungle Bus, there are also walking areas and a small petting zoo, suitable for leisurely visits by all ages.\n\nThe park includes shops, dining areas, and convenient parking. It also offers shuttle services to and from Oita City and Beppu City, making it an ideal destination for a day trip with family or group tours.",
+                "externalURL": "https://africansafari.co.jp/",
+                "type": "attraction",
+                "tag_labels": [
+                    {
+                        "id": 5,
+                        "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                        "name": "Top Attractions",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 31,
+                    "documentId": "ujmkkbhq0cas90iajt1asgjm",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993156/African_Safari_0b2a57df5a.jpg"
+                }
+            }
         }
     ],
     "meta": {
@@ -1010,7 +1042,7 @@
             "page": 1,
             "pageSize": 10000,
             "pageCount": 1,
-            "total": 31
+            "total": 32
         }
     }
 }

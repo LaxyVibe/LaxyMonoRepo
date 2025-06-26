@@ -1,0 +1,25 @@
+{
+    "data": {
+        "id": 1,
+        "documentId": "nqao9h5mk47k7jau1gj9e093",
+        "createdAt": "2025-06-26T10:28:50.679Z",
+        "updatedAt": "2025-06-26T10:28:50.679Z",
+        "publishedAt": "2025-06-26T10:28:50.656Z",
+        "universalConfig": {
+            "id": 1,
+            "releasedLanguages": [
+                {
+                    "id": 1,
+                    "label": "English",
+                    "value": "en"
+                },
+                {
+                    "id": 2,
+                    "label": "繁體中文",
+                    "value": "zh-Hant"
+                }
+            ]
+        }
+    },
+    "meta": {}
+}

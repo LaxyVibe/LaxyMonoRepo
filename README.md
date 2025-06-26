@@ -8,12 +8,6 @@
 
 ## Run tasks
 
-To run the dev server for the main app, use:
-
-```sh
-npx nx serve LaxyMonoRepo
-```
-
 To run the LaxyHub travel app, use:
 
 ```sh
@@ -23,15 +17,13 @@ npx nx serve laxy-hub
 To create a production bundle:
 
 ```sh
-npx nx build LaxyMonoRepo
-# or for LaxyHub
 npx nx build laxy-hub
 ```
 
 To see all available targets to run for a project, run:
 
 ```sh
-npx nx show project LaxyMonoRepo
+npx nx show project laxy-hub
 ```
 
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.

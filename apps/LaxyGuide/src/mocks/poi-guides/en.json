@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "documentId": "gqi70g6olfw207ciiq0o5960",
+            "legacyTourCode": "JPN-OITA-TUR-001-0001",
+            "poi": {
+                "id": 17,
+                "documentId": "zbyhe0y7k0w2ma9h1538lab9",
+                "slug": "Kaimonji-Onsen",
+                "label": "Kaimonji Onsen",
+                "address": "2-3-2 Kitahama, Beppu-shi, Oita 874-0920, Japan",
+                "highlight": "Kaimonji Onsen is a historic public hot spring in Beppu City, Oita Prefecture, Japan. It's affordable and popular among locals and tourists, making it an ideal choice for those who want to experience authentic Japanese bathing culture.\n\nThe onsen retains a traditional and simple style, not luxurious but full of warmth and nostalgia. The facilities are modest, suitable for travelers who prefer a quiet and pure hot spring experience. Its central location near Beppu Station makes it easily accessible on foot.\n\nIf you want to delve into Beppu's daily life and hot spring culture, Kaimonji Onsen is a worthwhile addition to your itinerary.",
+                "externalURL": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail7.html",
+                "type": "attraction",
+                "nativeLanguageCode": "ja",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4653855924157!2d131.5032886!3d33.2804858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6dd05cfbeff%3A0xdc9485bc2d68384!2z5rW36ZaA5a-65rip5rOJIEthaW1vbmppIG9uc2Vu!5e0!3m2!1sja!2sjp!4v1749357166015!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "0977-22-3625",
+                "addressURL": null,
+                "tag_labels": [
+                    {
+                        "id": 2,
+                        "documentId": "cfq91726e76i6u7ywdblwsnn",
+                        "name": " Onsen (Hot Spring)",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 20,
+                    "documentId": "bn0d6ekn7kb3kd07g07srb2d",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993120/Kaimonji_Onsen_bdf2f3eabf.webp"
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 10000,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

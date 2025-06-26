@@ -2,12 +2,5 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": [
-    {
-      "path": "./apps/LaxyMonoRepo-e2e"
-    },
-    {
-      "path": "./apps/LaxyMonoRepo"
-    }
-  ]
+  "references": []
 }

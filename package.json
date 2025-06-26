@@ -6,6 +6,8 @@
     "install:legacy": "npm install --legacy-peer-deps",
     "build:hub": "cd apps/LaxyHub && npm run build",
     "start:hub": "cd apps/LaxyHub && npm run start",
+    "build:guide": "cd apps/LaxyGuide && npm run build",
+    "start:guide": "cd apps/LaxyGuide && npm run start",
     "test": "nx test"
   },
   "private": true,
