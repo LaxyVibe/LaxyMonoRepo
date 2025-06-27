@@ -66,25 +66,33 @@ function installRollupDependencies() {
 async function main() {
   try {
     const rootDir = path.join(__dirname, '../../..');
+    const appDir = path.join(__dirname, '..');
     
-    console.log('📂 Working directory:', rootDir);
+    console.log('📂 Root directory:', rootDir);
+    console.log('📂 App directory:', appDir);
     
-    // Step 1: Install dependencies
+    // Step 1: Install dependencies (optimized for speed)
     console.log('📦 Installing dependencies...');
-    runCommand('npm install --legacy-peer-deps', { cwd: rootDir });
+    runCommand('npm install --legacy-peer-deps --no-optional --no-audit --no-fund', { cwd: rootDir });
     
     // Step 2: Install platform-specific Rollup dependencies
     installRollupDependencies();
     
-    // Step 3: Run the pre-build script
-    console.log('🔄 Running pre-build script...');
-    runCommand('npm run prebuild', { cwd: __dirname });
+    // Step 3: Run the pre-build script if it exists
+    const packageJsonPath = path.join(appDir, 'package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      if (packageJson.scripts && packageJson.scripts.prebuild) {
+        console.log('🔄 Running pre-build script...');
+        runCommand('npm run prebuild', { cwd: appDir });
+      }
+    }
     
     // Step 4: Build the application
-    console.log('🏗️  Building application...');
-    runCommand('npm run build', { cwd: __dirname });
+    console.log('🏗️  Building LaxyGuide application...');
+    runCommand('npm run build:guide', { cwd: rootDir });
     
-    console.log('✅ Build completed successfully!');
+    console.log('✅ LaxyGuide build completed successfully!');
     
   } catch (error) {
     console.error('❌ Build failed:', error.message);
