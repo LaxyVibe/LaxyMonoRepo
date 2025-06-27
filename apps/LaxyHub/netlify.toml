@@ -3,7 +3,7 @@
 
 [build]
   # Build and install deps from root, publish from this app's build directory
-  publish = "build"
+  publish = "apps/LaxyHub/build"
   command = "npm install --legacy-peer-deps --no-optional && npm install @rollup/rollup-linux-x64-gnu --save-dev && npm run build:hub"
 
 [build.environment]
