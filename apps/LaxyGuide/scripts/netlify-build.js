@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 /**
- * Netlify Build Script for LaxyGuide
+ * Netlify Build Script for LaxyGuide (Optimized Version)
  * 
  * This script handles the Rollup optional dependency issue that occurs
  * on Netlify's Linux build environment when using Vite.
+ * Optimized to prevent build timeouts by avoiding redundant installations.
  */
 
 const { execSync } = require('child_process');
@@ -13,17 +14,23 @@ const path = require('path');
 
 console.log('🚀 Starting LaxyGuide build process...');
 
-// Function to run commands safely
+// Function to run commands safely with timeout
 function runCommand(command, options = {}) {
   console.log(`📝 Running: ${command}`);
   try {
+    const timeout = options.timeout || 600000; // 10 minutes default timeout
     execSync(command, { 
       stdio: 'inherit', 
       cwd: options.cwd || process.cwd(),
+      timeout: timeout,
+      maxBuffer: 1024 * 1024 * 10, // 10MB buffer
       ...options 
     });
   } catch (error) {
     console.error(`❌ Command failed: ${command}`);
+    if (error.code === 'ETIMEDOUT') {
+      console.error('💀 Command timed out - this might indicate a network or dependency issue');
+    }
     console.error(error.message);
     process.exit(1);
   }
@@ -31,7 +38,7 @@ function runCommand(command, options = {}) {
 
 // Function to install missing Rollup dependencies
 function installRollupDependencies() {
-  console.log('🔧 Installing Rollup dependencies...');
+  console.log('🔧 Checking Rollup dependencies...');
   
   // Detect the platform-specific Rollup package
   const platform = process.platform;
@@ -51,10 +58,19 @@ function installRollupDependencies() {
   }
   
   if (rollupPackage) {
+    // Check if the package is already installed
+    const rootDir = path.join(__dirname, '../../..');
+    const packagePath = path.join(rootDir, 'node_modules', rollupPackage);
+    
+    if (fs.existsSync(packagePath)) {
+      console.log(`✅ ${rollupPackage} already installed`);
+      return;
+    }
+    
     console.log(`📦 Installing ${rollupPackage} for ${platform}-${arch}...`);
     try {
-      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps`, { 
-        cwd: path.join(__dirname, '../../..') 
+      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps --no-audit --no-fund --prefer-offline`, { 
+        cwd: rootDir 
       });
     } catch (error) {
       console.warn(`⚠️  Could not install ${rollupPackage}, continuing anyway...`);
@@ -71,11 +87,19 @@ async function main() {
     console.log('📂 Root directory:', rootDir);
     console.log('📂 App directory:', appDir);
     
-    // Step 1: Install dependencies (optimized for speed)
-    console.log('📦 Installing dependencies...');
-    runCommand('npm install --legacy-peer-deps --no-optional --no-audit --no-fund', { cwd: rootDir });
+    // Check if dependencies are already installed
+    const nodeModulesExists = fs.existsSync(path.join(rootDir, 'node_modules'));
+    console.log(`📦 Node modules exists: ${nodeModulesExists}`);
     
-    // Step 2: Install platform-specific Rollup dependencies
+    if (!nodeModulesExists) {
+      // Step 1: Install dependencies with aggressive optimizations for speed
+      console.log('📦 Installing dependencies with speed optimizations...');
+      runCommand('npm ci --legacy-peer-deps --no-optional --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+    } else {
+      console.log('📦 Dependencies already installed, skipping npm install');
+    }
+    
+    // Step 2: Install platform-specific Rollup dependencies (only if needed)
     installRollupDependencies();
     
     // Step 3: Run the pre-build script if it exists
