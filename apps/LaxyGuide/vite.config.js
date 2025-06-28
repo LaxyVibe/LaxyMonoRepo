@@ -5,6 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Ensure base path is set to root for SPA routing
   resolve: {
     alias: {
       // Enable importing from shared packages
@@ -18,7 +19,13 @@ export default defineConfig({
   },
   build: {
     outDir: 'build',
-    sourcemap: true
+    sourcemap: true,
+    // Ensure assets are generated correctly for SPA
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   // Handle environment variables (change from REACT_APP_ to VITE_)
   envPrefix: 'VITE_'

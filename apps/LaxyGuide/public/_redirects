@@ -1,1 +1,13 @@
+# Handle static assets first (these should be served as-is)
+/favicon.ico /favicon.ico 200
+/logo192.png /logo192.png 200
+/logo512.png /logo512.png 200
+/manifest.json /manifest.json 200
+/robots.txt /robots.txt 200
+/assets/* /assets/:splat 200
+
+# API routes should return 404 if not found (don't fallback to SPA)
+/api/* /api/:splat 404
+
+# All other routes should fallback to index.html for React Router (SPA routing)
 /* /index.html 200
