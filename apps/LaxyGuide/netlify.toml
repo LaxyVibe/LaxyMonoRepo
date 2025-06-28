@@ -3,8 +3,8 @@
 
 [build]
   # Use the main build script and publish from the build directory
-  publish = "apps/LaxyGuide/build"
-  command = "node apps/LaxyGuide/scripts/netlify-build.js"
+  publish = "build"
+  command = "node scripts/netlify-build.js"
 
 [build.environment]
   NODE_VERSION = "22"
@@ -24,7 +24,7 @@
 
 # Branch-specific builds with faster install
 [context.develop]
-  command = "npm ci --legacy-peer-deps --no-optional --no-audit --prefer-offline && node apps/LaxyGuide/scripts/netlify-build.js"
+  command = "cd ../.. && npm ci --legacy-peer-deps --no-optional --no-audit --prefer-offline && cd apps/LaxyGuide && node scripts/netlify-build.js"
 
 # Headers for better caching
 [[headers]]

@@ -37,7 +37,7 @@ function runCommand(command, options = {}) {
 }
 
 // Function to install missing Rollup dependencies
-function installRollupDependencies() {
+function installRollupDependencies(rootDir) {
   console.log('🔧 Checking Rollup dependencies...');
   
   // Detect the platform-specific Rollup package
@@ -59,7 +59,6 @@ function installRollupDependencies() {
   
   if (rollupPackage) {
     // Check if the package is already installed
-    const rootDir = path.join(__dirname, '../../..');
     const packagePath = path.join(rootDir, 'node_modules', rollupPackage);
     
     if (fs.existsSync(packagePath)) {
@@ -81,8 +80,20 @@ function installRollupDependencies() {
 // Main build process
 async function main() {
   try {
-    const rootDir = path.join(__dirname, '../../..');
-    const appDir = path.join(__dirname, '..');
+    // Detect if we're being run from the LaxyGuide app directory or the monorepo root
+    const currentDir = process.cwd();
+    const isRunFromAppDir = currentDir.includes('apps/LaxyGuide');
+    
+    let rootDir, appDir;
+    if (isRunFromAppDir) {
+      // Running from /build/repo/apps/LaxyGuide
+      appDir = currentDir;
+      rootDir = path.join(currentDir, '../..');
+    } else {
+      // Running from monorepo root
+      rootDir = currentDir;
+      appDir = path.join(currentDir, 'apps/LaxyGuide');
+    }
     
     console.log('📂 Root directory:', rootDir);
     console.log('📂 App directory:', appDir);
@@ -100,7 +111,7 @@ async function main() {
     }
     
     // Step 2: Install platform-specific Rollup dependencies (only if needed)
-    installRollupDependencies();
+    installRollupDependencies(rootDir);
     
     // Step 3: Run the pre-build script if it exists
     const packageJsonPath = path.join(appDir, 'package.json');
