@@ -1,0 +1,28 @@
+{
+  "id": "JPN-OITA-TUR-001",
+  "title": {
+    "eng": "Kaimonji Onsen Audio Guide",
+    "jpn": "海門寺温泉オーディオガイド",
+    "kor": "카이몬지 온천 오디오 가이드",
+    "cht": "海門寺溫泉音頻導覽",
+    "chs": "海门寺温泉音频导览"
+  },
+  "description": {
+    "eng": "Discover the history and culture of Kaimonji Onsen, a traditional hot spring in Beppu City",
+    "jpn": "別府市の伝統的な温泉、海門寺温泉の歴史と文化を発見してください",
+    "kor": "베푸시의 전통 온천인 카이몬지 온천의 역사와 문화를 발견하세요",
+    "cht": "探索別府市傳統溫泉海門寺溫泉的歷史與文化",
+    "chs": "探索别府市传统温泉海门寺温泉的历史与文化"
+  },
+  "duration": 180,
+  "location": {
+    "name": "Kaimonji Onsen",
+    "address": "2-3-2 Kitahama, Beppu-shi, Oita 874-0920, Japan",
+    "coordinates": {
+      "lat": 33.2804858,
+      "lng": 131.5032886
+    }
+  },
+  "languages": ["eng", "jpn", "kor", "cht", "chs"],
+  "totalSteps": 3
+}
