@@ -2,10 +2,16 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext.jsx';
+import { AudioGuideProvider } from './context/AudioGuideContext.jsx';
 import { DEFAULT_LANGUAGE, extractLanguageFromPath } from './utils/languageUtils';
 import GuideLanding from './components/GuideLanding.jsx';
 import POIDetailGuide from './components/guide/POIDetailGuide.jsx';
+import TourLanding from './components/guide/TourLanding.jsx';
+import TourDetail from './components/guide/TourDetail.jsx';
+import StepList from './components/guide/StepList.jsx';
 import LanguagePage from './components/LanguagePage.jsx';
+import MiniAudioPlayer from './components/audioGuide/MiniAudioPlayer.jsx';
+import AudioGuidePage from './components/audioGuide/AudioGuidePage.jsx';
 
 // Language redirect component
 function DefaultLanguageRedirect() {
@@ -27,13 +33,21 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <LanguageProvider>
-          <Routes>
-            <Route path="/" element={<DefaultLanguageRedirect />} />
-            <Route path="/language" element={<LanguagePage />} />
-            <Route path="/:langCode" element={<GuideLanding />} />
-            <Route path="/:langCode/poi/:poiSlug" element={<POIDetailGuide />} />
-            <Route path="*" element={<DefaultLanguageRedirect />} />
-          </Routes>
+          <AudioGuideProvider>
+            <Routes>
+              <Route path="/" element={<DefaultLanguageRedirect />} />
+              <Route path="/language" element={<LanguagePage />} />
+              <Route path="/:langCode" element={<GuideLanding />} />
+              <Route path="/:langCode/poi/:poiSlug" element={<TourLanding />} />
+              <Route path="/:langCode/poi/:poiSlug/details" element={<POIDetailGuide />} />
+              <Route path="/:langCode/tour/:tourId/details" element={<TourDetail />} />
+              <Route path="/:langCode/tour/:tourId/steps" element={<StepList />} />
+              <Route path="/:langCode/tour/:tourId/step/:stepId" element={<AudioGuidePage />} />
+              <Route path="/:langCode/audio-guide/:tourId" element={<AudioGuidePage />} />
+              <Route path="*" element={<DefaultLanguageRedirect />} />
+            </Routes>
+            <MiniAudioPlayer />
+          </AudioGuideProvider>
         </LanguageProvider>
       </BrowserRouter>
     </div>

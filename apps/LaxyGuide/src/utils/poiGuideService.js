@@ -37,7 +37,7 @@ export const loadPOIGuideData = async (language) => {
  * Find a POI by slug in the loaded data
  * @param {Object} poiData - The POI data object
  * @param {string} poiSlug - The POI slug to search for
- * @returns {Object|null} The POI object or null if not found
+ * @returns {Object|null} The complete POI item object (including legacyTourCode) or null if not found
  */
 export const findPOIBySlug = (poiData, poiSlug) => {
   if (!poiData?.data || !Array.isArray(poiData.data)) {
@@ -49,7 +49,7 @@ export const findPOIBySlug = (poiData, poiSlug) => {
   const poiItem = poiData.data.find(item => 
     item.poi?.slug && item.poi.slug.toLowerCase() === normalizedSlug
   );
-  return poiItem?.poi || null;
+  return poiItem || null;
 };
 
 /**

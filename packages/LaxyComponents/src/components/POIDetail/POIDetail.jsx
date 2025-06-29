@@ -29,7 +29,7 @@ const extractDomain = (url) => {
     }
     return hostname;
   } catch (error) {
-    console.warn('Invalid URL:', url);
+    console.warn('Invalid URL:', url, error);
     return url; // Return original URL if parsing fails
   }
 };
@@ -50,6 +50,7 @@ const extractDomain = (url) => {
  * @param {function} props.trackContentInteraction - Analytics function for tracking content interaction (optional)
  * @param {function} props.onAddressClick - Custom handler for address click (optional)
  * @param {object} props.routeParams - Additional route parameters like suiteId (optional)
+ * @param {function} props.renderCustomSections - Function to render custom sections (receives poi as argument) (optional)
  */
 const POIDetail = ({
   useLanguage,
@@ -63,7 +64,8 @@ const POIDetail = ({
   trackNavigation = () => { /* no-op */ },
   trackContentInteraction = () => { /* no-op */ },
   onAddressClick,
-  routeParams = {}
+  routeParams = {},
+  renderCustomSections
 }) => {
   const { language } = useLanguage();
   const { poiSlug, suiteId } = useParams();
@@ -684,6 +686,9 @@ const POIDetail = ({
               </Button>
             </Box>
           )}
+
+          {/* Custom Sections */}
+          {renderCustomSections && renderCustomSections(poi)}
 
           {/* Address Embed HTML */}
           {poi.addressEmbedHTML && (

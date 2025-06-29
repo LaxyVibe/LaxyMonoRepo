@@ -1,0 +1,226 @@
+{
+  "poiList": [
+    {
+      "id": "poi-1",
+      "label": {
+        "eng": "Entrance and History",
+        "jpn": "入口と歴史",
+        "kor": "입구와 역사",
+        "cht": "入口與歷史",
+        "chs": "入口与历史"
+      },
+      "subtitle": {
+        "eng": "Welcome to Kaimonji Onsen",
+        "jpn": "海門寺温泉へようこそ",
+        "kor": "카이몬지 온천에 오신 것을 환영합니다",
+        "cht": "歡迎來到海門寺溫泉",
+        "chs": "欢迎来到海门寺温泉"
+      },
+      "audio": {
+        "eng": "audio/step1-eng.mp3",
+        "jpn": "audio/step1-jpn.mp3",
+        "kor": "audio/step1-kor.mp3",
+        "cht": "audio/step1-cht.mp3",
+        "chs": "audio/step1-chs.mp3"
+      },
+      "subtitle": {
+        "eng": "subtitles/step1-eng.srt",
+        "jpn": "subtitles/step1-jpn.srt",
+        "kor": "subtitles/step1-kor.srt",
+        "cht": "subtitles/step1-cht.srt",
+        "chs": "subtitles/step1-chs.srt"
+      },
+      "image": {
+        "eng": [
+          {
+            "url": "https://picsum.photos/800/600?random=1",
+            "startTimestamp": 0,
+            "endTimestamp": 15,
+            "caption": "The historic entrance of Kaimonji Onsen"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=2",
+            "startTimestamp": 15,
+            "endTimestamp": 30,
+            "caption": "Historical photo from the 1950s"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=3",
+            "startTimestamp": 30,
+            "endTimestamp": 45,
+            "caption": "Traditional interior entrance area"
+          }
+        ],
+        "jpn": [
+          {
+            "url": "https://picsum.photos/800/600?random=1",
+            "startTimestamp": 0,
+            "endTimestamp": 15,
+            "caption": "海門寺温泉の歴史ある入口"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=2",
+            "startTimestamp": 15,
+            "endTimestamp": 30,
+            "caption": "1950年代の歴史的写真"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=3",
+            "startTimestamp": 30,
+            "endTimestamp": 45,
+            "caption": "伝統的な入口内部エリア"
+          }
+        ]
+      },
+      "duration": 45
+    },
+    {
+      "id": "poi-2",
+      "label": {
+        "eng": "The Hot Spring Waters",
+        "jpn": "温泉の湯",
+        "kor": "온천수",
+        "cht": "溫泉水",
+        "chs": "温泉水"
+      },
+      "subtitle": {
+        "eng": "Natural healing waters",
+        "jpn": "自然の癒しの湯",
+        "kor": "자연 치유의 물",
+        "cht": "天然療癒之水",
+        "chs": "天然疗愈之水"
+      },
+      "audio": {
+        "eng": "audio/step2-eng.mp3",
+        "jpn": "audio/step2-jpn.mp3",
+        "kor": "audio/step2-kor.mp3",
+        "cht": "audio/step2-cht.mp3",
+        "chs": "audio/step2-chs.mp3"
+      },
+      "subtitle": {
+        "eng": "subtitles/step2-eng.srt",
+        "jpn": "subtitles/step2-jpn.srt",
+        "kor": "subtitles/step2-kor.srt",
+        "cht": "subtitles/step2-cht.srt",
+        "chs": "subtitles/step2-chs.srt"
+      },
+      "image": {
+        "eng": [
+          {
+            "url": "https://picsum.photos/800/600?random=4",
+            "startTimestamp": 0,
+            "endTimestamp": 20,
+            "caption": "The main hot spring bath"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=5",
+            "startTimestamp": 20,
+            "endTimestamp": 40,
+            "caption": "Natural hot spring water source"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=6",
+            "startTimestamp": 40,
+            "endTimestamp": 60,
+            "caption": "Traditional steam bathing area"
+          }
+        ],
+        "jpn": [
+          {
+            "url": "https://picsum.photos/800/600?random=4",
+            "startTimestamp": 0,
+            "endTimestamp": 20,
+            "caption": "メインの温泉浴場"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=5",
+            "startTimestamp": 20,
+            "endTimestamp": 40,
+            "caption": "天然温泉の源泉"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=6",
+            "startTimestamp": 40,
+            "endTimestamp": 60,
+            "caption": "伝統的な蒸し風呂エリア"
+          }
+        ]
+      },
+      "duration": 60
+    },
+    {
+      "id": "poi-3",
+      "label": {
+        "eng": "Local Culture and Etiquette",
+        "jpn": "地域文化とマナー",
+        "kor": "지역 문화와 예절",
+        "cht": "當地文化與禮儀",
+        "chs": "当地文化与礼仪"
+      },
+      "subtitle": {
+        "eng": "Respecting the traditions",
+        "jpn": "伝統を尊重する",
+        "kor": "전통 존중하기",
+        "cht": "尊重傳統",
+        "chs": "尊重传统"
+      },
+      "audio": {
+        "eng": "audio/step3-eng.mp3",
+        "jpn": "audio/step3-jpn.mp3",
+        "kor": "audio/step3-kor.mp3",
+        "cht": "audio/step3-cht.mp3",
+        "chs": "audio/step3-chs.mp3"
+      },
+      "subtitle": {
+        "eng": "subtitles/step3-eng.srt",
+        "jpn": "subtitles/step3-jpn.srt",
+        "kor": "subtitles/step3-kor.srt",
+        "cht": "subtitles/step3-cht.srt",
+        "chs": "subtitles/step3-chs.srt"
+      },
+      "image": {
+        "eng": [
+          {
+            "url": "https://picsum.photos/800/600?random=7",
+            "startTimestamp": 0,
+            "endTimestamp": 25,
+            "caption": "Proper washing area before entering"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=8",
+            "startTimestamp": 25,
+            "endTimestamp": 50,
+            "caption": "Locals enjoying the traditional experience"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=9",
+            "startTimestamp": 50,
+            "endTimestamp": 75,
+            "caption": "Quiet relaxation and reflection space"
+          }
+        ],
+        "jpn": [
+          {
+            "url": "https://picsum.photos/800/600?random=7",
+            "startTimestamp": 0,
+            "endTimestamp": 25,
+            "caption": "入浴前の適切な洗い場"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=8",
+            "startTimestamp": 25,
+            "endTimestamp": 50,
+            "caption": "伝統的な体験を楽しむ地元の人々"
+          },
+          {
+            "url": "https://picsum.photos/800/600?random=9",
+            "startTimestamp": 50,
+            "endTimestamp": 75,
+            "caption": "静かなリラクゼーションと瞑想の空間"
+          }
+        ]
+      },
+      "duration": 75
+    }
+  ]
+}
