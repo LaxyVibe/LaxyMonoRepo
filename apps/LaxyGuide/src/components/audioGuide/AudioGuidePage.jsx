@@ -89,8 +89,8 @@ export default function AudioGuidePage() {
 
   if (isLoading) {
     return (
-      <Container maxWidth="md" sx={{ py: 4 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+      <Container maxWidth="md" sx={{ py: 4, bgcolor: '#000000', minHeight: '100vh' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh', color: '#ffffff' }}>
           Loading audio guide...
         </Box>
       </Container>
@@ -99,15 +99,20 @@ export default function AudioGuidePage() {
 
   if (error) {
     return (
-      <Container maxWidth="md" sx={{ py: 4 }}>
+      <Container maxWidth="md" sx={{ py: 4, bgcolor: '#000000', minHeight: '100vh' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '50vh', justifyContent: 'center' }}>
           <Box sx={{ mb: 2, fontSize: 48 }}>🎧</Box>
-          <Box sx={{ textAlign: 'center', color: 'text.secondary' }}>
+          <Box sx={{ textAlign: 'center', color: '#ffffff' }}>
             {error}
           </Box>
           <IconButton 
             onClick={handleBackClick}
-            sx={{ mt: 2 }}
+            sx={{ 
+              mt: 2,
+              color: '#ffffff',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.2)' }
+            }}
             aria-label="Go back"
           >
             <ArrowBackIcon />
@@ -119,15 +124,20 @@ export default function AudioGuidePage() {
 
   if (!currentStep || !steps || steps.length === 0) {
     return (
-      <Container maxWidth="md" sx={{ py: 4 }}>
+      <Container maxWidth="md" sx={{ py: 4, bgcolor: '#000000', minHeight: '100vh' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '50vh', justifyContent: 'center' }}>
           <Box sx={{ mb: 2, fontSize: 48 }}>🎧</Box>
-          <Box sx={{ textAlign: 'center', color: 'text.secondary' }}>
+          <Box sx={{ textAlign: 'center', color: '#ffffff' }}>
             No audio guide loaded
           </Box>
           <IconButton 
             onClick={handleBackClick}
-            sx={{ mt: 2 }}
+            sx={{ 
+              mt: 2,
+              color: '#ffffff',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.2)' }
+            }}
             aria-label="Go back"
           >
             <ArrowBackIcon />

@@ -23,14 +23,29 @@ export function parseSRT(srtContent) {
     const index = parseInt(lines[0], 10);
     if (isNaN(index)) continue;
 
-    const timeLine = lines[1];
+    // Handle timestamps that might be broken across multiple lines
+    let timeLine = lines[1];
+    let textStartIndex = 2;
+
+    // Check if timestamp is incomplete (missing end time)
+    if (timeLine.includes('-->') && !timeLine.match(/(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})/)) {
+      // Timestamp is broken across lines, combine with next line
+      if (lines.length > 2) {
+        timeLine = timeLine.trim() + ' ' + lines[2].trim();
+        textStartIndex = 3;
+      }
+    }
+
     const timeMatch = timeLine.match(/(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})/);
     
     if (!timeMatch) continue;
 
     const startTime = parseTimeString(timeMatch[1]);
     const endTime = parseTimeString(timeMatch[2]);
-    const text = lines.slice(2).join('\n').trim();
+    const text = lines.slice(textStartIndex).join('\n').trim();
+
+    // Skip empty text entries
+    if (!text) continue;
 
     subtitles.push({
       index,
@@ -118,7 +133,15 @@ export function isValidSRT(srtContent) {
   const index = parseInt(firstBlock[0], 10);
   if (isNaN(index)) return false;
 
-  // Check if second line has time format
-  const timeMatch = firstBlock[1].match(/\d{2}:\d{2}:\d{2},\d{3}\s*-->\s*\d{2}:\d{2}:\d{2},\d{3}/);
+  // Check if second line has time format (might be broken across lines)
+  let timeLine = firstBlock[1];
+  if (timeLine.includes('-->') && !timeLine.match(/(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})/)) {
+    // Try combining with next line if timestamp is broken
+    if (firstBlock.length > 2) {
+      timeLine = timeLine.trim() + ' ' + firstBlock[2].trim();
+    }
+  }
+
+  const timeMatch = timeLine.match(/\d{2}:\d{2}:\d{2},\d{3}\s*-->\s*\d{2}:\d{2}:\d{2},\d{3}/);
   return !!timeMatch;
 }

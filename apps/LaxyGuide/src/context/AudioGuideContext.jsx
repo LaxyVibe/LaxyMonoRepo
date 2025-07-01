@@ -260,15 +260,6 @@ export function AudioGuideProvider({ children }) {
           
           console.log(`🔍 POI ${index} - Title extracted:`, title);
           
-          // Handle subtitle similarly
-          let subtitle = '';
-          if (typeof poi.subtitle === 'object' && poi.subtitle !== null) {
-            subtitle = poi.subtitle[language] || poi.subtitle['eng'] || poi.subtitle['en'] || 
-                      poi.subtitle[Object.keys(poi.subtitle)[0]] || '';
-          } else if (typeof poi.subtitle === 'string') {
-            subtitle = poi.subtitle;
-          }
-          
           // Extract image data with timing information from audio language structure
           let images = [];
           if (poi.image) {
@@ -288,8 +279,8 @@ export function AudioGuideProvider({ children }) {
             id: poi.id,
             title: title,
             description: title, // Using title as description since it's not separate
-            audio: poi.audio,
-            subtitle: subtitle,
+            audio: poi.audio, // Keep the full audio object with all languages
+            subtitle: poi.subtitle, // Keep the full subtitle object with all languages
             images: images,
             order: index + 1,
             duration: null // Duration not provided in this data structure
@@ -373,6 +364,14 @@ export function AudioGuideProvider({ children }) {
     
     const legacyLangCode = languageMap[audioLanguage] || audioLanguage;
     
+    console.log('🎭 getStepDataForLanguage called:');
+    console.log('  step:', step);
+    console.log('  uiLanguage:', uiLanguage);
+    console.log('  audioLanguage:', audioLanguage);
+    console.log('  legacyLangCode:', legacyLangCode);
+    console.log('  step.subtitle:', step.subtitle);
+    console.log('  step.subtitle?.[legacyLangCode]:', step.subtitle?.[legacyLangCode]);
+    
     console.log('🖼️ getStepDataForLanguage - step images:', step.images);
     
     const processedImages = (step.images || []).map(img => {
@@ -394,12 +393,19 @@ export function AudioGuideProvider({ children }) {
     
     console.log('🖼️ getStepDataForLanguage - processed images:', processedImages);
     
+    const audioUrl = step.audio?.[legacyLangCode] ? `${s3BaseUrl}${step.audio[legacyLangCode]}` : null;
+    const subtitleUrl = step.subtitle?.[legacyLangCode] ? `${s3BaseUrl}${step.subtitle[legacyLangCode]}` : null;
+    
+    console.log('🎭 URL construction:');
+    console.log('  audioUrl:', audioUrl);
+    console.log('  subtitleUrl:', subtitleUrl);
+    
     return {
       id: step.id,
       title: step.title,
       description: step.description,
-      audioUrl: step.audio?.[legacyLangCode] ? `${s3BaseUrl}${step.audio[legacyLangCode]}` : null,
-      subtitleUrl: step.subtitle?.[legacyLangCode] ? `${s3BaseUrl}${step.subtitle[legacyLangCode]}` : null,
+      audioUrl: audioUrl,
+      subtitleUrl: subtitleUrl,
       images: processedImages,
       duration: step.duration,
       order: step.order

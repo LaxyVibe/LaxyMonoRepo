@@ -17,14 +17,26 @@ const commonStyles = {
     maxWidth: 1280,
     mx: 'auto',
     p: 0,
+    bgcolor: '#000000',
+    minHeight: '100vh',
   },
   image: {
-    height: '200px',
+    height: '400px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
     zIndex: 1,
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: 'linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.8) 100%)',
+      zIndex: 1,
+    },
   },
   card: {
     position: 'relative',
@@ -32,19 +44,21 @@ const commonStyles = {
     borderRadius: '16px 16px 0 0',
     p: 2,
     pb: 10,
-    bgcolor: 'background.paper',
+    bgcolor: '#000000',
+    color: '#ffffff',
     zIndex: 2,
-    boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 -2px 8px rgba(255, 255, 255, 0.1)',
+    border: '1px solid rgba(255, 255, 255, 0.1)',
   },
   footerCard: {
     position: 'fixed',
     bottom: 0,
     left: 0,
     right: 0,
-    bgcolor: 'background.paper',
+    bgcolor: '#000000',
+    color: '#ffffff',
     p: 2,
-    borderTop: '1px solid',
-    borderColor: 'grey.200',
+    borderTop: '1px solid rgba(255, 255, 255, 0.2)',
     zIndex: 3,
   },
   buyButton: {
@@ -64,6 +78,7 @@ const commonStyles = {
     alignItems: 'center',
     gap: 1,
     mb: 1,
+    color: '#ffffff',
   },
 };
 
@@ -112,11 +127,11 @@ function TourDetail() {
 
   if (error) {
     return (
-      <Box sx={{ p: 3, textAlign: 'center' }}>
+      <Box sx={{ p: 3, textAlign: 'center', bgcolor: '#000000', minHeight: '100vh', color: '#ffffff' }}>
         <Typography variant="h6" color="error" sx={{ mb: 2 }}>
           {error}
         </Typography>
-        <Button variant="outlined" onClick={() => navigate(-1)}>
+        <Button variant="outlined" onClick={() => navigate(-1)} sx={{ color: '#ffffff', borderColor: '#ffffff' }}>
           Go Back
         </Button>
       </Box>
@@ -125,7 +140,7 @@ function TourDetail() {
 
   if (!tourData) {
     return (
-      <Box sx={{ p: 3, textAlign: 'center' }}>
+      <Box sx={{ p: 3, textAlign: 'center', bgcolor: '#000000', minHeight: '100vh', color: '#ffffff' }}>
         <Typography variant="body2">Loading tour details...</Typography>
       </Box>
     );
@@ -165,29 +180,29 @@ function TourDetail() {
 
         {/* Content Card */}
         <Paper sx={commonStyles.card}>
-          <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+          <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2, color: '#ffffff' }}>
             {title}
           </Typography>
 
           <Box sx={commonStyles.iconText}>
-            <LocationOn color="primary" />
-            <Typography variant="body2">{venue}</Typography>
+            <LocationOn sx={{ color: '#46B2BB' }} />
+            <Typography variant="body2" sx={{ color: '#ffffff' }}>{venue}</Typography>
           </Box>
 
           <Box sx={commonStyles.iconText}>
-            <AccessTime color="primary" />
-            <Typography variant="body2">{estimatedDuration}</Typography>
+            <AccessTime sx={{ color: '#46B2BB' }} />
+            <Typography variant="body2" sx={{ color: '#ffffff' }}>{estimatedDuration}</Typography>
           </Box>
 
           <Box sx={commonStyles.iconText}>
-            <Paid color="primary" />
-            <Typography variant="body2">USD ${totalPrice}</Typography>
+            <Paid sx={{ color: '#46B2BB' }} />
+            <Typography variant="body2" sx={{ color: '#ffffff' }}>USD ${totalPrice}</Typography>
           </Box>
 
-          <Typography variant="h6" sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
+          <Typography variant="h6" sx={{ mt: 3, mb: 2, fontWeight: 'bold', color: '#ffffff' }}>
             About This Tour
           </Typography>
-          <Typography variant="body2" sx={{ lineHeight: 1.6, mb: 3 }}>
+          <Typography variant="body2" sx={{ lineHeight: 1.6, mb: 3, color: '#ffffff' }}>
             {description}
           </Typography>
 
@@ -197,7 +212,7 @@ function TourDetail() {
         {/* Floating Footer with Total Price and Buy Now Button */}
         <Paper sx={commonStyles.footerCard}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Typography variant="h5" sx={{ fontWeight: 'bold', color: 'text.primary', fontSize: '1.5rem' }}>
+            <Typography variant="h5" sx={{ fontWeight: 'bold', color: '#ffffff', fontSize: '1.5rem' }}>
               USD ${totalPrice}
             </Typography>
             <Button
