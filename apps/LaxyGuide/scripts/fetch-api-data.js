@@ -79,6 +79,13 @@ const GUIDE_CONFIG_PARAMS = {
       }
     }
   },
+  pagePOIGuide: {
+    fields: [
+      'coverDescription',
+      'audioLanguageLabel',
+      'nextLabel'
+    ]
+  },
   // globalComponent: {
   //   fields: [
   //     'readMoreLabel',

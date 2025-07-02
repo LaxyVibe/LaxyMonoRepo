@@ -3,6 +3,7 @@
  * Manages global audio guide state across the application
  */
 import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
+import { getCookie, setCookie } from '../utils/cookieUtils.js';
 
 const AudioGuideContext = createContext();
 
@@ -12,8 +13,18 @@ export function AudioGuideProvider({ children }) {
   const [currentStep, setCurrentStep] = useState(null);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   
-  // Audio language state (separate from UI language)
-  const [audioLanguage, setAudioLanguage] = useState('eng'); // Default to English audio
+  // Audio language state (separate from UI language) - initialize from cookie
+  const [audioLanguage, setAudioLanguageState] = useState(() => {
+    const savedAudioLang = getCookie('preferredAudioLanguage');
+    return savedAudioLang || 'eng'; // Default to English audio
+  });
+  
+  // Wrapper function to update both state and cookie
+  const setAudioLanguage = useCallback((newAudioLanguage) => {
+    console.log('🔍 Setting audio language:', newAudioLanguage);
+    setAudioLanguageState(newAudioLanguage);
+    setCookie('preferredAudioLanguage', newAudioLanguage, 30); // Store for 30 days
+  }, []);
   
   // Audio playback state
   const [isPlaying, setIsPlaying] = useState(false);

@@ -10,8 +10,8 @@
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>チェックイン: 午後 3:00 以降<br>チェックアウト: 午前 10:00 まで</p>\n<p>お客様の利便性のため、アーリーチェックインとレイトチェックアウトの便利なオプションをご用意しております。空室状況と稼働率に応じて、アーリーチェックインは最低3時間、レイトチェックアウトは最大3時間までご利用いただけます。これらのサービスには1時間あたり1,000円の追加料金がかかりますので、ご了承ください。必要な手配は喜んでお手伝いさせていただきます。 :)</p>",
-            "amenities": null,
-            "houseRules": "<p>- 最大宿泊人数 5名<br>- ペット不可<br>- パーティーやイベントの禁止<br>- 商業目的の撮影禁止<br>- 禁煙</p>",
+            "amenities": "<div class=\"ewa-rteLine\">- バスタブ</div>\n<div class=\"ewa-rteLine\">- シャンプー、コンディショナー、ボディソープ</div>\n<div class=\"ewa-rteLine\">- ヘアドライヤー</div>\n<div class=\"ewa-rteLine\">- 温水洗浄便座</div>\n<div class=\"ewa-rteLine\">- 洗濯機</div>\n<div class=\"ewa-rteLine\">- カトラリー</div>\n<div class=\"ewa-rteLine\">- テーブル</div>\n<div class=\"ewa-rteLine\">- エアコン</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 最大宿泊人数：5名様まで</div>\n<div class=\"ewa-rteLine\">- ペット不可</div>\n<div class=\"ewa-rteLine\">- 全室禁煙</div>",
             "slider": [
                 {
                     "id": 27,
@@ -19,36 +19,15 @@
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993145/familyroom01_beppu_airbnb_f31309b7bc.webp"
                 }
             ],
-            "faq": [
-                {
-                    "id": 17,
-                    "question": "何名まで宿泊できますか？",
-                    "answer": "<p>5名様まで</p>"
-                },
-                {
-                    "id": 18,
-                    "question": "チェックインとチェックアウトの時間は？",
-                    "answer": "<p>チェックイン: 午後 3:00 以降<br>チェックアウト: 午前 10:00 まで</p>\n<p>お客様の利便性のため、アーリーチェックインとレイトチェックアウトの便利なオプションをご用意しております。空室状況と稼働率に応じて、アーリーチェックインは最低3時間、レイトチェックアウトは最大3時間までご利用いただけます。これらのサービスには1時間あたり1,000円の追加料金がかかりますので、ご了承ください。必要な手配は喜んでお手伝いさせていただきます。 :)</p>"
-                },
-                {
-                    "id": 19,
-                    "question": "レストランはありますか？",
-                    "answer": "<p>申し訳ございませんが、レストランはございません。</p>"
-                },
-                {
-                    "id": 20,
-                    "question": "駐車は可能ですか？",
-                    "answer": "<p>近隣に無料の専用駐車場がございます（予約不要）。</p>"
-                }
-            ],
+            "faq": [],
             "wifi": [
                 {
-                    "id": 102,
+                    "id": 217,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 103,
+                    "id": 216,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -473,7 +452,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.5431976589944!2d131.5028965!3d33.2784494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6c2b7f05fd1%3A0x4db01432deac96d9!2z54S844Go44KK5YehIOavjeWutg!5e0!3m2!1sen!2sjp!4v1749359265680!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-26-6006",
-                        "highlight": "「焼とり凡 母家」は、別府市北浜エリアで人気の和風焼鳥居酒屋です。店内には掘りごたつ席や個室空間があり、上品でプライベートな雰囲気が魅力で、友人との食事会や気軽に一杯飲むのに最適です。\n\n���ばしい炭火焼鳥（焼き鳥）が自慢で、新鮮な海鮮料理や一品料理も豊富に揃っています。美味しい料理に加え、地酒や焼酎も充実しており、味にこだわるお客様にも満足いただけます。本格的な日本の居酒屋文化を体験するのに最適な場所です。",
+                        "highlight": "「焼とり凡 母家」は、別府市北浜エリアで人気の和風焼鳥居酒屋です。店内には掘りごたつ席や個室空間があり、上品でプライベートな雰囲気が魅力で、友人との食事会や気軽に一杯飲むのに最適です。\n\n香ばしい炭火焼鳥（焼き鳥）が自慢で、新鮮な海鮮料理や一品料理も豊富に揃っています。美味しい料理に加え、地酒や焼酎も充実しており、味にこだわるお客様にも満足いただけます。本格的な日本の居酒屋文化を体験するのに最適な場所です。",
                         "externalURL": "http://www.yakitoribon.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -785,7 +764,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
                         "tag_labels": [
                             {
                                 "id": 24,

@@ -10,8 +10,8 @@
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>체크인: 오후 3:00 이후<br>체크아웃: 오전 10:00 이전</p>\n<p>고객님의 편의를 위해 얼리 체크인 및 레이트 체크아웃 옵션을 제공하게 되어 기쁩니다. 객실 이용 가능 여부와 점유율에 따라 얼리 체크인은 최소 3시간, 레이트 체크아웃은 최대 3시간까지 이용하실 수 있습니다. 이 서비스에는 시간당 1,000엔의 추가 요금이 부과됩니다. 필요한 준비를 기꺼이 도와드리겠습니다. :)</p>",
-            "amenities": null,
-            "houseRules": "<p>- 최대 숙박 인원 5명<br>- 반려동물 동반 불가<br>- 파티 또는 이벤트 금지<br>- 상업적 사진 촬영 금지<br>- 금연</p>",
+            "amenities": "<div class=\"ewa-rteLine\">- 욕조</div>\n<div class=\"ewa-rteLine\">- 샴푸, 린스, 바디워시</div>\n<div class=\"ewa-rteLine\">- 헤어드라이어</div>\n<div class=\"ewa-rteLine\">- 비데</div>\n<div class=\"ewa-rteLine\">- 세탁기</div>\n<div class=\"ewa-rteLine\">- 수저류</div>\n<div class=\"ewa-rteLine\">- 테이블</div>\n<div class=\"ewa-rteLine\">- 에어컨</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 최대 숙박 인원: 5명</div>\n<div class=\"ewa-rteLine\">- 반려동물 동반 불가</div>\n<div class=\"ewa-rteLine\">- 금연</div>",
             "slider": [
                 {
                     "id": 27,
@@ -19,36 +19,15 @@
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993145/familyroom01_beppu_airbnb_f31309b7bc.webp"
                 }
             ],
-            "faq": [
-                {
-                    "id": 13,
-                    "question": "몇 명까지 숙박할 수 있나요?",
-                    "answer": "<p>최대 5명</p>"
-                },
-                {
-                    "id": 14,
-                    "question": "체크인과 체크아웃 시간은 어떻게 되나요?",
-                    "answer": "<p>체크인: 오후 3:00 이후<br>체크아웃: 오전 10:00 이전</p>\n<p>고객님의 편의를 위해 얼리 체크인 및 레이트 체크아웃 옵션을 제공하게 되어 기쁩니다. 객실 이용 가능 여부와 점유율에 따라 얼리 체크인은 최소 3시간, 레이트 체크아웃은 최대 3시간까지 이용하실 수 있습니다. 이 서비스에는 시간당 1,000엔의 추가 요금이 부과됩니다. 필요한 준비를 기꺼이 도와드리겠습니다. :)</p>"
-                },
-                {
-                    "id": 15,
-                    "question": "레스토랑이 있나요?",
-                    "answer": "<p>죄송하지만 레스토랑은 없습니다.</p>"
-                },
-                {
-                    "id": 16,
-                    "question": "주차할 수 있나요?",
-                    "answer": "<p>인근에 무료 전용 주차장이 있습니다(예약 불필요).</p>"
-                }
-            ],
+            "faq": [],
             "wifi": [
                 {
-                    "id": 116,
+                    "id": 221,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 117,
+                    "id": 220,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -131,7 +110,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.289058650653!2d131.4726!3d33.28510000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a65c95c88521%3A0x2b1c619b643d0a36!2sThe%20Aqua%20Garden!5e0!3m2!1sen!2sjp!4v1749359230971!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "0977-24-1141",
-                        "highlight": "아쿠아 가든은 벳푸 스기노이 호텔 내에 위치한 유명한 스파 및 워터파크로, 온천 치유와 리조트 분위기를 결합하여 여행객에게 최고의 휴식 경험을 제공합니다. 노천 온천 풀, 빛나는 분수, 폭포 벽, 시각 효과 등을 포함한 시설은 커플과 가족뿐만 아니라 낭만적인 밤의 분위기를 좋아하는 여행객에게도 매우 적합합니다.\n\n방문객은 스기노이 호텔에 숙박하지 않아도 단독으로 티켓을 구매하여 입장할 수 있어 당일치기 여행객들에게 인기가 많습니다. 특히 밤에는 조명과 수상 쇼가 배경 음악과 어우러져 벳푸에서 보기 드문 환상적인 풍경을 연출하며, 사진 촬영과 몸과 마음의 휴식을 위한 인기 있는 선택지입니다.",
+                        "highlight": "아쿠아 가든은 벳푸 스기노이 호텔 내에 위��한 유명한 스파 및 워터파크로, 온천 치유와 리조트 분위기를 결합하여 여행객에게 최고의 휴식 경험을 제공합니다. 노천 온천 풀, 빛나는 분수, 폭포 벽, 시각 효과 등을 포함한 시설은 커플과 가족뿐만 아니라 낭만적인 밤의 분위기를 좋아하는 여행객에게도 매우 적합합니다.\n\n방문객은 스기노이 호텔에 숙박하지 않아도 단독으로 티켓을 구매하여 입장할 수 있어 당일치기 여행객들에게 인기가 많습니다. 특히 밤에는 조명과 수상 쇼가 배경 음악과 어우러져 벳푸에서 보기 드문 환상적인 풍경을 연출하며, 사진 촬영과 몸과 마음의 휴식을 위한 인기 있는 선택지입니다.",
                         "externalURL": "https://www.suginoi-hotel.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -731,7 +710,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "벳푸시는 매년 7월 마지막 주말에 성대한 여름 축제를 개최합니다. 이 3일간의 행사는 벳푸에 활기 넘치는 축제 분위기를 선사하는 대규모 지역 축제입니다.\n\n축제 기간 동안 시내 중심가에는 다양한 길거리 음식과 음료를 제공하는 ��많은 야타이(포장마차)가 설치되어 시민과 관광객들이 음식과 즐거움을 만끽할 수 있습니다.\n\n행사의 절정은 일요일에 열리며, 약 두 시간 동안 일본 전통 춤 퍼레이드가 진행됩니다. 가장 기대되는 것은 저녁 8시부터 약 한 시간 동안 펼쳐지는 벳푸만 불꽃놀이로, 화려한 불꽃이 밤하늘을 수놓으며 매우 장관을 이룹니다. 축제에 많은 인파가 몰리기 때문에 이 시기의 벳푸 숙박료는 보통 연중 가장 비싼 시기 중 하나이므로, 미리 계획을 세우는 것이 좋습니다.",
+                        "highlight": "벳푸시는 매년 7월 마지막 주말에 성대한 여름 축제를 개최합니다. 이 3일간의 행사는 벳푸에 활기 넘치는 축제 분위기를 선사하는 대규모 지역 축제입니다.\n\n축제 기간 동안 시내 중심가에는 다양한 길거리 음식과 음료를 제공하는 수많은 야타이(포장마차)가 설치되어 시민과 관광객들이 음식과 즐거움을 만끽할 수 있습니다.\n\n행사의 절정은 일요일에 열리며, 약 두 시간 동안 일본 전통 춤 퍼레이드가 진행됩니다. 가장 기대되는 것은 저녁 8시부터 약 한 시간 동안 펼쳐지는 벳푸만 불꽃놀이로, 화려한 불꽃이 밤하늘을 수놓으며 매우 장관을 이룹니다. 축제에 많은 인파가 몰리기 때문에 이 시기의 벳푸 숙박료는 보통 연중 가장 비싼 시기 중 하나이므로, 미리 계획을 세우는 것이 좋습니다.",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -791,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
                         "tag_labels": [
                             {
                                 "id": 25,
@@ -811,11 +790,11 @@
                         "documentId": "wwzn6fi6olvnxqwcds45r21p",
                         "slug": "Jyumonjibaru-Observatory",
                         "label": "주몬지하라 전망대",
-                        "address": "일본 〒874-0016 오이타현 벳푸시 노다자이케노쓰루 1200",
+                        "address": "일본 〒874-0016 오이타현 벳푸시 노다자이케���쓰루 1200",
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.5828542348854!2d131.4602103!3d33.329719499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7ecbf391055%3A0x3b0fe1c46181594b!2sJumonji%20Viewpoint!5e0!3m2!1sen!2sjp!4v1749359610113!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1128",
-                        "highlight": "\"주몬지하라 전망대는 벳푸시 북쪽 고지대에 위치하며, 벳푸 시내 전체와 벳푸만을 조망할 수 있는 절경 명소이자 일본 100대 전망대 중 하나로 꼽힙니다. 시야가 탁 트여 맑은 날에는 시코쿠 방향까지 멀리 볼 수 있어 사진 애호가와 자연 경관 애호가에게 놓칠 수 없는 장소입니다.\n\n특히 해 질 녘에 방문하여 해가 지는 모습과 도시의 불빛이 켜지는 낭만적인 풍경을 감상하는 것을 추천합니다. 야경 또한 매우 매력적이며, 벳푸 온천 도시의 또 다른 면모를 보여줍니다. 전망대는 24시간 개방되므로 자가용 이용자는 자신의 페이스에 맞춰 방문 시간을 선택하여 인파를 피하고 산과 바다가 어우러진 웅장한 경관을 조용히 감상할 수 있습니다.",
+                        "highlight": "\"주몬지하라 전망대는 벳푸시 북쪽 고지대에 위치하며, 벳푸 시내 전체와 벳푸만을 조망할 수 있는 절경 명소이자 일본 100대 전망대 중 하나로 꼽힙니다. 시야가 탁 트여 맑은 날에는 시코쿠 방향까지 멀리 볼 수 있어 사진 애호가와 자연 경관 애호가에게 놓칠 수 없는 장소입니다.\n\n특히 해 질 녘에 방문하여 해가 지는 모습과 도시의 불빛이 켜지는 낭만적인 풍경을 감상하는 것��� 추천합니다. 야경 또한 매우 매력적이며, 벳푸 온천 도시의 또 다른 면모를 보여줍니다. 전망대는 24시간 개방되므로 자가용 이용자는 자신의 페이스에 맞춰 방문 시간을 선택하여 인파를 피하고 산과 바다가 어우러진 웅장한 경관을 조용히 감상할 수 있습니다.",
                         "externalURL": "https://www.city.beppu.oita.jp/sisetu/sangyou_kankou/jumonjibaru.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",

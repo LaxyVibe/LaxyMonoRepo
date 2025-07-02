@@ -819,7 +819,7 @@
             "kmFromStay": null,
             "weightInNearbyRestaurants": 0,
             "weightInNearbyAttractions": 0,
-            "weightInHighlight": -1,
+            "weightInHighlight": 3,
             "poi": {
                 "id": 31,
                 "documentId": "f4fwpb81h7i0fqrbgosmkdh6",

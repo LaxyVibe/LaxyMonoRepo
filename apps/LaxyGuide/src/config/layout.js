@@ -172,7 +172,7 @@ export const PAGE_LAYOUTS = {
   LanguagePage: CONTAINER_CONFIG.language,
   
   // Content detail pages
-  TourLanding: CONTAINER_CONFIG.wide,
+  POICover: CONTAINER_CONFIG.wide,
   PlaceLanding: CONTAINER_CONFIG.wide,
   POIDetail: CONTAINER_CONFIG.suiteLanding, // Changed from medium to suiteLanding
   
