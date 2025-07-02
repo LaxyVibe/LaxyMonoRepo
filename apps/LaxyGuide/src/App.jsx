@@ -6,7 +6,7 @@ import { AudioGuideProvider } from './context/AudioGuideContext.jsx';
 import { DEFAULT_LANGUAGE, extractLanguageFromPath } from './utils/languageUtils';
 import GuideLanding from './components/GuideLanding.jsx';
 import POIDetailGuide from './components/guide/POIDetailGuide.jsx';
-import POICover from './components/guide/POICOver.jsx';
+import POICover from './components/guide/POICover.jsx';
 import TourCover from './components/guide/TourCover.jsx';
 import StepList from './components/guide/StepList.jsx';
 import LanguagePage from './components/LanguagePage.jsx';
