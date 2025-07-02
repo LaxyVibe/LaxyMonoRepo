@@ -26,7 +26,7 @@ export default function MiniAudioPlayer() {
     return null;
   }
 
-  // Don't show mini player on AudioGuidePage (full player page), TourDetail page, or TourLanding page
+  // Don't show mini player on AudioGuidePage (full player page), TourCover page, or POICover page
   if (location.pathname.includes('/step/') || 
       location.pathname.includes('/audio-guide/') || 
       location.pathname.includes('/details') ||

@@ -1,34 +1,34 @@
 {
     "data": [
         {
-            "id": 1,
-            "documentId": "gqi70g6olfw207ciiq0o5960",
-            "legacyTourCode": "JPN-OITA-TUR-001",
+            "id": 34,
+            "documentId": "etzeaf5mp7fpmzt0mr042xxc",
+            "legacyTourCode": "JPN-BEPU-TUR-001",
             "poi": {
-                "id": 17,
-                "documentId": "zbyhe0y7k0w2ma9h1538lab9",
-                "slug": "Kaimonji-Onsen",
-                "label": "Kaimonji Onsen",
-                "address": "2-3-2 Kitahama, Beppu-shi, Oita 874-0920, Japan",
-                "highlight": "Kaimonji Onsen is a historic public hot spring in Beppu City, Oita Prefecture, Japan. It's affordable and popular among locals and tourists, making it an ideal choice for those who want to experience authentic Japanese bathing culture.\n\nThe onsen retains a traditional and simple style, not luxurious but full of warmth and nostalgia. The facilities are modest, suitable for travelers who prefer a quiet and pure hot spring experience. Its central location near Beppu Station makes it easily accessible on foot.\n\nIf you want to delve into Beppu's daily life and hot spring culture, Kaimonji Onsen is a worthwhile addition to your itinerary.",
-                "externalURL": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail7.html",
+                "id": 31,
+                "documentId": "f4fwpb81h7i0fqrbgosmkdh6",
+                "slug": "Jigoku-Hell-Tour",
+                "label": "Jigoku Hell Tour",
+                "address": "559-1 Kannawa, Beppu, Oita 874-0000, Japan",
+                "highlight": "The Beppu Hells Tour is one of Beppu's most iconic sightseeing routes, combining hot spring viewing with cultural themes to create a unique visual and sensory experience. Unlike typical hot springs focused on bathing, the Hells Tour is centered on observing the spectacular wonders of hot springs, featuring multiple distinct hells that allow visitors to fully appreciate the mystery and grandeur of geothermal activity.\n\nThe Hells Tour encompasses eight main hot spring attractions: Umi Jigoku (Sea Hell), Chinoike Jigoku (Blood Pond Hell), Oniyama Jigoku (Demon Mountain Hell), Shiraike Jigoku (White Pond Hell), Tatsumaki Jigoku (Spout Hell), Yama Jigoku (Mountain Hell), Onishi Bouzu Jigoku (Demon Stone Monk Hell), and Kamado Jigoku (Cooking Pot Hell). Each location offers different geothermal phenomena and exhibits; some are vivid red like blood, others are deep blue like the sea. There are even crocodile breeding areas and geothermal steaming food experiences, making it a diverse sightseeing route that blends nature with culture.\n\nSome hells are a bit far apart, so it's recommended to use city buses or drive. You can also purchase a Hells Tour pass to visit all eight at a discounted price. It's suitable for a half-day to full-day in-depth tour.",
+                "externalURL": "https://www.beppu-jigoku.com/",
                 "type": "attraction",
                 "nativeLanguageCode": "ja",
-                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4653855924157!2d131.5032886!3d33.2804858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6dd05cfbeff%3A0xdc9485bc2d68384!2z5rW36ZaA5a-65rip5rOJIEthaW1vbmppIG9uc2Vu!5e0!3m2!1sja!2sjp!4v1749357166015!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-                "dial": "0977-22-3625",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.1121527910245!2d131.4696745!3d33.315883299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7b960bca539%3A0x8bdccd2d35d910f2!2sHells%20of%20Beppu!5e0!3m2!1sen!2sjp!4v1749359571081!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "+81 977-66-1577",
                 "addressURL": null,
                 "tag_labels": [
                     {
-                        "id": 2,
-                        "documentId": "cfq91726e76i6u7ywdblwsnn",
-                        "name": " Onsen (Hot Spring)",
+                        "id": 5,
+                        "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                        "name": "Top Attractions",
                         "color": "GREY"
                     }
                 ],
                 "coverPhoto": {
-                    "id": 20,
-                    "documentId": "bn0d6ekn7kb3kd07g07srb2d",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993120/Kaimonji_Onsen_bdf2f3eabf.webp"
+                    "id": 16,
+                    "documentId": "z8iyfrx4xc70tni8fu6z30i8",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993107/Jigoku_Hell_Tour_e70335560f.jpg"
                 }
             }
         }

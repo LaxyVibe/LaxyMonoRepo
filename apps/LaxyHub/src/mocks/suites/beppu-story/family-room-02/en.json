@@ -10,45 +10,24 @@
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>- Check-in: After 3:00 PM<br>- Check-out: Before 10:00 AM</p>\n<p>We are pleased to offer convenient options for early check-in and late check-out. Depending on the availability and occupancy, we can provide a minimum of three hours for early check-in and up to three hours for late check-out. Kindly note that additional charges of 1,000 yen per hour apply for these services. We will gladly assist you in making the necessary arrangements. :)</p>",
-            "amenities": null,
-            "houseRules": "<div class=\"ewa-rteLine\">- 5 guests maximum</div>\n<div class=\"ewa-rteLine\">- No pets</div>\n<div class=\"ewa-rteLine\">- No parties or events</div>\n<div class=\"ewa-rteLine\">- No commercial photography</div>\n<div class=\"ewa-rteLine\">- No smoking</div>",
+            "amenities": "<p>- Bathtub<br>- Books and toys<br>- Shampoo, Conditioner, and Body Wash<br>- Hair dryers<br>- Bidet<br>- Washing machine<br>- Cutlery<br>- Table<br>- Air conditioner</p>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 5 guests maximum<br>- No pets<br>- No smoking</div>",
             "slider": [
                 {
-                    "id": 27,
-                    "documentId": "w96e76uo7sgeo9tr6wmrrvpi",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993145/familyroom01_beppu_airbnb_f31309b7bc.webp"
+                    "id": 22,
+                    "documentId": "rvis31xhb80oneat0raqps1i",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993127/familyroom02_beppu_airbnb_b9793915a3.webp"
                 }
             ],
-            "faq": [
-                {
-                    "id": 46,
-                    "question": "How many guests can stay?",
-                    "answer": "<p>5 guests</p>"
-                },
-                {
-                    "id": 47,
-                    "question": "What are the check-in and check-out times?",
-                    "answer": "<p>Check-in after 3:00 PM<br>Check-out before 10:00 AM</p>\n<p>We are pleased to offer convenient options for early check-in and late check-out. Depending on the availability and occupancy, we can provide a minimum of three hours for early check-in and up to three hours for late check-out. Kindly note that additional charges of 1,000 yen per hour apply for these services. We will gladly assist you in making the necessary arrangements. :)</p>"
-                },
-                {
-                    "id": 48,
-                    "question": "Is there a restaurant?",
-                    "answer": "<p>Unfortunately, there is no restaurant.</p>"
-                },
-                {
-                    "id": 49,
-                    "question": "Can I park there?",
-                    "answer": "<p>Free private parking is possible at a location nearby (reservation is not needed).</p>\n<p>&nbsp;</p>\n<p><img src=\"https://res.cloudinary.com/dui2mxeuh/image/upload/v1749997407/1164848_16042912250041919630_89caeffedd_a107774ec9.jpg\" alt=\"1164848_16042912250041919630_89caeffedd.jpg\"></p>"
-                }
-            ],
+            "faq": [],
             "wifi": [
                 {
-                    "id": 122,
+                    "id": 376,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 123,
+                    "id": 377,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -362,7 +341,7 @@
                         "id": 9,
                         "documentId": "ufvfj53ool114vx4qoajv07p",
                         "slug": "Gusto-Family-Restaurant",
-                        "label": "ガスト 別府店",
+                        "label": "Gusto Family Restaurant",
                         "address": "5-23 Minamikitamachō, Beppu, Oita 874-0929, Japan",
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.760326954975!2d131.50500399999999!3d33.28271600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6de987686f1%3A0x80977dcb31a9e37e!2z44Ks44K544OIIOWIpeW6nOW6lw!5e0!3m2!1sen!2sjp!4v1749359278056!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
@@ -791,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
                         "tag_labels": [
                             {
                                 "id": 5,

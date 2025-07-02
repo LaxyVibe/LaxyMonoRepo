@@ -1,33 +1,33 @@
 {
     "data": [
         {
-            "id": 102,
-            "documentId": "ksadzfxg5zuux2xaoptyaxh0",
-            "name": "family-room-02",
-            "label": "Family Room 2",
+            "id": 145,
+            "documentId": "uwlhp9m10ne63hmryquyrir0",
+            "name": "premium-suite-01",
+            "label": "Premium Suite 1",
             "headline": null,
-            "address": "大分县别府市北滨 2 丁目 6-6 邮编 874-0920",
-            "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
-            "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-            "checkInOut": "<p>- 浴缸<br>- 书籍和玩具<br>- 洗发水、护发素和沐浴露<br>- 吹风机<br>- 智能马桶盖<br>- 洗衣机<br>- 餐具<br>- 桌子<br>- 空调</p>",
-            "amenities": "<p>- 最多可入住5位客人<br>- 禁止携带宠物<br>- 禁止吸烟</p>",
-            "houseRules": null,
+            "address": "大分县别府市站前本町8-17 邮编 874-0934",
+            "addressURL": "https://maps.app.goo.gl/oz4tgL46mvXGsFAY7",
+            "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+            "checkInOut": "<p>入住: 下午 3:00 后<br>退房: 上午 10:00 前</p>\n<p>我们很高兴提供便捷的提前入住和延迟退房选择。根据客房供应情况和入住率，我们可提供最少三小时的提前入住和最多三小时的延迟退房。请注意，这些服务每小时将收取 1,000 日元的额外费用。我们将很乐意协助您进行必要的安排。 :)</p>",
+            "amenities": "<p>- 浴缸<br>- 洗发水、护发素和沐浴露<br>- 吹风机<br>- 智能马桶盖<br>- 洗衣机 (带烘干机)<br>- 餐具<br>- 桌子<br>- 空调</p>",
+            "houseRules": "<p>- 最多可入住5位客人<br>- 禁止携带宠物<br>- 禁止吸烟</p>",
             "slider": [
                 {
-                    "id": 22,
-                    "documentId": "rvis31xhb80oneat0raqps1i",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993127/familyroom02_beppu_airbnb_b9793915a3.webp"
+                    "id": 24,
+                    "documentId": "n2uijz2wlhhxp1zlu86p00p8",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993134/premiumsuite01_beppu_airbnb_e8cfa84f16.webp"
                 }
             ],
             "faq": [],
             "wifi": [
                 {
-                    "id": 378,
+                    "id": 636,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 379,
+                    "id": 637,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -134,7 +134,7 @@
                         "documentId": "ay4mg0bs3x2bxba901uhtanm",
                         "slug": "Takegawara-Onsen",
                         "label": "竹瓦温泉",
-                        "address": "〒874-0944 大分县别府市元町16番23号",
+                        "address": "〒874-0944 大���县别府市元町16番23号",
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.5811698237458!2d131.5059894!3d33.277455599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6dbc076d72f%3A0x30437b42d69f3478!2sTakegawara%20Onsen!5e0!3m2!1sen!2sjp!4v1749359217585!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "0977-23-1585",
@@ -256,7 +256,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2133157247627!2d131.5039933!3d33.2870819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6df796c3b93%3A0xcdc0fb800ae8b95e!2sFukuya%20So-Honten!5e0!3m2!1sen!2sjp!4v1749359288720!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-25-9471",
-                        "highlight": "\"位于别府市京町的“ラーメン工房 ふくや総本店”是一家老字号的拉面专门店，以实在的味道与浓厚豚骨汤头闻名。店面外观朴实低调，内部则是简约舒适的日式设计，气氛亲切，是许多当地人与熟客的日常用餐首选。\n\n本店坚持以传统手法熬制豚骨汤头，香气浓郁但不油腻，配上弹牙的中细面条，呈现出一碗风味十足的经典九州拉面。除了基本款，还提供蔬菜拉面、叉烧加量版本，以及辣味变化，满足不同食客的口味需求。\n\n店内提供座位内用，也开放外带服���，非常适合在行程紧凑的旅途中快速品尝一餐热腾腾的拉面。无论是当作午餐还是晚餐的选择，这里都能提供一碗令人满足的热汤拉面。",
+                        "highlight": "\"位于别府市京町的“ラーメン工房 ふくや総本店”是一家老字号的拉面专门店，以实在的味道与浓厚豚骨汤头闻名。店面外观朴实低调，内部则是简约舒适的日式设计，气氛亲切，是许多当地人与熟客的���常用餐首选。\n\n本店坚持以传统手法熬制豚骨汤头，香气浓郁但不油腻，配上弹牙的中细面条，呈现出一碗风味十足的经典九州拉面。除了基本款，还提供蔬菜拉面、叉烧加量版本，以及辣味变化，满足不同食客的口味需求。\n\n店内提供座位内用，也开放外带服务，非常适合在行程紧凑的旅途中快速品尝一餐热腾腾的拉面。无论是当作午餐还是晚餐的选择，这里都能提供一碗令人满足的热汤拉面。",
                         "externalURL": "https://fukuya-ramen.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -396,7 +396,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.6907363219098!2d131.504148!3d33.2745879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6c3b67a8ff7%3A0x3feb11a15c177bc1!2sTomonaga%20Bakery!5e0!3m2!1sen!2sjp!4v1749359298103!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-23-0969",
-                        "highlight": "创业超过百年的友永面包店是别府当地历史最悠久、人气最高的老字号面包店之一。自大正时代创业以来，店铺始终坚持使用传统制法与自家改良的配方，将一个个朴实无华却温暖人心的手作面包，带给每一位顾客。\n\n这里最受欢迎的产品包括经典的红豆面包（つぶあんパン）与奶油法国面包，内馅不会过甜，口感柔软有弹力，老顾客络绎不绝。不论是当地居民还是观光客，常常一早就来排队，只为抢购刚出炉的热腾腾面包。\n\n店内仅提供外带，不设内��座位，也无宅配服务。由于数量有限，热门商品常常在早上就售罄，建议早点前往以免向隅。",
+                        "highlight": "创业超过百年的友永面包店是别府当地历史最悠久、人气最高的老字号面包店之一。自大正时代创业以来，店铺始终坚持使用传统制法与自家改良的配方，将一个个朴实无华却温暖人心的手作面��，带给每一位顾客。\n\n这里最受欢迎的产品包括经典的红豆面包（つぶあんパン）与奶油法国面包，内馅不会过甜，口感柔软有弹力，老顾客络绎不绝。不论是当地居民还是观光客，常常一早就来排队，只为抢购刚出炉的热腾腾面包。\n\n店内仅提供外带，不设内用座位，也无宅配服务。由于数量有限，热门商品常常在早上就售罄，建议早点前往以免向隅。",
                         "externalURL": "https://www.instagram.com/tomonaga_panya/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",

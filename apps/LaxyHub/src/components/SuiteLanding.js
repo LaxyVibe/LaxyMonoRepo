@@ -11,7 +11,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import WifiIcon from '@mui/icons-material/Wifi';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import AttractionsTwoToneIcon from '@mui/icons-material/AttractionsTwoTone';
-// import TourIcon from '@mui/icons-material/Tour'; // Temporarily disabled
+import TourIcon from '@mui/icons-material/Tour';
 import { useLanguage } from '../context/LanguageContext';
 import { DEFAULT_CLIENT_ID } from '../config/constants';
 import Carousel from 'react-material-ui-carousel';
@@ -275,33 +275,14 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
     }
   };
 
-  // Tours functionality temporarily disabled
-  /* const handleToursClick = () => {
-    const toursNav = hubConfig?.data?.pageLanding?.naviagtion?.find(item => item.route === "/tours");
-    if (toursNav) {
-      navigate(`/${language}/${suiteId}${toursNav.route}`, {
-        state: { 
-          tours: clientInfo.featuredTours, 
-          suiteId,
-          clientInfo: {
-            ...clientInfo,
-            sectionLabels
-          }
-        }
-      });
-    } else {
-      // Fallback to legacy route
-      navigate(`/${suiteId}/${language}/featured-tours`, {
-        state: { 
-          tours: clientInfo.featuredTours, 
-          clientInfo: {
-            ...clientInfo,
-            sectionLabels
-          }
-        }
-      });
-    }
-  }; */
+  const handleToursClick = () => {
+    trackButtonClick('tours', 'suite_landing');
+    trackNavigation('suite_landing', 'tours', 'navigation_button');
+    
+    // Open hardcoded tour URL in new tab
+    const tourUrl = `https://guide.laxy.travel/${language}/tour/JPN-BEPU-TUR-001`;
+    window.open(tourUrl, '_blank');
+  };
 
     if (loading) {
     return (
@@ -463,46 +444,16 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
               />
             )}
             
-            {/* Tours button temporarily disabled - not ready yet */}
-            {/* {sectionLabels.toursLabel && (
-              <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                <Paper 
-                  elevation={1} 
-                  sx={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    p: { xs: 1, sm: 1.5 },
-                    borderRadius: '50%',
-                    width: { xs: 52, sm: 60 },
-                    height: { xs: 52, sm: 60 },
-                    mx: 'auto',
-                    boxShadow: '0 3px 6px rgba(0,0,0,0.1)',
-                    cursor: 'pointer'
-                  }}
-                  onClick={handleToursClick}
-                >
-                  {sectionLabels.toursIcon ? (
-                    <Box 
-                      component="img" 
-                      src={sectionLabels.toursIcon} 
-                      alt="Tours"
-                      sx={{ 
-                        width: { xs: 24, sm: 28 }, 
-                        height: { xs: 24, sm: 28 },
-                        color: 'primary.main'
-                      }}
-                    />
-                  ) : (
-                    <TourIcon fontSize={window.innerWidth < 600 ? "medium" : "large"} color="primary" />
-                  )}
-                </Paper>
-                <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
-                  {sectionLabels.toursLabel}
-                </Typography>
-              </Grid>
-            )} */}
+            {sectionLabels.toursLabel && (
+              <NavigationButton
+                iconUrl={sectionLabels.toursIcon}
+                icon={!sectionLabels.toursIcon && <TourIcon fontSize={window.innerWidth < 600 ? "medium" : "large"} color="primary" />}
+                iconAlt="Tours"
+                label={sectionLabels.toursLabel}
+                onClick={handleToursClick}
+                gridProps={{ xs: 2.4 }}
+              />
+            )}
           </Grid>
           {/* Highlighted POIs Section */}
           <HighlightedPOIsSection 
