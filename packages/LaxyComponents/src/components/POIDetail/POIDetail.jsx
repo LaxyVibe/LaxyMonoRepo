@@ -679,7 +679,8 @@ const POIDetail = ({
                   py: 1.5,
                   fontWeight: 600,
                   fontSize: '1rem',
-                  mb: 2
+                  mb: 2,
+                  borderRadius: '50px'
                 }}
               >
                 Start Audio Guide with Laxy

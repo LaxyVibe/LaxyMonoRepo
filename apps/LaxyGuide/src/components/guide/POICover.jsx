@@ -23,13 +23,21 @@ const AUDIO_LANGUAGES = [
 // Common styles
 const commonStyles = {
   container: {
-    minHeight: '100vh',
+    height: '100vh',
+    height: '100dvh', // Use dynamic viewport height when supported
+    maxHeight: '100vh',
+    maxHeight: '100dvh',
+    overflow: 'hidden',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
+    '@supports (height: 100dvh)': {
+      height: '100dvh',
+      maxHeight: '100dvh',
+    },
   },
   overlay: {
     position: 'absolute',
@@ -44,37 +52,60 @@ const commonStyles = {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 2, sm: 3 },
+    py: { xs: 1, sm: 2 },
+    minHeight: 0,
   },
   title: {
     textAlign: 'center',
     textTransform: 'uppercase',
-    mb: 1,
-    fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+    fontSize: '26px',
+    fontFamily: 'Commissioner',
+    fontWeight: 700,
+    mb: { xs: 2, sm: 3 },
+    lineHeight: 1.2,
   },
   jpnTitle: {
     textAlign: 'center',
-    mb: 2,
-    fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+    mb: { xs: 1, sm: 1.5 },
+    fontSize: { xs: '0.875rem', sm: '1.125rem', md: '1.375rem' },
     opacity: 0.9,
+    lineHeight: 1.2,
+    '@media (max-height: 600px)': {
+      fontSize: { xs: '0.75rem', sm: '1rem', md: '1.25rem' },
+      mb: { xs: 0.75, sm: 1.25 },
+    },
+    '@media (max-height: 500px)': {
+      fontSize: { xs: '0.6875rem', sm: '0.875rem', md: '1.125rem' },
+      mb: { xs: 0.5, sm: 1 },
+    },
   },
   subtitle: {
-    mb: { xs: 3, sm: 4 },
-    fontSize: { xs: '0.875rem', sm: '1rem' },
-    px: { xs: 1, sm: 2 },
+    mb: { xs: 1.5, sm: 2 },
+    fontSize: { xs: '0.75rem', sm: '0.875rem' },
+    px: { xs: 0.5, sm: 1 },
+    lineHeight: 1.3,
+    '@media (max-height: 600px)': {
+      fontSize: { xs: '0.6875rem', sm: '0.8125rem' },
+      mb: { xs: 1, sm: 1.5 },
+    },
+    '@media (max-height: 500px)': {
+      fontSize: { xs: '0.625rem', sm: '0.75rem' },
+      mb: { xs: 0.75, sm: 1 },
+    },
   },
   button: {
     borderRadius: '50px',
-    px: { xs: 3, sm: 4 },
-    py: { xs: 1, sm: 1.5 },
+    px: { xs: 2.5, sm: 3.5 },
+    py: { xs: 0.75, sm: 1.25 },
     textTransform: 'none',
-    fontSize: { xs: '0.875rem', sm: '1rem' },
+    fontSize: { xs: '0.75rem', sm: '0.875rem' },
+    minHeight: { xs: '44px', sm: '48px' },
   },
   audioButton: {
     backgroundColor: '#FFFFFF',
@@ -95,9 +126,11 @@ const commonStyles = {
   audioSelect: {
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     borderRadius: '50px',
+    minHeight: { xs: '44px', sm: '48px' },
     '& .MuiOutlinedInput-root': {
       borderRadius: '50px',
       paddingTop: '8px', // Add space for the label
+      minHeight: { xs: '44px', sm: '48px' },
       '& fieldset': {
         borderColor: 'white',
       },
@@ -111,6 +144,7 @@ const commonStyles = {
     '& .MuiInputLabel-root': {
       color: '#805858',
       backgroundColor: 'transparent',
+      fontSize: { xs: '0.75rem', sm: '0.875rem' },
       '&.Mui-focused': {
         color: '#805858',
       },
@@ -122,7 +156,8 @@ const commonStyles = {
     },
     '& .MuiSelect-select': {
       color: '#805858',
-      padding: { xs: '10px 12px', sm: '12px 14px' },
+      padding: { xs: '8px 12px', sm: '10px 14px' },
+      fontSize: { xs: '0.75rem', sm: '0.875rem' },
     },
   },
   snackbar: {
@@ -205,6 +240,11 @@ function POICover() {
   const handleAudioLanguageChange = (event) => {
     console.log('🔍 Audio language changed to:', event.target.value);
     setAudioLanguage(event.target.value);
+    
+    // Refresh the page after setting the audio language
+    setTimeout(() => {
+      window.location.reload();
+    }, 100); // Small delay to ensure the language is set before refresh
   };
 
   const handleToastClose = (event, reason) => {
@@ -325,47 +365,85 @@ function POICover() {
       {/* Logo in center of header */}
       <Box sx={{ 
         position: 'absolute', 
-        top: { xs: 15, sm: 20 }, 
+        top: { xs: 10, sm: 15 }, 
         left: '50%', 
         transform: 'translateX(-50%)', 
         zIndex: 3 
       }}>
         <img 
           src={travelLogo} 
-          alt="Travel Logo" 
+          alt="Laxy Travel" 
           style={{ 
-            height: '60px',
+            height: '76px',
             width: 'auto',
             filter: 'brightness(0) invert(1)' // Make the logo white
           }} 
         />
       </Box>
 
-      <Box sx={commonStyles.content}>
-        <Typography variant="h2" sx={commonStyles.title}>
-          {title}
-        </Typography>
-        {jpnTitle && selectedAudioLanguage !== 'jpn' && (
-          <Typography variant="h4" sx={commonStyles.jpnTitle}>
-            {jpnTitle}
-          </Typography>
-        )}
-        <Typography variant="body1" sx={commonStyles.subtitle}>
-          {coverDescription}
-        </Typography>
+      {/* Main Content Area - Centered */}
+      <Box sx={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        color: 'white',
+        zIndex: 2,
+        px: { xs: 2, sm: 3, md: 4 },
+        pt: { xs: 7, sm: 8 }, // Space for logo
+        pb: { xs: 1, sm: 2 },
+        minHeight: 0,
+        '@media (max-height: 600px)': {
+          pt: { xs: 6, sm: 7 },
+          pb: { xs: 0.5, sm: 1 },
+        },
+        '@media (max-height: 500px)': {
+          pt: { xs: 5, sm: 6 },
+          pb: { xs: 0, sm: 0.5 },
+        },
+      }}>
+        {/* Empty space for background image display */}
       </Box>
       
+      {/* Bottom Controls */}
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: { xs: 2, sm: 3 },
-          pb: { xs: 3, sm: 4 },
+          gap: { xs: 1.5, sm: 2 },
+          pb: { xs: 2, sm: 3 },
           px: { xs: 2, sm: 3, md: 4 },
           zIndex: 2,
+          flexShrink: 0,
+          '@media (max-height: 600px)': {
+            gap: { xs: 1, sm: 1.5 },
+            pb: { xs: 1.5, sm: 2.5 },
+          },
+          '@media (max-height: 500px)': {
+            gap: { xs: 0.75, sm: 1 },
+            pb: { xs: 1, sm: 2 },
+          },
         }}
       >
+        {/* Title */}
+        <Typography variant="h5" sx={{...commonStyles.title, color: 'white'}}>
+          {title}
+        </Typography>
+        
+        {/* Japanese Title */}
+        {jpnTitle && selectedAudioLanguage !== 'jpn' && (
+          <Typography variant="h4" sx={{...commonStyles.jpnTitle, color: 'white'}}>
+            {jpnTitle}
+          </Typography>
+        )}
+        
+        {/* Subtitle */}
+        <Typography variant="body1" sx={{...commonStyles.subtitle, color: 'white'}}>
+          {coverDescription}
+        </Typography>
         {/* Audio Language Select */}
         <FormControl sx={{ width: '100%', ...commonStyles.audioSelect }}>
           <InputLabel id="audio-language-label">{audioLanguageLabel}</InputLabel>

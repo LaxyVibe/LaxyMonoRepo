@@ -49,7 +49,6 @@ const AudioGuidePlayer = ({ onClose }) => {
   const [currentSubtitleIndex, setCurrentSubtitleIndex] = useState(-1);
   const [currentImage, setCurrentImage] = useState(null);
   const [isManualScroll, setIsManualScroll] = useState(false);
-  const [isTouching, setIsTouching] = useState(false);
   
   // Animation states for rotation
   const [isBackwardAnimating, setIsBackwardAnimating] = useState(false);
@@ -59,7 +58,6 @@ const AudioGuidePlayer = ({ onClose }) => {
   const subtitleContainerRef = useRef(null);
   const manualScrollTimerRef = useRef(null);
   const currentSubtitleRef = useRef(null);
-  const touchStartY = useRef(0);
 
   // Load subtitles when step changes
   useEffect(() => {
@@ -215,37 +213,6 @@ const AudioGuidePlayer = ({ onClose }) => {
     }, 5000);
   };
 
-  const handleTouchStart = (e) => {
-    if (subtitleContainerRef.current) {
-      touchStartY.current = e.touches[0].clientY;
-      setIsTouching(true);
-      setIsManualScroll(true);
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isTouching || !subtitleContainerRef.current) return;
-    
-    const container = subtitleContainerRef.current;
-    const touchY = e.touches[0].clientY;
-    const diff = touchStartY.current - touchY;
-    
-    container.scrollTop += diff;
-    touchStartY.current = touchY;
-    
-    if (manualScrollTimerRef.current) {
-      clearTimeout(manualScrollTimerRef.current);
-    }
-    
-    manualScrollTimerRef.current = setTimeout(() => {
-      setIsManualScroll(false);
-    }, 5000);
-  };
-
-  const handleTouchEnd = () => {
-    setIsTouching(false);
-  };
-
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
@@ -322,6 +289,7 @@ const AudioGuidePlayer = ({ onClose }) => {
           flexDirection: 'column',
           position: 'relative',
           paddingBottom: '200px', // Space for controls
+          minHeight: 0, // Allow flex container to shrink
         }}
       >
         {/* Subtitles Container */}
@@ -332,10 +300,13 @@ const AudioGuidePlayer = ({ onClose }) => {
             color: 'white',
             p: 3,
             overflowY: 'auto',
+            overflowX: 'hidden',
             WebkitOverflowScrolling: 'touch',
             msOverflowStyle: 'none',
             scrollbarWidth: 'thin',
             touchAction: 'pan-y',
+            minHeight: 0, // Critical for flex scrolling
+            maxHeight: '100%', // Ensure container doesn't exceed parent
             '&::-webkit-scrollbar': {
               width: '8px',
             },
@@ -352,12 +323,13 @@ const AudioGuidePlayer = ({ onClose }) => {
             },
           }}
           onScroll={handleSubtitleScroll}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
         >
         {subtitles.length > 0 ? (
-          <>
+          <Box sx={{ 
+            paddingTop: '20px', 
+            paddingBottom: '60px', // Extra bottom padding for better scroll experience
+            minHeight: '100%' // Ensure content takes full height to enable scrolling
+          }}>
             <Typography 
               variant="h8" 
               sx={{ 
@@ -367,7 +339,8 @@ const AudioGuidePlayer = ({ onClose }) => {
                 fontFamily: 'Inter',
                 fontWeight: 600,
                 marginLeft: '16px',
-                marginRight: '16px'
+                marginRight: '16px',
+                display: 'block' // Change to block for better text flow
               }}
             >
               {subtitles.map((subtitle, index) => {
@@ -396,9 +369,16 @@ const AudioGuidePlayer = ({ onClose }) => {
                 );
               })}
             </Typography>
-          </>
+          </Box>
         ) : (
-          <>
+          <Box sx={{ 
+            paddingTop: '20px', 
+            paddingBottom: '60px',
+            minHeight: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
             <Typography 
               variant="h8" 
               sx={{ 
@@ -412,7 +392,7 @@ const AudioGuidePlayer = ({ onClose }) => {
             >
               No subtitles available
             </Typography>
-          </>
+          </Box>
         )}
         </Box>
       </Box>
