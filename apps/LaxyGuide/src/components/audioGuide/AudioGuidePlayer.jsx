@@ -253,7 +253,7 @@ const AudioGuidePlayer = ({ onClose }) => {
       <Box
         sx={{
           width: '100%',
-          aspectRatio: '3/4',
+          aspectRatio: '4/3',
           position: 'relative',
           backgroundImage: (() => {
             // Use current timed image if available
