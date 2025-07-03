@@ -13,14 +13,14 @@ import {
 } from '@mui/material';
 import {
   PlayArrow,
-  Pause,
-  SkipNext,
-  SkipPrevious,
-  Replay10,
-  Forward10
+  Pause
 } from '@mui/icons-material';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import { parseSRT, isValidSRT } from '../../utils/srtParser.js';
+
+// Import custom SVG icons
+import Backward15sIcon from '../../assets/player/backward-15s.svg';
+import Forward15sIcon from '../../assets/player/forward-15s.svg';
 
 const AudioGuidePlayer = ({ onClose }) => {
   const {
@@ -50,6 +50,10 @@ const AudioGuidePlayer = ({ onClose }) => {
   const [currentImage, setCurrentImage] = useState(null);
   const [isManualScroll, setIsManualScroll] = useState(false);
   const [isTouching, setIsTouching] = useState(false);
+  
+  // Animation states for rotation
+  const [isBackwardAnimating, setIsBackwardAnimating] = useState(false);
+  const [isForwardAnimating, setIsForwardAnimating] = useState(false);
   
   // Refs for subtitle handling
   const subtitleContainerRef = useRef(null);
@@ -184,6 +188,19 @@ const AudioGuidePlayer = ({ onClose }) => {
     }
   };
 
+  // Enhanced skip functions with animation
+  const handleSkipBackward = () => {
+    setIsBackwardAnimating(true);
+    skipBackward(15); // Use 15 seconds
+    setTimeout(() => setIsBackwardAnimating(false), 200); // Animation duration
+  };
+
+  const handleSkipForward = () => {
+    setIsForwardAnimating(true);
+    skipForward(15); // Use 15 seconds  
+    setTimeout(() => setIsForwardAnimating(false), 200); // Animation duration
+  };
+
   const handleSubtitleScroll = () => {
     if (!isManualScroll) {
       setIsManualScroll(true);
@@ -266,14 +283,11 @@ const AudioGuidePlayer = ({ onClose }) => {
         overflow: 'hidden'
       }}
     >
-      {/* Background Image */}
       <Box
         sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
+          width: '100%',
+          aspectRatio: '3/4',
+          position: 'relative',
           backgroundImage: (() => {
             // Use current timed image if available
             if (currentImage) return `url(${currentImage})`;
@@ -286,7 +300,6 @@ const AudioGuidePlayer = ({ onClose }) => {
           })(),
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          zIndex: 0,
           '&::after': {
             content: '""',
             position: 'absolute',
@@ -294,103 +307,67 @@ const AudioGuidePlayer = ({ onClose }) => {
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.8) 100%)',
+            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 1) 100%)',
             zIndex: 1,
           },
         }}
       />
 
-      {/* Additional Dark Overlay */}
+      {/* Subtitle Section with Solid Background */}
       <Box
         sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,1) 100%)',
-          zIndex: 1,
-        }}
-      />
-
-      {/* Content Area */}
-      <Box sx={{ 
-        flex: 1, 
-        position: 'relative', 
-        overflowY: 'auto',
-        paddingBottom: '220px',
-        zIndex: 2 
-      }} />
-
-      {/* Step Title */}
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: 120,
-          left: 0,
-          zIndex: 2,
-          width: '100%',
-          padding: '0 16px',
+          flex: 1,
+          backgroundColor: '#000000',
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'relative',
+          paddingBottom: '200px', // Space for controls
         }}
       >
-        <Typography
+        {/* Subtitles Container */}
+        <Box
+          ref={subtitleContainerRef}
           sx={{
+            flex: 1,
             color: 'white',
-            fontWeight: 600,
-            fontSize: '16px',
-            textAlign: 'left',
-            marginBottom: '8px',
-          }}
-        >
-          {currentStep.title}
-        </Typography>
-      </Box>
-
-      {/* Subtitles */}
-      <Box
-        ref={subtitleContainerRef}
-        sx={{
-          position: 'absolute',
-          zIndex: 3,
-          top: 200,
-          left: 16,
-          right: 16,
-          color: 'white',
-          p: 2,
-          borderRadius: 2,
-          maxHeight: '40vh',
-          overflowY: 'auto',
-          WebkitOverflowScrolling: 'touch',
-          msOverflowStyle: 'none',
-          scrollbarWidth: 'thin',
-          touchAction: 'pan-y',
-          '&::-webkit-scrollbar': {
-            width: '8px',
-          },
-          '&::-webkit-scrollbar-track': {
-            background: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '4px',
-          },
-          '&::-webkit-scrollbar-thumb': {
-            background: 'rgba(255, 255, 255, 0.3)',
-            borderRadius: '4px',
-            '&:hover': {
-              background: 'rgba(255, 255, 255, 0.5)',
+            p: 3,
+            overflowY: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'thin',
+            touchAction: 'pan-y',
+            '&::-webkit-scrollbar': {
+              width: '8px',
             },
-          },
-        }}
-        onScroll={handleSubtitleScroll}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+            '&::-webkit-scrollbar-track': {
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '4px',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              background: 'rgba(255, 255, 255, 0.3)',
+              borderRadius: '4px',
+              '&:hover': {
+                background: 'rgba(255, 255, 255, 0.5)',
+              },
+            },
+          }}
+          onScroll={handleSubtitleScroll}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
         {subtitles.length > 0 ? (
           <>
             <Typography 
-              variant="h5" 
+              variant="h8" 
               sx={{ 
-                textAlign: 'center',
-                lineHeight: 1.5 
+                textAlign: 'justify',
+                lineHeight: 1.4,
+                fontSize: '18px',
+                fontFamily: 'Inter',
+                fontWeight: 600,
+                marginLeft: '16px',
+                marginRight: '16px'
               }}
             >
               {subtitles.map((subtitle, index) => {
@@ -422,11 +399,22 @@ const AudioGuidePlayer = ({ onClose }) => {
           </>
         ) : (
           <>
-            <Typography variant="h5" sx={{ textAlign: 'center' }}>
+            <Typography 
+              variant="h8" 
+              sx={{ 
+                textAlign: 'center',
+                fontSize: '18px',
+                fontFamily: 'Inter',
+                fontWeight: 600,
+                marginLeft: '16px',
+                marginRight: '16px'
+              }}
+            >
               No subtitles available
             </Typography>
           </>
         )}
+        </Box>
       </Box>
 
       {/* Player Controls */}
@@ -451,18 +439,6 @@ const AudioGuidePlayer = ({ onClose }) => {
           margin: '0 auto',
           width: '100%',
         }}>
-          <Typography 
-            variant="h7"
-            sx={{ 
-              color: 'rgba(255, 255, 255, 0.9)', 
-              mb: 1,
-              textAlign: 'left',
-              display: 'block'
-            }}
-          >
-            {currentStep.title}
-          </Typography>
-          
           {/* Progress Bar */}
           <Box sx={{ 
             display: 'flex',
@@ -532,26 +508,21 @@ const AudioGuidePlayer = ({ onClose }) => {
               mb: 1,
             }}
           >
-            <IconButton
-              onClick={goToPreviousStep}
-              disabled={!hasPreviousStep}
-              size="large"
-              sx={{
-                color: '#ffffff',
-                '&:disabled': {
-                  color: 'rgba(255, 255, 255, 0.3)',
-                },
-              }}
-            >
-              <SkipPrevious />
-            </IconButton>
 
             <IconButton 
-              onClick={() => skipBackward(10)} 
+              onClick={handleSkipBackward}
               size="large"
-              sx={{ color: '#ffffff' }}
+              sx={{ 
+                color: '#ffffff',
+                '& img': {
+                  width: 30,
+                  height: 30,
+                  transition: 'transform 0.6s ease-in-out',
+                  transform: isBackwardAnimating ? 'rotate(-360deg)' : 'rotate(0deg)',
+                }
+              }}
             >
-              <Replay10 />
+              <img src={Backward15sIcon} alt="Backward 15s" />
             </IconButton>
 
             <IconButton
@@ -559,12 +530,12 @@ const AudioGuidePlayer = ({ onClose }) => {
               disabled={isLoading}
               size="large"
               sx={{
-                backgroundColor: '#46B2BB',
-                color: 'white',
+                backgroundColor: 'white',
+                color: '#46b2bb',
                 width: 64,
                 height: 64,
                 '&:hover': {
-                  backgroundColor: '#3a9199',
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
                 },
                 '&:disabled': {
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -572,7 +543,7 @@ const AudioGuidePlayer = ({ onClose }) => {
               }}
             >
               {isLoading ? (
-                <CircularProgress size={24} sx={{ color: 'white' }} />
+                <CircularProgress size={24} sx={{ color: '#46b2bb' }} />
               ) : isPlaying ? (
                 <Pause sx={{ fontSize: 32 }} />
               ) : (
@@ -581,25 +552,19 @@ const AudioGuidePlayer = ({ onClose }) => {
             </IconButton>
 
             <IconButton 
-              onClick={() => skipForward(10)} 
+              onClick={handleSkipForward}
               size="large"
-              sx={{ color: '#ffffff' }}
-            >
-              <Forward10 />
-            </IconButton>
-
-            <IconButton
-              onClick={goToNextStep}
-              disabled={!hasNextStep}
-              size="large"
-              sx={{
+              sx={{ 
                 color: '#ffffff',
-                '&:disabled': {
-                  color: 'rgba(255, 255, 255, 0.3)',
-                },
+                '& img': {
+                  width: 30,
+                  height: 30,
+                  transition: 'transform 0.6s ease-in-out',
+                  transform: isForwardAnimating ? 'rotate(360deg)' : 'rotate(0deg)',
+                }
               }}
             >
-              <SkipNext />
+              <img src={Forward15sIcon} alt="Forward 15s" />
             </IconButton>
           </Box>
         </Box>
