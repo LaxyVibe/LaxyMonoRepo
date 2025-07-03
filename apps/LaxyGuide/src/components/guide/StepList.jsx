@@ -1,7 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Box, Typography, Card, CardContent, CardMedia, CircularProgress, Button } from '@mui/material';
-import { PlayArrow, AccessTime } from '@mui/icons-material';
+import { 
+  Box, 
+  Typography, 
+  CardMedia, 
+  CircularProgress, 
+  Button, 
+  IconButton,
+  List,
+  ListItem,
+  ListItemText 
+} from '@mui/material';
+import { PlayArrow, AccessTime, ArrowBack } from '@mui/icons-material';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 
@@ -13,52 +23,110 @@ const getS3BaseUrl = (legacyTourCode) => {
 // Common styles
 const commonStyles = {
   container: {
+    p: 2,
     maxWidth: 1280,
     mx: 'auto',
-    p: 2,
-    pb: 10, // Add padding-bottom for fixed header
+    pb: 10, // Add padding-bottom to prevent overlap with the fixed footer (if any)
+    pt: 2 // Reduced top padding since header is simpler
   },
   header: {
-    textAlign: 'center',
-    mb: 3,
-  },
-  stepCard: {
-    mb: 2,
-    cursor: 'pointer',
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      transform: 'translateY(-2px)',
-      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-    },
-  },
-  stepContent: {
     display: 'flex',
     alignItems: 'center',
-    gap: 2,
+    mb: 2,
+    py: 1,
   },
-  stepImage: {
-    width: 80,
-    height: 80,
-    borderRadius: 2,
+  backButton: {
+    mr: 2,
+    color: '#46B2BB',
+    '&:hover': {
+      backgroundColor: 'rgba(70, 178, 187, 0.1)',
+    },
   },
-  stepText: {
-    flex: 1,
+  headerTitle: {
+    fontWeight: 600,
+    fontSize: '18px',
+    color: '#333',
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: '24px',
+    mb: 3,
+    color: '#333',
+    textAlign: 'center',
+  },
+  listItem: {
+    display: 'flex',
+    alignItems: 'center',
+    py: 1.5, // Increased padding for better spacing
+    px: 0,
+    cursor: 'pointer',
+    borderRadius: '8px',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      backgroundColor: 'rgba(70, 178, 187, 0.1)',
+    },
+  },
+  stepNumberContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    mr: 2,
+    position: 'relative',
+    minWidth: 32,
   },
   stepNumber: {
-    backgroundColor: '#46B2BB',
-    color: 'white',
-    borderRadius: '50%',
-    width: 32,
+    color: '#46B2BB',
     height: 32,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '0.875rem',
-    fontWeight: 'bold',
+    fontSize: '18px',
+    fontWeight: 600,
+    fontFamily: 'Inter, sans-serif',
+    zIndex: 1,
+  },
+  verticalLine: {
+    width: 2,
+    height: 40,
+    backgroundColor: '#E0E0E0',
+    mt: 1,
+  },
+  stepImage: {
+    width: '60px',
+    height: '60px',
+    borderRadius: '8px',
+    mr: 2,
+    objectFit: 'cover',
+  },
+  stepContent: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  stepText: {
+    flex: 1,
+  },
+  stepTitle: {
+    fontWeight: 400,
+    fontSize: '16px',
+    color: '#212427',
+    fontFamily: 'Commissioner, sans-serif',
+    mb: 0.5,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: '200px',
+  },
+  stepDuration: {
+    fontSize: '14px',
+    color: '#666',
   },
   playIcon: {
     color: '#46B2BB',
-    fontSize: '2rem',
+    fontSize: '25px',
+    width: '25px',
+    height: '25px',
+    margin: 2
   },
   loadingContainer: {
     display: 'flex',
@@ -72,7 +140,7 @@ function StepList() {
   const { langCode, tourId } = useParams();
   const { language } = useLanguage();
   const navigate = useNavigate();
-  const { tourData, steps, tourTitle, loadAudioGuide, isLoading } = useAudioGuide();
+  const { tourData, steps, tourTitle, loadAudioGuide, isLoading, currentStep } = useAudioGuide();
   
   const [error, setError] = useState(null);
 
@@ -94,6 +162,10 @@ function StepList() {
 
   const handleStepClick = (step) => {
     navigate(`/${langCode}/tour/${tourId}/step/${step.id}`);
+  };
+
+  const handleGoBack = () => {
+    navigate(`/${langCode}/tour/${tourId}`);
   };
 
   if (error) {
@@ -157,60 +229,80 @@ function StepList() {
   const s3BaseUrl = getS3BaseUrl(tourId);
 
   return (
-    <Box sx={commonStyles.container}>
-      <Box sx={commonStyles.header}>
-        <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
+    <>
+      <Box sx={commonStyles.container}>
+        <Box sx={commonStyles.header}>
+          <IconButton
+            onClick={handleGoBack}
+            sx={commonStyles.backButton}
+          >
+            <ArrowBack />
+          </IconButton>
+          <Typography sx={commonStyles.headerTitle}>
+            Audio List
+          </Typography>
+        </Box>
+
+        <Typography sx={commonStyles.title}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {steps.length} steps • Tap to start listening
-        </Typography>
-      </Box>
 
-      {steps.map((step, index) => {
-        // Get the image URL for this step
-        // Handle both legacy string format and new object format for images
-        const getImageUrl = () => {
-          if (!step.images || step.images.length === 0) {
-            return 'https://via.placeholder.com/80x80?text=Step';
-          }
-          
-          const firstImage = step.images[0];
-          
-          // Check if it's the new object format with url property
-          if (typeof firstImage === 'object' && firstImage.url) {
-            return firstImage.url.startsWith('http') ? firstImage.url : `${s3BaseUrl}${firstImage.url}`;
-          }
-          
-          // Legacy string format
-          if (typeof firstImage === 'string') {
-            return firstImage.startsWith('http') ? firstImage : `${s3BaseUrl}${firstImage}`;
-          }
-          
-          return 'https://via.placeholder.com/80x80?text=Step';
-        };
-        
-        const imageUrl = getImageUrl();
+        <List>
+          {steps.map((step, index) => {
+            // Get the image URL for this step
+            // Handle both legacy string format and new object format for images
+            const getImageUrl = () => {
+              if (!step.images || step.images.length === 0) {
+                return 'https://via.placeholder.com/60x60?text=Step';
+              }
+              
+              const firstImage = step.images[0];
+              
+              // Check if it's the new object format with url property
+              if (typeof firstImage === 'object' && firstImage.url) {
+                return firstImage.url.startsWith('http') ? firstImage.url : `${s3BaseUrl}${firstImage.url}`;
+              }
+              
+              // Legacy string format
+              if (typeof firstImage === 'string') {
+                return firstImage.startsWith('http') ? firstImage : `${s3BaseUrl}${firstImage}`;
+              }
+              
+              return 'https://via.placeholder.com/60x60?text=Step';
+            };
+            
+            const imageUrl = getImageUrl();
 
-        // Ensure title and subtitle are strings, not objects
-        const stepTitle = typeof step.title === 'object' 
-          ? (step.title[currentLang] || step.title[fallbackLang] || step.title[Object.keys(step.title)[0]] || 'Untitled Step')
-          : (step.title || 'Untitled Step');
-        
-        const stepSubtitle = typeof step.subtitle === 'object'
-          ? (step.subtitle[currentLang] || step.subtitle[fallbackLang] || step.subtitle[Object.keys(step.subtitle)[0]] || '')
-          : (step.subtitle || step.description || '');
+            // Ensure title and subtitle are strings, not objects
+            const stepTitle = typeof step.title === 'object' 
+              ? (step.title[currentLang] || step.title[fallbackLang] || step.title[Object.keys(step.title)[0]] || 'Untitled Step')
+              : (step.title || 'Untitled Step');
 
-        return (
-          <Card 
-            key={step.id} 
-            sx={commonStyles.stepCard}
-            onClick={() => handleStepClick(step)}
-          >
-            <CardContent sx={{ p: 2 }}>
-              <Box sx={commonStyles.stepContent}>
-                <Box sx={commonStyles.stepNumber}>
-                  {step.order || index + 1}
+            // Format step number with leading zero
+            const stepNumber = String(step.order || index + 1).padStart(2, '0');
+
+            // Check if this step is currently playing
+            const isCurrentlyPlaying = currentStep && currentStep.id === step.id;
+
+            return (
+              <ListItem
+                key={step.id}
+                onClick={() => handleStepClick(step)}
+                sx={{
+                  ...commonStyles.listItem,
+                  backgroundColor: isCurrentlyPlaying ? 'rgba(70, 178, 187, 0.1)' : 'transparent',
+                }}
+              >
+                <Box sx={commonStyles.stepNumberContainer}>
+                  <Box sx={{
+                    ...commonStyles.stepNumber,
+                    color: isCurrentlyPlaying ? '#46B2BB' : '#46B2BB'
+                  }}>
+                    {stepNumber}
+                  </Box>
+                  {index < steps.length - 1 && (
+                    <Box sx={commonStyles.verticalLine} />
+                  )}
                 </Box>
                 
                 <CardMedia
@@ -220,30 +312,31 @@ function StepList() {
                   alt={stepTitle}
                 />
                 
-                <Box sx={commonStyles.stepText}>
-                  <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 0.5 }}>
-                    {stepTitle}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
-                    {stepSubtitle}
-                  </Typography>
-                  {step.duration && (
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                      <AccessTime sx={{ fontSize: '1rem', color: 'text.secondary' }} />
-                      <Typography variant="caption" color="text.secondary">
+                <ListItemText
+                  primary={
+                    <Typography sx={{
+                      ...commonStyles.stepTitle,
+                      color: isCurrentlyPlaying ? '#46B2BB' : '#212427'
+                    }}>
+                      {stepTitle}
+                    </Typography>
+                  }
+                  secondary={
+                    step.duration && (
+                      <Typography sx={commonStyles.stepDuration}>
                         {step.duration}
                       </Typography>
-                    </Box>
-                  )}
-                </Box>
+                    )
+                  }
+                />
                 
                 <PlayArrow sx={commonStyles.playIcon} />
-              </Box>
-            </CardContent>
-          </Card>
-        );
-      })}
-    </Box>
+              </ListItem>
+            );
+          })}
+        </List>
+      </Box>
+    </>
   );
 }
 

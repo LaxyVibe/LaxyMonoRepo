@@ -159,28 +159,44 @@ export default function AudioGuidePage() {
         position: 'sticky', 
         top: 0, 
         zIndex: 20, 
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#000000',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
         px: 2,
         py: 1.5,
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between'
       }}>
         <IconButton 
           onClick={handleBackClick}
           sx={{ 
-            mr: 1,
-            backgroundColor: 'rgba(0, 0, 0, 0.05)',
-            '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.1)' }
+            color: '#ffffff',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.2)' }
           }}
           aria-label="Go back to tour details"
         >
           <ArrowBackIcon />
         </IconButton>
-        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.875rem' }}>
-          Back to tour details
+        
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            color: '#ffffff',
+            fontWeight: 600,
+            textAlign: 'center',
+            flex: 1,
+            mx: 2,
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          {tourTitle || 'Audio Guide'}
         </Typography>
+        
+        {/* Spacer to balance the layout */}
+        <Box sx={{ width: 48 }} />
       </Box>
 
       {/* Main content */}
