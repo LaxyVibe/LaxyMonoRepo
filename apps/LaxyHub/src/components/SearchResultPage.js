@@ -10,6 +10,7 @@ import POIList from './common/POIList';
 import { PAGE_LAYOUTS, CONTENT_PADDING } from '../config/layout';
 import { trackNavigation } from '../utils/analytics';
 import { getHubConfigByLanguage } from '../mocks/hub-application-config';
+import { loadAllLanguagePOIData, searchAcrossLanguages } from '../utils/multiLanguageSearch';
 
 const SearchResultPage = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const SearchResultPage = () => {
   
   const [filteredResults, setFilteredResults] = useState([]);
   const [poiRecommendationsData, setPOIRecommendationsData] = useState(null);
+  const [allLanguagePOIData, setAllLanguagePOIData] = useState(null);
   
   // Get suite ID from params
   const suiteId = params.suiteId;
@@ -37,17 +39,27 @@ const SearchResultPage = () => {
   useEffect(() => {
     const loadPOIRecommendations = async () => {
       try {
+        // Load current language POI data
         const poiModule = await import(`../mocks/poi-recommendations/${language}.json`);
         setPOIRecommendationsData(poiModule.default);
+        
+        // Load all language data for cross-language search
+        const allLanguageData = await loadAllLanguagePOIData();
+        setAllLanguagePOIData(allLanguageData);
       } catch (error) {
         console.error(`Failed to load POI recommendations for language ${language}:`, error);
         // Fallback to English if language-specific data is not available
         try {
           const fallbackModule = await import(`../mocks/poi-recommendations/en.json`);
           setPOIRecommendationsData(fallbackModule.default);
+          
+          // Still try to load all language data
+          const allLanguageData = await loadAllLanguagePOIData();
+          setAllLanguagePOIData(allLanguageData);
         } catch (fallbackError) {
           console.error('Failed to load fallback POI recommendations:', fallbackError);
           setPOIRecommendationsData({ data: [] });
+          setAllLanguagePOIData({});
         }
       }
     };
@@ -66,15 +78,25 @@ const SearchResultPage = () => {
   // Filter search results based on query
   useEffect(() => {
     if (searchQuery.trim()) {
-      const results = highlightedPOIs.filter(poi => 
-        poi.poi.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        poi.poi.highlight.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setFilteredResults(results);
+      // Use multi-language search if all language data is available
+      if (allLanguagePOIData) {
+        const multiLangResults = searchAcrossLanguages(searchQuery, allLanguagePOIData, language, 50);
+        setFilteredResults(multiLangResults);
+      } else {
+        // Fallback to current language search
+        const results = highlightedPOIs.filter(poi => {
+          const query = searchQuery.toLowerCase();
+          const label = poi.poi.label?.toLowerCase() || '';
+          const address = poi.poi.address?.toLowerCase() || '';
+          
+          return label.includes(query) || address.includes(query);
+        });
+        setFilteredResults(results);
+      }
     } else {
       setFilteredResults([]);
     }
-  }, [searchQuery, highlightedPOIs]);
+  }, [searchQuery, highlightedPOIs, allLanguagePOIData, language]);
 
   const handleBack = () => {
     trackNavigation('search_result_page', 'search_page', 'back_button');
