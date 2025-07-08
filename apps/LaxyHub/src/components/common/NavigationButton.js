@@ -26,10 +26,10 @@ const NavigationButton = ({
           flexDirection: 'column', 
           alignItems: 'center', 
           justifyContent: 'center', 
-          p: { xs: 1, sm: 1.5 },
+          p: { xs: 0.75, sm: 1.5 },
           borderRadius: '50%',
-          width: 63,
-          height: 63,
+          width: { xs: 56, sm: 63 },
+          height: { xs: 56, sm: 63 },
           mx: 'auto',
           border: `3px solid ${colors.primary[200]}`, // Using #5FBCC4
           backgroundColor: 'transparent',
@@ -53,8 +53,8 @@ const NavigationButton = ({
             src={iconUrl} 
             alt={iconAlt || label}
             sx={{ 
-              width: iconSize, 
-              height: iconSize,
+              width: { xs: 20, sm: iconSize.xs || 24 }, 
+              height: { xs: 20, sm: iconSize.xs || 24 },
               color: 'primary.main'
             }}
           />
@@ -67,9 +67,13 @@ const NavigationButton = ({
           variant="caption" 
           color="text.secondary" 
           sx={{ 
-            mt: 1, 
+            mt: { xs: 0.5, sm: 1 }, 
             display: 'block',
-            opacity: disabled ? 0.6 : 1
+            opacity: disabled ? 0.6 : 1,
+            fontSize: { xs: '0.65rem', sm: '0.75rem' },
+            lineHeight: 1.2,
+            maxWidth: { xs: 60, sm: 80 },
+            mx: 'auto'
           }}
         >
           {label}

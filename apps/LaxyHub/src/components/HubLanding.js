@@ -126,20 +126,14 @@ const HubLanding = ({ clientInfo: initialClientInfo }) => {
           <Typography variant="h4" sx={{ mb: 1, textAlign: 'center' }}>
             {hubConfig?.pageLanding?.title || clientInfo?.title || 'Suite Selection'}
           </Typography>
-          <Typography variant="h6" sx={{ mb: 1 }}>
-            {sectionLabels.availableSuites}
-          </Typography>
-          <Typography variant="body2" sx={{ mb: 2 }}>
-            {sectionLabels.suiteDescription}
-          </Typography>
         </Paper>
 
       <Box sx={{ mb: 3 }}>
-        <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
+        <Grid container spacing={{ xs: 2, sm: 3 }} sx={{ justifyContent: 'center' }}>
           {suites.map((suite) => (
             <Grid item xs={12} sm={6} md={6} lg={4} xl={3} key={suite.id}>
               <Paper
-                elevation={2}
+                elevation={0}
                 sx={{
                   borderRadius: 2,
                   overflow: 'hidden',
@@ -148,8 +142,10 @@ const HubLanding = ({ clientInfo: initialClientInfo }) => {
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
+                  border: { xs: '1px solid #e0e0e0', sm: 'none' },
                   '&:hover': {
                     transform: 'translateY(-4px)',
+                    boxShadow: { xs: '0 4px 20px rgba(0,0,0,0.12)', sm: '0 6px 24px rgba(0,0,0,0.16)' },
                   }
                 }}
                 onClick={() => handleSuiteSelect(suite.id)}
@@ -157,19 +153,19 @@ const HubLanding = ({ clientInfo: initialClientInfo }) => {
                 {suite.image && (
                   <Box
                     sx={{
-                      height: { xs: 150, sm: 200 },
+                      height: { xs: 200, sm: 200 },
                       backgroundImage: `url(${suite.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
                   />
                 )}
-                <Box sx={{ p: { xs: 1.5, sm: 2 }, flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                  <Typography variant="subtitle1" fontWeight="medium" sx={{ mb: 1 }}>
+                <Box sx={{ p: { xs: 2, sm: 2 }, flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <Typography variant="subtitle1" fontWeight="medium" sx={{ mb: 1, fontSize: { xs: '1.1rem', sm: '1rem' } }}>
                     {suite.name}
                   </Typography>
                   {suite.description && (
-                    <Typography variant="caption" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: { xs: '0.875rem', sm: '0.75rem' } }}>
                       {suite.description}
                     </Typography>
                   )}

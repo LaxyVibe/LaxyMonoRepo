@@ -399,7 +399,20 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
             </Typography>
           )}
           
-          <Grid container spacing={0.5} justifyContent="space-between" sx={{ mt: 1, mx: 4 }}>
+          <Grid 
+            container 
+            spacing={{ xs: 0.25, sm: 0.5 }} 
+            justifyContent="space-between" 
+            sx={{ 
+              mt: 1, 
+              mx: { xs: 2, sm: 4 },
+              // Ensure buttons stay on same line even on very small screens
+              '& .MuiGrid-item': {
+                display: 'flex',
+                justifyContent: 'center'
+              }
+            }}
+          >
             {sectionLabels.wifiLabel && (
               <NavigationButton
                 iconUrl={sectionLabels.wifiIcon}
