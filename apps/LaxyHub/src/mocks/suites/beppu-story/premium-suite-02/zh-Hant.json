@@ -6,7 +6,7 @@
             "name": "premium-suite-02",
             "label": "Premium Suite 2",
             "headline": null,
-            "address": "大分縣別府市站前本町8-17 郵編 874-0934 ",
+            "address": "〒874-0934 大分縣別府市駅前本町8-17Nouvelle",
             "addressURL": "https://maps.app.goo.gl/oz4tgL46mvXGsFAY7",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 748,
+                    "id": 1160,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 750,
+                    "id": 1161,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -424,7 +424,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.7256473316343!2d131.5020446!3d33.2998398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a73d8297750b%3A0xf67fab0c01c2b352!2sTonkatsutei%20Beppu!5e0!3m2!1sen!2sjp!4v1749359440720!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-26-6685",
-                        "highlight": "「とん吉 日出店」是位於大分縣速見郡日出町的人氣日式炸豬排專門店，以香酥外皮與多汁厚切豬排聞名。這裡的炸豬排經過細緻工法處理，外酥內嫩，搭配濃郁特製醬汁與���炸現上的口感，深受在地居民與觀光客一致好評。\n\n店內環境簡潔溫馨，設有座席區，非常適合家庭聚餐或自駕旅途中途休息享用。除了經典豬排定食外，也有提供味噌豬排、起司豬排、海鮮炸物等多樣選擇，配菜與白飯、味噌湯的搭配也極具誠意，是一間讓人吃得飽足又滿意的餐廳。\n\n由於店舖位置靠近別府至湯布院的中繼點，非常適合作為行程中的午餐停留地點。",
+                        "highlight": "「とん吉 日出店」是位於大分縣速見郡日出町的人氣日式炸豬排專門店，以香酥外皮與多汁厚切豬排聞名。這裡的炸豬排經過細緻工法處理，外酥內嫩，搭配濃郁特製醬汁與現炸現上的口感，深受在地居民與觀光客一致好評。\n\n店內環境簡潔溫馨，設有座席區，非常適合家庭聚餐或自駕旅途中途休息享用。除了經典豬排定食外，也有提供味噌豬排、起司豬排、海鮮炸物等多樣選擇，配菜與白飯、味噌湯的搭配也極具誠意，是一間讓人吃得飽足又滿意的餐廳。\n\n由於店舖位置靠近別府至湯布院的中繼點，非常適合作為行程中的午餐停留地點。",
                         "externalURL": null,
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -738,7 +738,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "別府在聖誕節週的週六與週日，都會舉辦盛大的冬季慶典——別府聖誕花火幻想曲 (べっぷクリスマスHanabiファンタジア)。這個為期���天的活動是別府冬季的一大亮點。\n\n與七月底的夏日祭典花火僅施放一天不同，此時期的花火大會連續兩晚點亮別府的夜空，景色格外迷人與壯觀。活動現場設置了豐富的屋台，提供各式美味小吃與飲品，讓遊客在享受節慶氛圍的同時，也能大飽口福。\n\n由於這場冬季盛會廣受歡迎，別府市內的住宿設施會迅速滿房。因此，強烈建議計劃前往的旅客，務必提前至少兩個月預訂好住宿，以確保能順利參與這場浪漫又精彩的聖誕花火盛宴。",
+                        "highlight": "別府在聖誕節週的週六與週日，都會舉辦盛大的冬季慶典——別府聖誕花火幻想曲 (べっぷクリスマスHanabiファンタジア)。這個��期兩天的活動是別府冬季的一大亮點。\n\n與七月底的夏日祭典花火僅施放一天不同，此時期的花火大會連續兩晚點亮別府的夜空，景色格外迷人與壯觀。活動現場設置了豐富的屋台，提供各式美味小吃與飲品，讓遊客在享受節慶氛圍的同時，也能大飽口福。\n\n由於這場冬季盛會廣受歡迎，別府市內的住宿設施會迅速滿房。因此，強烈建議計劃前往的旅客，務必提前至少兩個月預訂好住宿，以確保能順利參與這場浪漫又精彩的聖誕花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,

@@ -6,12 +6,12 @@
             "name": "family-room-04",
             "label": "Family Room 4",
             "headline": null,
-            "address": "大分县别府市北滨 2 丁目 6-6 邮编 874-0920",
+            "address": "〒874-0920 大分县别府市北滨2町目6-6信用大楼",
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 淋浴</div>\n<div class=\"ewa-rteLine\">- 洗发水、护发素和沐浴露</div>\n<div class=\"ewa-rteLine\">- 吹风机</div>\n<div class=\"ewa-rteLine\">- 智能马桶盖</div>\n<div class=\"ewa-rteLine\">- 洗衣机</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空调</div>",
-            "houseRules": "<div class=\"ewa-rteLine\">- 最多可入住5位客人</div>\n<div class=\"ewa-rteLine\">- 禁止携带宠物</div>\n<div class=\"ewa-rteLine\">- 禁止吸烟</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 最多可入住4位客人</div>\n<div class=\"ewa-rteLine\">- 禁止携带宠物</div>\n<div class=\"ewa-rteLine\">- 禁止吸烟</div>",
             "slider": [
                 {
                     "id": 25,
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 758,
+                    "id": 1104,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 759,
+                    "id": 1105,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -340,7 +340,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.2560101022887!2d131.4841769!3d33.31212190000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a70b04ebffff%3A0x3a0db168b14ff957!2sKamesho%20Kurukuru%20Sushi!5e0!3m2!1sen!2sjp!4v1749359409305!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-66-5225",
-                        "highlight": "龟正转转寿司是别府市鹤见地区极具人气的回转寿司名店，以新鲜份量十足的寿司食材闻名。这里的每一贯寿司用料厚实、切工大器，不仅味道新鲜，视觉上也相当满足，是许多在地人与观光客心中的回访名单。\n\n店内装潢走简约路线，设有吧台座与宽敞的家庭式包厢座位，无论是一人用餐还是家族聚餐都相当合适。餐盘种类多样，从经典金枪鱼、鲑鱼、乌贼，到每日现流海鲜，都能轻松以回转方式享用，或直接向师傅点单。\n\n该店不提供外送服务，但可内用或外带。由于人气极高，高峰时段常需排队候位，建议提前前往或安排较早用餐时间。",
+                        "highlight": "龟正转转寿司是别府市鹤见地区极具人气的回转寿司名店，以新鲜份量十足的寿司食材闻名。这里的每一贯寿司用料厚实、切工大器，不仅味道新鲜，视觉上也相当满足，是许多在地人与观光客心中的回访名单。\n\n店内装潢走简约路线，设有吧台座与宽敞的家庭式包厢座位，无论是一人用餐还是家族聚餐都相当合适。餐盘种类多样，从经典金枪鱼、鲑鱼、乌贼，到每日现流海鲜，都能轻松以���转方式享用，或直接向师傅点单。\n\n该店不提供外送服务，但可内用或外带。由于人气极高，高峰时段常需排队候位，建议提前前往或安排较早用餐时间。",
                         "externalURL": "https://instagram.com/kamesho_9696_sushi",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -626,7 +626,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3912072576054!2d131.5474087!3d33.256249200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1115d167fe9%3A0xba67a416773d5b1c!2sTanoura%20beach!5e0!3m2!1sen!2sjp!4v1749359533520!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-537-5638",
-                        "highlight": "田ノ浦ビーチ是位于大分市神崎地区的人气海滨景点，以宁静宜人的氛围与便利设施闻名。这里设有人工筑起的缓坡沙滩与防波堤，适合散步、戏水、以及在傍晚欣赏壮丽的夕阳景色。\n\n海滩对面有一座小型人工岛公园，透过步行桥可轻松前往，岛上配有儿童游具与座椅，成为家庭客与情侣散步拍照的热门场所。沿岸的长廊步道平坦好走，是慢跑、带宠物散步与放空放松的理想空间。\n\n在夏季，海滩开放给民众游泳，水质干净，适合抓鱼、观察小生物，也有洗手间与淋浴等基础设施。此地区也开放宠物同行，是爱狗人士的友善沙滩选择。",
+                        "highlight": "田ノ浦ビーチ是位于大分市神崎地区的人气海滨景点，以宁静宜人的氛围与便利设施闻名。这里设有人工筑起的缓坡沙滩与防波堤，适合散步、戏水、以及在傍晚欣赏壮丽的夕阳景色。\n\n海滩对面有一座小型人工岛公园，透过步行桥可轻松前往，岛上配有儿童游具与座椅，成为家庭客与情侣散步拍照的热门场所。沿岸的长廊步道平坦好走，是慢跑、带宠物散步与放空放松的理想空间。\n\n在夏��，海滩开放给民众游泳，水质干净，适合抓鱼、观察小生物，也有洗手间与淋浴等基础设施。此地区也开放宠物同行，是爱狗人士的友善沙滩选择。",
                         "externalURL": "https://www.city.oita.oita.jp/o177/tanoura_syoukai.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -738,7 +738,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典——��府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮点。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
+                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典���—别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮点。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 26,

@@ -6,7 +6,7 @@
             "name": "premium-suite-02",
             "label": "Premium Suite 2",
             "headline": null,
-            "address": "〒874-0934 8-17 Ekimae Honmachi, Beppu, Oita",
+            "address": "Nouvelle, 8-17 Ekimaehonmachi, Beppu City, Oita Prefecture 874-0934",
             "addressURL": "https://maps.app.goo.gl/oz4tgL46mvXGsFAY7",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>Check-in: After 3:00 PM<br>Check-out: Before 10:00 AM</p>\n<p>We are pleased to offer convenient options for early check-in and late check-out. Depending on the availability and occupancy, we can provide a minimum of three hours for early check-in and up to three hours for late check-out. Kindly note that additional charges of 1,000 yen per hour apply for these services. We will gladly assist you in making the necessary arrangements. :)</p>",
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 738,
+                    "id": 1167,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 739,
+                    "id": 1166,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 5,

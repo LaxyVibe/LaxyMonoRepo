@@ -6,12 +6,12 @@
             "name": "family-room-04",
             "label": "Family Room 4",
             "headline": null,
-            "address": "〒874-0920 오이타현 벳푸시 키타하마 2가 6-6",
+            "address": "874-0920 오이타현 벳푸시 키타하마 2초메 6-6 신요 빌딩",
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-            "checkInOut": "<p>체크인: 오후 3:00 이후<br>체크아웃: 오전 10:00 이전</p>\n<p>고객님의 편의를 위해 얼리 체크인 및 레이트 체크아웃 옵션을 제공하게 되어 기쁩니다. 객실 이용 가능 여부와 점유율에 따라 얼리 체크인은 최소 3시간, 레이트 체크아웃은 최대 3시간까지 이용하실 수 있습니다. 이 서비스에는 시간당 1,000엔의 추가 요금이 부과됩니다. 필요한 준비를 기꺼이 도와드리겠습니다. :)</p>",
+            "checkInOut": "<p>체크인: 오후 3:00 이후<br>체크아웃: 오전 10:00 이전</p>\n<p>고객님의 편의를 위해 얼리 체크인 및 레이트 체크아웃 옵션을 제공하고 있습니다.<br>객실 이용 가능 여부와 전날 이용객의 상황에 따라&nbsp;<br>얼리 체크인은 최소 3시간, 레이트 체크아웃은 최대 3시간까지 이용하실 수 있습니다.&nbsp;<br>이 서비스에는 시간당 1,000엔의 추가 요금이 부과됩니다.&nbsp;<br>옵션이 필요 하시면 문의 주세요. :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 샤워기</div>\n<div class=\"ewa-rteLine\">- 샴푸, 린스, 바디워시</div>\n<div class=\"ewa-rteLine\">- 헤어드라이어</div>\n<div class=\"ewa-rteLine\">- 비데</div>\n<div class=\"ewa-rteLine\">- 세탁기</div>\n<div class=\"ewa-rteLine\">- 수저류</div>\n<div class=\"ewa-rteLine\">- 테이블</div>\n<div class=\"ewa-rteLine\">- 에어컨</div>",
-            "houseRules": "<div class=\"ewa-rteLine\">- 최대 숙박 인원: 5명</div>\n<div class=\"ewa-rteLine\">- 반려동물 동반 불가</div>\n<div class=\"ewa-rteLine\">- 금연</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 최대 숙박 인원: 4명</div>\n<div class=\"ewa-rteLine\">- 반려동물 동반 불가</div>\n<div class=\"ewa-rteLine\">- 금연</div>",
             "slider": [
                 {
                     "id": 25,
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 756,
+                    "id": 1058,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 757,
+                    "id": 1059,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -224,7 +224,7 @@
                         "documentId": "k43jal69ybwqggeyuh7x5plr",
                         "slug": "Don-Quijote-Beppu",
                         "label": "돈키호테 벳푸점",
-                        "address": "일본 〒874-0929 오이타현 벳푸시 미나미키타하마마치 6-20",
+                        "address": "일본 〒874-0929 오이��현 벳푸시 미나미키타하마마치 6-20",
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": "+81 570-200-465",
@@ -598,7 +598,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.1078125982526!2d131.4549176!3d33.26366970000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a5e51e2ff08b%3A0x1e166e28e296ff65!2sShidaka%20Lake!5e0!3m2!1sen!2sjp!4v1749359544754!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": null,
-                        "highlight": "시다카 호수는 오이타현 벳푸시 산간 지역에 위치한 고원 호수로, 사방이 산으로 둘러싸여 호수와 산의 경치가 어우러져 자연 경관과 휴식 시설을 겸비한 숨겨진 명소입니다. 이곳은 사계절 내내 기후가 쾌적하며, 봄에는 벚꽃, 가을에는 단풍이 물들어 계절마다 다른 매력을 선사합니다.\n\n호수 주변은 캠핑장, 바비큐장, 오리배 대여, 등산 트레일, 그리고 가족이 함께 즐길 수 있는 시설들이 잘 조성되어 있어 현지인과 여행객 ���두에게 휴일 휴식처로 좋습니다. 조용하고 자연을 좋아하는 사람들은 호숫가에서 낚시를 하거나 피크닉을 즐길 수 있으며, 야외 활동을 체험하고 싶은 여행객은 당일 캠핑이나 하이킹을 계획할 수도 있습니다.\n\n호수 지역은 공기가 맑고 수면이 거울처럼 잔잔합니다. 특히 이른 아침이나 해 질 녘에 방문하여 물에 비친 풍경과 안개가 어우러진 아름다운 장면을 촬영하는 것을 추천합니다.",
+                        "highlight": "시다카 호수는 오이타현 벳푸시 산간 지역에 위치한 고원 호수로, 사방이 산으로 둘러싸여 호수와 산의 경치가 어우러져 자연 경관과 휴식 시설을 겸비한 숨겨진 명소입니다. 이곳은 사계절 내내 기후가 쾌적하며, 봄에는 벚꽃, 가을에는 단풍이 물들어 계절마다 다른 매력을 선사합니다.\n\n호수 주변은 캠핑장, 바비큐장, 오리배 대여, 등산 트레일, 그리고 가족이 함께 즐길 수 있는 시설들이 잘 조성되어 있어 현지인과 여행객 모두에게 휴일 휴식처로 좋습니다. 조용하고 자연을 좋아하는 사람들은 호숫가에서 낚시를 하거나 피크닉을 즐길 수 있으며, 야외 활동을 체험하고 싶은 여행객은 당일 캠핑이나 하이킹을 계획할 수도 있습니다.\n\n호수 지역은 공기가 맑고 수면이 거울처럼 잔잔합니다. 특히 이른 아침이나 해 질 녘에 방문하여 물에 비친 풍경과 안개가 어우러진 아름다운 장면을 촬영하는 것을 추천합니다.",
                         "externalURL": "https://www.recamp.co.jp/recamp%E5%88%A5%E5%BA%9C%E5%BF%97%E9%AB%98%E6%B9%96",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -621,7 +621,7 @@
                         "id": 145,
                         "documentId": "ndibwc6kzg3gud9w03qwrde6",
                         "slug": "Tanoura-Beach",
-                        "label": "야키토��� 범 오모야",
+                        "label": "야키토리 범 오모야",
                         "address": "일본 〒870-0100 오이타현 오이타시 간자키 4253",
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3912072576054!2d131.5474087!3d33.256249200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1115d167fe9%3A0xba67a416773d5b1c!2sTanoura%20beach!5e0!3m2!1sen!2sjp!4v1749359533520!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 25,
@@ -822,7 +822,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "\"다카사키야마 자연동물원은 오이타시 간자키 지역에 위치한 야생 원숭이(일본 원숭이)를 주인공으로 하는 자연동물 공원으로, 규슈 지역에서 가장 대표적인 가족 야외 명소 중 하나입니다. 공원 내 원숭이들은 자연 산림에서 생활하며, 방문객들은 가까이에서 이들의 자연스러운 모습을 관찰하며 사람과 동물이 공존하는 조화로운 분위기를 경험할 수 있습니다.\n\n이곳은 울타리 없는 디자인으로 유명하며, 원숭이들이 공원 내에서 자유롭게 활동하고 매우 활발하며 사람을 두려워하지 않습니다. 원숭이들의 생활을 관찰하는 것 외에도, 공원 측은 정기적인 먹이 주기 해설을 진행하여 방문객들이 원숭이의 습성과 집단 행동을 이해하도록 돕습니다. 특히 가족 단위 방문객과 생태 애호가들에게 인기가 많습니다.\n\n공원 내에는 매표소, 간단한 기념품 가게, 정보 전시 공간이 마련되어 교육적인 여행지로도 이상적입니다. 공원은 오이타 마린 팰리스 수족관 우미타마고와 인접해 있어 반나절에서 하루 동안의 연계 관광 코스로 계획할 수 있습니다.",
+                        "highlight": "\"다카사키야마 자연동물원은 오이타시 간자키 지역에 위치한 야생 원숭이(일본 원숭이)를 주인공으로 하는 자연동물 공원으로, 규슈 지역에서 가장 대표적인 가족 야외 명소 중 하나입니다. 공원 내 원숭이들은 자연 산림에서 생활하며, ��문객들은 가까이에서 이들의 자연스러운 모습을 관찰하며 사람과 동물이 공존하는 조화로운 분위기를 경험할 수 있습니다.\n\n이곳은 울타리 없는 디자인으로 유명하며, 원숭이들이 공원 내에서 자유롭게 활동하고 매우 활발하며 사람을 두려워하지 않습니다. 원숭이들의 생활을 관찰하는 것 외에도, 공원 측은 정기적인 먹이 주기 해설을 진행하여 방문객들이 원숭이의 습성과 집단 행동을 이해하도록 돕습니다. 특히 가족 단위 방문객과 생태 애호가들에게 인기가 많습니다.\n\n공원 내에는 매표소, 간단한 기념품 가게, 정보 전시 공간이 마련되어 교육적인 여행지로도 이상적입니다. 공원은 오이타 마린 팰리스 수족관 우미타마고와 인접해 있어 반나절에서 하루 동안의 연계 관광 코스로 계획할 수 있습니다.",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",

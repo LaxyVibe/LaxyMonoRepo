@@ -6,12 +6,12 @@
             "name": "family-room-02",
             "label": "Family Room 2",
             "headline": null,
-            "address": "2 Chome-6-6 Kitahama, Beppu, Oita 874-0920",
+            "address": "Shin'yo Building, 2-6-6 Kitahama, Beppu City, Oita Prefecture 874-0920",
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>- Check-in: After 3:00 PM<br>- Check-out: Before 10:00 AM</p>\n<p>We are pleased to offer convenient options for early check-in and late check-out. Depending on the availability and occupancy, we can provide a minimum of three hours for early check-in and up to three hours for late check-out. Kindly note that additional charges of 1,000 yen per hour apply for these services. We will gladly assist you in making the necessary arrangements. :)</p>",
             "amenities": "<p>- Bathtub<br>- Books and toys<br>- Shampoo, Conditioner, and Body Wash<br>- Hair dryers<br>- Bidet<br>- Washing machine<br>- Cutlery<br>- Table<br>- Air conditioner</p>",
-            "houseRules": "<div class=\"ewa-rteLine\">- 5 guests maximum<br>- No pets<br>- No smoking</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 4 guests maximum<br>- No pets<br>- No smoking</div>",
             "slider": [
                 {
                     "id": 22,
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 376,
+                    "id": 1140,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 377,
+                    "id": 1141,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 5,

@@ -6,12 +6,12 @@
             "name": "family-room-03",
             "label": "Family Room 3",
             "headline": null,
-            "address": "大分縣別府市北濱 2 丁目 6-6 郵編 874-0920",
+            "address": "〒874-0920 大分縣別府市北濱2町目6-6信用大樓",
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 浴缸</div>\n<div class=\"ewa-rteLine\">- 洗髮乳、潤髮乳和沐浴乳</div>\n<div class=\"ewa-rteLine\">- 吹風機</div>\n<div class=\"ewa-rteLine\">- 免治馬桶</div>\n<div class=\"ewa-rteLine\">- 洗衣機</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空調</div>",
-            "houseRules": "<div class=\"ewa-rteLine\">\n<div class=\"ewa-rteLine\">-最多可入住5位房客</div>\n<div class=\"ewa-rteLine\">- 禁止攜帶寵物</div>\n<div class=\"ewa-rteLine\">-禁止吸煙</div>\n</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">\n<div class=\"ewa-rteLine\">-最多可入住4位房客</div>\n<div class=\"ewa-rteLine\">- 禁止攜帶寵物</div>\n<div class=\"ewa-rteLine\">-禁止吸煙</div>\n</div>",
             "slider": [
                 {
                     "id": 26,
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 485,
+                    "id": 1144,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 484,
+                    "id": 1145,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -396,7 +396,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.6907363219098!2d131.504148!3d33.2745879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6c3b67a8ff7%3A0x3feb11a15c177bc1!2sTomonaga%20Bakery!5e0!3m2!1sen!2sjp!4v1749359298103!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-23-0969",
-                        "highlight": "創業超過百年的「友永パン屋」是別府當地歷史最悠久、人氣最高的老字號麵包店之一。自大正時代創業以來，店舖始終堅持使用傳統製法與自家改良的配方，將一個個樸實無華卻溫暖人心的手作麵包，帶給每一位顧客。\n\n這裡最受歡迎的產品包括經典的紅豆麵包（つぶあんパン）與奶油法國麵包，內餡不會過甜，口感柔軟有彈性，老顧客絡繹不絕。不論是當地居民還是觀光客，常常一早就來排隊，只為搶購剛出爐的熱騰騰麵包。\n\n店內僅提供外帶，不設內用座��，也無宅配服務。由於數量有限，熱門商品常常在早上就售罄，建議早點前往以免向隅。",
+                        "highlight": "創業超過百年的「友永パン屋」是別府當地歷史最悠久、人氣最高的老字號麵包店之一。自大正時代創業以來，店舖始終堅持使用傳統製法與自家改良的配方，將一個個樸實無華卻溫暖人心的手作麵包，帶給每一位顧客。\n\n這裡最受歡迎的產品包括經典的紅豆麵包（つぶあんパン）與奶油法國麵包，內餡不會過甜，口感柔軟有彈性，老顧客絡繹不絕。不論是當地居民還是觀光客，常常一早就來排隊，只為搶購剛出爐的熱騰騰麵包。\n\n店內僅提供外帶，不設內用座位，也無宅配服務。由於數量有限，熱門商品常常在早上就售罄，建議早點前往以免向隅。",
                         "externalURL": "https://www.instagram.com/tomonaga_panya/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,
