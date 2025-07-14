@@ -105,7 +105,10 @@ export const getPOIsByType = async (clientId, suiteId, type, language = 'en') =>
       // Create a map of slug to weight for quick lookup
       const weightMap = new Map();
       poiRecommendations.data.forEach(item => {
-        weightMap.set(item.poi.slug, item[weightField] || 0);
+        // Add null check for item.poi
+        if (item && item.poi && item.poi.slug) {
+          weightMap.set(item.poi.slug, item[weightField] || 0);
+        }
       });
       
       // Sort POIs by their weights (ascending order - lower weight = higher priority)
@@ -122,6 +125,11 @@ export const getPOIsByType = async (clientId, suiteId, type, language = 'en') =>
       
       pois = poiRecommendations.data
         .filter(item => {
+          // Add null checks for item and item.poi
+          if (!item || !item.poi || !item.poi.type) {
+            return false;
+          }
+          
           // Include POIs with positive weight and matching type
           const hasWeight = item[weightField] > 0;
           const matchesType = item.poi.type === type;
