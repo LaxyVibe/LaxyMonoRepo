@@ -6,7 +6,7 @@
             "name": "premium-suite-02",
             "label": "Premium Suite 2",
             "headline": null,
-            "address": "大分县别府市站前本町8-17 邮编 874-0934",
+            "address": "〒874-0934 大分县别府市駅前本町8-17Nouvelle",
             "addressURL": "https://maps.app.goo.gl/oz4tgL46mvXGsFAY7",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 后<br>退房: 上午 10:00 前</p>\n<p>我们很高兴提供便捷的提前入住和延迟退房选择。根据客房供应情况和入住率，我们可提供最少三小时的提前入住和最多三小时的延迟退房。请注意，这些服务每小时将收取 1,000 日元的额外费用。我们将很乐意协助您进行必要的安排。 :)</p>",
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 747,
+                    "id": 1163,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 746,
+                    "id": 1164,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -256,7 +256,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2133157247627!2d131.5039933!3d33.2870819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6df796c3b93%3A0xcdc0fb800ae8b95e!2sFukuya%20So-Honten!5e0!3m2!1sen!2sjp!4v1749359288720!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-25-9471",
-                        "highlight": "\"位于别府市京町的“ラーメン工房 ふくや総本店”是一家老字号的拉面专门店，以实在的味道与浓厚豚骨汤头闻名。店面外观朴实低调，内部则是简约舒适的日式设计，气氛亲切，是许多当地人与熟客的���常用餐首选。\n\n本店坚持以传统手法熬制豚骨汤头，香气浓郁但不油腻，配上弹牙的中细面条，呈现出一碗风味十足的经典九州拉面。除了基本款，还提供蔬菜拉面、叉烧加量版本，以及辣味变化，满足不同食客的口味需求。\n\n店内提供座位内用，也开放外带服务，非常适合在行程紧凑的旅途中快速品尝一餐热腾腾的拉面。无论是当作午餐还是晚餐的选择，这里都能提供一碗令人满足的热汤拉面。",
+                        "highlight": "\"位于别府市京町的“ラーメン工房 ふくや総本店”是一家老字号的拉面专门店，以实在的味道与浓厚豚骨汤头闻名。店面外观朴实低调，内部则是简约舒适的日式设计，气氛亲切，是许多当地人与熟���的日常用餐首选。\n\n本店坚持以传统手法熬制豚骨汤头，香气浓郁但不油腻，配上弹牙的中细面条，呈现出一碗风味十足的经典九州拉面。除了基本款，还提供蔬菜拉面、叉烧加量版本，以及辣味变化，满足不同食客的口味需求。\n\n店内提供座位内用，也开放外带服务，非常适合在行程紧凑的旅途中快速品尝一餐热腾腾的拉面。无论是当作午餐还是晚餐的选择，这里都能提供一碗令人满足的热汤拉面。",
                         "externalURL": "https://fukuya-ramen.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -536,7 +536,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4244488848994!2d131.4910055!3d33.28155710000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6f020482965%3A0x9e5d27cb752123a8!2sBeppu%20Park!5e0!3m2!1sen!2sjp!4v1749359512569!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1473",
-                        "highlight": "别府公园是别府市中心面积最大的都市绿地，占地辽阔、景色四季各异，是当地居民与旅客放松身心、晨间运动与亲子散步的热门地点。园内设有广阔草地、竹林、松树步道，以及春季盛开的樱花与梅花林，是摄影与赏花的理想之地。\n\n除了自然景观，公园也常被用作当地活动或祭典场地，节庆期间气氛热闹，平日则清幽宁静，是深入体验别府生活节奏的好场���。园区步道平缓好走，适合慢跑、遛狗、野餐或在树荫下小憩。\n\n别府公园全年无栅栏开放，并允许携带狗只同行，十分友善宠物家庭。地点邻近市区，交通便利，无论早晨或傍晚，都能在此感受自然与城市交融的舒适节奏。",
+                        "highlight": "别府公园是别府市中心面积最大的都市绿地，占地辽阔、景色四季各异，是当地居民与旅客放松身心、晨间运动与亲子散步的热门地点。园内设有广阔草地、竹林、松树步道，以及春季盛开的樱花与梅花林，是摄影与赏花的理想之地。\n\n除了自然景观，公园也常被用作当地活动或祭典场地，节庆期间气氛热闹，平日则清幽宁静，是深入体验别府生活节奏的���场所。园区步道平缓好走，适合慢跑、遛狗、野餐或在树荫下小憩。\n\n别府公园全年无栅栏开放，并允许携带狗只同行，十分友善宠物家庭。地点邻近市区，交通便利，无论早晨或傍晚，都能在此感受自然与城市交融的舒适节奏。",
                         "externalURL": "http://www.city.beppu.oita.jp/sisetu/kouen_tyuusyajyou/03kouen_03-01beppu.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 26,
@@ -822,7 +822,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然动物园位于大分市神崎地区，是一座以野生猕猴（日本猕猴）为主角的自然动物公园，也是九州地区最具代表性的亲子户外景点之一。园内的猴群生活在天然山林中，游客可近距离观察它们自然生活的样貌，体验人与动物共处的和谐氛围。\n\n这里以无栅栏设计闻名，猴子们可自由在园区活动，十分活泼且不怕人。除了观看猴群的生活，园方还会安排定时喂食解说，帮助旅客了解猴子的习性与群体行为，特别受亲子与生态爱好者欢迎。\n\n园区附设有购票处、简单的纪念品商店与资讯展览空间，可作为教育性旅游���理想场域。园区与大分海洋水族馆 うみたまご相邻，可安排成半日至一日的连线观光行程。",
+                        "highlight": "高崎山自然动物园位于大分市神崎地区，是一座以野生猕猴（日本猕猴）为主角的自然动物公园，也是九州地区最具代表性的亲子户外景点之一。园内的猴群生活在天然山林中，游客可近距离观察它们自然生活的样貌，体验人与动物共处的和谐氛围。\n\n这里以无栅栏设计闻名，猴子们可自由在园区活动，十分活泼且不怕人。除了观看猴群的生活，园方还会安排定时喂食解说，帮助旅客了解猴子的习性与群体行为，特别受亲子与生态爱好者欢迎。\n\n园区附设有购票处、简单的纪念品商店与资讯展览空间，可作为教育性旅游的理想场域。园区与大分海洋水族馆 うみたまご相邻，可安排成半日至一日的连线观光行程。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -887,7 +887,7 @@
                             {
                                 "id": 26,
                                 "documentId": "y0fm6ubj5q6j89tv7xchn360",
-                                "name": "���气景点",
+                                "name": "人气景点",
                                 "color": "GREY"
                             }
                         ],

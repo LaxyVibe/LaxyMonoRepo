@@ -52,6 +52,35 @@ const loadPOIData = async (poiSlug, language, suiteId) => {
     }
   }
   
+  // If no POI found in suite data, try loading directly from POI recommendations as fallback
+  if (!foundPOI) {
+    try {
+      const poiRecommendationsModule = await import(`../../mocks/poi-recommendations/${language}.json`);
+      const poiRecommendations = poiRecommendationsModule.default;
+      
+      const recommendationItem = poiRecommendations.data.find(item => item.poi.slug === poiSlug);
+      if (recommendationItem) {
+        foundPOI = {
+          id: recommendationItem.poi.id,
+          documentId: recommendationItem.poi.documentId,
+          slug: recommendationItem.poi.slug,
+          label: recommendationItem.poi.label,
+          address: recommendationItem.poi.address,
+          highlight: recommendationItem.poi.highlight,
+          externalURL: recommendationItem.poi.externalURL,
+          dial: recommendationItem.poi.dial,
+          laxyURL: recommendationItem.poi.laxyURL,
+          type: recommendationItem.poi.type,
+          nativeLanguageCode: recommendationItem.poi.nativeLanguageCode,
+          tag_labels: recommendationItem.poi.tag_labels || [],
+          coverPhoto: recommendationItem.poi.coverPhoto
+        };
+      }
+    } catch (error) {
+      console.warn(`Failed to load POI recommendations as fallback:`, error);
+    }
+  }
+  
   return foundPOI;
 };
 

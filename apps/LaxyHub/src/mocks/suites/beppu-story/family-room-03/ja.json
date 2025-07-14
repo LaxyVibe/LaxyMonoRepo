@@ -6,12 +6,12 @@
             "name": "family-room-03",
             "label": "Family Room 3",
             "headline": null,
-            "address": "〒874-0920 大分県別府市北浜2丁目6-6",
+            "address": "〒874-0920 大分県別府市北浜2町目6-6信用ビル",
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>チェックイン: 午後 3:00 以降<br>チェックアウト: 午前 10:00 まで</p>\n<p>お客様の利便性のため、アーリーチェックインとレイトチェックアウトの便利なオプションをご用意しております。空室状況と稼働率に応じて、アーリーチェックインは最低3時間、レイトチェックアウトは最大3時間までご利用いただけます。これらのサービスには1時間あたり1,000円の追加料金がかかりますので、ご了承ください。必要な手配は喜んでお手伝いさせていただきます。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- バスタブ</div>\n<div class=\"ewa-rteLine\">- シャンプー、コンディショナー、ボディソープ</div>\n<div class=\"ewa-rteLine\">- ヘアドライヤー</div>\n<div class=\"ewa-rteLine\">- 温水洗浄便座</div>\n<div class=\"ewa-rteLine\">- 洗濯機</div>\n<div class=\"ewa-rteLine\">- カトラリー</div>\n<div class=\"ewa-rteLine\">- テーブル</div>\n<div class=\"ewa-rteLine\">- エアコン</div>",
-            "houseRules": "<div class=\"ewa-rteLine\">- 最大宿泊人数：5名様まで</div>\n<div class=\"ewa-rteLine\">- ペット不可</div>\n<div class=\"ewa-rteLine\">- 全室禁煙</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">- 最大宿泊人数：4名様まで</div>\n<div class=\"ewa-rteLine\">- ペット不可</div>\n<div class=\"ewa-rteLine\">- 全室禁煙</div>",
             "slider": [
                 {
                     "id": 26,
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 488,
+                    "id": 1099,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 489,
+                    "id": 1100,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -564,7 +564,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2953375788084!2d131.50515289999998!3d33.2849357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6ded9706d85%3A0xc114a1dd39d3335!2sMatogahama%20Park!5e0!3m2!1sen!2sjp!4v1749359474655!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1111",
-                        "highlight": "\"「的ヶ浜���園」は、別府市北的ヶ浜町にある海岸に隣接する開放型の市民公園で、開放的な眺望と静かな雰囲気が特徴です。地元住民や観光客に人気の散策・休憩スポットとなっています。\n\n公園は別府湾に面しており、海岸沿いには遊歩道が整備されているため、朝のジョギング、夕方の散歩、日の出や海の景色を眺めるのに最適です。広々とした平坦な敷地は緑豊かで、犬の散歩、ピクニック、子供を遊ばせるのに理想的な場所です。さらに、ペット同伴が可能なので、愛犬家の方々にも非常に親しまれています。\n\n市内中心部や海に近く、複数の温泉施設や飲食店まで徒歩圏内とアクセスも便利で、別府の生活風景の一部を形成しています。早朝の潮風も夜の静けさも、別府ならではののんびりとした魅力を感じさせてくれます。",
+                        "highlight": "\"「的ヶ浜公園」は、別府市北的ヶ浜町にある海岸に隣接する開放型の市民公園で、開放的な眺望と静かな雰囲気が特徴です。地元住民や観光客に人気の散策・休憩スポットとなっています。\n\n公園は別府湾に面しており、海岸沿いには遊歩道が整備されているため、朝のジョギング、夕方の散歩、日の出や海の景色を眺めるのに最適です。広々とした平坦な敷地は緑豊かで、犬の散歩、ピクニック、子供を遊ばせるのに理想的な場所です。さらに、ペット同伴が可能なので、愛犬家の方々にも非常に親しまれています。\n\n市内中心部や海に近く、複数の温泉施設や飲食店まで徒歩圏内とアクセスも便利で、別府の生活風景の一部を形成しています。早朝の潮風も夜の静けさも、別府ならではののんびりとした魅力を感じさせてくれます。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -764,7 +764,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 24,
@@ -816,7 +816,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然動物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のない���ザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
+                        "highlight": "高崎山自然動物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",

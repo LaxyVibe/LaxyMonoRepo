@@ -6,7 +6,7 @@
             "name": "premium-suite-01",
             "label": "Premium Suite 1",
             "headline": null,
-            "address": "大分縣別府市站前本町8-17 郵編 874-0934 ",
+            "address": "〒874-0934 大分縣別府市駅前本町8-17Nouvelle",
             "addressURL": "https://maps.app.goo.gl/oz4tgL46mvXGsFAY7",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 634,
+                    "id": 1157,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 635,
+                    "id": 1158,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -256,7 +256,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2133157247627!2d131.5039933!3d33.2870819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6df796c3b93%3A0xcdc0fb800ae8b95e!2sFukuya%20So-Honten!5e0!3m2!1sen!2sjp!4v1749359288720!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-25-9471",
-                        "highlight": "\"位於別府市京町的「ラーメン工房 ふくや総本店」是一家老字號的拉麵專門店，以實在的味道與濃厚豚骨湯頭聞名。店面外觀樸實低調，內部則是簡約舒適的日式設計，氣氛親切��是許多當地人與熟客的日常用餐首選。\n\n本店堅持以傳統手法熬製豚骨湯頭，香氣濃郁但不油膩，配上彈牙的中細麵條，呈現出一碗風味十足的經典九州拉麵。除了基本款，還提供蔬菜拉麵、叉燒加量版本，以及辣味變化，滿足不同食客的口味需求。\n\n店內提供座位內用，也開放外帶服務，非常適合在行程緊湊的旅途中快速品嚐一餐熱騰騰的拉麵。無論是當作午餐還是晚餐的選擇，這裡都能提供一碗令人滿足的熱湯拉麵。\"",
+                        "highlight": "\"位於別府市京町的「ラーメン工房 ふくや総本店」是一家老字號的拉麵專門店，以實在的味道與濃厚豚骨湯頭聞名。店面外觀樸實低調，內部則是簡約舒適的日式設計，氣氛親切，是許多當地人與熟客的日常用餐首選。\n\n本店堅持以傳統手法熬製豚骨湯頭，香氣濃郁但不油膩，配上彈牙的中細麵條，呈現出一碗風味十足的經典九州拉麵。除了基本款，還提供蔬菜拉麵、叉燒加量版本，以及辣味變化，滿足不同食客的口味需求。\n\n店內提供座位內用，也開放外帶服務，非常適合在行程緊湊的旅途中快速品嚐一餐熱騰騰的拉麵。無論是當作午餐還是晚餐的選擇，這裡都能提供一碗令人滿足的熱湯拉麵。\"",
                         "externalURL": "https://fukuya-ramen.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -654,7 +654,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.5628792715493!2d131.5033774!3d33.2779343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6c2d16bd203%3A0x325a21d5c2a8dfa8!2sYayoi%20Tengu!5e0!3m2!1sen!2sjp!4v1749359498895!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": null,
-                        "highlight": "「やよい天狗」是位於別府市北濱、彌生商店街入口處的特色地標雕像，以巨大的天狗面具（日本傳說中的山林守護神）為造型，象徵著驅邪與守護。這座雕像不僅是當地信仰的象徵，也成為來別府觀光時的熱門拍照點。\n\n天狗的鼻子高挺，���情威嚴，據說代表男性力量與庇佑之意。許多遊客會站在其前方或一旁留影，尤其在夜晚點燈時更具神秘感。據說從雕像背面觀察還能發現一些「隱藏彩蛋」，讓遊客多了一分趣味探索。\n\n地點鄰近別府站，交通方便，也與彌生商店街連接，是在地人過往繁華的購物區之一。雖然如今人潮不如以往，但這座天狗雕像仍默默守護著別府的街角與記憶，是散步途中不可錯過的文化景觀。",
+                        "highlight": "「やよい天狗」是位於別府市北濱、彌生商店街入口處的特色地標雕像，以巨大的天狗面具（日本傳說中的山林守護神）為造型，象徵著驅邪與守護。這座雕像不僅是當地信仰的象徵，也成為來別府觀光時的熱門拍照點。\n\n天狗的鼻子高挺，表情威嚴，據說代表男性力量與庇佑之意。許多遊客會站在其前方或一旁留影，尤其在夜晚點燈時更具神秘感。據說從雕像背面觀察還能發現一些「隱藏彩蛋」，讓遊客多了一分趣味探索。\n\n地點鄰近別府站，交通方便，也與彌生商店街連接，是在地人過往繁華的購物區之一。雖然如今人潮不如以往，但這座天狗雕像仍默默守護著別府的街角與記憶，是散步途中不可錯過的文化景觀。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -738,7 +738,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "別府在聖誕節週的週六與週日，都會舉辦盛大的冬季慶典——別府聖誕花火幻想曲 (べっぷクリスマスHanabiファンタジア)。這個為期兩天的活動是別府冬季的一大亮點。\n\n與七月底的夏日祭典花火僅施放一天不同，此時期的花火大會連續兩晚點亮別府的夜空，景色格外迷人與壯觀。活動現場設置了豐富的屋台，提供各式美味小吃與飲品，讓遊客在享受節慶氛圍的同時，也能大飽口福。\n\n由於這場冬季盛會廣受歡迎，別府市內的住宿設施會迅速滿房。因此，強烈建議計劃前往的旅客，務必提前至少兩個月預訂好住宿，以確保能順利參與這場浪漫又精彩的聖誕花火盛宴。",
+                        "highlight": "別府在聖誕節週的週六與週日，都會舉辦盛大的冬季慶典——別府聖誕花火幻想曲 (べっぷクリスマスHanabiファンタジア)。這個��期兩天的活動是別府冬季的一大亮點。\n\n與七月底的夏日祭典花火僅施放一天不同，此時期的花火大會連續兩晚點亮別府的夜空，景色格外迷人與壯觀。活動現場設置了豐富的屋台，提供各式美味小吃與飲品，讓遊客在享受節慶氛圍的同時，也能大飽口福。\n\n由於這場冬季盛會廣受歡迎，別府市內的住宿設施會迅速滿房。因此，強烈建議計劃前往的旅客，務必提前至少兩個月預訂好住宿，以確保能順利參與這場浪漫又精彩的聖誕花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,

@@ -6,12 +6,12 @@
             "name": "family-room-02",
             "label": "Family Room 2",
             "headline": null,
-            "address": "大分縣別府市北濱 2 丁目 6-6 郵編 874-0920",
+            "address": "〒874-0920 大分縣別府市北濱2町目6-6信用大樓",
             "addressURL": "https://maps.app.goo.gl/z3LNWA1QGYsV4t7h9",
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<p>- 浴缸<br>- 書籍和玩具<br>- 洗髮乳、潤髮乳和沐浴乳<br>- 吹風機<br>- 免治馬桶<br>- 洗衣機<br>- 餐具<br>- 桌子<br>- 空調</p>",
-            "houseRules": "<div class=\"ewa-rteLine\">\n<div class=\"ewa-rteLine\">- 最多可入住5位房客</div>\n<div class=\"ewa-rteLine\">- 禁止攜帶寵物</div>\n<div class=\"ewa-rteLine\">- 禁止吸煙</div>\n</div>",
+            "houseRules": "<div class=\"ewa-rteLine\">\n<div class=\"ewa-rteLine\">- 最多可入住4位房客</div>\n<div class=\"ewa-rteLine\">- 禁止攜帶寵物</div>\n<div class=\"ewa-rteLine\">- 禁止吸煙</div>\n</div>",
             "slider": [
                 {
                     "id": 22,
@@ -22,12 +22,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 374,
+                    "id": 1136,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 375,
+                    "id": 1137,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -54,7 +54,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "別府八湯溫泉祭是當地最大的溫泉節慶，通常在三月底至四月初為期���天。期間，許多市營溫泉免費開放，整個城鎮洋溢著歡樂氣氛。慶典包含遊行、傳統表演，以及獨特的「潑湯祭」，參與者將溫泉水潑灑向人群，場面熱鬧非凡。\n\n另一獨特活動是扇山火祭，這是在扇山上放火的儀式，旨在祈求一年的健康、長壽與生意興旺。然而，請注意此火祭通常在二月初舉行，與溫泉祭的日期不同，是別府冬季獨有的壯觀景象。",
+                        "highlight": "別府八湯溫泉祭是當地最大的溫泉節慶，通常在三月底至四月初為期五天。期間，許多市營溫泉免費開放，整個城鎮洋溢著歡樂氣氛。慶典包含遊行、傳統表演，以及獨特的「潑湯祭」，參與者將溫泉水潑灑向人群，場面熱鬧非凡。\n\n另一獨特活動是扇山火祭，這是在扇山上放火的儀式，旨在祈求一年的健康、長壽與生意興旺。然而，請注意此火祭通常在二月初舉行，與溫泉祭的日期不同，是別府冬季獨有的壯觀景象。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -256,7 +256,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2133157247627!2d131.5039933!3d33.2870819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6df796c3b93%3A0xcdc0fb800ae8b95e!2sFukuya%20So-Honten!5e0!3m2!1sen!2sjp!4v1749359288720!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-25-9471",
-                        "highlight": "\"位於別府市京町的「ラーメン工房 ふくや総本店」是一家老字��的拉麵專門店，以實在的味道與濃厚豚骨湯頭聞名。店面外觀樸實低調，內部則是簡約舒適的日式設計，氣氛親切，是許多當地人與熟客的日常用餐首選。\n\n本店堅持以傳統手法熬製豚骨湯頭，香氣濃郁但不油膩，配上彈牙的中細麵條，呈現出一碗風味十足的經典九州拉麵。除了基本款，還提供蔬菜拉麵、叉燒加量版本，以及辣味變化，滿足不同食客的口味需求。\n\n店內提供座位內用，也開放外帶服務，非常適合在行程緊湊的旅途中快速品嚐一餐熱騰騰的拉麵。無論是當作午餐還是晚餐的選擇，這裡都能提供一碗令人滿足的熱湯拉麵。\"",
+                        "highlight": "\"位於別府市京町的「ラーメン工房 ふくや総本店」是一家���字號的拉麵專門店，以實在的味道與濃厚豚骨湯頭聞名。店面外觀樸實低調，內部則是簡約舒適的日式設計，氣氛親切，是許多當地人與熟客的日常用餐首選。\n\n本店堅持以傳統手法熬製豚骨湯頭，香氣濃郁但不油膩，配上彈牙的中細麵條，呈現出一碗風味十足的經典九州拉麵。除了基本款，還提供蔬菜拉麵、叉燒加量版本，以及辣味變化，滿足不同食客的口味需求。\n\n店內提供座位內用，也開放外帶服務，非常適合在行程緊湊的旅途中快速品嚐一餐熱騰騰的拉麵。無論是當作午餐還是晚餐的選擇，這裡都能提供一碗令人滿足的熱湯拉麵。\"",
                         "externalURL": "https://fukuya-ramen.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -536,7 +536,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4244488848994!2d131.4910055!3d33.28155710000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6f020482965%3A0x9e5d27cb752123a8!2sBeppu%20Park!5e0!3m2!1sen!2sjp!4v1749359512569!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1473",
-                        "highlight": "\"別府公園是別府市中心面積最大的都市綠地，佔地遼闊、景色四季各異，是當地居民與��客放鬆身心、晨間運動與親子散步的熱門地點。園內設有廣闊草地、竹林、松樹步道，以及春季盛開的櫻花與梅花林，是攝影與賞花的理想之地。\n\n除了自然景觀，公園也常被用作當地活動或祭典場地，節慶期間氣氛熱鬧，平日則清幽寧靜，是深入體驗別府生活節奏的好場所。園區步道平緩好走，適合慢跑、遛狗、野餐或在樹蔭下小憩。\n\n別府公園全年無柵欄開放，並允許攜帶狗隻同行，十分友善寵物家庭。地點鄰近市區，交通便利，無論早晨或傍晚，都能在此感受自然與城市交融的舒適節奏。",
+                        "highlight": "\"別府公園是別府市中心面積最大的都市綠地，佔地遼闊、景色四季各異，是當地居民與旅客放鬆身心、晨間運動與親子散步的熱門地點。園內設有廣闊草地、竹林、松樹步道，以及春季盛開的櫻花與梅花林，是攝影與賞花的理想之地。\n\n除了自然景觀，公園也常被用作當地活動或祭典場地，節慶期間氣氛熱鬧，平日則清幽寧靜，是深入體驗別府生活節奏的好場所。園區步道平緩好走，適合慢跑、遛狗、野餐或在樹蔭下小憩。\n\n別府公園全年無柵欄開放，並允許攜帶狗隻同行，十分友善寵物家庭。地點鄰近市區，交通便利，無論早晨或傍晚，都能在此感受自然與城市交融的舒適節奏。",
                         "externalURL": "http://www.city.beppu.oita.jp/sisetu/kouen_tyuusyajyou/03kouen_03-01beppu.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -682,7 +682,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.7712648138936!2d131.4137658!3d33.35092509999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a82560d12c2f%3A0x6f9e5e00fb890acd!2sKyushu%20Wildlife%20Park%20African%20Safari!5e0!3m2!1sen!2sjp!4v1749359580506!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 978-48-2331",
-                        "highlight": "九州自然動物公園，又名「African Safari」，是一座位於大分縣宇佐市的廣闊野生動物園，以自由放養方式展示非洲草原風格的動物生態，是親子與動物愛好者不可錯過的旅遊亮點。\n\n園區最大特色是搭乘鐵籠裝甲的「叢林巴士」，可在專屬路線中近距離觀察獅子、大象、長頸鹿、斑馬、駱駝等動物，還可以親手餵食，帶來極具臨場感的野生動物互動體驗。除了叢林巴士外，也設有步行區與小型動物觸摸園，適合各年齡層遊客悠閒參觀。\n\n園內附設商店、餐飲區與便利的停車場，亦提供與大分市、別府市間接駁的交通方案，是安排一日親子郊遊或團體旅遊的理想景點。",
+                        "highlight": "九州自然動物公園，又名「African Safari」，是一座位於大分縣宇佐市的廣闊野生動物園，以自由放養方式展示非洲草原風格的動物生態，是親子��動物愛好者不可錯過的旅遊亮點。\n\n園區最大特色是搭乘鐵籠裝甲的「叢林巴士」，可在專屬路線中近距離觀察獅子、大象、長頸鹿、斑馬、駱駝等動物，還可以親手餵食，帶來極具臨場感的野生動物互動體驗。除了叢林巴士外，也設有步行區與小型動物觸摸園，適合各年齡層遊客悠閒參觀。\n\n園內附設商店、餐飲區與便利的停車場，亦提供與大分市、別府市間接駁的交通方案，是安排一日親子郊遊或團體旅遊的理想景點。",
                         "externalURL": "https://africansafari.co.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -770,7 +770,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Jigoku-Hell-Tour",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,
@@ -822,7 +822,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然動物園位於大分市神崎地區，是一座以野生獼猴（日本猕猴）為主角的自然動物公園，也是九州地區最具代表性的親子戶外景點之一。園內的猴群生活在天然山林中，遊客可近距離觀察牠們自然生活的樣貌，體驗人與動物共處的和諧氛圍。\n\n這裡以無柵欄設計聞名，猴子們可自由在園區活動，十分活潑且不怕人。除了觀看猴群的生活，園方還會安排定時餵食解說，幫助旅客了解猴子的習性與群體行為，特別受親子與生態愛好者歡迎。\n\n園區附設有購票處、簡單的紀念品商店與資訊展覽空間，可作為教育性旅遊的理想場域。園區與「大分海洋水族館 うみたまご」相鄰，可安排成半日至一日的連線觀光行程。",
+                        "highlight": "高崎山自然動物園位於大分市神崎地區，是一座以野生獼猴（日本猕猴）為主角的自然動物公園，也是九州地區最具代表性的親子戶外景點之一。園內的猴群生活在天然山林中，遊客可近距離觀察牠們自然生活的樣���，體驗人與動物共處的和諧氛圍。\n\n這裡以無柵欄設計聞名，猴子們可自由在園區活動，十分活潑且不怕人。除了觀看猴群的生活，園方還會安排定時餵食解說，幫助旅客了解猴子的習性與群體行為，特別受親子與生態愛好者歡迎。\n\n園區附設有購票處、簡單的紀念品商店與資訊展覽空間，可作為教育性旅遊的理想場域。園區與「大分海洋水族館 うみたまご」相鄰，可安排成半日至一日的連線觀光行程。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
