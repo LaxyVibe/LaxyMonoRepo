@@ -50,6 +50,15 @@ const StayInfo = () => {
   // Get the pageInfo configuration with navigation items
   const pageInfo = hubConfig?.data?.pageInfo;
 
+  // Filter out FAQ navigation item if FAQ data is empty
+  const navigationItems = pageInfo?.navigation?.filter(item => {
+    if (item.route === '/info/faq') {
+      const faqData = suiteData?.details?.data?.[0]?.faq;
+      return faqData && faqData.length > 0;
+    }
+    return true;
+  }) || [];
+
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
       {/* Header Image Section */}
@@ -174,7 +183,7 @@ const StayInfo = () => {
 
           {/* Navigation items */}
           <List sx={{ p: 0 }}>
-            {pageInfo.navigation && pageInfo.navigation.map((item, index) => (
+            {navigationItems.map((item, index) => (
               <ListItem
                 key={item.id || index}
                 button
