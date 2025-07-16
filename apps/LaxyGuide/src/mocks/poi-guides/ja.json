@@ -1,11 +1,82 @@
 {
-    "data": [],
+    "data": [
+        {
+            "id": 70,
+            "documentId": "t9el7436j8a0gtph9sm3zxbm",
+            "legacyTourCode": "JPN-BEPU-TUR-003",
+            "poi": {
+                "id": 119,
+                "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
+                "slug": "Asami-Shrine",
+                "label": "八幡朝見神社",
+                "address": "〒874-0812 大分県別府市朝見２丁目１５−１９",
+                "highlight": "八幡朝見神社は、別府市で最も歴史が古く、規模の大きい神社のひとつで、千年以上もの歴史を持ち、八幡大神を祀る荘厳な神域です。朝見山麓に鎮座し、古くから地元住民が健康、平安、家庭の和合を祈願する信仰の中心地でした。\n\n境内は静寂な雰囲気に包まれ、緑豊かな木々に囲まれています。建築様式は古風で優雅であり、鳥居、石灯籠、神橋、本殿など、至る所に年月の痕跡が漂います。春には桜が咲き誇り、神社全体がよりロマンチックで穏やかな雰囲気に包まれ、花見や写真撮影に最適な場所です。\n\nさらに、境内には「長寿の水」と称される湧き水があり、多くの地元の人々がわざわざ汲みに訪れる名水です。観光、参拝、あるいは心を落ち着ける散策など、八幡朝見神社は別府の歴史と文化を深く知るのに理想的な場所です。",
+                "externalURL": "http://www.asami.or.jp/",
+                "type": "attraction",
+                "nativeLanguageCode": "ja",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.8040574276943!2d131.4951489!3d33.27162169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6934ad40397%3A0x6477dc4b0952a412!2sHachiman%20Asami%20Shrine!5e0!3m2!1sen!2sjp!4v1749359524312!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "+81 977-23-1408",
+                "addressURL": null,
+                "tag_labels": [
+                    {
+                        "id": 30,
+                        "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                        "name": "散策",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 32,
+                    "documentId": "mjqr2uqo8dnjjiao94f4xut8",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993159/Asami_Shrine_e8e00db78f.jpg"
+                }
+            }
+        },
+        {
+            "id": 74,
+            "documentId": "yo67359un50i44hf0j5pgtvm",
+            "legacyTourCode": "JPN-BEPU-TUR-002",
+            "poi": {
+                "id": 203,
+                "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                "slug": "Hachiman-Kamado-Shrine",
+                "label": "八幡竈門神社",
+                "address": "〒874-0011 大分県別府市大字内竈1900番地",
+                "highlight": "別府に位置する八幡竈門神社は、西暦727年に創建され、八幡神と鬼にまつわる地元の伝承に深く根ざしています。夜明けまでに100段の石段を築くことを挑まれた鬼は、99段を完成させたところで逃げ出したとされ、その石段は今も神社へと続いており、急いで造られた様子を物語っています。近年、この神社は、主人公炭治郎と同じ「竈門」の名、鬼を退治する伝説、「竈門神楽」の舞、象徴的な龍の描写といった要素から、アニメ「鬼滅の刃」のファンの間で人気の「聖地」となっています。これにより、古来からの伝統と現代のポップカルチャーが融合した独特の場所となっています。",
+                "externalURL": "http://hachimannkamado.sub.jp/",
+                "type": "attraction",
+                "nativeLanguageCode": "ja",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "+81-977-66-1633",
+                "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                "tag_labels": [
+                    {
+                        "id": 24,
+                        "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                        "name": "人気観光スポット",
+                        "color": "GREY"
+                    },
+                    {
+                        "id": 30,
+                        "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                        "name": "散策",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 100,
+                    "documentId": "ofj2668p6ywoarqd54h9zri2",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
+                }
+            }
+        }
+    ],
     "meta": {
         "pagination": {
             "page": 1,
             "pageSize": 10000,
-            "pageCount": 0,
-            "total": 0
+            "pageCount": 1,
+            "total": 2
         }
     }
 }

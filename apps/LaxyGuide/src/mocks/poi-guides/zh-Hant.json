@@ -1,11 +1,82 @@
 {
-    "data": [],
+    "data": [
+        {
+            "id": 68,
+            "documentId": "t9el7436j8a0gtph9sm3zxbm",
+            "legacyTourCode": "JPN-BEPU-TUR-003",
+            "poi": {
+                "id": 117,
+                "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
+                "slug": "Asami-Shrine",
+                "label": "八幡朝見神社",
+                "address": "〒874-0812 大分縣別府市朝見2丁目15-19",
+                "highlight": "八幡朝見神社是別府市歷史最悠久、規模最大的神社之一，擁有超過千年的歷史，是祭祀八幡大神的莊嚴神域。神社坐落於朝見山麓，自古以來便是當地居民祈求健康、平安、家庭和諧的信仰中心。\n\n境內氣氛寧靜，綠蔭環繞，建築風格古樸典雅，鳥居、石燈籠、神橋與主殿等處處散發著歲月痕跡。春季櫻花綻放時，整個神社更顯浪漫祥和，是賞花與拍照的絕佳地點。\n\n此外，這裡還有一處被譽為「長壽之水」的湧泉，是許多當地人會特地前來汲取的名水。無論是觀光、參拜、還是散步沉澱心靈，八幡朝見神社都是深入認識別府歷史與文化的理想之地。",
+                "externalURL": "http://www.asami.or.jp/",
+                "type": "attraction",
+                "nativeLanguageCode": "ja",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.8040574276943!2d131.4951489!3d33.27162169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6934ad40397%3A0x6477dc4b0952a412!2sHachiman%20Asami%20Shrine!5e0!3m2!1sen!2sjp!4v1749359524312!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "+81 977-23-1408",
+                "addressURL": null,
+                "tag_labels": [
+                    {
+                        "id": 28,
+                        "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                        "name": "漫步",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 32,
+                    "documentId": "mjqr2uqo8dnjjiao94f4xut8",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993159/Asami_Shrine_e8e00db78f.jpg"
+                }
+            }
+        },
+        {
+            "id": 72,
+            "documentId": "yo67359un50i44hf0j5pgtvm",
+            "legacyTourCode": "JPN-BEPU-TUR-002",
+            "poi": {
+                "id": 200,
+                "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                "slug": "Hachiman-Kamado-Shrine",
+                "label": "八幡竈門神社",
+                "address": "〒874-0011 大分縣別府市大字內竈1900號",
+                "highlight": "位於別府的八幡竈門神社，創建於西元727年，深深植根於當地關於八幡神和惡鬼的傳說。相傳惡鬼被挑戰在黎明前築起100級石階，卻在完成99級後便匆忙逃離，這些石階至今仍通往神社，見證了當年倉促建造的痕跡。近年來，這座神社因其與主角炭治郎同為「竈門」之名、神社驅逐惡鬼的傳說、「竈門神樂」之舞以及象徵性的龍之描繪等多項元素，成為動畫《鬼滅之刃》粉絲們熱門的「聖地」。這也使得古老傳統與現代流行文化在此獨特融合。",
+                "externalURL": "http://hachimannkamado.sub.jp/",
+                "type": "attraction",
+                "nativeLanguageCode": "ja",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "+81-977-66-1633",
+                "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                "tag_labels": [
+                    {
+                        "id": 27,
+                        "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                        "name": "人氣景點",
+                        "color": "GREY"
+                    },
+                    {
+                        "id": 28,
+                        "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                        "name": "漫步",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 100,
+                    "documentId": "ofj2668p6ywoarqd54h9zri2",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
+                }
+            }
+        }
+    ],
     "meta": {
         "pagination": {
             "page": 1,
             "pageSize": 10000,
-            "pageCount": 0,
-            "total": 0
+            "pageCount": 1,
+            "total": 2
         }
     }
 }
