@@ -5,13 +5,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import AudioGuidePlayer from './AudioGuidePlayer.jsx';
+import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
 
 /**
  * Full-screen audio guide page component
  * Displays the complete audio guide player interface
  */
 export default function AudioGuidePage() {
-  const { tourId, stepId } = useParams();
+  const { tourId, stepId, audioLang } = useParams();
   const navigate = useNavigate();
   const { language } = useLanguage();
   const { 
@@ -23,8 +24,36 @@ export default function AudioGuidePage() {
     isLoading, 
     error,
     loadAudioGuide,
-    goToStep
+    goToStep,
+    audioLanguage,
+    audioLanguageRefreshKey,
+    setAudioLanguage,
+    clearAudioGuide,
+    pause
   } = useAudioGuide();
+
+  // Extract audio language from URL or use default
+  const { textLangCode, audioLangCode } = extractTextAndAudioLanguageFromPath(window.location.pathname);
+  const urlAudioLanguage = getValidAudioLanguageCode(audioLang || audioLangCode);
+
+  // Set audio language immediately on component mount if it's different
+  React.useLayoutEffect(() => {
+    if (urlAudioLanguage !== audioLanguage) {
+      console.log('🔍 AudioGuidePage setting audio language immediately:', urlAudioLanguage);
+      setAudioLanguage(urlAudioLanguage);
+    }
+  }, []); // Only run once on mount
+
+  // Set audio language from URL
+  React.useEffect(() => {
+    if (urlAudioLanguage !== audioLanguage) {
+      console.log('🔍 AudioGuidePage audio language change detected, clearing guide and setting new language:', urlAudioLanguage);
+      // Stop current audio and clear guide state for clean reload
+      pause();
+      clearAudioGuide();
+      setAudioLanguage(urlAudioLanguage);
+    }
+  }, [urlAudioLanguage, audioLanguage, setAudioLanguage, pause, clearAudioGuide]);
 
   // Debug logging for URL parameters and state
   console.log('🔍 AudioGuidePage Debug:');
@@ -44,21 +73,33 @@ export default function AudioGuidePage() {
     console.log('  currentGuide:', currentGuide);
     console.log('  currentGuide?.tourCode:', currentGuide?.tourCode);
     console.log('  currentGuide?.currentLanguage:', currentGuide?.currentLanguage);
+    console.log('  currentGuide?.audioLanguage:', currentGuide?.audioLanguage);
     console.log('  language:', language);
+    console.log('  urlAudioLanguage:', urlAudioLanguage);
     
-    // Only load if we have a tourId but either no guide loaded or wrong tour loaded
-    if (tourId && !isLoading && 
-        (!currentGuide || currentGuide.tourCode !== tourId || currentGuide.currentLanguage !== language)) {
-      console.log('🔍 Loading audio guide with tourId:', tourId, 'language:', language);
+    // Only load if we have a tourId but either:
+    // 1. No guide loaded
+    // 2. Wrong tour loaded  
+    // 3. Wrong UI language
+    // 4. Wrong audio language (this is the key fix)
+    const needsToLoad = tourId && !isLoading && 
+        (!currentGuide || 
+         currentGuide.tourCode !== tourId || 
+         currentGuide.currentLanguage !== language ||
+         currentGuide.audioLanguage !== urlAudioLanguage);
+         
+    if (needsToLoad) {
+      console.log('🔍 Loading audio guide with tourId:', tourId, 'language:', language, 'audioLanguage:', urlAudioLanguage);
       loadAudioGuide(tourId, language).catch(console.error);
     } else {
       console.log('🔍 Not loading audio guide. Reason:');
       console.log('  - No tourId:', !tourId);
       console.log('  - Is loading:', isLoading);
       console.log('  - Guide already loaded for this tour:', currentGuide?.tourCode === tourId);
-      console.log('  - Language matches:', currentGuide?.currentLanguage === language);
+      console.log('  - UI Language matches:', currentGuide?.currentLanguage === language);
+      console.log('  - Audio Language matches:', currentGuide?.audioLanguage === urlAudioLanguage);
     }
-  }, [tourId, currentGuide, isLoading, language]); // Check currentGuide.tourCode for proper comparison
+  }, [tourId, currentGuide, isLoading, language, urlAudioLanguage, audioLanguageRefreshKey]); // Add refresh key dependency
 
   React.useEffect(() => {
     console.log('🔍 AudioGuidePage useEffect #2 triggered:');
@@ -82,6 +123,28 @@ export default function AudioGuidePage() {
       }
     }
   }, [stepId, steps, currentStepIndex]); // Removed goToStep to prevent infinite loop
+
+  // Refresh current step when audio language changes
+  React.useEffect(() => {
+    // Wait for tour data to be reloaded with new audio language, then refresh current step
+    if (stepId && steps && steps.length > 0 && currentGuide && 
+        currentGuide.audioLanguage === urlAudioLanguage) {
+      console.log('🔍 AudioGuidePage checking if step needs refresh after tour reload:', {
+        stepId,
+        hasSteps: steps.length > 0,
+        guideAudioLang: currentGuide.audioLanguage,
+        urlAudioLang: urlAudioLanguage,
+        currentStepId: currentStep?.id
+      });
+      
+      // Find the target step again and go to it to refresh with new audio language
+      const targetStepIndex = steps.findIndex(step => step.id.toString() === stepId.toString());
+      if (targetStepIndex !== -1 && targetStepIndex !== currentStepIndex) {
+        console.log('🔍 AudioGuidePage re-going to step after tour reload:', targetStepIndex);
+        goToStep(targetStepIndex);
+      }
+    }
+  }, [stepId, steps, currentGuide, urlAudioLanguage, currentStep, currentStepIndex, goToStep]);
 
   const handleBackClick = () => {
     navigate(-1);
