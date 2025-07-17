@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>チェックイン: 午後 3:00 以降<br>チェックアウト: 午前 10:00 まで</p>\n<p>お客様の利便性のため、アーリーチェックインとレイトチェックアウトの便利なオプションをご用意しております。空室状況と稼働率に応じて、アーリーチェックインは最低3時間、レイトチェックアウトは最大3時間までご利用いただけます。これらのサービスには1時間あたり1,000円の追加料金がかかりますので、ご了承ください。必要な手配は喜んでお手伝いさせていただきます。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- バスタブ</div>\n<div class=\"ewa-rteLine\">- シャンプー、コンディショナー、ボディソープ</div>\n<div class=\"ewa-rteLine\">- ヘアドライヤー</div>\n<div class=\"ewa-rteLine\">- 温水洗浄便座</div>\n<div class=\"ewa-rteLine\">- 洗濯機</div>\n<div class=\"ewa-rteLine\">- カトラリー</div>\n<div class=\"ewa-rteLine\">- テーブル</div>\n<div class=\"ewa-rteLine\">- エアコン</div>",
+            "directContact": null,
             "houseRules": "<div class=\"ewa-rteLine\">- 最大宿泊人数：4名様まで</div>\n<div class=\"ewa-rteLine\">- ペット不可</div>\n<div class=\"ewa-rteLine\">- 全室禁煙</div>",
             "slider": [
                 {
@@ -512,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 30,
@@ -676,7 +677,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.7712648138936!2d131.4137658!3d33.35092509999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a82560d12c2f%3A0x6f9e5e00fb890acd!2sKyushu%20Wildlife%20Park%20African%20Safari!5e0!3m2!1sen!2sjp!4v1749359580506!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 978-48-2331",
-                        "highlight": "「九州自然動物公園」、通称「アフリカンサファリ」は、大分県宇佐市にある広大な野生動物園で、アフリカの草原を思わせる動物たちが放し飼いにされており、親子連れや動物愛好家にとって見逃せない観光スポットです。\n\n園内最大の特色は、檻付き装甲の「ジャングルバス」に乗車することです。専用ルートでライオン、ゾウ、キリン、シマウマ、ラクダなどの動物たちを間近で観察でき、直接餌やりも体験できるため、非常に臨場感あふれる野生動物との触れ合いが楽しめます。ジャングルバスの他に、ウォーキングゾーンや小型動物とのふれあい広場もあり、あらゆる年齢層の来園者がゆっくりと楽しめます。\n\n\n園内には売店、飲食エリア、便利な駐車場が併設されており、大分市や別府市からのアクセス手段も提供されているため、日帰りでの親子旅行や団体旅行に理想的なスポットです。",
+                        "highlight": "「九州自然動物公園」、通称「アフリカンサファリ」は、大分県宇佐市にある広大な野生動物園で、アフリカの草原を思わせる動物たちが放し飼いにされており、親子連れや動物愛好家にとって見逃せない観光スポットです。\n\n園内最大の特色は、檻付き装甲の「ジャングルバス」に乗車することです。専用ルートでライオン、ゾウ、キ���ン、シマウマ、ラクダなどの動物たちを間近で観察でき、直接餌やりも体験できるため、非常に臨場感あふれる野生動物との触れ合いが楽しめます。ジャングルバスの他に、ウォーキングゾーンや小型動物とのふれあい広場もあり、あらゆる年齢層の来園者がゆっくりと楽しめます。\n\n\n園内には売店、飲食エリア、便利な駐車場が併設されており、大分市や別府市からのアクセス手段も提供されているため、日帰りでの親子旅行や団体旅行に理想的なスポットです。",
                         "externalURL": "https://africansafari.co.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -816,7 +817,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然動物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
+                        "highlight": "高崎山自然��物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -917,6 +918,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 203,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "八幡竈門神社",
+                        "address": "〒874-0011 大分県別府市大字内竈1900番地",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "別府に位置する八幡竈門神社は、西暦727年に創建され、八幡神と鬼にまつわる地元の伝承に深く根ざしています。夜明けまでに100段の石段を築くことを挑まれた鬼は、99段を完成させたところで逃げ出したとされ、その石段は今も神社へと続いており、急いで造られた様子を物語っています。近年、この神社は、主人公炭治郎と同じ「竈門」の名、鬼を退治する伝説、「竈門神楽」の舞、象徴的な龍の描写といった要素から、アニメ「鬼滅の刃」のファンの間で人気の「聖地」となっています。これにより、古来からの伝統と現代のポップカルチャーが融合した独特の場所となっています。",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 24,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "人気観光スポット",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 30,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "散策",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]

@@ -3,34 +3,34 @@
         "id": 2,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:13.423Z",
-        "updatedAt": "2025-06-24T13:13:26.726Z",
+        "updatedAt": "2025-07-17T05:53:31.850Z",
         "publishedAt": "2025-06-24T13:11:10.337Z",
         "locale": "zh-Hans",
         "universalConfig": {
-            "id": 215,
+            "id": 239,
             "releasedLanguages": [
                 {
-                    "id": 906,
+                    "id": 963,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 907,
+                    "id": 962,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 909,
+                    "id": 964,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 908,
+                    "id": 965,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 910,
+                    "id": 966,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -42,6 +42,7 @@
             "readLessLabel": "收起",
             "hostTagLabel": "推荐",
             "poweredByLabel": "Powered by{{value}}",
+            "exploreMoreAboutLabel": null,
             "speechButton": {
                 "id": 39,
                 "label": " 用当地语言说出",
@@ -50,7 +51,8 @@
                     "documentId": "mticwymvi5wqs4bdz0lobe4s",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993196/volume_05_0df3287e92.svg"
                 }
-            }
+            },
+            "audioGuideButton": null
         },
         "header": {
             "id": 2,

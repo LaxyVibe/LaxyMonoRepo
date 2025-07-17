@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:10.324Z",
-        "updatedAt": "2025-06-24T13:13:26.722Z",
-        "publishedAt": "2025-06-24T13:09:45.437Z",
+        "updatedAt": "2025-07-17T05:53:31.566Z",
+        "publishedAt": "2025-07-17T05:53:31.090Z",
         "locale": "en",
         "universalConfig": {
             "id": 214,
@@ -42,6 +42,7 @@
             "readLessLabel": "Read less",
             "hostTagLabel": "Host",
             "poweredByLabel": "Powered by {{value}}",
+            "exploreMoreAboutLabel": "Explore more about {{value}}",
             "speechButton": {
                 "id": 18,
                 "label": "Speak in the local language",
@@ -50,6 +51,10 @@
                     "documentId": "mticwymvi5wqs4bdz0lobe4s",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993196/volume_05_0df3287e92.svg"
                 }
+            },
+            "audioGuideButton": {
+                "id": 925,
+                "label": "Start Audio with Laxy"
             }
         },
         "header": {
@@ -194,6 +199,16 @@
                     "id": 17,
                     "label": "FAQ",
                     "route": "/info/faq",
+                    "icon": {
+                        "id": 47,
+                        "documentId": "qcmz642lrze1motca93rn3vz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
+                    }
+                },
+                {
+                    "id": 946,
+                    "label": "Direct Contact",
+                    "route": "/info/direct-contact",
                     "icon": {
                         "id": 47,
                         "documentId": "qcmz642lrze1motca93rn3vz",

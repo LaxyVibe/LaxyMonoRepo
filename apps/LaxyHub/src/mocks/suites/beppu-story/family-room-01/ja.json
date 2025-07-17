@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>チェックイン: 午後 3:00 以降<br>チェックアウト: 午前 10:00 まで</p>\n<p>お客様の利便性のため、アーリーチェックインとレイトチェックアウトの便利なオプションをご用意しております。空室状況と稼働率に応じて、アーリーチェックインは最低3時間、レイトチェックアウトは最大3時間までご利用いただけます。これらのサービスには1時間あたり1,000円の追加料金がかかりますので、ご了承ください。必要な手配は喜んでお手伝いさせていただきます。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- バスタブ</div>\n<div class=\"ewa-rteLine\">- シャンプー、コンディショナー、ボディソープ</div>\n<div class=\"ewa-rteLine\">- ヘアドライヤー</div>\n<div class=\"ewa-rteLine\">- 温水洗浄便座</div>\n<div class=\"ewa-rteLine\">- 洗濯機</div>\n<div class=\"ewa-rteLine\">- カトラリー</div>\n<div class=\"ewa-rteLine\">- テーブル</div>\n<div class=\"ewa-rteLine\">- エアコン</div>",
+            "directContact": null,
             "houseRules": "<div class=\"ewa-rteLine\">- 最大宿泊人数：5名様まで</div>\n<div class=\"ewa-rteLine\">- ペット不可</div>\n<div class=\"ewa-rteLine\">- 全室禁煙</div>",
             "slider": [
                 {
@@ -22,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1083,
+                    "id": 1190,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1082,
+                    "id": 1191,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -508,11 +509,11 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.8040574276943!2d131.4951489!3d33.27162169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6934ad40397%3A0x6477dc4b0952a412!2sHachiman%20Asami%20Shrine!5e0!3m2!1sen!2sjp!4v1749359524312!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-23-1408",
-                        "highlight": "八幡朝見神社は、別府市で最も歴史が古く、規模の大きい神社のひとつで、千年以上もの歴史を持ち、八幡大神を祀る荘厳な神域です。朝見山麓に鎮座し、古くから地元住民が健康、平安、家庭の和合を祈願する信仰の中心地でした。\n\n境内は静寂な雰囲気に包まれ、緑豊かな木々に囲まれています。建築様式は古風で優雅であり、鳥居、石灯籠、神橋、本殿など、至る所に年月の痕跡が漂います。春には桜が咲き誇り、神社全体がよりロマンチックで穏やかな雰囲気に包まれ、花見や写真撮影に最適な場所です。\n\nさらに、境内には「長寿の水」と称される湧き水があり、多くの地元の人々がわざわざ汲みに訪れる名水です。観光、参拝、あるいは心を落ち着ける散策など、八幡朝見神社は別府の歴史と文化を深く知るのに理想的な場所です。",
+                        "highlight": "八幡朝見神社は、別府市で最も歴史が古く、規模の大きい神社のひとつで、千年以上もの歴��を持ち、八幡大神を祀る荘厳な神域です。朝見山麓に鎮座し、古くから地元住民が健康、平安、家庭の和合を祈願する信仰の中心地でした。\n\n境内は静寂な雰囲気に包まれ、緑豊かな木々に囲まれています。建築様式は古風で優雅であり、鳥居、石灯籠、神橋、本殿など、至る所に年月の痕跡が漂います。春には桜が咲き誇り、神社全体がよりロマンチックで穏やかな雰囲気に包まれ、花見や写真撮影に最適な場所です。\n\nさらに、境内には「長寿の水」と称される湧き水があり、多くの地元の人々がわざわざ汲みに訪れる名水です。観光、参拝、あるいは心を落ち着ける散策など、八幡朝見神社は別府の歴史と文化を深く知るのに理想的な場所です。",
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 30,
@@ -620,7 +621,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3912072576054!2d131.5474087!3d33.256249200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1115d167fe9%3A0xba67a416773d5b1c!2sTanoura%20beach!5e0!3m2!1sen!2sjp!4v1749359533520!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-537-5638",
-                        "highlight": "田ノ浦ビーチは、大分市神崎地区にある人気の海岸スポットで、穏やかで心地よい雰囲気と便利な施設で知られて��ます。ここでは人工的に作られた緩やかな傾斜の砂浜と防波堤があり、散歩や水遊び、夕暮れ時には壮大な夕日を楽しむのに適しています。\n\nビーチの向かいには小さな人工島公園があり、歩道橋で簡単にアクセスできます。島には子供の遊具やベンチが設置されており、家族連れやカップルが散歩したり写真を撮ったりする人気の場所となっています。海岸沿いの遊歩道は平坦で歩きやすく、ジョギング、ペットの散歩、ぼんやりとリラックスするのに理想的な空間です。\n\n夏には海水浴が解禁され、水質もきれいで、魚を捕まえたり小さな生き物を観察したりするのに適しています。トイレやシャワーなどの基本施設も整っています。この地域はペット同伴も可能で、愛犬家にとって優しいビーチの選択肢です。",
+                        "highlight": "田ノ浦ビーチは、大分市神崎地区にある人気の海岸スポットで、穏やかで心地よい雰囲気と便利な施設で知られています。ここでは人工的に作られた緩やかな傾斜の砂浜と防波堤があり、散歩や水遊び、夕暮れ時には壮大な夕日を楽しむのに適しています。\n\nビーチの向かいには小さな人工島公園があり、歩道橋で簡単にアクセスできます。島には子供の遊具やベンチが設置されており、家族連れやカップルが散歩したり写真を撮ったりする人気の場所となっています。海岸沿いの遊歩道は平坦で歩きやすく、ジョギング、ペットの散歩、ぼんやりとリラックスするのに理想的な空間です。\n\n夏には海水浴が解禁され、水質もきれいで、魚を捕まえたり小さな生き物を観察したりするのに適しています。トイレやシャワーなどの基本施設も整っています。この地域はペット同伴も可能で、愛犬家にとって優しいビーチの選択肢です。",
                         "externalURL": "https://www.city.oita.oita.jp/o177/tanoura_syoukai.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -816,7 +817,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然動物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
+                        "highlight": "高崎山自然動���園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -844,7 +845,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.296645477282!2d131.53556319999998!3d33.258725399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a139253d6ab5%3A0x39c434d349a8835a!2sOita%20Marine%20Palace%20Aquarium%20%22Umitamago%22!5e0!3m2!1sen!2sjp!4v1749359562419!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-534-1010",
-                        "highlight": "大分マリーンパレス水族館「うみたまご」は大分県神崎地区の海岸沿いに位置する、海洋生物の展示とインタラクティブな体験をテーマにした大型水族館で、九州地方の親子旅行の人気スポットの一つです。斬新な建築外観と多様な展示空間で知られ、エンターテイメントと海洋教育を融合させ、学びと遊びを兼ね備えた観光体験を提供しています。\n\n館内には熱帯魚、ペンギン、アシカ、イルカ、エイなど、豊富な海洋生物が展示されています。来館者は素晴らしいアシカやイルカのショーを観覧できるほか、タッチプールではヒトデや貝類に直接触れることができ、子供たちや家族連れに大変人気です。\n\n水族館内には、土産物店、カフェスペース、屋外の景観遊歩道があり、一日中楽しめる総合的なレジャー施設です。館外には海岸遊歩道が直結しており、隣接する高崎山自然動物園と連携して��日または一日かけての観光コースとして計画できます。",
+                        "highlight": "大分マリーンパレス水族館「うみたまご」は大分県神崎地区の海岸沿いに位置する、海洋生物の展示とインタラクティブな体験をテーマにした大型水族館で、九州地方の親子旅行の人気スポットの一つです。斬新な建築外観と多様な展示空間で知られ、エンターテイメントと海洋教育を融合させ、学びと遊びを兼ね備えた観光体験を提供しています。\n\n館内には熱帯魚、ペンギン、アシカ、イルカ、エイなど、豊富な海洋生物が展示されています。来館者は素晴らしいアシカやイルカのショーを観覧できるほか、タッチプールではヒトデや貝類に直接触れることができ、子供たちや家族連れに大変人気です。\n\n水族館内には、土産物店、カフェスペース、屋外の景観遊歩道があり、一日中楽しめる総合的なレジャー施設です。館外には海岸遊歩道が直結しており、隣接する高崎山自然動物園と連携して半日または一日かけての観光コースとして計画できます。",
                         "externalURL": "https://www.umitamago.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -917,6 +918,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 203,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "八幡竈門神社",
+                        "address": "〒874-0011 大分県別府市大字内竈1900番地",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "別府に位置する八幡竈門神社は、西暦727年に創建され、八幡神と鬼にまつわる地元の伝承に深く根ざしています。夜明けまでに100段の石段を築くことを挑まれた鬼は、99段を完成させたところで逃げ出したとされ、その石段は今も神社へと続いており、急いで造られた様子を物語っています。近年、この神社は、主人公炭治郎と同じ「竈門」の名、鬼を退治する伝説、「竈門神楽」の舞、象徴的な龍の描写といった要素から、アニメ「鬼滅の刃」のファンの間で人気の「聖地」となっています。これにより、古来からの伝統と現代のポップカルチャーが融合した独特の場所となっています。",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 24,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "人気観光スポット",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 30,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "散策",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]

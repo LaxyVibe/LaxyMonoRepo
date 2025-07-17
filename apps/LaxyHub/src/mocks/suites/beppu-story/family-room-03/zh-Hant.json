@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 浴缸</div>\n<div class=\"ewa-rteLine\">- 洗髮乳、潤髮乳和沐浴乳</div>\n<div class=\"ewa-rteLine\">- 吹風機</div>\n<div class=\"ewa-rteLine\">- 免治馬桶</div>\n<div class=\"ewa-rteLine\">- 洗衣機</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空調</div>",
+            "directContact": null,
             "houseRules": "<div class=\"ewa-rteLine\">\n<div class=\"ewa-rteLine\">-最多可入住4位房客</div>\n<div class=\"ewa-rteLine\">- 禁止攜帶寵物</div>\n<div class=\"ewa-rteLine\">-禁止吸煙</div>\n</div>",
             "slider": [
                 {
@@ -312,7 +313,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.1273790772834!2d131.4762201!3d33.3154852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7a18b11e30f%3A0x7d092fbf0d6c8086!2sJigokumushikobo%20Kannawa!5e0!3m2!1sen!2sjp!4v1749359417652!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-66-3775",
-                        "highlight": "「地獄蒸し工房 鉄輪」是別府著名的體驗型鄉土料理餐廳，以利用天然溫泉蒸氣進行烹調的「地獄蒸し料理」聞名。這種烹飪方式自江戶時代便已流傳，將蔬菜、海鮮、肉類等食材放入蒸籠中，直接以地底噴出的高溫蒸氣烹熟，不加一滴油水，保留食材原始風味與營養。\n\n工房提供兩種體驗方式：可選擇現場提供的套餐菜單，也可自備食材進行DIY蒸煮（酌收設備使用費）。體驗過程親自動手操作，既有趣又能留下深刻回憶，是家庭、朋友與情侶間熱門的別府特色行程。\n\n店內設有寬敞的用餐區，但不提供外帶與宅配服務。地點位於鐵輪溫泉區中心，交通便利，是到訪別府不可錯過的在地體驗美食。",
+                        "highlight": "「地獄蒸し工房 鉄輪」是別府著名的體驗型鄉土料理餐廳，以利用天然溫泉蒸氣進行烹調的「地獄蒸し料理」聞名。這種烹飪方式自江戶時代便已流傳，將蔬菜、海鮮、肉類等食材放入蒸籠中，直接以地底噴出的高溫蒸氣烹熟，不加一滴油水，保留食材原始風味與營養。\n\n工房提供兩種體驗方式：可選擇現場提供的套餐菜單，也可自備食材進行DIY蒸煮（酌收設備使用費）。體驗過程親自動手操作，既有趣又能留下深刻回憶，是家庭、朋友與情侶間熱門的別府特色行程。\n\n店內設有寬敞的用餐區，但不提供外帶與宅配服務。地點位於鐵���溫泉區中心，交通便利，是到訪別府不可錯過的在地體驗美食。",
                         "externalURL": "http://jigokumushi.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -512,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 28,
@@ -598,7 +599,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.1078125982526!2d131.4549176!3d33.26366970000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a5e51e2ff08b%3A0x1e166e28e296ff65!2sShidaka%20Lake!5e0!3m2!1sen!2sjp!4v1749359544754!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": null,
-                        "highlight": "志高湖是位於大分縣別府市山區的一座高原湖泊，四周被群山環繞，湖光山色相映成趣，是一處兼具自然美景與休閒設施的隱藏版景點。這裡常年氣候宜人，春有櫻花、秋有紅葉，四季各有風情。\n\n湖畔規劃完善，有露營區、烤肉場、湖上鴨子船出租、登山健行步道以及親子可同樂的設施，是當地人與遊客假日放鬆的好去處。喜歡安靜自然的人可以在湖邊釣魚或野餐，想體驗戶外活動的旅客也可安排一日露營或健行。\n\n湖區空氣清新，水面平靜如鏡，特別推薦在清晨或傍晚時分來訪，拍攝倒影與雲霧交織的絕美畫面。",
+                        "highlight": "志高湖是位於大分縣別府市山區的一座高原湖泊，四周被群山環繞，湖光山色相映成趣，是一處兼具自然美景與休閒設施的隱藏版景點。這裡常年氣候宜人，春有櫻花、秋有紅葉，四季各有風情。\n\n湖畔規劃完善，有露營區、烤肉場、湖上鴨子船出租、登山健行步道以及親子可同樂的設施，是當地人與遊客假日放鬆的好去處。喜歡安靜自然的人可以在湖邊釣魚或野餐，想體驗戶外��動的旅客也可安排一日露營或健行。\n\n湖區空氣清新，水面平靜如鏡，特別推薦在清晨或傍晚時分來訪，拍攝倒影與雲霧交織的絕美畫面。",
                         "externalURL": "https://www.recamp.co.jp/recamp%E5%88%A5%E5%BA%9C%E5%BF%97%E9%AB%98%E6%B9%96",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -923,6 +924,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 200,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "八幡竈門神社",
+                        "address": "〒874-0011 大分縣別府市大字內竈1900號",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "位於別府的八幡竈門神社，創建於西元727年，深深植根於當地關於八幡神和惡鬼的傳說。相傳惡鬼被挑戰在黎明前築起100級石階，卻在完成99級後便匆忙逃離，這些石階至今仍通往神社，見證了當年倉促建造的痕跡。近年來，這座神社因其與主角炭治郎同為「竈門」之名、神社驅逐惡鬼的傳說、「竈門神樂」之舞以及象徵性的龍之描繪等多項元素，成為動畫《鬼滅之刃》粉絲們熱門的「聖地」。這也使得古老傳統與現代流行文化在此獨特融合。",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 27,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "人氣景點",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 28,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "漫步",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]

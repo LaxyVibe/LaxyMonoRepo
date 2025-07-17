@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 浴缸</div>\n<div class=\"ewa-rteLine\">- 洗发水、护发素和沐浴露</div>\n<div class=\"ewa-rteLine\">- 吹风机</div>\n<div class=\"ewa-rteLine\">- 智能马桶盖</div>\n<div class=\"ewa-rteLine\">- 洗衣机</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空调</div>",
+            "directContact": null,
             "houseRules": "<div class=\"ewa-rteLine\">- 最多可入住5位客人</div>\n<div class=\"ewa-rteLine\">- 禁止携带宠物</div>\n<div class=\"ewa-rteLine\">- 禁止吸烟</div>",
             "slider": [
                 {
@@ -22,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1132,
+                    "id": 1195,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1133,
+                    "id": 1196,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -512,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 29,
@@ -738,7 +739,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典——别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮点。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
+                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典——别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮���。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -923,6 +924,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 201,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "八幡灶门神社",
+                        "address": "〒874-0011 大分县别府市大字内灶1900号",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "位于别府的八幡灶门神社，创建于公元727年，深深植根于当地关于八幡神和恶鬼的传说。相传恶鬼被挑战在黎明前筑起100级石阶，却在完成99级后便匆忙逃离，这些石阶至今仍通往神社，见证了当年仓促建造的痕迹。近年来，这座神社因其与主角炭治郎同为“灶门”之名、神社驱逐恶鬼的传说、“灶门神乐”之舞以及象征性的龙之描绘等多项元素，成为动画《鬼灭之刃》粉丝们热门的“圣地”。这也使得古老传统与现代流行文化在此独特融合。",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 26,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "人气景点",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 29,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "漫步",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]

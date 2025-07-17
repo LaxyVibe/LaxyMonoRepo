@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<p>- 浴缸<br>- 洗髮乳、潤髮乳和沐浴乳<br>- 吹風機<br>- 免治馬桶<br>- 洗衣機 (附烘衣機)<br>- 餐具<br>- 桌子<br>- 空調</p>",
+            "directContact": null,
             "houseRules": "<p>-最多可入住5位房客<br>- 禁止攜帶寵物<br>-禁止吸煙</p>",
             "slider": [
                 {
@@ -512,12 +513,12 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 28,
                                 "documentId": "cbe1blfqovxzr7wnb3dce3c8",
-                                "name": "漫步",
+                                "name": "漫���",
                                 "color": "GREY"
                             }
                         ],
@@ -738,7 +739,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "別府在聖誕節週的週六與週日，都會舉辦盛大的冬季慶典——別府聖誕花火幻想曲 (べっぷクリスマスHanabiファンタジア)。這個��期兩天的活動是別府冬季的一大亮點。\n\n與七月底的夏日祭典花火僅施放一天不同，此時期的花火大會連續兩晚點亮別府的夜空，景色格外迷人與壯觀。活動現場設置了豐富的屋台，提供各式美味小吃與飲品，讓遊客在享受節慶氛圍的同時，也能大飽口福。\n\n由於這場冬季盛會廣受歡迎，別府市內的住宿設施會迅速滿房。因此，強烈建議計劃前往的旅客，務必提前至少兩個月預訂好住宿，以確保能順利參與這場浪漫又精彩的聖誕花火盛宴。",
+                        "highlight": "別府在聖誕節週的週六與週日，都會舉辦盛大的冬季慶典——別府聖誕花火��想曲 (べっぷクリスマスHanabiファンタジア)。這個為期兩天的活動是別府冬季的一大亮點。\n\n與七月底的夏日祭典花火僅施放一天不同，此時期的花火大會連續兩晚點亮別府的夜空，景色格外迷人與壯觀。活動現場設置了豐富的屋台，提供各式美味小吃與飲品，讓遊客在享受節慶氛圍的同時，也能大飽口福。\n\n由於這場冬季盛會廣受歡迎，別府市內的住宿設施會迅速滿房。因此，強烈建議計劃前往的旅客，務必提前至少兩個月預訂好住宿，以確保能順利參與這場浪漫又精彩的聖誕花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -923,6 +924,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 200,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "八幡竈門神社",
+                        "address": "〒874-0011 大分縣別府市大字內竈1900號",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "位於別府的八幡竈門神社，創建於西元727年，深深植根於當地關於八幡神和惡鬼的傳說。相傳惡鬼被挑戰在黎明前築起100級石階，卻在完成99級後便匆忙逃離，這些石階至今仍通往神社，見證了當年倉促建造的痕跡。近年來，這座神社因其與主角炭治郎同為「竈門」之名、神社驅逐惡鬼的傳說、「竈門神樂」之舞以及象徵性的龍之描繪等多項元素，成為動畫《鬼滅之刃》粉絲們熱門的「聖地」。這也使得古老傳統與現代流行文化在此獨特融合。",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 27,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "人氣景點",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 28,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "漫步",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]
