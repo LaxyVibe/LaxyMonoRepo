@@ -33,9 +33,22 @@ const commonStyles = {
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
+    // Use dynamic viewport height on mobile to account for browser UI
     '@supports (height: 100dvh)': {
       height: '100dvh',
       maxHeight: '100dvh',
+    },
+    // Fallback for mobile browsers without dvh support
+    '@supports not (height: 100dvh)': {
+      '@media (max-width: 768px)': {
+        height: '100svh', // Small viewport height - more stable on mobile
+        maxHeight: '100svh',
+      },
+    },
+    // Additional mobile-specific adjustments
+    '@media (max-width: 768px) and (max-height: 700px)': {
+      height: 'calc(100vh - 60px)', // Account for potential browser UI
+      maxHeight: 'calc(100vh - 60px)',
     },
   },
   overlay: {
@@ -63,59 +76,74 @@ const commonStyles = {
   title: {
     textAlign: 'center',
     textTransform: 'uppercase',
-    fontSize: { xs: '20px', sm: '24px', md: '26px' },
+    fontSize: { xs: '18px', sm: '22px', md: '26px' }, // Slightly smaller on mobile
     fontFamily: 'Commissioner',
     fontWeight: 700,
-    mb: { xs: 1, sm: 2, md: 3 },
+    mb: { xs: 0.5, sm: 1.5, md: 2.5 }, // Reduced margin on mobile
     lineHeight: 1.2,
-    '@media (max-height: 700px)': {
-      fontSize: { xs: '18px', sm: '22px', md: '24px' },
-      mb: { xs: 0.75, sm: 1.5, md: 2.5 },
+    // Mobile-specific adjustments
+    '@media (max-width: 768px)': {
+      fontSize: { xs: '16px', sm: '20px', md: '24px' },
+      mb: { xs: 0.25, sm: 1, md: 2 },
     },
-    '@media (max-height: 600px)': {
-      fontSize: { xs: '16px', sm: '20px', md: '22px' },
-      mb: { xs: 0.5, sm: 1, md: 2 },
-    },
-    '@media (max-height: 500px)': {
-      fontSize: { xs: '14px', sm: '18px', md: '20px' },
+    '@media (max-width: 768px) and (max-height: 700px)': {
+      fontSize: { xs: '14px', sm: '18px', md: '22px' },
       mb: { xs: 0.25, sm: 0.75, md: 1.5 },
+    },
+    '@media (max-width: 768px) and (max-height: 600px)': {
+      fontSize: { xs: '13px', sm: '16px', md: '20px' },
+      mb: { xs: 0.25, sm: 0.5, md: 1 },
+    },
+    '@media (max-width: 768px) and (max-height: 500px)': {
+      fontSize: { xs: '12px', sm: '15px', md: '18px' },
+      mb: { xs: 0.25, sm: 0.25, md: 0.75 },
     },
   },
   jpnTitle: {
     textAlign: 'center',
-    mb: { xs: 0.5, sm: 1, md: 1.5 },
-    fontSize: { xs: '0.75rem', sm: '1rem', md: '1.375rem' },
+    mb: { xs: 0.25, sm: 0.75, md: 1.25 }, // Reduced margin on mobile
+    fontSize: { xs: '0.6875rem', sm: '0.875rem', md: '1.25rem' }, // Slightly smaller
     opacity: 0.9,
     lineHeight: 1.2,
-    '@media (max-height: 700px)': {
-      fontSize: { xs: '0.6875rem', sm: '0.875rem', md: '1.25rem' },
-      mb: { xs: 0.375, sm: 0.75, md: 1.25 },
-    },
-    '@media (max-height: 600px)': {
+    // Mobile-specific adjustments
+    '@media (max-width: 768px)': {
       fontSize: { xs: '0.625rem', sm: '0.75rem', md: '1.125rem' },
       mb: { xs: 0.25, sm: 0.5, md: 1 },
     },
-    '@media (max-height: 500px)': {
+    '@media (max-width: 768px) and (max-height: 700px)': {
       fontSize: { xs: '0.5625rem', sm: '0.6875rem', md: '1rem' },
-      mb: { xs: 0.125, sm: 0.25, md: 0.75 },
+      mb: { xs: 0.25, sm: 0.25, md: 0.75 },
+    },
+    '@media (max-width: 768px) and (max-height: 600px)': {
+      fontSize: { xs: '0.5rem', sm: '0.625rem', md: '0.875rem' },
+      mb: { xs: 0.25, sm: 0.25, md: 0.5 },
+    },
+    '@media (max-width: 768px) and (max-height: 500px)': {
+      fontSize: { xs: '0.4375rem', sm: '0.5625rem', md: '0.75rem' },
+      mb: { xs: 0.25, sm: 0.25, md: 0.25 },
     },
   },
   subtitle: {
-    mb: { xs: 1, sm: 1.5, md: 2 },
-    fontSize: { xs: '0.6875rem', sm: '0.75rem', md: '0.875rem' },
+    mb: { xs: 0.5, sm: 1, md: 1.5 }, // Reduced margin on mobile
+    fontSize: { xs: '0.625rem', sm: '0.6875rem', md: '0.8125rem' }, // Slightly smaller
     px: { xs: 0.5, sm: 1 },
     lineHeight: 1.3,
-    '@media (max-height: 700px)': {
-      fontSize: { xs: '0.625rem', sm: '0.6875rem', md: '0.8125rem' },
-      mb: { xs: 0.75, sm: 1.25, md: 1.75 },
-    },
-    '@media (max-height: 600px)': {
+    // Mobile-specific adjustments
+    '@media (max-width: 768px)': {
       fontSize: { xs: '0.5625rem', sm: '0.625rem', md: '0.75rem' },
-      mb: { xs: 0.5, sm: 1, md: 1.5 },
-    },
-    '@media (max-height: 500px)': {
-      fontSize: { xs: '0.5rem', sm: '0.5625rem', md: '0.6875rem' },
       mb: { xs: 0.25, sm: 0.75, md: 1.25 },
+    },
+    '@media (max-width: 768px) and (max-height: 700px)': {
+      fontSize: { xs: '0.5rem', sm: '0.5625rem', md: '0.6875rem' },
+      mb: { xs: 0.25, sm: 0.5, md: 1 },
+    },
+    '@media (max-width: 768px) and (max-height: 600px)': {
+      fontSize: { xs: '0.4375rem', sm: '0.5rem', md: '0.625rem' },
+      mb: { xs: 0.25, sm: 0.25, md: 0.75 },
+    },
+    '@media (max-width: 768px) and (max-height: 500px)': {
+      fontSize: { xs: '0.375rem', sm: '0.4375rem', md: '0.5625rem' },
+      mb: { xs: 0.25, sm: 0.25, md: 0.5 },
     },
   },
   button: {
@@ -443,16 +471,25 @@ function POICover() {
       {/* Logo in center of header */}
       <Box sx={{ 
         position: 'absolute', 
-        top: { xs: 10, sm: 15 }, 
+        top: { xs: 8, sm: 12, md: 15 }, // Reduced top spacing on mobile
         left: '50%', 
         transform: 'translateX(-50%)', 
-        zIndex: 3 
+        zIndex: 3,
+        '@media (max-width: 768px) and (max-height: 700px)': {
+          top: { xs: 5, sm: 8, md: 12 },
+        },
+        '@media (max-width: 768px) and (max-height: 600px)': {
+          top: { xs: 3, sm: 5, md: 8 },
+        },
+        '@media (max-width: 768px) and (max-height: 500px)': {
+          top: { xs: 2, sm: 3, md: 5 },
+        },
       }}>
         <img 
           src={travelLogo} 
           alt="Laxy Travel" 
           style={{ 
-            height: '76px',
+            height: '70px', // Slightly smaller on mobile
             width: 'auto',
             filter: 'brightness(0) invert(1)' // Make the logo white
           }} 
@@ -470,19 +507,24 @@ function POICover() {
         color: 'white',
         zIndex: 2,
         px: { xs: 2, sm: 3, md: 4 },
-        pt: { xs: 6, sm: 7, md: 8 }, // Reduced top padding for small screens
-        pb: { xs: 0.5, sm: 1, md: 2 }, // Reduced bottom padding
+        pt: { xs: 4, sm: 6, md: 8 }, // Reduced top padding for mobile
+        pb: { xs: 0, sm: 0.5, md: 1 }, // Minimal bottom padding
         minHeight: 0,
-        '@media (max-height: 700px)': {
-          pt: { xs: 5, sm: 6, md: 7 },
-          pb: { xs: 0, sm: 0.5, md: 1 },
-        },
-        '@media (max-height: 600px)': {
-          pt: { xs: 4, sm: 5, md: 6 },
+        // More aggressive mobile adjustments
+        '@media (max-width: 768px)': {
+          pt: { xs: 3, sm: 4, md: 5 },
           pb: { xs: 0, sm: 0, md: 0.5 },
         },
-        '@media (max-height: 500px)': {
-          pt: { xs: 3, sm: 4, md: 5 },
+        '@media (max-width: 768px) and (max-height: 700px)': {
+          pt: { xs: 2, sm: 3, md: 4 },
+          pb: { xs: 0, sm: 0, md: 0 },
+        },
+        '@media (max-width: 768px) and (max-height: 600px)': {
+          pt: { xs: 1, sm: 2, md: 3 },
+          pb: { xs: 0, sm: 0, md: 0 },
+        },
+        '@media (max-width: 768px) and (max-height: 500px)': {
+          pt: { xs: 0.5, sm: 1, md: 2 },
           pb: { xs: 0, sm: 0, md: 0 },
         },
       }}>
@@ -495,22 +537,27 @@ function POICover() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: { xs: 1, sm: 1.5, md: 2 },
-          pb: { xs: 1.5, sm: 2, md: 3 },
+          gap: { xs: 0.5, sm: 1, md: 1.5 }, // Reduced gaps on mobile
+          pb: { xs: 1, sm: 1.5, md: 2.5 }, // Reduced bottom padding
           px: { xs: 2, sm: 3, md: 4 },
           zIndex: 2,
           flexShrink: 0,
-          '@media (max-height: 700px)': {
-            gap: { xs: 0.75, sm: 1, md: 1.5 },
-            pb: { xs: 1, sm: 1.5, md: 2.5 },
+          // Mobile-specific adjustments
+          '@media (max-width: 768px)': {
+            gap: { xs: 0.25, sm: 0.5, md: 1 },
+            pb: { xs: 0.5, sm: 1, md: 2 },
           },
-          '@media (max-height: 600px)': {
-            gap: { xs: 0.5, sm: 0.75, md: 1 },
-            pb: { xs: 0.75, sm: 1, md: 2 },
-          },
-          '@media (max-height: 500px)': {
+          '@media (max-width: 768px) and (max-height: 700px)': {
             gap: { xs: 0.25, sm: 0.5, md: 0.75 },
             pb: { xs: 0.5, sm: 0.75, md: 1.5 },
+          },
+          '@media (max-width: 768px) and (max-height: 600px)': {
+            gap: { xs: 0.25, sm: 0.25, md: 0.5 },
+            pb: { xs: 0.5, sm: 0.5, md: 1 },
+          },
+          '@media (max-width: 768px) and (max-height: 500px)': {
+            gap: { xs: 0.25, sm: 0.25, md: 0.25 },
+            pb: { xs: 0.5, sm: 0.5, md: 0.75 },
           },
         }}
       >
