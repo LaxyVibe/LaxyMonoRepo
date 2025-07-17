@@ -253,7 +253,8 @@ const AudioGuidePlayer = ({ onClose }) => {
       <Box
         sx={{
           width: '100%',
-          aspectRatio: '4/3',
+          height: 'clamp(200px, 35vh, 300px)', // Responsive height with min/max bounds
+          maxHeight: '35vh', // Limit to 35% of viewport height
           position: 'relative',
           backgroundImage: (() => {
             // Use current timed image if available
@@ -289,7 +290,8 @@ const AudioGuidePlayer = ({ onClose }) => {
           flexDirection: 'column',
           position: 'relative',
           paddingBottom: '200px', // Space for controls
-          minHeight: 0, // Allow flex container to shrink
+          minHeight: 'clamp(250px, 40vh, 100vh)', // Ensure minimum height for subtitles
+          maxHeight: 'calc(65vh - 200px)', // Ensure space for controls
         }}
       >
         {/* Subtitles Container */}
@@ -305,7 +307,7 @@ const AudioGuidePlayer = ({ onClose }) => {
             msOverflowStyle: 'none',
             scrollbarWidth: 'thin',
             touchAction: 'pan-y',
-            minHeight: 0, // Critical for flex scrolling
+            minHeight: 'clamp(200px, 30vh, 100vh)', // Ensure minimum subtitle area
             maxHeight: '100%', // Ensure container doesn't exceed parent
             '&::-webkit-scrollbar': {
               width: '8px',
@@ -335,7 +337,7 @@ const AudioGuidePlayer = ({ onClose }) => {
               sx={{ 
                 textAlign: 'justify',
                 lineHeight: 1.4,
-                fontSize: '18px',
+                fontSize: 'clamp(16px, 4vw, 18px)', // Responsive font size
                 fontFamily: 'Inter',
                 fontWeight: 600,
                 marginLeft: '16px',
@@ -383,7 +385,7 @@ const AudioGuidePlayer = ({ onClose }) => {
               variant="h8" 
               sx={{ 
                 textAlign: 'center',
-                fontSize: '18px',
+                fontSize: 'clamp(16px, 4vw, 18px)', // Responsive font size
                 fontFamily: 'Inter',
                 fontWeight: 600,
                 marginLeft: '16px',
