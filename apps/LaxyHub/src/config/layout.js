@@ -183,6 +183,7 @@ export const PAGE_LAYOUTS = {
   AddressInfo: CONTAINER_CONFIG.suiteLanding, // Changed from medium to suiteLanding
   CheckInOutInfo: CONTAINER_CONFIG.suiteLanding, // Changed from medium to suiteLanding
   HouseRulesInfo: CONTAINER_CONFIG.suiteLanding, // Changed from medium to suiteLanding
+  DirectContactInfo: CONTAINER_CONFIG.suiteLanding, // Changed from medium to suiteLanding
   AmenitiesInfo: CONTAINER_CONFIG.suiteLanding, // Changed from medium to suiteLanding
   FAQInfo: CONTAINER_CONFIG.suiteLanding // Changed from medium to suiteLanding
 };

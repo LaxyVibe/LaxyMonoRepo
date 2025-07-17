@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 淋浴</div>\n<div class=\"ewa-rteLine\">- 洗发水、护发素和沐浴露</div>\n<div class=\"ewa-rteLine\">- 吹风机</div>\n<div class=\"ewa-rteLine\">- 智能马桶盖</div>\n<div class=\"ewa-rteLine\">- 洗衣机</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空调</div>",
+            "directContact": null,
             "houseRules": "<div class=\"ewa-rteLine\">- 最多可入住4位客人</div>\n<div class=\"ewa-rteLine\">- 禁止携带宠物</div>\n<div class=\"ewa-rteLine\">- 禁止吸烟</div>",
             "slider": [
                 {
@@ -340,7 +341,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.2560101022887!2d131.4841769!3d33.31212190000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a70b04ebffff%3A0x3a0db168b14ff957!2sKamesho%20Kurukuru%20Sushi!5e0!3m2!1sen!2sjp!4v1749359409305!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-66-5225",
-                        "highlight": "龟正转转寿司是别府市鹤见地区极具人气的回转寿司名店，以新鲜份量十足的寿司食材闻名。这里的每一贯寿司用料厚实、切工大器，不仅味道新鲜，视觉上也相当满足，是许多在地人与观光客心中的回访名单。\n\n店内装潢走简约路线，设有吧台座与宽敞的家庭式包厢座位，无论是一人用餐还是家族聚餐都相当合适。餐盘种类多样，从经典金枪鱼、鲑鱼、乌贼，到每日现流海鲜，都能轻松以���转方式享用，或直接向师傅点单。\n\n该店不提供外送服务，但可内用或外带。由于人气极高，高峰时段常需排队候位，建议提前前往或安排较早用餐时间。",
+                        "highlight": "龟正转转寿司是别府市鹤见地区极具人气的回转寿司名店，以新鲜份量十足的寿司食材闻名。这里的每一贯寿司用料厚实、切工大器，不仅味道新鲜，视觉上也相当满足，是许多在地人与观光客心中的回访名单。\n\n店内装潢走简约路线，设有吧台座与宽敞的家庭式包厢座位，无论是一人用餐还是家族聚餐都相当合适。餐盘种类多样，从经典金枪鱼、鲑鱼、乌贼，到每日现流海鲜，都能轻松以回转方式享用，或直接向师傅点单。\n\n该店不提供外送服务，但可内用或外带。由于人气极高，高峰时段常需排队候位，建议提前前往或安排较早用餐时间。",
                         "externalURL": "https://instagram.com/kamesho_9696_sushi",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -512,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 29,
@@ -536,7 +537,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4244488848994!2d131.4910055!3d33.28155710000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6f020482965%3A0x9e5d27cb752123a8!2sBeppu%20Park!5e0!3m2!1sen!2sjp!4v1749359512569!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1473",
-                        "highlight": "别府公园是别府市中心面积最大的都市绿地，占地辽阔、景色四季各异，是当地居民与旅客放松身心、晨间运动与亲子散步的热门地点。园内设有广阔草地、竹林、松树步道，以及春季盛开的樱花与梅花林，是摄影与赏花的理想之地。\n\n除了自然景观，公园也常被用作当地活动或祭典场地，节庆期间气氛热闹，平日则清幽宁静，是深入体验别府生活节奏的好场所。园区步道平缓好走，适合慢跑、遛狗、野餐或在树荫下小憩。\n\n别府公园全年无栅栏开放，并允许携带狗只同行，十分友善宠物家庭。地点邻近市区，交通便利，无论早晨或傍晚，都能在此感受自然与城市交融的舒适节奏。",
+                        "highlight": "别府公园是别府市中心面积最大的都市绿地，占��辽阔、景色四季各异，是当地居民与旅客放松身心、晨间运动与亲子散步的热门地点。园内设有广阔草地、竹林、松树步道，以及春季盛开的樱花与梅花林，是摄影与赏花的理想之地。\n\n除了自然景观，公园也常被用作当地活动或祭典场地，节庆期间气氛热闹，平日则清幽宁静，是深入体验别府生活节奏的好场所。园区步道平缓好走，适合慢跑、遛狗、野餐或在树荫下小憩。\n\n别府公园全年无栅栏开放，并允许携带狗只同行，十分友善宠物家庭。地点邻近市区，交通便利，无论早晨或傍晚，都能在此感受自然与城市交融的舒适节奏。",
                         "externalURL": "http://www.city.beppu.oita.jp/sisetu/kouen_tyuusyajyou/03kouen_03-01beppu.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -626,7 +627,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3912072576054!2d131.5474087!3d33.256249200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1115d167fe9%3A0xba67a416773d5b1c!2sTanoura%20beach!5e0!3m2!1sen!2sjp!4v1749359533520!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-537-5638",
-                        "highlight": "田ノ浦ビーチ是位于大分市神崎地区的人气海滨景点，以宁静宜人的氛围与便利设施闻名。这里设有人工筑起的缓坡沙滩与防波堤，适合散步、戏水、以及在傍晚欣赏壮丽的夕阳景色。\n\n海滩对面有一座小型人工岛公园，透过步行桥可轻松前往，岛上配有儿童游具与座椅，成为家庭客与情侣散步拍照的热门场所。沿岸的长廊步道平坦好走，是慢跑、带宠物散步与放空放松的理想空间。\n\n在夏��，海滩开放给民众游泳，水质干净，适合抓鱼、观察小生物，也有洗手间与淋浴等基础设施。此地区也开放宠物同行，是爱狗人士的友善沙滩选择。",
+                        "highlight": "田ノ浦ビーチ是位于大分市神崎地区的人气海滨景点，以宁静宜人的氛围与便利设施闻名。这里设有人工筑起的缓坡沙滩与防波堤，适合散步、戏水、以及在傍晚欣赏壮丽的夕阳景色。\n\n海滩对面有一座小型人工岛公园，透过步行桥可轻松前往，岛上配有儿童游具与座椅，成为家庭客与情侣散步拍照的热门场所。沿岸的长廊步道平坦好走，是慢跑、带宠物散步与放空放松的理想空间。\n\n在夏季，海滩开放给民众游泳，水质干净，适合抓鱼、观察小生物，也有洗手间与淋浴等基础设施。此地区也开放宠物同行，是爱狗人士的友善沙滩选择。",
                         "externalURL": "https://www.city.oita.oita.jp/o177/tanoura_syoukai.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -738,7 +739,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典���—别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮点。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
+                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典——别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮点。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -822,7 +823,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然动物园位于大分市神崎地区，是一座以野生猕猴（日本猕猴）为主角的自然动物公园，也是九州地区最具代表性的亲子户外景点之一。园内的猴群生活在天然山林中，游客可近距离观察它们自然生活的样貌，体验人与动物共处的和谐氛围。\n\n这里以无栅栏设计闻名，猴子们可自由在园区活动，十分活泼且不怕人。除了观看猴群的生活，园方还会安排定时喂食解说，帮助旅客了解猴子的习性与群体行为，特别受亲子与生态爱好者欢迎。\n\n园区附设有购票处、简单的纪念品商店与资讯展览空间，可作为教育性旅游的理想场域。园区与大分海洋水族馆 うみたまご相邻，可安排成半日至一日的连线观光行程。",
+                        "highlight": "高崎山自然动物园位于大分市神崎地区，是一座以野生猕猴（日本猕猴）为主角的自然动物公园，也是九州地区最具代表性的亲子户外景点之一。园内的猴群生活在天然山林中，游客可近距离观察它们自然生活的��貌，体验人与动物共处的和谐氛围。\n\n这里以无栅栏设计闻名，猴子们可自由在园区活动，十分活泼且不怕人。除了观看猴群的生活，园方还会安排定时喂食解说，帮助旅客了解猴子的习性与群体行为，特别受亲子与生态爱好者欢迎。\n\n园区附设有购票处、简单的纪念品商店与资讯展览空间，可作为教育性旅游的理想场域。园区与大分海洋水族馆 うみたまご相邻，可安排成半日至一日的连线观光行程。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -923,6 +924,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 201,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "八幡灶门神社",
+                        "address": "〒874-0011 大分县别府市大字内灶1900号",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "位于别府的八幡灶门神社，创建于公元727年，深深植根于当地关于八幡神和恶鬼的传说。相传恶鬼被挑战在黎明前筑起100级石阶，却在完成99级后便匆忙逃离，这些石阶至今仍通往神社，见证了当年仓促建造的痕迹。近年来，这座神社因其与主角炭治郎同为“灶门”之名、神社驱逐恶鬼的传说、“灶门神乐”之舞以及象征性的龙之描绘等多项元素，成为动画《鬼灭之刃》粉丝们热门的“圣地”。这也使得古老传统与现代流行文化在此独特融合。",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 26,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "人气景点",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 29,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "漫步",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]

@@ -9,6 +9,7 @@ import StayInfo from './components/hub/StayInfo';
 import AddressInfo from './components/hub/AddressInfo';
 import CheckInOutInfo from './components/hub/CheckInOutInfo';
 import HouseRulesInfo from './components/hub/HouseRulesInfo';
+import DirectContactInfo from './components/hub/DirectContactInfo';
 import AmenitiesInfo from './components/hub/AmenitiesInfo';
 import FAQInfo from './components/hub/FAQInfo';
 import POIDetailHub from './components/hub/POIDetailHub';
@@ -124,6 +125,10 @@ function CheckInOutInfoWrapper() {
 
 function HouseRulesInfoWrapper() {
   return <HouseRulesInfo />;
+}
+
+function DirectContactInfoWrapper() {
+  return <DirectContactInfo />;
 }
 
 function AmenitiesInfoWrapper() {
@@ -310,6 +315,7 @@ function App() {
         <Route path="/info/address" element={<DefaultLanguageRedirect />} />
         <Route path="/info/check-in-out" element={<DefaultLanguageRedirect />} />
         <Route path="/info/house-rules" element={<DefaultLanguageRedirect />} />
+        <Route path="/info/direct-contact" element={<DefaultLanguageRedirect />} />
         <Route path="/info/amenities" element={<DefaultLanguageRedirect />} />
         <Route path="/info/faq" element={<DefaultLanguageRedirect />} />
         <Route path="/nearby-restaurants" element={<DefaultLanguageRedirect />} />
@@ -331,6 +337,7 @@ function App() {
               <Route path="address" element={<AddressInfoWrapper />} />
               <Route path="check-in-out" element={<CheckInOutInfoWrapper />} />
               <Route path="house-rules" element={<HouseRulesInfoWrapper />} />
+              <Route path="direct-contact" element={<DirectContactInfoWrapper />} />
               <Route path="amenities" element={<AmenitiesInfoWrapper />} />
               <Route path="faq" element={<FAQInfoWrapper />} />
             </Route>

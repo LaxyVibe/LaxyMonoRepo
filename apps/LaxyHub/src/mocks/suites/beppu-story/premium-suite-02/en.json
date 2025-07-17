@@ -11,6 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>Check-in: After 3:00 PM<br>Check-out: Before 10:00 AM</p>\n<p>We are pleased to offer convenient options for early check-in and late check-out. Depending on the availability and occupancy, we can provide a minimum of three hours for early check-in and up to three hours for late check-out. Kindly note that additional charges of 1,000 yen per hour apply for these services. We will gladly assist you in making the necessary arrangements. :)</p>",
             "amenities": "<p>- Bathtub<br>- Shampoo, Conditioner, and Body Wash<br>- Hair dryers<br>- Bidet<br>- Washing machine and dryer<br>- Cutlery<br>- Table<br>- Air conditioner&nbsp;</p>",
+            "directContact": null,
             "houseRules": "<p>- 5 guests maximum<br>- No pets<br>- No smoking</p>",
             "slider": [
                 {
@@ -232,7 +233,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": null,
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
                         "tag_labels": [
                             {
                                 "id": 6,
@@ -923,6 +924,40 @@
                             "id": 63,
                             "documentId": "k4n3yokyb1jvs0k994ws1ci3",
                             "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993268/Yukemuri_Observatory_f7f1e74717.jpg"
+                        }
+                    },
+                    {
+                        "id": 199,
+                        "documentId": "k6q2lfikdmfm6ukhfos0jgus",
+                        "slug": "Hachiman-Kamado-Shrine",
+                        "label": "Hachiman Kamado Shrine",
+                        "address": "1900 Oaza Uchigama, Beppu, Oita 874-0011, Japan",
+                        "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
+                        "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                        "dial": "+81-977-66-1633",
+                        "highlight": "Hachiman Kamado Shrine in Beppu, established in 727 CE, is steeped in local lore about the god Hachiman and a demon, who, challenged to build 100 stone steps by dawn, only completed 99 before fleeing. These steps still lead to the shrine, a testament to the hurried construction. In recent years, the shrine has become a popular \"pilgrimage site\" for fans of the Demon Slayer: Kimetsu no Yaiba anime, due to the shared \"Kamado\" name with the protagonist Tanjiro, the shrine's demon-slaying legends, the \"Kamado Kagura\" dance, and symbolic dragon imagery, creating a unique blend of ancient tradition and modern pop culture.",
+                        "externalURL": "http://hachimannkamado.sub.jp/",
+                        "type": "attraction",
+                        "nativeLanguageCode": "ja",
+                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "tag_labels": [
+                            {
+                                "id": 6,
+                                "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                                "name": "Strolling",
+                                "color": "GREY"
+                            },
+                            {
+                                "id": 5,
+                                "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                                "name": "Top Attractions",
+                                "color": "GREY"
+                            }
+                        ],
+                        "coverPhoto": {
+                            "id": 100,
+                            "documentId": "ofj2668p6ywoarqd54h9zri2",
+                            "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1752475126/Hachiman_Kamado_Shrine01_93018e74bf.jpg"
                         }
                     }
                 ]

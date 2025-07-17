@@ -90,6 +90,8 @@ const POIDetail = ({
   const readMoreLabel = config?.data?.globalComponent?.readMoreLabel || 'Read more';
   const readLessLabel = config?.data?.globalComponent?.readLessLabel || 'Read less';
   const hostTagLabel = config?.data?.globalComponent?.hostTagLabel || 'Host';
+  const audioGuideButtonLabel = config?.data?.globalComponent?.audioGuideButton?.label || 'Start Audio Guide with Laxy';
+  const exploreMoreAboutLabel = config?.data?.globalComponent?.exploreMoreAboutLabel || 'Explore more about {{value}}?';
 
   // Get suite data for host avatar (if getSuiteData is provided)
   const suiteData = getSuiteData ? getSuiteData(suiteId || routeSuiteId, language) : null;
@@ -665,7 +667,7 @@ const POIDetail = ({
                   textAlign: 'center'
                 }}
               >
-                Explore more about {poi.label}?
+                {exploreMoreAboutLabel.replace('{{value}}', poi.label)}
               </Typography>
               <Button
                 variant="contained"
@@ -683,7 +685,7 @@ const POIDetail = ({
                   borderRadius: '50px'
                 }}
               >
-                Start Audio Guide with Laxy
+                {audioGuideButtonLabel}
               </Button>
             </Box>
           )}
