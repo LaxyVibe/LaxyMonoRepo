@@ -5,6 +5,7 @@ import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import { travelLogo, getCurrentLanguages, mapTextToAudioLanguage } from '@laxy/components';
 import { getHubConfigByLanguage } from '../../mocks/guide-application-config/index.js';
+import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
@@ -136,7 +137,7 @@ function TourCover() {
   const { langCode, tourId } = useParams();
   const { language } = useLanguage();
   const navigate = useNavigate();
-  const { loadAudioGuide, isLoading, audioLanguage, setAudioLanguage } = useAudioGuide();
+  const { loadAudioGuide, isLoading, setAudioLanguage, clearAudioGuide, pause, audioLanguage, audioLanguageRefreshKey } = useAudioGuide();
   
   const [tourData, setTourData] = useState(null);
   const [error, setError] = useState(null);
@@ -144,20 +145,42 @@ function TourCover() {
 
   // Get current languages based on URL langCode
   const { currentTextLanguage, currentAudioLanguage } = getCurrentLanguages(langCode);
+  
+  // For TourCover, since the route doesn't include audio language, we need to use the actual
+  // audio language from the context, not just the default from language context
+  // This ensures the dropdown reflects the current state correctly
+  const defaultAudioLanguage = getValidAudioLanguageCode(currentAudioLanguage);
+  
+  // State for currently selected audio language (for the dropdown)
+  // Initialize with the actual audio language from context, not just the default
+  // Use a function to ensure we get the most current value
+  const [selectedAudioLanguage, setSelectedAudioLanguage] = useState(() => {
+    const currentAudioLang = audioLanguage || defaultAudioLanguage;
+    console.log('🔍 TourCover initializing selectedAudioLanguage with:', currentAudioLang);
+    return currentAudioLang;
+  });
 
   useEffect(() => {
     loadTourCoverData();
   }, [tourId, currentTextLanguage]);
 
-  // Initialize audio language when component mounts or when mapped language changes
+  // Sync the dropdown with the actual audio language from context
+  // This ensures the dropdown always shows the current audio language
   useEffect(() => {
-    // Only set the default audio language if none is stored in cookie (audioLanguage will be 'eng' by default)
-    // But we should update it based on the current page's text language
-    if (!audioLanguage || audioLanguage === 'eng') {
-      console.log('🔍 Setting default audio language from URL mapping:', currentAudioLanguage);
-      setAudioLanguage(currentAudioLanguage);
+    console.log('🔍 TourCover syncing dropdown with context audioLanguage:', audioLanguage);
+    if (audioLanguage && audioLanguage !== selectedAudioLanguage) {
+      setSelectedAudioLanguage(audioLanguage);
     }
-  }, [currentAudioLanguage, setAudioLanguage]); // Removed audioLanguage dependency to avoid conflicts
+  }, [audioLanguage, selectedAudioLanguage]);
+
+  // Initialize audio language if not set (fallback to default)
+  useEffect(() => {
+    if (!audioLanguage) {
+      console.log('🔍 TourCover initializing audio language with default:', defaultAudioLanguage);
+      setAudioLanguage(defaultAudioLanguage);
+      setSelectedAudioLanguage(defaultAudioLanguage);
+    }
+  }, [audioLanguage, defaultAudioLanguage, setAudioLanguage]);
 
   const loadTourCoverData = async () => {
     try {
@@ -179,14 +202,37 @@ function TourCover() {
   const handleStartTour = async () => {
     if (!tourId) return;
 
-    // Navigate to the first step of the tour using currentTextLanguage for URL
-    // Audio language will be read from cookie by AudioGuideContext
-    navigate(`/${currentTextLanguage}/tour/${tourId}/steps`);
+    // Navigate to the steps list with the selected audio language in the URL
+    navigate(`/${currentTextLanguage}/tour/${tourId}/${selectedAudioLanguage}/steps`);
   };
 
   const handleAudioLanguageChange = (event) => {
-    console.log('🔍 Audio language changed to:', event.target.value);
-    setAudioLanguage(event.target.value);
+    const newAudioLang = event.target.value;
+    const currentDropdownLang = selectedAudioLanguage;
+    const currentContextLang = audioLanguage;
+    console.log('🔍 Audio language change event:');
+    console.log('  From dropdown state:', currentDropdownLang);
+    console.log('  From context:', currentContextLang);
+    console.log('  To:', newAudioLang);
+    console.log('  Is same as dropdown?', currentDropdownLang === newAudioLang);
+    console.log('  Is same as context?', currentContextLang === newAudioLang);
+    
+    // Always stop current audio and clear audio guide state to force clean reload
+    // This ensures that even if the user selects the same language, we refresh the content
+    pause();
+    clearAudioGuide();
+    
+    // Force update the selected language state
+    setSelectedAudioLanguage(newAudioLang);
+    
+    // Always set the audio language with force refresh flag
+    // This ensures that even if the user selects the same language, we refresh the content
+    setAudioLanguage(newAudioLang, true); // Force refresh = true
+    
+    console.log('🔍 Audio content cleared and language set to:', newAudioLang);
+    
+    // No need to navigate since TourCover route doesn't include audio language
+    // The audio language will be included when user clicks "Start Tour"
   };
 
   const handleToastClose = (event, reason) => {
@@ -240,16 +286,11 @@ function TourCover() {
   const audioLanguageLabel = guideConfig?.data?.pagePOIGuide?.audioLanguageLabel || 'Audio Language';
   const nextLabel = guideConfig?.data?.pagePOIGuide?.nextLabel || 'Start Tour';
   
-  // Get localized content - IMPORTANT: Separate text language from audio language
-  // For UI text (title, descriptions): use currentTextLanguage (from URL)
-  // For audio content: use selectedAudioLanguage (from user selection/cookie)
-  const selectedAudioLanguage = audioLanguage || currentAudioLanguage;
-  
   console.log('🔍 Debug TourCover data binding:');
   console.log('  currentTextLanguage (for UI):', currentTextLanguage);
-  console.log('  audioLanguage from context:', audioLanguage);
-  console.log('  currentAudioLanguage from mapping:', currentAudioLanguage);
-  console.log('  selectedAudioLanguage (for audio):', selectedAudioLanguage);
+  console.log('  defaultAudioLanguage from context:', defaultAudioLanguage);
+  console.log('  audioLanguage from AudioGuideContext:', audioLanguage);
+  console.log('  selectedAudioLanguage (dropdown state):', selectedAudioLanguage);
   console.log('  availableAudioLanguages:', availableAudioLanguages);
   
   // Title should be based on TEXT language (for UI), not audio language
@@ -344,7 +385,7 @@ function TourCover() {
           <InputLabel id="audio-language-label">{audioLanguageLabel}</InputLabel>
           <Select
             labelId="audio-language-label"
-            value={selectedAudioLanguage || 'eng'}
+            value={selectedAudioLanguage || audioLanguage || 'eng'}
             label={audioLanguageLabel}
             onChange={handleAudioLanguageChange}
             displayEmpty

@@ -6,6 +6,7 @@ import { getPOIDetails } from '../../utils/poiGuideService.js';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import { travelLogo, getCurrentLanguages, mapTextToAudioLanguage } from '@laxy/components';
 import { getHubConfigByLanguage } from '../../mocks/guide-application-config/index.js';
+import { getValidAudioLanguageCode } from '../../utils/languageUtils.js';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
@@ -216,7 +217,7 @@ function POICover() {
   const { langCode, poiSlug } = useParams();
   const { language } = useLanguage();
   const navigate = useNavigate();
-  const { loadAudioGuide, isLoading, audioLanguage, setAudioLanguage } = useAudioGuide();
+  const { loadAudioGuide, isLoading, audioLanguage, audioLanguageRefreshKey, setAudioLanguage, clearAudioGuide, pause } = useAudioGuide();
   
   const [poiData, setPoiData] = useState(null);
   const [tourData, setTourData] = useState(null);
@@ -225,20 +226,39 @@ function POICover() {
 
   // Get current languages based on URL langCode
   const { currentTextLanguage, currentAudioLanguage } = getCurrentLanguages(langCode);
+  
+  // For POICover, similar to TourCover, use reactive audio language state
+  const defaultAudioLanguage = getValidAudioLanguageCode(currentAudioLanguage);
+  
+  // State for currently selected audio language (for the dropdown)
+  // Initialize with the actual audio language from context, not just the default
+  const [selectedAudioLanguage, setSelectedAudioLanguage] = useState(() => {
+    const currentAudioLang = audioLanguage || defaultAudioLanguage;
+    console.log('🔍 POICover initializing selectedAudioLanguage with:', currentAudioLang);
+    return currentAudioLang;
+  });
 
   useEffect(() => {
     loadPOICoverData();
   }, [poiSlug, currentTextLanguage]);
 
-  // Initialize audio language when component mounts or when mapped language changes
+  // Sync the dropdown with the actual audio language from context
+  // This ensures the dropdown always shows the current audio language
   useEffect(() => {
-    // Only set the default audio language if none is stored in cookie (audioLanguage will be 'eng' by default)
-    // But we should update it based on the current page's text language
-    if (!audioLanguage || audioLanguage === 'eng') {
-      console.log('🔍 Setting default audio language from URL mapping:', currentAudioLanguage);
-      setAudioLanguage(currentAudioLanguage);
+    console.log('🔍 POICover syncing dropdown with context audioLanguage:', audioLanguage);
+    if (audioLanguage && audioLanguage !== selectedAudioLanguage) {
+      setSelectedAudioLanguage(audioLanguage);
     }
-  }, [currentAudioLanguage, setAudioLanguage]); // Removed audioLanguage dependency to avoid conflicts
+  }, [audioLanguage, selectedAudioLanguage]);
+
+  // Initialize audio language if not set (fallback to default)
+  useEffect(() => {
+    if (!audioLanguage) {
+      console.log('🔍 POICover initializing audio language with default:', defaultAudioLanguage);
+      setAudioLanguage(defaultAudioLanguage);
+      setSelectedAudioLanguage(defaultAudioLanguage);
+    }
+  }, [audioLanguage, defaultAudioLanguage, setAudioLanguage]);
 
   const loadPOICoverData = async () => {
     try {
@@ -276,19 +296,34 @@ function POICover() {
   const handleStartTour = async () => {
     if (!poiData?.legacyTourCode) return;
 
-    // Navigate to the step AudioGuide directly using currentTextLanguage for URL
-    // Audio language will be read from cookie by AudioGuideContext
+    // Navigate to the step AudioGuide directly using currentTextLanguage for URL and selectedAudioLanguage for audio
     navigate(`/${currentTextLanguage}/poi/${poiSlug}/tour/${poiData.legacyTourCode}/step/${poiData.legacyTourCode}-0001`);
   };
 
   const handleAudioLanguageChange = (event) => {
-    console.log('🔍 Audio language changed to:', event.target.value);
-    setAudioLanguage(event.target.value);
+    const newAudioLang = event.target.value;
+    const currentDropdownLang = selectedAudioLanguage;
+    const currentContextLang = audioLanguage;
+    console.log('🔍 POICover Audio language change event:');
+    console.log('  From dropdown state:', currentDropdownLang);
+    console.log('  From context:', currentContextLang);
+    console.log('  To:', newAudioLang);
+    console.log('  Is same as dropdown?', currentDropdownLang === newAudioLang);
+    console.log('  Is same as context?', currentContextLang === newAudioLang);
     
-    // Refresh the page after setting the audio language
-    setTimeout(() => {
-      window.location.reload();
-    }, 100); // Small delay to ensure the language is set before refresh
+    // Always stop current audio and clear audio guide state to force clean reload
+    // This ensures that even if the user selects the same language, we refresh the content
+    pause();
+    clearAudioGuide();
+    
+    // Force update the selected language state
+    setSelectedAudioLanguage(newAudioLang);
+    
+    // Always set the audio language with force refresh flag
+    // This ensures that even if the user selects the same language, we refresh the content
+    setAudioLanguage(newAudioLang, true); // Force refresh = true
+    
+    console.log('🔍 POICover Audio content cleared and language set to:', newAudioLang);
   };
 
   const handleToastClose = (event, reason) => {
@@ -348,14 +383,13 @@ function POICover() {
   
   // Get localized content - IMPORTANT: Separate text language from audio language
   // For UI text (title, descriptions): use currentTextLanguage (from URL)
-  // For audio content: use selectedAudioLanguage (from user selection/cookie)
-  const selectedAudioLanguage = audioLanguage || currentAudioLanguage;
+  // For audio content: use selectedAudioLanguage (from state/context)
   
   console.log('🔍 Debug POICover data binding:');
   console.log('  currentTextLanguage (for UI):', currentTextLanguage);
   console.log('  audioLanguage from context:', audioLanguage);
   console.log('  currentAudioLanguage from mapping:', currentAudioLanguage);
-  console.log('  selectedAudioLanguage (for audio):', selectedAudioLanguage);
+  console.log('  selectedAudioLanguage (dropdown state):', selectedAudioLanguage);
   console.log('  availableAudioLanguages:', availableAudioLanguages);
   
   // Title should be based on TEXT language (for UI), not audio language
@@ -501,7 +535,7 @@ function POICover() {
           <InputLabel id="audio-language-label">{audioLanguageLabel}</InputLabel>
           <Select
             labelId="audio-language-label"
-            value={selectedAudioLanguage || 'eng'}
+            value={selectedAudioLanguage || audioLanguage || 'eng'}
             label={audioLanguageLabel}
             onChange={handleAudioLanguageChange}
             displayEmpty

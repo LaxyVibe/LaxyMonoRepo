@@ -142,3 +142,89 @@ export const extractLanguageFromPath = (pathname) => {
     cleanedPathname: pathname
   };
 };
+
+/**
+ * Extract both text and audio language codes from the URL path
+ * Supports URLs like /:textLang/tour/:tourId/:audioLang/steps
+ * @param {string} pathname - Current URL path
+ * @returns {object} - Contains textLangCode, audioLangCode, and cleanedPathname
+ */
+export const extractTextAndAudioLanguageFromPath = (pathname) => {
+  // Remove leading slash if present
+  const path = pathname.startsWith('/') ? pathname.substring(1) : pathname;
+  
+  // Split path by slashes
+  const segments = path.split('/');
+  
+  // Check if the first segment is a text language code
+  const potentialTextLangCode = segments[0];
+  let textLangCode = null;
+  let audioLangCode = null;
+  let cleanedPathname = pathname;
+  
+  if (isLanguageSupported(potentialTextLangCode)) {
+    textLangCode = potentialTextLangCode;
+    
+    // Check for tour patterns that might include audio language
+    // Pattern: /:textLang/tour/:tourId/:audioLang/steps
+    // Pattern: /:textLang/tour/:tourId/:audioLang/step/:stepId
+    if (segments.length >= 4 && segments[1] === 'tour') {
+      const potentialAudioLangCode = segments[3];
+      
+      // Validate if it's an audio language (not 'steps' or 'step')
+      if (potentialAudioLangCode !== 'steps' && potentialAudioLangCode !== 'step') {
+        // Check if it's a valid audio language code (eng, jpn, kor, cmn)
+        const validAudioLanguages = ['eng', 'jpn', 'kor', 'cmn'];
+        if (validAudioLanguages.includes(potentialAudioLangCode)) {
+          audioLangCode = potentialAudioLangCode;
+          // Remove both text and audio language from path
+          const remainingSegments = [segments[1], segments[2], ...segments.slice(4)];
+          cleanedPathname = '/' + remainingSegments.join('/');
+        } else {
+          // No audio language, just remove text language
+          const remainingSegments = segments.slice(1);
+          cleanedPathname = '/' + remainingSegments.join('/');
+        }
+      } else {
+        // No audio language, just remove text language
+        const remainingSegments = segments.slice(1);
+        cleanedPathname = '/' + remainingSegments.join('/');
+      }
+    } else {
+      // Standard pattern without audio language
+      const remainingSegments = segments.slice(1);
+      cleanedPathname = '/' + remainingSegments.join('/');
+    }
+  }
+  
+  return {
+    textLangCode: textLangCode || DEFAULT_LANGUAGE,
+    audioLangCode: audioLangCode || null,
+    cleanedPathname
+  };
+};
+
+// List of supported audio language codes
+export const SUPPORTED_AUDIO_LANGUAGES = ['eng', 'jpn', 'kor', 'cmn'];
+
+/**
+ * Check if the provided audio language code is supported
+ * @param {string} audioLangCode - Audio language code to check
+ * @returns {boolean} - Whether the audio language is supported
+ */
+export const isAudioLanguageSupported = (audioLangCode) => {
+  return SUPPORTED_AUDIO_LANGUAGES.includes(audioLangCode);
+};
+
+/**
+ * Get a valid audio language code from the provided code
+ * Returns the default audio language if the provided code is not supported
+ * @param {string} audioLangCode - Audio language code to validate
+ * @returns {string} - Valid audio language code
+ */
+export const getValidAudioLanguageCode = (audioLangCode) => {
+  if (!audioLangCode || !isAudioLanguageSupported(audioLangCode)) {
+    return 'eng'; // Default to English audio
+  }
+  return audioLangCode;
+};

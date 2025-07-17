@@ -14,6 +14,7 @@ import {
 import { PlayArrow, AccessTime, ArrowBack } from '@mui/icons-material';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
+import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
@@ -137,31 +138,77 @@ const commonStyles = {
 };
 
 function StepList() {
-  const { langCode, tourId } = useParams();
+  const { langCode, tourId, audioLang } = useParams();
   const { language } = useLanguage();
   const navigate = useNavigate();
-  const { tourData, steps, tourTitle, loadAudioGuide, isLoading, currentStep } = useAudioGuide();
+  const { tourData, steps, tourTitle, loadAudioGuide, isLoading, currentStep, audioLanguage, audioLanguageRefreshKey, setAudioLanguage } = useAudioGuide();
   
   const [error, setError] = useState(null);
 
+  // Extract audio language from URL or use default
+  const { audioLangCode } = extractTextAndAudioLanguageFromPath(window.location.pathname);
+  const urlAudioLanguage = getValidAudioLanguageCode(audioLang || audioLangCode);
+
+  // Set audio language immediately on component mount if it's different
+  React.useLayoutEffect(() => {
+    if (urlAudioLanguage !== audioLanguage) {
+      console.log('🔍 StepList setting audio language immediately:', urlAudioLanguage);
+      setAudioLanguage(urlAudioLanguage);
+    }
+  }, []); // Only run once on mount
+
+  // Monitor audio language changes from URL
+  useEffect(() => {
+    if (urlAudioLanguage !== audioLanguage) {
+      console.log('🔍 StepList updating audio language:', urlAudioLanguage);
+      setAudioLanguage(urlAudioLanguage);
+    }
+  }, [urlAudioLanguage, audioLanguage, setAudioLanguage]);
+
   const loadTourData = useCallback(async () => {
     try {
+      console.log('🔍 StepList loadTourData called with audioLanguage:', audioLanguage);
+      // Pass the UI text language to loadAudioGuide, but audio language is already set in context
+      // The AudioGuideContext will use the audioLanguage from context for step content extraction
       await loadAudioGuide(tourId, language);
     } catch (error) {
       console.error('Failed to load tour data:', error);
       setError('Failed to load tour steps');
     }
-  }, [loadAudioGuide, tourId, language]);
+  }, [loadAudioGuide, tourId, language, audioLanguage, audioLanguageRefreshKey]); // Add refresh key dependency
 
   useEffect(() => {
-    // Only load if we don't have tourData or if the tourId has changed
-    if (!tourData || tourData.tourCode !== tourId) {
+    // Only load tour data when audio language is properly synced with URL
+    const isAudioLanguageSynced = audioLanguage === urlAudioLanguage;
+    const needsToLoad = !tourData || 
+                       tourData.tourCode !== tourId ||
+                       tourData.audioLanguage !== urlAudioLanguage; // Also check if guide was loaded with different audio language
+    
+    if (isAudioLanguageSynced && needsToLoad) {
+      console.log('🔍 StepList loading tour data with synced audio language:', { 
+        tourId, 
+        language, 
+        audioLanguage, 
+        urlAudioLanguage,
+        guideAudioLanguage: tourData?.audioLanguage,
+        reason: !tourData ? 'no tour data' : 
+                tourData.tourCode !== tourId ? 'tour changed' : 
+                'audio language changed'
+      });
       loadTourData();
+    } else {
+      console.log('🔍 StepList waiting for sync or no need to load:', {
+        isAudioLanguageSynced,
+        needsToLoad,
+        audioLanguage,
+        urlAudioLanguage,
+        guideAudioLanguage: tourData?.audioLanguage
+      });
     }
-  }, [tourId, language, loadTourData, tourData]);
+  }, [tourId, language, audioLanguage, urlAudioLanguage, audioLanguageRefreshKey, loadTourData, tourData]);
 
   const handleStepClick = (step) => {
-    navigate(`/${langCode}/tour/${tourId}/step/${step.id}`);
+    navigate(`/${langCode}/tour/${tourId}/${urlAudioLanguage}/step/${step.id}`);
   };
 
   const handleGoBack = () => {
