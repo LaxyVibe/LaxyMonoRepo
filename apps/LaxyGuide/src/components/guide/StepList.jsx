@@ -15,6 +15,7 @@ import { PlayArrow, AccessTime, ArrowBack } from '@mui/icons-material';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
+import { trackEvent, trackButtonClick, trackNavigation } from '../../utils/analytics.js';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
@@ -196,6 +197,15 @@ function StepList() {
                 'audio language changed'
       });
       loadTourData();
+      
+      // Track step list view
+      trackEvent('step_list_view', {
+        category: 'Content',
+        label: `${tourId}-steps`,
+        tour_id: tourId,
+        audio_language: urlAudioLanguage,
+        text_language: language
+      });
     } else {
       console.log('🔍 StepList waiting for sync or no need to load:', {
         isAudioLanguageSynced,
@@ -208,10 +218,22 @@ function StepList() {
   }, [tourId, language, audioLanguage, urlAudioLanguage, audioLanguageRefreshKey, loadTourData, tourData]);
 
   const handleStepClick = (step) => {
+    // Track step click
+    trackEvent('step_list_item_click', {
+      category: 'Navigation',
+      label: `${tourId}-step-${step.id}`,
+      tour_id: tourId,
+      step_id: step.id,
+      audio_language: urlAudioLanguage
+    });
+    trackNavigation('Step List', 'Audio Guide Step', 'step_click');
+    
     navigate(`/${langCode}/tour/${tourId}/${urlAudioLanguage}/step/${step.id}`);
   };
 
   const handleGoBack = () => {
+    trackButtonClick('Back to Tour', 'step-list');
+    trackNavigation('Step List', 'Tour Cover', 'back_button');
     navigate(`/${langCode}/tour/${tourId}`);
   };
 

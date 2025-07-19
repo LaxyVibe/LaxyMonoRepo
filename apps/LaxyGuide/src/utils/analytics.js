@@ -1,8 +1,8 @@
 // Google Analytics utility functions
 
 // Configuration
-const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID || 'GA_MEASUREMENT_ID_NOT_SET';
-const isProduction = process.env.NODE_ENV === 'production';
+const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_LAXY_GUIDE_MEASUREMENT_ID || 'GA_MEASUREMENT_ID_NOT_SET';
+const isProduction = import.meta.env.MODE === 'production';
 const isAnalyticsEnabled = isProduction && GA_MEASUREMENT_ID !== 'GA_MEASUREMENT_ID_NOT_SET';
 
 // Queue for events before GA is loaded

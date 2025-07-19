@@ -10,6 +10,7 @@ import {
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { SUPPORTED_LANGUAGES } from '../utils/languageUtils';
+import { trackLanguageChange, trackButtonClick } from '../utils/analytics.js';
 
 // Language display names
 const languageNames = {
@@ -26,6 +27,9 @@ const LanguagePage = () => {
   const { language, setLanguage } = useLanguage();
 
   const handleLanguageSelect = (newLanguage) => {
+    // Track language change
+    trackLanguageChange(language, newLanguage);
+    
     setLanguage(newLanguage);
     // Navigate back to the previous page or home
     const from = location.state?.from || `/${newLanguage}`;
@@ -33,6 +37,7 @@ const LanguagePage = () => {
   };
 
   const handleBack = () => {
+    trackButtonClick('Back', 'language-page');
     navigate(`/${language}`);
   };
 
