@@ -6,6 +6,7 @@ import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import { travelLogo, getCurrentLanguages, mapTextToAudioLanguage } from '@laxy/components';
 import { getHubConfigByLanguage } from '../../mocks/guide-application-config/index.js';
 import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
+import { trackTourView, trackButtonClick, trackNavigation, trackEvent } from '../../utils/analytics.js';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
@@ -162,6 +163,10 @@ function TourCover() {
 
   useEffect(() => {
     loadTourCoverData();
+    // Track tour view
+    if (tourId) {
+      trackTourView(tourId, currentTextLanguage);
+    }
   }, [tourId, currentTextLanguage]);
 
   // Sync the dropdown with the actual audio language from context
@@ -202,6 +207,10 @@ function TourCover() {
   const handleStartTour = async () => {
     if (!tourId) return;
 
+    // Track button click and navigation
+    trackButtonClick('Start Tour', `tour-${tourId}`);
+    trackNavigation('Tour Cover', 'Tour Steps', 'button');
+
     // Navigate to the steps list with the selected audio language in the URL
     navigate(`/${currentTextLanguage}/tour/${tourId}/${selectedAudioLanguage}/steps`);
   };
@@ -216,6 +225,15 @@ function TourCover() {
     console.log('  To:', newAudioLang);
     console.log('  Is same as dropdown?', currentDropdownLang === newAudioLang);
     console.log('  Is same as context?', currentContextLang === newAudioLang);
+    
+    // Track language change
+    if (currentContextLang !== newAudioLang) {
+      trackEvent('audio_language_change', {
+        category: 'Localization',
+        label: `${currentContextLang || 'unknown'} -> ${newAudioLang}`,
+        tour_id: tourId
+      });
+    }
     
     // Always stop current audio and clear audio guide state to force clean reload
     // This ensures that even if the user selects the same language, we refresh the content
@@ -248,7 +266,10 @@ function TourCover() {
         <Typography variant="h6" color="error" sx={{ mb: 2 }}>
           {error}
         </Typography>
-        <Button variant="outlined" onClick={() => navigate(-1)}>
+        <Button variant="outlined" onClick={() => {
+          trackButtonClick('Go Back', 'tour-error');
+          navigate(-1);
+        }}>
           Go Back
         </Button>
       </Box>

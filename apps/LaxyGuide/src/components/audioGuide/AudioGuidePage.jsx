@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Box, IconButton, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -6,6 +6,7 @@ import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
 import AudioGuidePlayer from './AudioGuidePlayer.jsx';
 import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
+import { trackEvent, trackNavigation, trackButtonClick } from '../../utils/analytics.js';
 
 /**
  * Full-screen audio guide page component
@@ -120,6 +121,16 @@ export default function AudioGuidePage() {
         // This ensures the correct step is loaded even if indices match
         console.log('🔍 Going to step index:', targetStepIndex);
         goToStep(targetStepIndex);
+        
+        // Track step view
+        trackEvent('audio_step_view', {
+          category: 'Audio Guide',
+          label: `${tourId}-step-${stepId}`,
+          tour_id: tourId,
+          step_id: stepId,
+          step_index: targetStepIndex,
+          audio_language: urlAudioLanguage
+        });
       }
     }
   }, [stepId, steps, currentStepIndex]); // Removed goToStep to prevent infinite loop
@@ -147,6 +158,8 @@ export default function AudioGuidePage() {
   }, [stepId, steps, currentGuide, urlAudioLanguage, currentStep, currentStepIndex, goToStep]);
 
   const handleBackClick = () => {
+    trackButtonClick('Back', 'audio-guide-page');
+    trackNavigation('Audio Guide', 'Previous Page', 'back_button');
     navigate(-1);
   };
 
