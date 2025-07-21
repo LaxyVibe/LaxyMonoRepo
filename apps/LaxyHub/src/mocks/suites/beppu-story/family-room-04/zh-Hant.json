@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1107,
+                    "id": 1328,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1106,
+                    "id": 1327,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -285,7 +285,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.760326954975!2d131.50500399999999!3d33.28271600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6de987686f1%3A0x80977dcb31a9e37e!2z44Ks44K544OIIOWIpeW6nOW6lw!5e0!3m2!1sen!2sjp!4v1749359278056!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 570-021-065",
-                        "highlight": "ガスト 別府店是日本知名的家庭餐廳連鎖店「Gusto」在別府的分店。這家餐廳提供多樣化的菜單選擇，從日式料理到西式餐點應有盡有，包括漢堡排、義大利麵、沙拉和各種甜點。無論是早餐、午餐還是晚餐，都是當地居民和遊客輕鬆用餐的好去處。餐廳通常營業時間很長，能滿足不同時段的用餐需求，提供一個舒適便利的用餐環境。您可以在這裡享用美味且價格實惠的家庭式料理。",
+                        "highlight": "ガスト 別府店是日本知名的家庭餐廳連鎖店「Gusto」在別府的分店。這家餐廳提供多樣化的菜單選擇，從日式料理到西式餐點應有盡有，包括漢堡排、義大利麵、沙拉和各種甜點。無論是早餐、午餐還是晚餐，都是當地居民和遊客輕鬆用餐的好去處。餐廳通常營業時間很長，能滿足不同時段的用餐需求，提供��個舒適便利的用餐環境。您可以在這裡享用美味且價格實惠的家庭式料理。",
                         "externalURL": "https://www.skylark.co.jp/gusto/?utm_source=gt&utm_medium=gmb&utm_campaign=brandtop-Oita",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -767,7 +767,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.1121527910245!2d131.4696745!3d33.315883299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7b960bca539%3A0x8bdccd2d35d910f2!2sHells%20of%20Beppu!5e0!3m2!1sen!2sjp!4v1749359571081!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-66-1577",
-                        "highlight": "別府地獄巡禮是別府最具代表性的觀光行程之一，將溫泉觀賞與文化主題結合，打造出獨一無二的視覺與感官體驗。不同於一般溫泉以泡湯為主，地獄巡禮是以觀賞為目的的溫泉奇景，設有多個風格迥異的主題地獄，讓旅客一次飽覽地熱的神秘與壯觀。\n\n地獄巡禮總共包含八處主要溫泉景點，分別是：海地獄、血之池地獄、鬼山地獄、白池地獄、龍卷地獄、山地獄、鬼石坊主地獄與灶地獄。每處都有不同的地熱現象與展示內容，有的鮮紅如血、有的湛藍如海，更有鱷魚養殖區與地熱蒸食體驗設施，是結合自然與人文的多元觀光路線。\n\n部分地獄地點之間距離稍遠，建議搭配市區巴士或自駕前往，亦可購買地獄巡禮通票一次參觀��處，票價更為優惠。適合安排半日至一日的深度旅遊行程。",
+                        "highlight": "別府地獄巡禮是別府最具代表性的觀光行程之一，將溫泉觀賞與文化主題結合，打造出獨一無二的視覺與感官體驗。不同於一般溫泉以泡湯為主，地獄巡禮是以觀賞為目的的溫泉奇景，設有多個風格迥異的主題地獄，讓旅客一次飽覽地熱的神秘與壯觀。\n\n地獄巡禮總共包含八處主要溫泉景點，分別是：海地獄、血之池地獄、鬼山地獄、白池地獄、龍卷地獄、山地獄、鬼石坊主地獄與灶地獄。每處都有不同的地熱現象與展示內容，有的鮮紅如血、有的湛藍如海，更有鱷魚養殖區與地熱蒸食體驗設施，是結合自然與人文的多元觀光路線。\n\n部分地獄地點之間距離稍遠，建議搭配市區巴士或自駕前往，亦可購買地獄巡禮通票一次參觀八處，票價更為優惠。適合安排半日至一日的深度旅遊行程。",
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",

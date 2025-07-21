@@ -3,34 +3,34 @@
         "id": 5,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:22.398Z",
-        "updatedAt": "2025-07-17T05:53:31.844Z",
-        "publishedAt": "2025-06-24T13:13:26.210Z",
+        "updatedAt": "2025-07-18T03:51:05.195Z",
+        "publishedAt": "2025-07-18T03:51:04.833Z",
         "locale": "ja",
         "universalConfig": {
-            "id": 237,
+            "id": 267,
             "releasedLanguages": [
                 {
-                    "id": 957,
+                    "id": 1109,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 959,
+                    "id": 1113,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 955,
+                    "id": 1112,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 956,
+                    "id": 1111,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 960,
+                    "id": 1110,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -42,7 +42,7 @@
             "readLessLabel": "閉じる",
             "hostTagLabel": "おすすめ",
             "poweredByLabel": "Powered by{{value}}",
-            "exploreMoreAboutLabel": null,
+            "exploreMoreAboutLabel": "{{value}}についてもっと知る",
             "speechButton": {
                 "id": 133,
                 "label": "現地の言語で話す",
@@ -52,7 +52,10 @@
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993196/volume_05_0df3287e92.svg"
                 }
             },
-            "audioGuideButton": null
+            "audioGuideButton": {
+                "id": 1114,
+                "label": "Laxy でオーディオガイドを開始"
+            }
         },
         "header": {
             "id": 5,
@@ -192,6 +195,16 @@
                     "id": 132,
                     "label": "よくある質問",
                     "route": "/info/faq",
+                    "icon": {
+                        "id": 47,
+                        "documentId": "qcmz642lrze1motca93rn3vz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
+                    }
+                },
+                {
+                    "id": 1030,
+                    "label": "直接連絡",
+                    "route": "/info/direct-contact",
                     "icon": {
                         "id": 47,
                         "documentId": "qcmz642lrze1motca93rn3vz",

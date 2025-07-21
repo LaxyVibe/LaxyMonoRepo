@@ -11,7 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4267072550774!2d131.5028807!3d33.281498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a700030bffa9%3A0xac8539ea96375e74!2sNouvelle!5e0!3m2!1sen!2sjp!4v1751451706981!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<p>- 浴缸<br>- 洗髮乳、潤髮乳和沐浴乳<br>- 吹風機<br>- 免治馬桶<br>- 洗衣機 (附烘衣機)<br>- 餐具<br>- 桌子<br>- 空調</p>",
-            "directContact": null,
+            "directContact": "<ul class=\"ak-ul\" data-indent-level=\"1\">\n<li>\n<p data-renderer-start-pos=\"184\">Instagram @ kakaotalk_beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"221\">KakaoTalk @ beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"248\">LINE @ beppuairbnb</p>\n</li>\n</ul>",
             "houseRules": "<p>-最多可入住5位房客<br>- 禁止攜帶寵物<br>-禁止吸煙</p>",
             "slider": [
                 {
@@ -23,13 +23,13 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1157,
-                    "network": "Airbnb3",
+                    "id": 1437,
+                    "network": "Suite 201 2.4G",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1158,
-                    "network": "Airbnb4",
+                    "id": 1438,
+                    "network": "Suite 201 5G",
                     "password": "beppuairbnb"
                 }
             ],

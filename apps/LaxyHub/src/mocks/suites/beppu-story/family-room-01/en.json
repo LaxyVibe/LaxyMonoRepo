@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1134,
+                    "id": 1222,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1135,
+                    "id": 1223,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }

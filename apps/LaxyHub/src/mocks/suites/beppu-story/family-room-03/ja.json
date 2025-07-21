@@ -11,7 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>チェックイン: 午後 3:00 以降<br>チェックアウト: 午前 10:00 まで</p>\n<p>お客様の利便性のため、アーリーチェックインとレイトチェックアウトの便利なオプションをご用意しております。空室状況と稼働率に応じて、アーリーチェックインは最低3時間、レイトチェックアウトは最大3時間までご利用いただけます。これらのサービスには1時間あたり1,000円の追加料金がかかりますので、ご了承ください。必要な手配は喜んでお手伝いさせていただきます。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- バスタブ</div>\n<div class=\"ewa-rteLine\">- シャンプー、コンディショナー、ボディソープ</div>\n<div class=\"ewa-rteLine\">- ヘアドライヤー</div>\n<div class=\"ewa-rteLine\">- 温水洗浄便座</div>\n<div class=\"ewa-rteLine\">- 洗濯機</div>\n<div class=\"ewa-rteLine\">- カトラリー</div>\n<div class=\"ewa-rteLine\">- テーブル</div>\n<div class=\"ewa-rteLine\">- エアコン</div>",
-            "directContact": null,
+            "directContact": "<ul class=\"ak-ul\" data-indent-level=\"1\">\n<li>\n<p data-renderer-start-pos=\"184\">Instagram @ kakaotalk_beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"221\">KakaoTalk @ beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"248\">LINE @ beppuairbnb</p>\n</li>\n</ul>",
             "houseRules": "<div class=\"ewa-rteLine\">- 最大宿泊人数：4名様まで</div>\n<div class=\"ewa-rteLine\">- ペット不可</div>\n<div class=\"ewa-rteLine\">- 全室禁煙</div>",
             "slider": [
                 {
@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1099,
+                    "id": 1300,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1100,
+                    "id": 1299,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -677,7 +677,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.7712648138936!2d131.4137658!3d33.35092509999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a82560d12c2f%3A0x6f9e5e00fb890acd!2sKyushu%20Wildlife%20Park%20African%20Safari!5e0!3m2!1sen!2sjp!4v1749359580506!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 978-48-2331",
-                        "highlight": "「九州自然動物公園」、通称「アフリカンサファリ」は、大分県宇佐市にある広大な野生動物園で、アフリカの草原を思わせる動物たちが放し飼いにされており、親子連れや動物愛好家にとって見逃せない観光スポットです。\n\n園内最大の特色は、檻付き装甲の「ジャングルバス」に乗車することです。専用ルートでライオン、ゾウ、キ���ン、シマウマ、ラクダなどの動物たちを間近で観察でき、直接餌やりも体験できるため、非常に臨場感あふれる野生動物との触れ合いが楽しめます。ジャングルバスの他に、ウォーキングゾーンや小型動物とのふれあい広場もあり、あらゆる年齢層の来園者がゆっくりと楽しめます。\n\n\n園内には売店、飲食エリア、便利な駐車場が併設されており、大分市や別府市からのアクセス手段も提供されているため、日帰りでの親子旅行や団体旅行に理想的なスポットです。",
+                        "highlight": "「九州自然動物公園」、通称「アフリカンサファリ」は、大分県宇佐市にある広大な野生動物園で、アフリカの草原を思わせる動物たちが放し飼いにされており、親子連れや動物愛好家にとって見逃せない観光スポットです。\n\n園内最大の特色は、檻付き装甲の「ジャングルバス」に乗車することです。専用ルートでライオン、ゾウ、キリン、シマウマ、ラクダなどの動物たちを間近で観察でき、直接餌やりも体験できるため、非常に臨場感あふれる野生動物との触れ合いが楽しめます。ジャングルバスの他に、ウォーキングゾーンや小型動物とのふれあい広場もあり、あらゆる年齢層の来園者がゆっくりと楽しめます。\n\n\n園内には売店、飲食エリア、便利な駐車場が併設されており、大分市や別府市からのアクセス手段も提供されているため、日帰りでの親子旅行や団体旅行に理想的なスポットです。",
                         "externalURL": "https://africansafari.co.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -817,7 +817,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然��物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
+                        "highlight": "高崎山自然動物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
