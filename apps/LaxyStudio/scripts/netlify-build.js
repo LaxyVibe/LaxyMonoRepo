@@ -55,57 +55,63 @@ function installRollupDependencies(rootDir) {
     rollupPackage = '@rollup/rollup-darwin-arm64';
   } else if (platform === 'win32' && arch === 'x64') {
     rollupPackage = '@rollup/rollup-win32-x64-msvc';
-  } else {
-    console.log(`⚠️  Unknown platform ${platform}-${arch}, skipping Rollup package installation`);
-    return;
   }
-
-  console.log(`🔄 Installing ${rollupPackage} for platform ${platform}-${arch}...`);
   
-  try {
-    // Try to install the platform-specific package
-    runCommand(`npm install ${rollupPackage} --no-save --legacy-peer-deps`, {
-      cwd: rootDir,
-      timeout: 300000 // 5 minutes timeout for this step
-    });
-    console.log(`✅ Successfully installed ${rollupPackage}`);
-  } catch (error) {
-    console.warn(`⚠️  Failed to install ${rollupPackage}, but continuing with build...`);
-    console.warn(error.message);
+  if (rollupPackage) {
+    // Check if the package is already installed
+    const packagePath = path.join(rootDir, 'node_modules', rollupPackage);
+    
+    if (fs.existsSync(packagePath)) {
+      console.log(`✅ ${rollupPackage} already installed`);
+      return;
+    }
+    
+    console.log(`� Installing ${rollupPackage} for ${platform}-${arch}...`);
+    try {
+      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps --no-audit --no-fund --prefer-offline`, { 
+        cwd: rootDir 
+      });
+    } catch (error) {
+      console.warn(`⚠️  Could not install ${rollupPackage}, continuing anyway...`);
+    }
   }
 }
 
 // Main build process
-function main() {
+async function main() {
   try {
-    const rootDir = path.resolve(__dirname, '../..');
-    const appDir = path.resolve(__dirname, '..');
+    // Detect if we're being run from the LaxyStudio app directory or the monorepo root
+    const currentDir = process.cwd();
+    const isRunFromAppDir = currentDir.includes('apps/LaxyStudio');
     
-    console.log(`🏠 Root directory: ${rootDir}`);
-    console.log(`📁 App directory: ${appDir}`);
+    let rootDir, appDir;
+    if (isRunFromAppDir) {
+      // Running from /build/repo/apps/LaxyStudio
+      appDir = currentDir;
+      rootDir = path.join(currentDir, '../..');
+    } else {
+      // Running from monorepo root
+      rootDir = currentDir;
+      appDir = path.join(currentDir, 'apps/LaxyStudio');
+    }
     
-    // Change to root directory for dependency management
-    process.chdir(rootDir);
+    console.log('📂 Root directory:', rootDir);
+    console.log('� App directory:', appDir);
     
-    // Check if we're already in a proper installation state
-    const lockFileExists = fs.existsSync(path.join(rootDir, 'package-lock.json'));
+    // Check if dependencies are already installed
     const nodeModulesExists = fs.existsSync(path.join(rootDir, 'node_modules'));
+    console.log(`📦 Node modules exists: ${nodeModulesExists}`);
     
-    if (!nodeModulesExists || !lockFileExists) {
-      console.log('📦 Installing root dependencies...');
-      runCommand('npm ci --legacy-peer-deps --no-optional --no-audit --prefer-offline', {
-        cwd: rootDir,
-        timeout: 900000 // 15 minutes for full install
-      });
+    if (!nodeModulesExists) {
+      // Step 1: Install dependencies with aggressive optimizations for speed
+      console.log('📦 Installing dependencies with speed optimizations...');
+      runCommand('npm ci --legacy-peer-deps --no-optional --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
     } else {
       console.log('✅ Dependencies already installed, skipping npm ci');
     }
     
     // Install platform-specific Rollup dependencies
     installRollupDependencies(rootDir);
-    
-    // Change to app directory for build
-    process.chdir(appDir);
     
     // Run any pre-build scripts if they exist
     console.log('🔄 Running pre-build scripts...');
