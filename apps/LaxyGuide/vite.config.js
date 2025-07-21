@@ -39,21 +39,5 @@ export default defineConfig({
     }
   },
   // Handle environment variables (change from REACT_APP_ to VITE_)
-  envPrefix: 'VITE_',
-  esbuild: {
-    // Enable JSX in .js files
-    jsx: 'automatic',
-    include: [
-      /src\/.*\.[jt]sx?$/,
-      /.*\.js$/,
-    ]
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      jsx: 'automatic',
-      loader: {
-        '.js': 'jsx',
-      },
-    },
-  }
+  envPrefix: 'VITE_'
 })
