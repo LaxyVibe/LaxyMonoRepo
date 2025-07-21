@@ -40,6 +40,16 @@ function runCommand(command, options = {}) {
 function installRollupDependencies(rootDir) {
   console.log('🔧 Checking Rollup dependencies...');
   
+  // First check if any rollup packages are already installed
+  const nodeModulesPath = path.join(rootDir, 'node_modules', '@rollup');
+  if (fs.existsSync(nodeModulesPath)) {
+    const rollupPackages = fs.readdirSync(nodeModulesPath);
+    if (rollupPackages.length > 0) {
+      console.log(`✅ Rollup dependencies already installed: ${rollupPackages.join(', ')}`);
+      return;
+    }
+  }
+  
   // Detect the platform-specific Rollup package
   const platform = process.platform;
   const arch = process.arch;
@@ -58,22 +68,18 @@ function installRollupDependencies(rootDir) {
   }
   
   if (rollupPackage) {
-    // Check if the package is already installed
-    const packagePath = path.join(rootDir, 'node_modules', rollupPackage);
-    
-    if (fs.existsSync(packagePath)) {
-      console.log(`✅ ${rollupPackage} already installed`);
-      return;
-    }
-    
-    console.log(`� Installing ${rollupPackage} for ${platform}-${arch}...`);
+    console.log(`📦 Installing ${rollupPackage} for ${platform}-${arch}...`);
     try {
-      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps --no-audit --no-fund --prefer-offline`, { 
-        cwd: rootDir 
+      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps --no-audit --no-fund --prefer-offline --timeout=300000`, { 
+        cwd: rootDir,
+        timeout: 300000 // 5 minute timeout for rollup install
       });
     } catch (error) {
       console.warn(`⚠️  Could not install ${rollupPackage}, continuing anyway...`);
+      console.warn('This might be okay if Vite can use a fallback build method.');
     }
+  } else {
+    console.log('ℹ️  No platform-specific Rollup package needed for this platform');
   }
 }
 

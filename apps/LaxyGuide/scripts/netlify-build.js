@@ -102,15 +102,13 @@ async function main() {
     const nodeModulesExists = fs.existsSync(path.join(rootDir, 'node_modules'));
     console.log(`📦 Node modules exists: ${nodeModulesExists}`);
     
-    // Force clean install to resolve any cached dependency issues
-    if (nodeModulesExists) {
-      console.log('🧹 Cleaning existing node_modules to ensure fresh install...');
-      runCommand('rm -rf node_modules package-lock.json', { cwd: rootDir });
+    if (!nodeModulesExists) {
+      // Step 1: Install dependencies with aggressive optimizations for speed
+      console.log('📦 Installing dependencies with speed optimizations...');
+      runCommand('npm ci --legacy-peer-deps --no-optional --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+    } else {
+      console.log('📦 Dependencies already installed, skipping npm install');
     }
-    
-    // Step 1: Install dependencies with aggressive optimizations for speed
-    console.log('📦 Installing dependencies with speed optimizations...');
-    runCommand('npm install --legacy-peer-deps --no-optional --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
     
     // Step 2: Install platform-specific Rollup dependencies (only if needed)
     installRollupDependencies(rootDir);
