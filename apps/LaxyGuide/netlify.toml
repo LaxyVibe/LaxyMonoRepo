@@ -2,9 +2,11 @@
 # Optimized configuration to prevent build timeouts
 
 [build]
+  # Use a custom base to avoid automatic npm workspace detection
+  base = "../../"
   # Use the main build script and publish from the build directory
-  publish = "build"
-  command = "node scripts/netlify-build.js"
+  publish = "apps/LaxyGuide/build"
+  command = "node apps/LaxyGuide/scripts/netlify-build.js"
 
 [build.environment]
   NODE_VERSION = "22"
