@@ -39,5 +39,7 @@ export default defineConfig({
     }
   },
   // Handle environment variables (change from REACT_APP_ to VITE_)
-  envPrefix: 'VITE_'
+  envPrefix: 'VITE_',
+  // Disable esbuild to avoid version conflicts
+  esbuild: false
 })

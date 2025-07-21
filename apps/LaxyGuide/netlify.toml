@@ -4,7 +4,7 @@
 [build]
   # Build and install deps from root, publish from this app's build directory
   publish = "apps/LaxyGuide/build"
-  command = "npm install --legacy-peer-deps && npm install @rollup/rollup-linux-x64-gnu @esbuild/linux-x64 --save-dev && npm run build:guide"
+  command = "npm install --legacy-peer-deps && npm install @rollup/rollup-linux-x64-gnu --save-dev && npm run build:guide"
 
 [build.environment]
   NODE_VERSION = "22"
