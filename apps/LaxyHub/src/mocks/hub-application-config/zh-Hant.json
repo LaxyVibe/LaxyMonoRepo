@@ -3,34 +3,34 @@
         "id": 3,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:16.469Z",
-        "updatedAt": "2025-07-17T05:53:31.862Z",
-        "publishedAt": "2025-06-24T13:11:20.321Z",
+        "updatedAt": "2025-07-18T03:51:05.422Z",
+        "publishedAt": "2025-07-18T03:33:57.106Z",
         "locale": "zh-Hant",
         "universalConfig": {
-            "id": 238,
+            "id": 274,
             "releasedLanguages": [
                 {
-                    "id": 952,
+                    "id": 1144,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 961,
+                    "id": 1146,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 953,
+                    "id": 1148,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 954,
+                    "id": 1147,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 958,
+                    "id": 1149,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -42,7 +42,7 @@
             "readLessLabel": "收起",
             "hostTagLabel": "推薦",
             "poweredByLabel": "Powered by{{value}}",
-            "exploreMoreAboutLabel": null,
+            "exploreMoreAboutLabel": "探索更多關於{{value}}",
             "speechButton": {
                 "id": 65,
                 "label": " 用當地語言說出",
@@ -52,7 +52,10 @@
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993196/volume_05_0df3287e92.svg"
                 }
             },
-            "audioGuideButton": null
+            "audioGuideButton": {
+                "id": 1051,
+                "label": "開始 Laxy 語音導覽"
+            }
         },
         "header": {
             "id": 3,
@@ -192,6 +195,16 @@
                     "id": 64,
                     "label": "常見問題",
                     "route": "/info/faq",
+                    "icon": {
+                        "id": 47,
+                        "documentId": "qcmz642lrze1motca93rn3vz",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
+                    }
+                },
+                {
+                    "id": 967,
+                    "label": "直接聯繫",
+                    "route": "/info/direct-contact",
                     "icon": {
                         "id": 47,
                         "documentId": "qcmz642lrze1motca93rn3vz",

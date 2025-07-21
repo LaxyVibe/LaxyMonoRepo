@@ -3,15 +3,15 @@
         "id": 35,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:25:14.498Z",
-        "updatedAt": "2025-07-02T13:25:21.680Z",
-        "publishedAt": "2025-07-02T13:25:21.661Z",
+        "updatedAt": "2025-07-18T03:53:41.173Z",
+        "publishedAt": "2025-07-18T03:53:41.142Z",
         "locale": "ja",
         "universalConfig": null,
         "pagePOIGuide": {
             "id": 3,
-            "coverDescription": "この聖地の30分間のオーディオツアーを開始するにはクリック！古代の儀式、神聖な木々、地元の伝説を発見。専門家が案内する没入型の文化体験に参加しよう。",
-            "audioLanguageLabel": "Audio Language",
-            "nextLabel": "Next"
+            "coverDescription": "お好みのオーディオ言語を選んで、没入感あふれる文化の旅を始めましょう。",
+            "audioLanguageLabel": "オーディオ言語",
+            "nextLabel": "次へ"
         }
     },
     "meta": {}
