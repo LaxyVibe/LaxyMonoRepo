@@ -1,0 +1,61 @@
+{
+  "name": "laxy-studio",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/LaxyStudio/src",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "command": "vite build",
+        "cwd": "apps/LaxyStudio",
+        "outputPath": "apps/LaxyStudio/build"
+      },
+      "configurations": {
+        "development": {
+          "command": "vite build",
+          "cwd": "apps/LaxyStudio"
+        },
+        "production": {
+          "command": "vite build",
+          "cwd": "apps/LaxyStudio"
+        }
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "development",
+      "options": {
+        "command": "vite",
+        "cwd": "apps/LaxyStudio"
+      },
+      "configurations": {
+        "development": {
+          "command": "vite",
+          "cwd": "apps/LaxyStudio"
+        },
+        "production": {
+          "command": "vite preview",
+          "cwd": "apps/LaxyStudio"
+        }
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest",
+        "cwd": "apps/LaxyStudio"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/LaxyStudio/**/*.{js,jsx,ts,tsx}"]
+      }
+    }
+  },
+  "tags": []
+}

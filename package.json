@@ -8,6 +8,8 @@
     "start:hub": "cd apps/LaxyHub && npm run start",
     "build:guide": "cd apps/LaxyGuide && npm run build",
     "start:guide": "cd apps/LaxyGuide && npm run start",
+    "build:studio": "cd apps/LaxyStudio && npm run build",
+    "start:studio": "cd apps/LaxyStudio && npm run start",
     "test": "nx test"
   },
   "private": true,
