@@ -4,7 +4,18 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Include .js files for JSX processing
+      include: '**/*.{jsx,tsx,js,ts}',
+      babel: {
+        plugins: [],
+        presets: [
+          ['@babel/preset-react', { runtime: 'automatic' }]
+        ]
+      }
+    })
+  ],
   base: '/', // Ensure base path is set to root for SPA routing
   resolve: {
     alias: {
@@ -28,5 +39,21 @@ export default defineConfig({
     }
   },
   // Handle environment variables (change from REACT_APP_ to VITE_)
-  envPrefix: 'VITE_'
+  envPrefix: 'VITE_',
+  esbuild: {
+    // Enable JSX in .js files
+    jsx: 'automatic',
+    include: [
+      /src\/.*\.[jt]sx?$/,
+      /.*\.js$/,
+    ]
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      jsx: 'automatic',
+      loader: {
+        '.js': 'jsx',
+      },
+    },
+  }
 })
