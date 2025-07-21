@@ -1,18 +1,17 @@
 # Netlify Configuration for LaxyGuide
-# Optimized configuration to prevent build timeouts
+# Following Netlify's recommended monorepo setup
 
 [build]
-  # Use the main build script and publish from the build directory
-  publish = "build"
-  command = "node scripts/netlify-build.js"
+  # Build command to run from workspace root
+  command = "npm run build:guide"
+  # Publish directory relative to workspace root
+  publish = "apps/LaxyGuide/build"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_AUDIT = "false"
-  NPM_CONFIG_OPTIONAL = "false"
-  NPM_CONFIG_PROGRESS = "false"
   NODE_OPTIONS = "--max-old-space-size=4096"
 
 # Speed up builds by only building when relevant files change
@@ -21,10 +20,6 @@
 
 [context.deploy-preview]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
-
-# Branch-specific builds with faster install
-[context.develop]
-  command = "cd ../.. && npm ci --legacy-peer-deps --no-optional --no-audit --prefer-offline && cd apps/LaxyGuide && node scripts/netlify-build.js"
 
 # Headers for better caching
 [[headers]]
