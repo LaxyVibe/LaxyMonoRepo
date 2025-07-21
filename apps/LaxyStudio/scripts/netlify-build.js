@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 
 /**
- * Simple Netlify Build Script for LaxyStudio
+ * Netlify Build Script for LaxyStudio
  * 
- * This script provides a fallback build process if needed.
- * The primary method should be using npm run build:studio directly in netlify.toml
+ * This script handles the Rollup optional dependency issue that occurs
+ * on Netlify's Linux build environment when using Vite.
  */
 
 const { execSync } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 console.log('🚀 Starting LaxyStudio build process...');
 
@@ -17,6 +18,24 @@ try {
   const rootDir = path.join(__dirname, '../../..');
   process.chdir(rootDir);
   
+  // Check if we're on Netlify's Linux environment and missing the Rollup dependency
+  const isNetlify = process.env.NETLIFY === 'true';
+  const isLinux = process.platform === 'linux';
+  
+  if (isNetlify && isLinux) {
+    console.log('🔧 Installing missing Rollup dependency for Linux...');
+    try {
+      // Quick install of just the missing package
+      execSync('npm install @rollup/rollup-linux-x64-gnu --no-save --silent', { 
+        stdio: 'pipe',
+        env: { ...process.env, NPM_CONFIG_FUND: 'false', NPM_CONFIG_AUDIT: 'false' }
+      });
+      console.log('✅ Rollup dependency installed successfully!');
+    } catch (rollupError) {
+      console.warn('⚠️  Could not install Rollup dependency, continuing anyway...');
+    }
+  }
+  
   console.log('🏗️  Building LaxyStudio using workspace script...');
   execSync('npm run build:studio', { 
     stdio: 'inherit',
@@ -24,6 +43,14 @@ try {
   });
   
   console.log('✅ Build completed successfully!');
+  
+  // Verify build output exists
+  const buildDir = path.join(__dirname, '..', 'build');
+  if (fs.existsSync(buildDir)) {
+    console.log('📁 Build output verified at:', buildDir);
+  } else {
+    throw new Error('Build directory was not created');
+  }
   
 } catch (error) {
   console.error('❌ Build failed:', error.message);

@@ -2,8 +2,8 @@
 # Following Netlify's recommended monorepo setup
 
 [build]
-  # Build command to run from workspace root
-  command = "npm run build:guide"
+  # Use build script to handle Rollup dependencies
+  command = "node apps/LaxyGuide/scripts/netlify-build.js"
   # Publish directory relative to workspace root
   publish = "apps/LaxyGuide/build"
 
