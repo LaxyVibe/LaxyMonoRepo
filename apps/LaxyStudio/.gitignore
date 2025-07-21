@@ -1,0 +1,26 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+.vscode/
+
+# Auto-generated configuration files
+src/config/discovered.json
+
+# Dependency lockfiles (if using different package managers)
+yarn.lock
+pnpm-lock.yaml
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage reports
+coverage/
+
+# Vite build cache
+.vite/
