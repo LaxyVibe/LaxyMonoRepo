@@ -124,7 +124,15 @@ async function main() {
     const nodeModulesExists = fs.existsSync(path.join(rootDir, 'node_modules'));
     console.log(`📦 Node modules exists: ${nodeModulesExists}`);
     
-    if (!nodeModulesExists) {
+    // Check if rollup packages are missing (common issue with Netlify cache)
+    const rollupDir = path.join(rootDir, 'node_modules', '@rollup');
+    const rollupPackagesExist = fs.existsSync(rollupDir);
+    
+    if (!nodeModulesExists || !rollupPackagesExist) {
+      if (nodeModulesExists && !rollupPackagesExist) {
+        console.log('🔧 Rollup packages missing from cache, forcing fresh install...');
+        runCommand('rm -rf node_modules package-lock.json', { cwd: rootDir });
+      }
       // Step 1: Install dependencies including optional packages (for rollup)
       console.log('📦 Installing dependencies with speed optimizations...');
       runCommand('npm ci --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
