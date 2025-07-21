@@ -123,7 +123,7 @@ async function main() {
         console.log('🔧 Linux rollup package missing, forcing fresh install...');
         runCommand('rm -rf node_modules package-lock.json', { cwd: rootDir });
         console.log('📦 Installing dependencies with speed optimizations...');
-        runCommand('npm ci --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+        runCommand('npm install --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
       } else {
         console.log('✅ Dependencies already installed, skipping npm ci');
       }
@@ -131,7 +131,12 @@ async function main() {
       console.log('🔧 Rollup directory missing, forcing fresh install...');
       runCommand('rm -rf node_modules package-lock.json', { cwd: rootDir });
       console.log('📦 Installing dependencies with speed optimizations...');
-      runCommand('npm ci --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+      runCommand('npm install --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+    }
+    
+    if (!nodeModulesExists) {
+      console.log('📦 Installing dependencies with speed optimizations...');
+      runCommand('npm install --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
     }
     
     // Skip platform-specific Rollup dependencies - let Vite handle it
