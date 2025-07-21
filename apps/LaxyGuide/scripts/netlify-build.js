@@ -84,19 +84,7 @@ async function main() {
     console.log('🏗️  Building application...');
     runCommand('npm run build', { cwd: __dirname });
     
-    // Step 5: Ensure _redirects file is in the build directory
-    const redirectsSource = path.join(appDir, 'public', '_redirects');
-    const redirectsTarget = path.join(appDir, 'build', '_redirects');
-    
-    if (fs.existsSync(redirectsSource)) {
-      console.log('📄 Copying _redirects file to build directory...');
-      fs.copyFileSync(redirectsSource, redirectsTarget);
-      console.log('✅ _redirects file copied successfully');
-    } else {
-      console.warn('⚠️  _redirects file not found in public directory');
-    }
-    
-    console.log('✅ LaxyGuide build completed successfully!');
+    console.log('✅ Build completed successfully!');
     
   } catch (error) {
     console.error('❌ Build failed:', error.message);
