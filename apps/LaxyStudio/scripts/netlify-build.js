@@ -111,17 +111,27 @@ async function main() {
     // Check if rollup packages are missing (common issue with Netlify cache)
     const rollupDir = path.join(rootDir, 'node_modules', '@rollup');
     const rollupPackagesExist = fs.existsSync(rollupDir);
+    console.log(`🔧 Rollup directory exists: ${rollupPackagesExist} (${rollupDir})`);
     
-    if (!nodeModulesExists || !rollupPackagesExist) {
-      if (nodeModulesExists && !rollupPackagesExist) {
-        console.log('🔧 Rollup packages missing from cache, forcing fresh install...');
+    if (rollupPackagesExist) {
+      const rollupPackages = fs.readdirSync(rollupDir);
+      console.log(`🔧 Found rollup packages: [${rollupPackages.join(', ')}]`);
+      const hasLinuxPackage = rollupPackages.includes('rollup-linux-x64-gnu');
+      console.log(`🔧 Has Linux rollup package: ${hasLinuxPackage}`);
+      
+      if (!hasLinuxPackage) {
+        console.log('🔧 Linux rollup package missing, forcing fresh install...');
         runCommand('rm -rf node_modules package-lock.json', { cwd: rootDir });
+        console.log('📦 Installing dependencies with speed optimizations...');
+        runCommand('npm ci --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+      } else {
+        console.log('✅ Dependencies already installed, skipping npm ci');
       }
-      // Step 1: Install dependencies including optional packages (for rollup)
+    } else {
+      console.log('🔧 Rollup directory missing, forcing fresh install...');
+      runCommand('rm -rf node_modules package-lock.json', { cwd: rootDir });
       console.log('📦 Installing dependencies with speed optimizations...');
       runCommand('npm ci --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
-    } else {
-      console.log('✅ Dependencies already installed, skipping npm ci');
     }
     
     // Skip platform-specific Rollup dependencies - let Vite handle it
