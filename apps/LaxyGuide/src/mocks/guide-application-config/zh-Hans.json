@@ -3,15 +3,15 @@
         "id": 37,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:26:20.847Z",
-        "updatedAt": "2025-07-02T13:26:20.847Z",
-        "publishedAt": "2025-07-02T13:26:20.837Z",
+        "updatedAt": "2025-07-18T03:54:00.140Z",
+        "publishedAt": "2025-07-18T03:54:00.103Z",
         "locale": "zh-Hans",
         "universalConfig": null,
         "pagePOIGuide": {
             "id": 5,
-            "coverDescription": "点击开始30分钟的圣地音频导览！探索古老仪式、神圣树木和当地传说。加入专家引导的文化之旅，沉浸其中。",
-            "audioLanguageLabel": "Audio Language",
-            "nextLabel": "Next"
+            "coverDescription": "选择您偏好的语音导览语言，开启一场沉浸式的文化之旅。",
+            "audioLanguageLabel": "音频语言",
+            "nextLabel": "下一步"
         }
     },
     "meta": {}

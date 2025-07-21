@@ -3,15 +3,15 @@
         "id": 36,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:26:04.129Z",
-        "updatedAt": "2025-07-02T13:26:04.129Z",
-        "publishedAt": "2025-07-02T13:26:04.117Z",
+        "updatedAt": "2025-07-18T03:53:50.658Z",
+        "publishedAt": "2025-07-18T03:53:50.634Z",
         "locale": "ko",
         "universalConfig": null,
         "pagePOIGuide": {
             "id": 4,
-            "coverDescription": "이 성지의 30분 오디오 투어를 시작하려면 클릭하세요! 고대 의식, 신성한 나무, 지역 전설을 탐험하세요. 전문가가 안내하는 몰입형 문화 여정에 참여하세요.",
-            "audioLanguageLabel": "Audio Language",
-            "nextLabel": "Next"
+            "coverDescription": "선호하는 오디오 언어를 선택하고 몰입감 넘치는 문화 여행을 시작하세요.",
+            "audioLanguageLabel": "오디오 언어",
+            "nextLabel": "다음"
         }
     },
     "meta": {}

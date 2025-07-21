@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-06-26T10:28:50.679Z",
-        "updatedAt": "2025-07-02T09:07:38.264Z",
-        "publishedAt": "2025-07-02T09:07:38.204Z",
+        "updatedAt": "2025-07-18T03:48:52.045Z",
+        "publishedAt": "2025-07-18T03:48:51.990Z",
         "locale": "en",
         "universalConfig": {
             "id": 1,
@@ -38,7 +38,7 @@
         },
         "pagePOIGuide": {
             "id": 1,
-            "coverDescription": "Click to start a 30-minute audio tour of this sacred site! Uncover ancient rituals, sacred trees, and local legends. Join for an immersive, expert-guided cultural journey.",
+            "coverDescription": "Select your favourite audio language and start an immersive cultural journey.",
             "audioLanguageLabel": "Audio Language",
             "nextLabel": "Next"
         }

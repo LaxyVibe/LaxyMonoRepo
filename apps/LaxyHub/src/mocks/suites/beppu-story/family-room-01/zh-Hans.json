@@ -11,7 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 浴缸</div>\n<div class=\"ewa-rteLine\">- 洗发水、护发素和沐浴露</div>\n<div class=\"ewa-rteLine\">- 吹风机</div>\n<div class=\"ewa-rteLine\">- 智能马桶盖</div>\n<div class=\"ewa-rteLine\">- 洗衣机</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空调</div>",
-            "directContact": null,
+            "directContact": "<ul class=\"ak-ul\" data-indent-level=\"1\">\n<li>\n<p data-renderer-start-pos=\"184\">Instagram @ kakaotalk_beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"221\">KakaoTalk @ beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"248\">LINE @ beppuairbnb</p>\n</li>\n</ul>",
             "houseRules": "<div class=\"ewa-rteLine\">- 最多可入住5位客人</div>\n<div class=\"ewa-rteLine\">- 禁止携带宠物</div>\n<div class=\"ewa-rteLine\">- 禁止吸烟</div>",
             "slider": [
                 {
@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1195,
+                    "id": 1228,
                     "network": "Airbnb3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1196,
+                    "id": 1225,
                     "network": "Airbnb4",
                     "password": "beppuairbnb"
                 }
@@ -739,7 +739,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典——别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮���。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
+                        "highlight": "别府在圣诞节周的周六与周日，都会举办盛大的冬季庆典——别府圣诞花火幻想曲 (べっぷクリスマスHanabiファンタジア)。这个为期两天的活动是别府冬季的一大亮点。\n\n与七月底的夏日祭典花火仅施放一天不同，此时期的花火大会连续两晚点亮别府的夜空，景色格外迷人与壮观。活动现场设置了丰富的屋台，提供各式美味小吃与饮品，让游客在享受节庆氛围的同时，也能大饱口福。\n\n由于这场冬季盛会广受欢迎，别府市内的住宿设施会迅速满房。因此，强烈建议计划前往的旅客，务必提前至少两个月预订好住宿，以确保能顺利参与这场浪漫又精彩的圣诞花火盛宴。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
