@@ -1,0 +1,5 @@
+# Cache Buster
+# This file forces Netlify to clear its build cache
+# Date: 2025-07-21T15:26:00Z
+# Reason: Clear cached dependencies with platform-specific rollup packages
+BUILD_CACHE_VERSION=2025072115
