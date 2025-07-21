@@ -3,8 +3,8 @@
 
 [build]
   # Use the main build script and publish from the build directory
-  publish = "build"
-  command = "node scripts/netlify-build.js"
+  publish = "apps/LaxyGuide/build"
+  command = "npm install --legacy-peer-deps --no-optional && npm install @rollup/rollup-linux-x64-gnu --save-dev && npm run build:guide"
 
 [build.environment]
   NODE_VERSION = "22"
@@ -22,9 +22,14 @@
 [context.deploy-preview]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
 
-# Branch-specific builds with faster install
+# Branch-specific builds
 [context.develop]
-  command = "cd ../.. && npm ci --legacy-peer-deps --no-optional --no-audit --prefer-offline && cd apps/LaxyGuide && node scripts/netlify-build.js"
+  command = "npm install --legacy-peer-deps && npm run build:guide"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Headers for better caching
 [[headers]]
