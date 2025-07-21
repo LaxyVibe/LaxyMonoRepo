@@ -109,9 +109,9 @@ async function main() {
     console.log(`📦 Node modules exists: ${nodeModulesExists}`);
     
     if (!nodeModulesExists) {
-      // Step 1: Install dependencies with aggressive optimizations for speed
+      // Step 1: Install dependencies including optional packages (for rollup)
       console.log('📦 Installing dependencies with speed optimizations...');
-      runCommand('npm ci --legacy-peer-deps --no-optional --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
+      runCommand('npm ci --legacy-peer-deps --no-audit --no-fund --prefer-offline --progress=false', { cwd: rootDir });
     } else {
       console.log('✅ Dependencies already installed, skipping npm ci');
     }
