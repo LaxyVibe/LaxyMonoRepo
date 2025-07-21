@@ -40,6 +40,16 @@ function runCommand(command, options = {}) {
 function installRollupDependencies(rootDir) {
   console.log('🔧 Checking Rollup dependencies...');
   
+  // First check if any rollup packages are already installed
+  const nodeModulesPath = path.join(rootDir, 'node_modules', '@rollup');
+  if (fs.existsSync(nodeModulesPath)) {
+    const rollupPackages = fs.readdirSync(nodeModulesPath);
+    if (rollupPackages.length > 0) {
+      console.log(`✅ Rollup dependencies already installed: ${rollupPackages.join(', ')}`);
+      return;
+    }
+  }
+  
   // Detect the platform-specific Rollup package
   const platform = process.platform;
   const arch = process.arch;
@@ -58,22 +68,34 @@ function installRollupDependencies(rootDir) {
   }
   
   if (rollupPackage) {
-    // Check if the package is already installed
-    const packagePath = path.join(rootDir, 'node_modules', rollupPackage);
-    
-    if (fs.existsSync(packagePath)) {
-      console.log(`✅ ${rollupPackage} already installed`);
-      return;
-    }
-    
     console.log(`📦 Installing ${rollupPackage} for ${platform}-${arch}...`);
     try {
-      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps --no-audit --no-fund --prefer-offline`, { 
-        cwd: rootDir 
+      // Try a more aggressive approach to fix npm optional dependency issues
+      runCommand(`npm install ${rollupPackage} --save-optional --legacy-peer-deps --no-audit --no-fund --prefer-offline --timeout=300000`, { 
+        cwd: rootDir,
+        timeout: 300000 // 5 minute timeout for rollup install
       });
+      
+      // Verify the installation worked
+      const packagePath = path.join(rootDir, 'node_modules', rollupPackage);
+      if (!fs.existsSync(packagePath)) {
+        console.warn(`⚠️  ${rollupPackage} installation may have failed, trying alternative approach...`);
+        // Try removing node_modules/@rollup and reinstalling
+        const rollupDir = path.join(rootDir, 'node_modules', '@rollup');
+        if (fs.existsSync(rollupDir)) {
+          runCommand(`rm -rf ${rollupDir}`, { cwd: rootDir });
+        }
+        runCommand(`npm install ${rollupPackage} --force --legacy-peer-deps`, { 
+          cwd: rootDir,
+          timeout: 300000
+        });
+      }
     } catch (error) {
       console.warn(`⚠️  Could not install ${rollupPackage}, continuing anyway...`);
+      console.warn('This might be okay if Vite can use a fallback build method.');
     }
+  } else {
+    console.log('ℹ️  No platform-specific Rollup package needed for this platform');
   }
 }
 
@@ -110,8 +132,8 @@ async function main() {
       console.log('📦 Dependencies already installed, skipping npm install');
     }
     
-    // Step 2: Install platform-specific Rollup dependencies (only if needed)
-    installRollupDependencies(rootDir);
+    // Step 2: Skip Rollup dependencies installation - let Vite handle it
+    console.log('🔧 Skipping Rollup dependencies - letting Vite use fallback build method...');
     
     // Step 3: Run the pre-build script if it exists
     const packageJsonPath = path.join(appDir, 'package.json');

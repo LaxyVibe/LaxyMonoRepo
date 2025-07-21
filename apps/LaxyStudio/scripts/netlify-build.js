@@ -116,8 +116,8 @@ async function main() {
       console.log('✅ Dependencies already installed, skipping npm ci');
     }
     
-    // Install platform-specific Rollup dependencies
-    installRollupDependencies(rootDir);
+    // Skip platform-specific Rollup dependencies - let Vite handle it
+    console.log('🔧 Skipping Rollup dependencies - letting Vite use fallback build method...');
     
     // Run any pre-build scripts if they exist
     console.log('🔄 Running pre-build scripts...');
