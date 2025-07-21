@@ -1,10 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
-import { fileURLToPath, URL } from 'node:url'
+const { defineConfig } = require('vite')
+const react = require('@vitejs/plugin-react')
+const path = require('path')
 
 // https://vitejs.dev/config/
-export default defineConfig({
+module.exports = defineConfig({
   plugins: [
     react({
       // Include .js files for JSX processing
@@ -21,8 +20,8 @@ export default defineConfig({
   resolve: {
     alias: {
       // Enable importing from shared packages
-      '@laxy/components': path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../packages/LaxyComponents/src'),
-      '@': path.resolve(path.dirname(fileURLToPath(import.meta.url)), './src')
+      '@laxy/components': path.resolve(__dirname, '../../packages/LaxyComponents/src'),
+      '@': path.resolve(__dirname, './src')
     }
   },
   server: {
@@ -41,6 +40,6 @@ export default defineConfig({
   },
   // Handle environment variables (change from REACT_APP_ to VITE_)
   envPrefix: 'VITE_',
-  // Disable esbuild to avoid version conflicts
+  // Disable esbuild to avoid platform-specific issues
   esbuild: false
 })
