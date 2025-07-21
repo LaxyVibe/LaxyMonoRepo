@@ -11,10 +11,7 @@
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_AUDIT = "false"
-  NPM_CONFIG_OPTIONAL = "false"
-  NPM_CONFIG_PROGRESS = "false"
-  NODE_OPTIONS = "--max-old-space-size=4096"
-
+  
 # Speed up builds by only building when relevant files change
 [context.production]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
