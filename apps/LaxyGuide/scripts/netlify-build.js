@@ -76,20 +76,13 @@ async function main() {
     // Step 2: Install platform-specific Rollup dependencies
     installRollupDependencies();
     
-    // Step 3: Run the pre-build script if it exists
-    const appDir = path.join(__dirname, '..');
-    const packageJsonPath = path.join(appDir, 'package.json');
-    if (fs.existsSync(packageJsonPath)) {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      if (packageJson.scripts && packageJson.scripts.prebuild) {
-        console.log('🔄 Running pre-build script...');
-        runCommand('npm run prebuild', { cwd: appDir });
-      }
-    }
+    // Step 3: Run the pre-build script
+    console.log('🔄 Running pre-build script...');
+    runCommand('npm run prebuild', { cwd: __dirname });
     
     // Step 4: Build the application
-    console.log('🏗️  Building LaxyGuide application...');
-    runCommand('npm run build:guide', { cwd: rootDir });
+    console.log('🏗️  Building application...');
+    runCommand('npm run build', { cwd: __dirname });
     
     // Step 5: Ensure _redirects file is in the build directory
     const redirectsSource = path.join(appDir, 'public', '_redirects');
