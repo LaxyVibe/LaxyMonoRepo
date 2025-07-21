@@ -36,11 +36,9 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          'react-admin': ['react-admin', 'ra-data-json-server'],
-          'mui': ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled']
+          admin: ['react-admin']
         }
       }
-    },
-    chunkSizeWarningLimit: 1000
+    }
   }
 })

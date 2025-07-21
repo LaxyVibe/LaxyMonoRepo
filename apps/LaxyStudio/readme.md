@@ -39,28 +39,6 @@ npm run dev
 
 The application will be available at `http://localhost:4202`
 
-## Building
-
-To build for production:
-
-```bash
-npm run build
-```
-
-### Netlify Deployment
-
-LaxyStudio is configured for Netlify deployment with:
-
-- **netlify.toml** - Netlify configuration with optimized build settings
-- **scripts/netlify-build.js** - Custom build script handling Rollup dependencies
-- **_redirects** - SPA routing support
-
-The build process includes:
-- Automatic dependency installation with legacy peer deps support
-- Platform-specific Rollup package installation for Linux environments
-- Optimized chunk splitting for better performance
-- Build verification and error handling
-
 ### Building
 
 To build for production:

@@ -10,7 +10,6 @@
     "start:guide": "cd apps/LaxyGuide && npm run start",
     "build:studio": "cd apps/LaxyStudio && npm run build",
     "start:studio": "cd apps/LaxyStudio && npm run start",
-    "dev:studio": "cd apps/LaxyStudio && npm run dev",
     "test": "nx test"
   },
   "private": true,
