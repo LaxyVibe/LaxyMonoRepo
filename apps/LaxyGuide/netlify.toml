@@ -1,25 +1,32 @@
 # Netlify Configuration for LaxyGuide
-# Following Netlify's recommended monorepo setup
+# App-specific configuration file (following LaxyHub working pattern)
 
 [build]
-  # Use build script to handle Rollup dependencies
-  command = "node apps/LaxyGuide/scripts/netlify-build.js"
-  # Publish directory relative to workspace root
+  # Build and install deps from root, publish from this app's build directory
   publish = "apps/LaxyGuide/build"
+  command = "npm install --legacy-peer-deps --no-optional && npm install @rollup/rollup-linux-x64-gnu --save-dev && npm run build:guide"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_AUDIT = "false"
-  NODE_OPTIONS = "--max-old-space-size=4096"
 
-# Speed up builds by only building when relevant files change
+# Only build when LaxyGuide or shared dependencies change
 [context.production]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
 
 [context.deploy-preview]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
+
+# Branch-specific builds
+[context.develop]
+  command = "npm install --legacy-peer-deps && npm run build:guide"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Headers for better caching
 [[headers]]
