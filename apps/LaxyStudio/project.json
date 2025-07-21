@@ -33,27 +33,23 @@
       },
       "configurations": {
         "development": {
-          "command": "vite",
+          "command": "vite --port 4202",
           "cwd": "apps/LaxyStudio"
         },
         "production": {
-          "command": "vite preview",
+          "command": "vite --port 4202",
           "cwd": "apps/LaxyStudio"
         }
       }
     },
-    "test": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "vitest",
-        "cwd": "apps/LaxyStudio"
-      }
-    },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "lintFilePatterns": ["apps/LaxyStudio/**/*.{js,jsx,ts,tsx}"]
+        "jestConfig": "apps/LaxyStudio/jest.config.ts"
       }
     }
   },

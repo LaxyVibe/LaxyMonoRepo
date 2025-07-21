@@ -1,29 +1,43 @@
 # Netlify Configuration for LaxyStudio
-# App-specific configuration file
+# Optimized configuration to prevent build timeouts
 
 [build]
-  # Build and install deps from root, publish from this app's build directory
-  publish = "apps/LaxyStudio/build"
-  command = "npm install --legacy-peer-deps --no-optional && npm install @rollup/rollup-linux-x64-gnu --save-dev && npm run build:studio"
+  # Use the main build script and publish from the build directory
+  publish = "build"
+  command = "node scripts/netlify-build.js"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_AUDIT = "false"
+  NPM_CONFIG_OPTIONAL = "false"
+  NPM_CONFIG_PROGRESS = "false"
+  NODE_OPTIONS = "--max-old-space-size=4096"
 
-# Only build when LaxyStudio or shared dependencies change
+# Speed up builds by only building when relevant files change
 [context.production]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyStudio/ packages/"
 
 [context.deploy-preview]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyStudio/ packages/"
 
-# Branch-specific builds
+# Branch-specific builds with faster install
 [context.develop]
-  command = "npm install --legacy-peer-deps && npm run build:studio"
-  
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  command = "cd ../.. && npm ci --legacy-peer-deps --no-optional --no-audit --prefer-offline && cd apps/LaxyStudio && node scripts/netlify-build.js"
+
+# Headers for better caching
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

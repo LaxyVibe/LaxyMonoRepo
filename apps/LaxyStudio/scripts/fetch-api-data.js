@@ -1,11 +1,36 @@
 #!/usr/bin/env node
 
 /**
- * API Data Fetcher for LaxyStudio
- * 
- * LaxyStudio uses JSONPlaceholder for demo data, so this script
- * is a placeholder that doesn't need to fetch any additional data.
+ * Simple fetch-api-data script for LaxyStudio
+ * This is a placeholder script that can be extended to fetch any API data needed at build time
  */
 
-console.log('📊 LaxyStudio uses JSONPlaceholder demo API - no additional data fetching needed');
-console.log('✅ Fetch API data complete');
+console.log('🔄 Fetching API data for LaxyStudio...');
+
+// This is a placeholder - add your API fetching logic here
+// For now, we'll just create a simple data file
+const fs = require('fs');
+const path = require('path');
+
+const dataDir = path.join(__dirname, '..', 'src', 'data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+const sampleData = {
+  appName: 'LaxyStudio',
+  version: '1.0.0',
+  buildTime: new Date().toISOString(),
+  features: [
+    'Hello World Display',
+    'Modern React Architecture',
+    'Netlify Deployment Ready'
+  ]
+};
+
+fs.writeFileSync(
+  path.join(dataDir, 'app-data.json'),
+  JSON.stringify(sampleData, null, 2)
+);
+
+console.log('✅ API data fetched successfully!');

@@ -1,10 +1,21 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+const { defineConfig } = require('vite')
+const react = require('@vitejs/plugin-react')
+const path = require('path')
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
+module.exports = defineConfig({
+  plugins: [
+    react({
+      // Include .js files for JSX processing
+      include: '**/*.{jsx,tsx,js,ts}',
+      babel: {
+        plugins: [],
+        presets: [
+          ['@babel/preset-react', { runtime: 'automatic' }]
+        ]
+      }
+    })
+  ],
   base: '/', // Ensure base path is set to root for SPA routing
   resolve: {
     alias: {
@@ -28,5 +39,7 @@ export default defineConfig({
     }
   },
   // Handle environment variables (change from REACT_APP_ to VITE_)
-  envPrefix: 'VITE_'
+  envPrefix: 'VITE_',
+  // Disable esbuild to avoid platform-specific issues
+  esbuild: false
 })
