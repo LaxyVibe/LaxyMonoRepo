@@ -1,19 +1,32 @@
 # Netlify Configuration for LaxyGuide
-# Optimized configuration to prevent build timeouts
+# App-specific configuration file
 
 [build]
-  # Use the main build script and publish from the build directory
+  # Build and install deps from root, publish from this app's build directory
   publish = "build"
-  command = "node scripts/netlify-build.js"
+  command = "npm install --legacy-peer-deps --no-optional && npm install @rollup/rollup-linux-x64-gnu --save-dev && npm run build:guide"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_AUDIT = "false"
-  NPM_CONFIG_OPTIONAL = "false"
-  NPM_CONFIG_PROGRESS = "false"
-  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Only build when LaxyGuide or shared dependencies change
+[context.production]
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
+
+[context.deploy-preview]
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/LaxyGuide/ packages/"
+
+# Branch-specific builds
+[context.develop]
+  command = "npm install --legacy-peer-deps && npm run build:guide"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Speed up builds by only building when relevant files change
 [context.production]
