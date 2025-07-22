@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders hello world', () => {
+test('renders dashboard title', () => {
   render(<App />);
-  const helloElement = screen.getByText(/Hello World!/i);
-  expect(helloElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/Laxy Studio Dashboard/i);
+  expect(titleElement).toBeInTheDocument();
 });
 
 test('renders welcome message', () => {

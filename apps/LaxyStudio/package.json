@@ -9,6 +9,7 @@
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@tailwindcss/postcss": "^4.1.4",
+    "axios": "^1.10.0",
     "cra-template-pwa": "2.0.0",
     "gtag": "^1.0.1",
     "ra-data-json-server": "^5.9.2",
