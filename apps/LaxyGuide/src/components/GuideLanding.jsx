@@ -4,7 +4,7 @@ const GuideLanding = () => {
 
   return (
     <div>
-      <h1>Laxy Guide</h1>
+      <h1>Laxy Guide 0722</h1>
     </div>
   );
 };

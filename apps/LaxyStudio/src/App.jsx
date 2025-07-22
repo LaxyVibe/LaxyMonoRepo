@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="hello-world-container">
-          <h1 className="hello-world-title">Hello World!</h1>
+          <h1 className="hello-world-title">Hello World! 123</h1>
           <p className="hello-world-subtitle">Welcome to Laxy Studio</p>
           <div className="hello-world-description">
             <p>🚀 Your creative development platform is ready!</p>
