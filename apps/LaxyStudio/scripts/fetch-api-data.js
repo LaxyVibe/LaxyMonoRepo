@@ -22,8 +22,10 @@ const sampleData = {
   version: '1.0.0',
   buildTime: new Date().toISOString(),
   features: [
-    'Hello World Display',
-    'Modern React Architecture',
+    'Multilingual POI Management',
+    'Modern React Admin Architecture',
+    'Strapi 5 Backend Integration',
+    'i18n Support (EN, ZH, KO, JA)',
     'Netlify Deployment Ready'
   ]
 };

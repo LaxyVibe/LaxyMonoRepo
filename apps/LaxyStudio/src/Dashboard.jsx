@@ -1,64 +1,163 @@
 import React from 'react';
-import { Card, CardContent, CardHeader } from '@mui/material';
-import { Title } from 'react-admin';
+import { Card, CardContent, CardHeader, Box, Typography, Button, Grid } from '@mui/material';
+import { Title, useRedirect } from 'react-admin';
+import { Add as AddIcon, List as ListIcon } from '@mui/icons-material';
+import LaxyLogo from './assets/logo.svg';
 
-export const Dashboard = () => (
-  <div>
-    <Title title="Laxy Studio Dashboard" />
-    <div style={{ padding: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-      <Card>
-        <CardHeader 
-          title="🎉 Hello World!" 
-          subheader="Welcome to Laxy Studio"
-          style={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
-        />
-        <CardContent>
-          <h3>🚀 Your creative development platform is ready!</h3>
-          <p>Built with React Admin framework, powered by Vite, deployed on Netlify</p>
-          <ul>
-            <li>✨ Modern React Admin UI</li>
-            <li>🎨 Material-UI Components</li>
-            <li>⚡ Lightning Fast Development</li>
-            <li>🌐 Deploy Ready</li>
-          </ul>
-        </CardContent>
-      </Card>
+export const Dashboard = () => {
+  const redirect = useRedirect();
 
-      <Card>
-        <CardHeader 
-          title="📊 Dashboard Features" 
-          subheader="What you can do here"
-          style={{ background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)' }}
-        />
-        <CardContent>
-          <h4>Admin Panel Features:</h4>
-          <ul>
-            <li>📝 Create, Read, Update, Delete posts</li>
-            <li>📋 List view with filtering</li>
-            <li>📖 Detailed show pages</li>
-            <li>✏️ Form-based editing</li>
-            <li>🔍 Search functionality</li>
-          </ul>
-        </CardContent>
-      </Card>
+  return (
+    <Box sx={{ padding: { xs: 2, sm: 3 } }}>
+      <Title title="Laxy Studio" />
+      
+      <Box sx={{ mb: 4 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+          <img 
+            src={LaxyLogo} 
+            alt="Laxy Logo" 
+            style={{ 
+              height: '48px', 
+              width: '48px',
+              filter: 'hue-rotate(240deg) saturate(1.2)' // Apply brand colors
+            }} 
+          />
+          <Typography variant="h4" component="h1" sx={{ fontWeight: 600, color: '#333' }}>
+            Welcome to Laxy Studio
+          </Typography>
+        </Box>
+        <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3 }}>
+          Manage your multilingual Points of Interest with ease
+        </Typography>
+      </Box>
 
-      <Card>
-        <CardHeader 
-          title="🎯 Quick Actions" 
-          subheader="Get started quickly"
-          style={{ background: 'linear-gradient(45deg, #4CAF50 30%, #8BC34A 90%)' }}
-        />
-        <CardContent>
-          <h4>Try these features:</h4>
-          <ul>
-            <li>🆕 Click "Hello World Posts" to see the list</li>
-            <li>➕ Create new posts</li>
-            <li>👁️ View post details</li>
-            <li>✏️ Edit existing posts</li>
-            <li>🗑️ Delete posts (with confirmation)</li>
-          </ul>
-        </CardContent>
-      </Card>
-    </div>
-  </div>
-);
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6} lg={4}>
+          <Card sx={{ height: '100%', transition: 'transform 0.2s', '&:hover': { transform: 'translateY(-4px)' } }}>
+            <CardHeader 
+              title="🗺️ POI Management" 
+              subheader="Points of Interest Collection"
+              sx={{ 
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: 'white',
+                '& .MuiCardHeader-subheader': { color: 'rgba(255,255,255,0.8)' }
+              }}
+            />
+            <CardContent>
+              <Typography variant="body2" paragraph>
+                Manage your multilingual POI collection with full CRUD operations powered by Strapi 5.
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mt: 2 }}>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>✨</span> Multilingual support (EN, 中文, 한국어, 日本語)
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🔍</span> Advanced search and filtering
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>📸</span> Media management with cover photos
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🏷️</span> Tag system and categorization
+                </Typography>
+              </Box>
+              <Box sx={{ mt: 3, display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                <Button 
+                  variant="contained" 
+                  startIcon={<ListIcon />}
+                  onClick={() => redirect('/pois')}
+                  size="small"
+                >
+                  View POIs
+                </Button>
+                <Button 
+                  variant="outlined" 
+                  startIcon={<AddIcon />}
+                  onClick={() => redirect('/pois/create')}
+                  size="small"
+                >
+                  Add New
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} md={6} lg={4}>
+          <Card sx={{ height: '100%', transition: 'transform 0.2s', '&:hover': { transform: 'translateY(-4px)' } }}>
+            <CardHeader 
+              title="🌐 i18n Features" 
+              subheader="Internationalization"
+              sx={{ 
+                background: 'linear-gradient(135deg, #4CAF50 30%, #8BC34A 90%)',
+                color: 'white',
+                '& .MuiCardHeader-subheader': { color: 'rgba(255,255,255,0.8)' }
+              }}
+            />
+            <CardContent>
+              <Typography variant="body2" paragraph>
+                Built-in internationalization with automatic content switching.
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mt: 2 }}>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🇺🇸</span> English (Default)
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🇹🇼</span> Traditional Chinese
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🇨🇳</span> Simplified Chinese
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🇰🇷</span> Korean
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🇯🇵</span> Japanese
+                </Typography>
+              </Box>
+              <Typography variant="caption" color="text.secondary" sx={{ mt: 2, display: 'block' }}>
+                Switch languages using the selector in the top-right corner
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} md={6} lg={4}>
+          <Card sx={{ height: '100%', transition: 'transform 0.2s', '&:hover': { transform: 'translateY(-4px)' } }}>
+            <CardHeader 
+              title="⚡ Technical Stack" 
+              subheader="Modern Development"
+              sx={{ 
+                background: 'linear-gradient(135deg, #FF6B6B 30%, #FFE66D 90%)',
+                color: 'white',
+                '& .MuiCardHeader-subheader': { color: 'rgba(255,255,255,0.8)' }
+              }}
+            />
+            <CardContent>
+              <Typography variant="body2" paragraph>
+                Built with modern technologies for optimal performance.
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mt: 2 }}>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>⚛️</span> React Admin Framework
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🎨</span> Material-UI Components
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🚀</span> Strapi 5 CMS Backend
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>⚡</span> Vite Build System
+                </Typography>
+                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <span>🌐</span> Netlify Deployment
+                </Typography>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
