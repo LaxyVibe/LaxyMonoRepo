@@ -11,7 +11,9 @@
     "@tailwindcss/postcss": "^4.1.4",
     "cra-template-pwa": "2.0.0",
     "gtag": "^1.0.1",
+    "ra-data-json-server": "^5.9.2",
     "react": "^18.2.0",
+    "react-admin": "^5.9.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.6.0"
   },

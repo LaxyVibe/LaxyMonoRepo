@@ -1,34 +1,39 @@
 import React from 'react';
+import { Admin, Resource, ListGuesser, EditGuesser, ShowGuesser } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+import { Dashboard } from './Dashboard';
+import { UserList, UserEdit, UserShow } from './users';
+import { PostList, PostEdit, PostShow, PostCreate } from './posts';
+import PersonIcon from '@mui/icons-material/Person';
+import PostAddIcon from '@mui/icons-material/PostAdd';
 import './App.css';
+
+// Mock data provider - you can replace this with your actual API
+const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="hello-world-container">
-          <h1 className="hello-world-title">Hello World!</h1>
-          <p className="hello-world-subtitle">Welcome to Laxy Studio</p>
-          <div className="hello-world-description">
-            <p>🚀 Your creative development platform is ready!</p>
-            <p>Built with React, powered by Vite, deployed on Netlify</p>
-          </div>
-          <div className="feature-cards">
-            <div className="feature-card">
-              <h3>⚡ Fast Development</h3>
-              <p>Powered by Vite for lightning-fast development experience</p>
-            </div>
-            <div className="feature-card">
-              <h3>🎨 Modern Design</h3>
-              <p>Beautiful and responsive UI components ready for customization</p>
-            </div>
-            <div className="feature-card">
-              <h3>🌐 Deploy Ready</h3>
-              <p>Optimized Netlify configuration for seamless deployments</p>
-            </div>
-          </div>
-        </div>
-      </header>
-    </div>
+    <Admin 
+      dataProvider={dataProvider} 
+      dashboard={Dashboard}
+      title="Laxy Studio Dashboard"
+    >
+      <Resource 
+        name="users" 
+        list={UserList} 
+        edit={UserEdit} 
+        show={UserShow} 
+        icon={PersonIcon}
+      />
+      <Resource 
+        name="posts" 
+        list={PostList} 
+        edit={PostEdit} 
+        show={PostShow} 
+        create={PostCreate}
+        icon={PostAddIcon}
+      />
+    </Admin>
   );
 }
 
