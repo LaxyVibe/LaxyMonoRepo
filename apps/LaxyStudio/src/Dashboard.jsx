@@ -121,42 +121,6 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
         </Grid>
-
-        <Grid item xs={12} md={6} lg={4}>
-          <Card sx={{ height: '100%', transition: 'transform 0.2s', '&:hover': { transform: 'translateY(-4px)' } }}>
-            <CardHeader 
-              title="⚡ Technical Stack" 
-              subheader="Modern Development"
-              sx={{ 
-                background: 'linear-gradient(135deg, #FF6B6B 30%, #FFE66D 90%)',
-                color: 'white',
-                '& .MuiCardHeader-subheader': { color: 'rgba(255,255,255,0.8)' }
-              }}
-            />
-            <CardContent>
-              <Typography variant="body2" paragraph>
-                Built with modern technologies for optimal performance.
-              </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mt: 2 }}>
-                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <span>⚛️</span> React Admin Framework
-                </Typography>
-                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <span>🎨</span> Material-UI Components
-                </Typography>
-                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <span>🚀</span> Strapi 5 CMS Backend
-                </Typography>
-                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <span>⚡</span> Vite Build System
-                </Typography>
-                <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <span>🌐</span> Netlify Deployment
-                </Typography>
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>
       </Grid>
     </Box>
   );

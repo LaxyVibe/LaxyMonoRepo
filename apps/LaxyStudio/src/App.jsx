@@ -38,7 +38,7 @@ const CustomAppBar = () => {
               style={{ 
                 height: '48px', 
                 width: '48px',
-                marginLeft: '8px',
+                marginLeft: '20px',
                 filter: 'brightness(0) invert(1)' // Make logo white
               }} 
             />
