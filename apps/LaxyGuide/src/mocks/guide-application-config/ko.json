@@ -3,10 +3,35 @@
         "id": 36,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:26:04.129Z",
-        "updatedAt": "2025-07-18T03:53:50.658Z",
-        "publishedAt": "2025-07-18T03:53:50.634Z",
+        "updatedAt": "2025-07-23T08:45:10.811Z",
+        "publishedAt": "2025-07-23T08:45:10.761Z",
         "locale": "ko",
-        "universalConfig": null,
+        "universalConfig": {
+            "id": 68,
+            "releasedLanguages": [],
+            "audioLanguages": [
+                {
+                    "id": 79,
+                    "label": "English",
+                    "value": "eng"
+                },
+                {
+                    "id": 80,
+                    "label": "日本語",
+                    "value": "jpn"
+                },
+                {
+                    "id": 81,
+                    "label": "한국어",
+                    "value": "kor"
+                },
+                {
+                    "id": 82,
+                    "label": "國語",
+                    "value": "cmn"
+                }
+            ]
+        },
         "pagePOIGuide": {
             "id": 4,
             "coverDescription": "선호하는 오디오 언어를 선택하고 몰입감 넘치는 문화 여행을 시작하세요.",

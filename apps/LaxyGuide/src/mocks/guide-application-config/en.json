@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-06-26T10:28:50.679Z",
-        "updatedAt": "2025-07-18T03:48:52.045Z",
-        "publishedAt": "2025-07-18T03:48:51.990Z",
+        "updatedAt": "2025-07-23T08:54:11.601Z",
+        "publishedAt": "2025-07-23T08:54:11.499Z",
         "locale": "en",
         "universalConfig": {
             "id": 1,
@@ -33,6 +33,28 @@
                     "id": 36,
                     "label": "한국어",
                     "value": "ko"
+                }
+            ],
+            "audioLanguages": [
+                {
+                    "id": 67,
+                    "label": "English",
+                    "value": "eng"
+                },
+                {
+                    "id": 68,
+                    "label": "日本語2",
+                    "value": "jpn"
+                },
+                {
+                    "id": 69,
+                    "label": "한국어",
+                    "value": "kor"
+                },
+                {
+                    "id": 70,
+                    "label": "國語",
+                    "value": "cmn"
                 }
             ]
         },
