@@ -24,7 +24,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3001, // Different port from LaxyGuide
+    port: 3000, // Different port from LaxyGuide
     open: true
   },
   build: {

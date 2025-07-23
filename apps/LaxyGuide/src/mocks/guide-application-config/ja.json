@@ -3,10 +3,35 @@
         "id": 35,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:25:14.498Z",
-        "updatedAt": "2025-07-18T03:53:41.173Z",
-        "publishedAt": "2025-07-18T03:53:41.142Z",
+        "updatedAt": "2025-07-23T08:45:54.255Z",
+        "publishedAt": "2025-07-23T08:45:54.212Z",
         "locale": "ja",
-        "universalConfig": null,
+        "universalConfig": {
+            "id": 69,
+            "releasedLanguages": [],
+            "audioLanguages": [
+                {
+                    "id": 83,
+                    "label": "English",
+                    "value": "eng"
+                },
+                {
+                    "id": 84,
+                    "label": "日本語",
+                    "value": "jpn"
+                },
+                {
+                    "id": 85,
+                    "label": "한국어",
+                    "value": "kor"
+                },
+                {
+                    "id": 86,
+                    "label": "國語",
+                    "value": "cmn"
+                }
+            ]
+        },
         "pagePOIGuide": {
             "id": 3,
             "coverDescription": "お好みのオーディオ言語を選んで、没入感あふれる文化の旅を始めましょう。",

@@ -13,19 +13,19 @@ import {
   Box
 } from '@mui/material';
 import { useAudioGuide } from '../../context/AudioGuideContext.jsx';
-
-// Audio language options with display names
-const AUDIO_LANGUAGES = [
-  { code: 'eng', label: 'English', displayName: 'English' },
-  { code: 'jpn', label: '日本語', displayName: 'Japanese' },
-  { code: 'kor', label: '한국어', displayName: 'Korean' },
-  { code: 'cht', label: '繁體中文', displayName: 'Traditional Chinese' },
-  { code: 'chs', label: '简体中文', displayName: 'Simplified Chinese' }
-];
+import { useLanguage } from '../../context/LanguageContext.jsx';
+import { getFilteredAudioLanguages, FALLBACK_AUDIO_LANGUAGES } from '../../utils/audioLanguageUtils.js';
 
 const AudioLanguageSelector = ({ open, onClose, availableLanguages = [] }) => {
   const { audioLanguage, setAudioLanguage } = useAudioGuide();
+  const { language } = useLanguage();
   const [selectedLanguage, setSelectedLanguage] = useState(audioLanguage);
+
+  // Get dynamic audio languages from API configuration
+  const configAudioLanguages = getFilteredAudioLanguages(language, availableLanguages);
+  
+  // Use config languages or fallback if none available
+  const AUDIO_LANGUAGES = configAudioLanguages.length > 0 ? configAudioLanguages : FALLBACK_AUDIO_LANGUAGES;
 
   // Filter available languages based on what's provided
   const availableAudioLanguages = availableLanguages.length > 0 
@@ -86,7 +86,7 @@ const AudioLanguageSelector = ({ open, onClose, availableLanguages = [] }) => {
                       {language.label}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
-                      {language.displayName}
+                      {language.code}
                     </Typography>
                   </Box>
                 }

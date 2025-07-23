@@ -7,19 +7,12 @@ import { travelLogo, getCurrentLanguages, mapTextToAudioLanguage } from '@laxy/c
 import { getHubConfigByLanguage } from '../../mocks/guide-application-config/index.js';
 import { extractTextAndAudioLanguageFromPath, getValidAudioLanguageCode } from '../../utils/languageUtils.js';
 import { trackTourView, trackButtonClick, trackNavigation, trackEvent } from '../../utils/analytics.js';
+import { getFilteredAudioLanguages, FALLBACK_AUDIO_LANGUAGES } from '../../utils/audioLanguageUtils.js';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
   return `https://s3.ap-northeast-1.amazonaws.com/laxy.travel.staging/tours/${legacyTourCode}/`;
 };
-
-// Audio language options with display names
-const AUDIO_LANGUAGES = [
-  { code: 'eng', label: 'English' },
-  { code: 'jpn', label: '日本語' },
-  { code: 'kor', label: '한국어' },
-  { code: 'cmn', label: '國語' }
-];
 
 // Common styles
 const commonStyles = {
@@ -290,6 +283,12 @@ function TourCover() {
 
   // Get available audio languages from tour data
   const availableAudioLanguages = tourData.languages || ['eng'];
+  
+  // Get dynamic audio languages from API configuration
+  const configAudioLanguages = getFilteredAudioLanguages(currentTextLanguage, availableAudioLanguages);
+  
+  // Use config languages or fallback if none available
+  const AUDIO_LANGUAGES = configAudioLanguages.length > 0 ? configAudioLanguages : FALLBACK_AUDIO_LANGUAGES;
   
   // Filter available audio languages to only include ones we support
   const supportedAudioLanguages = AUDIO_LANGUAGES

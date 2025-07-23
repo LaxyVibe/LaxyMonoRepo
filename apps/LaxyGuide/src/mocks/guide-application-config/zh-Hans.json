@@ -3,10 +3,35 @@
         "id": 37,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:26:20.847Z",
-        "updatedAt": "2025-07-18T03:54:00.140Z",
-        "publishedAt": "2025-07-18T03:54:00.103Z",
+        "updatedAt": "2025-07-23T08:44:26.129Z",
+        "publishedAt": "2025-07-23T08:44:26.094Z",
         "locale": "zh-Hans",
-        "universalConfig": null,
+        "universalConfig": {
+            "id": 67,
+            "releasedLanguages": [],
+            "audioLanguages": [
+                {
+                    "id": 75,
+                    "label": "English",
+                    "value": "eng"
+                },
+                {
+                    "id": 76,
+                    "label": "日本語",
+                    "value": "jpn"
+                },
+                {
+                    "id": 77,
+                    "label": "한국어",
+                    "value": "kor"
+                },
+                {
+                    "id": 78,
+                    "label": "國語",
+                    "value": "cmn"
+                }
+            ]
+        },
         "pagePOIGuide": {
             "id": 5,
             "coverDescription": "选择您偏好的语音导览语言，开启一场沉浸式的文化之旅。",

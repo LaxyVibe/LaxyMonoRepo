@@ -76,6 +76,9 @@ const GUIDE_CONFIG_PARAMS = {
     populate: {
       releasedLanguages: {
         fields: ['label', 'value']
+      },
+      audioLanguages: {
+        fields: ['label', 'value']
       }
     }
   },
