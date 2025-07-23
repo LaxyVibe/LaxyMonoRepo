@@ -87,7 +87,7 @@ async function testClientSuites(clientId) {
  * Main function
  */
 async function main() {
-  const clientId = process.argv[2] || 'beppu-story';
+  const clientId = process.argv[2] || 'beppu-airbnb';
   
   console.log('🚀 Suite Discovery Test');
   console.log(`🌐 API Base URL: ${API_BASE_URL}`);

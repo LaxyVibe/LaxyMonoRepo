@@ -15,7 +15,7 @@
  *   node scripts/fetch-api-data.js
  *   
  * Environment Variables (optional):
- *   CLIENT_ID - Override the default client ID (default: beppu-story)
+ *   CLIENT_ID - Override the default client ID (default: beppu-airbnb)
  * 
  * Customizing API Parameters:
  *   To modify what data is fetched from the endpoints, edit the configuration objects:
@@ -54,7 +54,7 @@ const API_BASE_URL = 'https://laxy-studio-strapi-c1d6d20cbc41.herokuapp.com';
 const API_TOKEN = 'e67959c9c07282664a57013db7120c2d9993fb097f9bd28cde7e550e0eaff82845957f4b9d572c5a4c33813922a982c8442bb460dab88f3253b964cf59b8428f227cec012a832526060cd2511631c9c2bc7525bb4252c3c15377cd8bb6d45b88f0721bbf87752720c4cdfbe1e4551ef29108638e377e9d536127afdb571b1acb';
 
 // Default client configuration - can be overridden via environment variable
-const DEFAULT_CLIENT_ID = process.env.CLIENT_ID || 'beppu-story';
+const DEFAULT_CLIENT_ID = process.env.CLIENT_ID || 'beppu-airbnb';
 
 // Supported languages
 const LANGUAGES = ['en', 'ja', 'ko', 'zh-Hans', 'zh-Hant'];

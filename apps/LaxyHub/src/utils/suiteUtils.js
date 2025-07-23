@@ -24,7 +24,7 @@ const discoverAvailableSuites = () => {
       const pathParts = filePath.split('/');
       const fileName = pathParts[pathParts.length - 1]; // 'en.json'
       const suiteId = pathParts[pathParts.length - 2]; // 'family-room-01'
-      const clientId = pathParts[pathParts.length - 3]; // 'beppu-story'
+      const clientId = pathParts[pathParts.length - 3]; // 'beppu-airbnb'
       const langCode = fileName.replace('.json', ''); // 'en'
       
       // Only process files for the current client
