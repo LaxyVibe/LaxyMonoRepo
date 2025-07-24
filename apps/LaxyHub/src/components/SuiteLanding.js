@@ -413,17 +413,6 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
               }
             }}
           >
-            {sectionLabels.wifiLabel && (
-              <NavigationButton
-                iconUrl={sectionLabels.wifiIcon}
-                icon={!sectionLabels.wifiIcon && <WifiIcon fontSize={window.innerWidth < 600 ? "medium" : "large"} color="primary" />}
-                iconAlt="WiFi"
-                label={sectionLabels.wifiLabel}
-                onClick={handleWifiInfoClick}
-                gridProps={{ xs: 2.4 }}
-              />
-            )}
-            
             {sectionLabels.infoLabel && (
               <NavigationButton
                 iconUrl={sectionLabels.infoIcon}
@@ -435,13 +424,13 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
               />
             )}
             
-            {sectionLabels.restaurantsLabel && (
+            {sectionLabels.wifiLabel && (
               <NavigationButton
-                iconUrl={sectionLabels.restaurantsIcon}
-                icon={!sectionLabels.restaurantsIcon && <RestaurantIcon fontSize={window.innerWidth < 600 ? "medium" : "large"} color="primary" />}
-                iconAlt="Restaurants"
-                label={sectionLabels.restaurantsShortLabel}
-                onClick={handleRestaurantsClick}
+                iconUrl={sectionLabels.wifiIcon}
+                icon={!sectionLabels.wifiIcon && <WifiIcon fontSize={window.innerWidth < 600 ? "medium" : "large"} color="primary" />}
+                iconAlt="WiFi"
+                label={sectionLabels.wifiLabel}
+                onClick={handleWifiInfoClick}
                 gridProps={{ xs: 2.4 }}
               />
             )}
@@ -453,6 +442,17 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
                 iconAlt="Attractions"
                 label={sectionLabels.attractionsShortLabel}
                 onClick={handleAttractionsClick}
+                gridProps={{ xs: 2.4 }}
+              />
+            )}
+            
+            {sectionLabels.restaurantsLabel && (
+              <NavigationButton
+                iconUrl={sectionLabels.restaurantsIcon}
+                icon={!sectionLabels.restaurantsIcon && <RestaurantIcon fontSize={window.innerWidth < 600 ? "medium" : "large"} color="primary" />}
+                iconAlt="Restaurants"
+                label={sectionLabels.restaurantsShortLabel}
+                onClick={handleRestaurantsClick}
                 gridProps={{ xs: 2.4 }}
               />
             )}

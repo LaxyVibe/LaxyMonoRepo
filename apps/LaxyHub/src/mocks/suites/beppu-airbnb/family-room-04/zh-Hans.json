@@ -111,7 +111,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.289058650653!2d131.4726!3d33.28510000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a65c95c88521%3A0x2b1c619b643d0a36!2sThe%20Aqua%20Garden!5e0!3m2!1sen!2sjp!4v1749359230971!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "0977-24-1141",
-                        "highlight": "The Aqua Garden 是位于别府杉乃井酒店内的著名水疗乐园，结合了温泉疗愈与度假风情，为旅客带来绝佳的放松体验。设施包含露天温泉水池、发光喷泉、瀑布墙与视觉特效等，不仅适合情侣与家庭同游，也非常适合喜爱夜间浪漫氛围的旅人。\n\n游客无需住宿杉乃井酒店也可单独购票入场，因此深受一日游旅���喜爱。尤其夜晚点灯与水上表演搭配背景音乐，营造出别府难得一见的幻想景色，是拍照与放松身心的热门选择。",
+                        "highlight": "The Aqua Garden 是位于别府杉乃井酒店内的著名水疗乐园，结合了温泉疗愈与度假风情，为旅客带来绝佳的放松体验。设施包含露天温泉水池、发光喷泉、瀑布墙与视觉特效等，不仅适合情侣与家庭同游，也非常适合喜爱夜间浪漫氛围的旅人。\n\n游客无需住宿杉乃井酒店也可单独购票入场，因此深受一日游旅客喜爱。尤其夜晚点灯与水上表演搭配背景音乐，营造出别府难得一见的幻想景色，是拍照与放松身心的热门选择。",
                         "externalURL": "https://www.suginoi-hotel.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -664,7 +664,7 @@
                             {
                                 "id": 29,
                                 "documentId": "cbe1blfqovxzr7wnb3dce3c8",
-                                "name": "漫步",
+                                "name": "��步",
                                 "color": "GREY"
                             }
                         ],
