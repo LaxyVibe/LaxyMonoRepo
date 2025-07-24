@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:10.324Z",
-        "updatedAt": "2025-07-24T01:42:51.425Z",
-        "publishedAt": "2025-07-24T01:42:51.066Z",
+        "updatedAt": "2025-07-24T02:32:58.374Z",
+        "publishedAt": "2025-07-24T02:32:58.111Z",
         "locale": "en",
         "universalConfig": {
             "id": 275,
@@ -98,7 +98,7 @@
                 },
                 {
                     "id": 3,
-                    "label": "Attractions",
+                    "label": "Popular Spots",
                     "route": "/nearby-attractions",
                     "icon": {
                         "id": 135,
