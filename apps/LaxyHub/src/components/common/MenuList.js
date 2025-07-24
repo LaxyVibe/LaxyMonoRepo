@@ -21,6 +21,7 @@ import CheckIcon from '@mui/icons-material/Check';
  * @param {string} props.headerText - Header text to display
  * @param {boolean} props.showArrow - Whether to show right arrow (default: true)
  * @param {string} props.selectedValue - Value of the selected item to show check mark
+ * @param {string} props.tickColor - Color for the check mark icon (default: 'primary.main')
  * @param {Object} props.sx - Additional styling
  * @returns {JSX.Element} The menu list component
  */
@@ -31,6 +32,7 @@ const MenuList = ({
   headerText = '',
   showArrow = true,
   selectedValue = null,
+  tickColor = 'primary.main',
   sx = {} 
 }) => {
   
@@ -81,7 +83,7 @@ const MenuList = ({
                   {selectedValue && (
                     <ListItemIcon sx={{ minWidth: 40 }}>
                       {isSelected ? (
-                        <CheckIcon sx={{ color: 'primary.main' }} />
+                        <CheckIcon sx={{ color: tickColor }} />
                       ) : (
                         <Box sx={{ width: 24, height: 24 }} />
                       )}

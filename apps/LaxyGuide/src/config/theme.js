@@ -95,24 +95,6 @@ export const theme = createTheme({
   },
   // Custom navigation button styles
   custom: {
-    navigationButton: {
-      width: 63,
-      height: 63,
-      borderRadius: '50%',
-      border: `3px solid ${colors.primary[200]}`,
-      backgroundColor: '#ffffff',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease',
-      '&:hover': {
-        transform: 'translateY(-2px)',
-        boxShadow: '0 4px 12px rgba(95, 188, 196, 0.3)',
-        backgroundColor: 'rgba(95, 188, 196, 0.05)',
-      },
-    },
   },
 });
 

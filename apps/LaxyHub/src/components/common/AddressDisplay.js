@@ -8,9 +8,11 @@ import {
   Alert,
   Dialog,
   DialogTitle,
-  DialogContent
+  DialogContent,
+  useTheme
 } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CloseIcon from '@mui/icons-material/Close';
 import { useLanguage } from '../../context/LanguageContext';
 import { getSuiteData } from '../../utils/suiteUtils';
 import { getHubConfigByLanguage } from '../../mocks/hub-application-config';
@@ -26,6 +28,7 @@ const AddressDisplay = ({
   poiSlug = null, // For POI-specific address lookup
 }) => {
   const { language } = useLanguage();
+  const theme = useTheme();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [speechDialogOpen, setSpeechDialogOpen] = useState(false);
@@ -180,7 +183,7 @@ const AddressDisplay = ({
   };
 
   return (
-    <>
+    <Box>
       {/* 1. Embedded Map */}
       {showMap && address && (
         <Box sx={{ mb: 3 }}>
@@ -289,7 +292,10 @@ const AddressDisplay = ({
                   component="img"
                   src={hubConfig.data.globalComponent.speechButton.icon.url}
                   alt="Speech"
-                  sx={{ width: 16, height: 16 }}
+                  sx={{ 
+                    width: 18, 
+                    height: 18
+                  }}
                 />
               ) : null
             }
@@ -297,14 +303,14 @@ const AddressDisplay = ({
             sx={{ 
               py: 1.5,
               borderRadius: '37px',
-              borderColor: 'primary.400',
+              borderColor: theme.palette.primary.light, // Using primary[100] for border
               fontWeight: 600,
               fontSize: '16px',
               fontFamily: 'Commissioner, sans-serif',
-              color: '#328188',
+              color: theme.palette.primary.light, // Using primary[100] for text
               '&:hover': {
                 backgroundColor: 'primary.50',
-                borderColor: 'primary.400'
+                borderColor: theme.palette.primary.light
               }
             }}
           >
@@ -322,14 +328,26 @@ const AddressDisplay = ({
           maxWidth="sm"
           fullWidth
         >
-          <DialogTitle>
+          <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pr: 1 }}>
             {hubConfig.data.globalComponent.speechButton.label}
+            <IconButton
+              onClick={handleSpeechDialogClose}
+              size="small"
+              sx={{ color: 'text.secondary' }}
+              aria-label="close"
+            >
+              <CloseIcon />
+            </IconButton>
           </DialogTitle>
           <DialogContent>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
               <IconButton
                 onClick={() => speakAddress(nativeAddress, nativeLanguageCode)}
-                sx={{ color: 'primary.400', borderRadius: '50%', border: '3px solid #328188' }}
+                sx={{ 
+                  color: 'primary.400', 
+                  borderRadius: '50%', 
+                  border: `3px solid ${theme.palette.primary.light}` // Using primary[100] for border
+                }}
                 size="large"
                 title="Speak address"
               >
@@ -338,7 +356,11 @@ const AddressDisplay = ({
                     component="img"
                     src={hubConfig.data.globalComponent.speechButton.icon.url}
                     alt="Speech"
-                    sx={{ width: 30, height: 30 }}
+                    sx={{ 
+                      width: 30, 
+                      height: 30,
+                      filter: `brightness(0) saturate(100%) invert(44%) sepia(29%) saturate(1458%) hue-rotate(142deg) brightness(95%) contrast(89%)` // Converts to primary color
+                    }}
                   />
                 ) : (
                   <span>🔊</span>
@@ -373,7 +395,7 @@ const AddressDisplay = ({
           {snackbarMessage}
         </Alert>
       </Snackbar>
-    </>
+    </Box>
   );
 };
 

@@ -1,10 +1,6 @@
 import React from 'react';
 import { Box, Paper, Typography, Grid } from '@mui/material';
 
-/**
- * Reusable navigation button component with consistent styling
- * Features 63px x 63px size with 3px #5FBCC4 border and hover effects
- */
 const NavigationButton = ({
   icon,
   iconUrl,

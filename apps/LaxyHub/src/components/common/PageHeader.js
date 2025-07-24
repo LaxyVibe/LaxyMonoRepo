@@ -57,14 +57,14 @@ const PageHeader = ({ title, onBack, isHierarchical }) => {
       sx={{ 
         display: 'flex', 
         alignItems: 'center', 
-        px: 2,
-        py: 1,
+        px: 0.5,
+        py: 2,
       }}
     >
       {/* Back button */}
       <IconButton
         onClick={handleBackClick}
-        sx={{ p: 1, mr: 2 }}
+        sx={{ p: 0, mr: 2 }}
       >
         <ArrowBackIcon 
           sx={{ 
