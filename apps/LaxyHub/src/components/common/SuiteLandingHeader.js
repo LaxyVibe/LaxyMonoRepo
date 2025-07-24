@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   Box, 
   IconButton,
-  Typography 
+  Typography,
+  useTheme
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate } from 'react-router-dom';
@@ -17,6 +18,7 @@ import { trackButtonClick, trackNavigation } from '../../utils/analytics';
 const SuiteLandingHeader = ({ title, showBackButton = false, suiteId = null }) => {
   const navigate = useNavigate();
   const { language } = useLanguage();
+  const theme = useTheme();
   const hubConfig = getHubConfigByLanguage(language);
   
   // Extract header configuration
@@ -131,7 +133,7 @@ const SuiteLandingHeader = ({ title, showBackButton = false, suiteId = null }) =
             fontFamily: '"Playfair Display", serif',
             fontSize: '32px',
             fontWeight: 900, 
-            color: '#3B7B7B', 
+            color: theme.palette.primary.light, // Using BS-100 color (primary[100])
             flexGrow: 1, 
             textAlign: 'center' 
           }}

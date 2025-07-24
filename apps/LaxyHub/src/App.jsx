@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import './App.css';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -24,7 +24,7 @@ import { getPOIsByType } from './utils/dataFetcher';
 import { LanguageProvider } from './context/LanguageContext';
 import { DEFAULT_LANGUAGE, extractLanguageFromPath } from './utils/languageUtils';
 import { DEFAULT_SUITE_ID, DEFAULT_CLIENT_ID } from './config/constants';
-import { theme } from './config/theme';
+import { createThemeFromConfig } from './config/theme';
 import { getHubConfigByLanguage } from './mocks/hub-application-config';
 import usePageTracking from './hooks/usePageTracking';
 
@@ -305,6 +305,49 @@ function DefaultLanguageRedirect() {
 }
 
 function App() {
+  // Create theme dynamically from hub configuration
+  const theme = useMemo(() => {
+    try {
+      // Get hub configuration with default language
+      const hubConfig = getHubConfigByLanguage(DEFAULT_LANGUAGE);
+      
+      // Create theme from universal config
+      if (hubConfig?.data?.universalConfig) {
+        return createThemeFromConfig(hubConfig.data.universalConfig, 'beppu-airbnb');
+      } else {
+        console.warn('Hub configuration not available, using fallback theme');
+        // Create a minimal fallback theme if config is not available
+        return createThemeFromConfig({
+          themeOptions: [{
+            name: 'beppu-airbnb',
+            colors: {
+              primary: { 50: '#f0f9fa', 100: '#a39ddd', 200: '#5fbcc4', 300: '#46b2bb', 400: '#328188', 500: '#215458', 600: '#133033' },
+              secondary: { 100: '#fc6dcd', 200: '#f9ad9b', 300: '#f57c5f', 400: '#f24b24', 500: '#cb310c', 600: '#a82209' },
+              third: { 100: '#fd4ee8', 200: '#fd87ac', 300: '#f2ba6f', 400: '#ed9d33', 500: '#cd8d12', 600: '#90580d' },
+              background: { default: '#f5f5f7', paper: '#ffffff' },
+              text: { primary: '#333333', secondary: '#666666' }
+            },
+            typography: { fontFamily: '"Segoe UI", "Roboto", "Helvetica Neue", sans-serif' },
+            components: {},
+            custom: { navigationButton: { width: 63, height: 63, borderRadius: '50%', border: '3px solid #5fbcc4', backgroundColor: '#ffffff', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.3s ease', hover: {} } }
+          }]
+        }, 'beppu-airbnb');
+      }
+    } catch (error) {
+      console.error('Error creating theme:', error);
+      // Return a basic Material-UI theme as last resort
+      return createThemeFromConfig({
+        themeOptions: [{
+          name: 'beppu-airbnb',
+          colors: { primary: { 200: '#5fbcc4', 500: '#215458' }, secondary: { 300: '#f57c5f', 500: '#cb310c' }, background: { default: '#f5f5f7', paper: '#ffffff' }, text: { primary: '#333333', secondary: '#666666' } },
+          typography: { fontFamily: '"Segoe UI", "Roboto", "Helvetica Neue", sans-serif' },
+          components: {},
+          custom: { navigationButton: { width: 63, height: 63, borderRadius: '50%', border: '3px solid #5fbcc4', backgroundColor: '#ffffff', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.3s ease', hover: {} } }
+        }]
+      }, 'beppu-airbnb');
+    }
+  }, []);
+
   const getRouteConfig = () => {
     return (
       <Routes>

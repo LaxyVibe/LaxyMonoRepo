@@ -72,6 +72,7 @@ const BASE_MOCK_PATH = path.join(__dirname, '..', 'src', 'mocks');
  */
 const HUB_CONFIG_PARAMS = {
   universalConfig: {
+    fields: ['themeOptions'],
     populate: {
       releasedLanguages: {
         fields: ['label', 'value']
