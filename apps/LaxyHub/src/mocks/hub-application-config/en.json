@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:10.324Z",
-        "updatedAt": "2025-07-24T05:41:57.607Z",
-        "publishedAt": "2025-07-24T05:41:57.241Z",
+        "updatedAt": "2025-07-24T07:07:41.719Z",
+        "publishedAt": "2025-07-24T07:07:41.366Z",
         "locale": "en",
         "universalConfig": {
             "id": 320,
@@ -25,8 +25,8 @@
                             "600": "#90580d"
                         },
                         "primary": {
-                            "50": "#f0f9fa",
-                            "100": "#a39ddd",
+                            "50": "#FFBBBF",
+                            "100": "#FF5A5F",
                             "200": "#5fbcc4",
                             "300": "#46b2bb",
                             "400": "#328188",
