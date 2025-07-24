@@ -23,13 +23,13 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1256,
-                    "network": "Airbnb3",
+                    "id": 1471,
+                    "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1253,
-                    "network": "Airbnb4",
+                    "id": 1472,
+                    "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
             ],
@@ -37,8 +37,8 @@
                 "id": 5,
                 "documentId": "sryg01oy5y4rbisxyhzujue9",
                 "slug": "beppu-airbnb",
-                "label": "Beppu Story",
-                "greeting": "Beppu Story에 오신 것을 환영합니다!",
+                "label": "Beppu Airbnb",
+                "greeting": "벳푸에 오신 것을 환영합니다!",
                 "nativeLanguageCode": "ja",
                 "avatar": {
                     "id": 15,
@@ -225,7 +225,7 @@
                         "documentId": "k43jal69ybwqggeyuh7x5plr",
                         "slug": "Don-Quijote-Beppu",
                         "label": "돈키호테 벳푸점",
-                        "address": "일본 〒874-0929 오이타��� 벳푸시 미나미키타하마마치 6-20",
+                        "address": "일본 〒874-0929 오이타현 벳푸시 미나미키타하마마치 6-20",
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": "+81 570-200-465",
@@ -481,7 +481,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6671.257148794366!2d131.5075326!3d33.2762149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6c4cbb65641%3A0x933daa209e21df0b!2sYouMe%20Town%20Beppu!5e0!3m2!1sen!2sjp!4v1749359463586!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-26-3333",
-                        "highlight": "유메타운 벳푸(YouMe Town Beppu)는 벳푸시에서 가장 큰 복합 쇼핑몰 중 하나로, 슈퍼마켓, 의류, 화장품, 서점, 게임 센터, 음식점, 생활용품 등 다양한 상점들을 한데 모아 현지 주민과 여행객에게 원스톱 쇼�� 및 여가 경험을 제공합니다.\n\n쇼핑몰은 여러 층으로 이루어져 있으며, 1층은 대형 슈퍼마켓과 생활 잡화 구역으로 일상용품과 기념품 구매에 편리합니다. 2층은 의류 브랜드와 다이소와 같은 100엔 샵이 주를 이루고, 3층에는 유니클로, 서점, 어린이 놀이 공간, 푸드코트가 있어 쇼핑, 식사, 가족 동반 방문 모두 편리합니다.\n\n벳푸 시내와 가까워 교통이 편리하며, 무료 주차장이 마련되어 있어 도보나 대중교통으로도 갈 수 있습니다. 생활용품을 빠르게 구매하고 싶거나 여유로운 오후 시간을 보내고 싶을 때 모두 훌륭한 선택입니다.",
+                        "highlight": "유메타운 벳푸(YouMe Town Beppu)는 벳푸시에서 가장 큰 복합 쇼핑몰 중 하나로, 슈퍼마켓, 의류, 화장품, 서점, 게임 센터, 음식점, 생활용품 등 다양한 상점들을 한데 모아 현지 주민과 여행객에게 원스톱 쇼핑 및 여가 경험을 제공합니다.\n\n쇼핑몰은 여러 층으로 이루어져 있으며, 1층은 대형 슈퍼마켓과 생활 잡화 구역으로 일상용품과 기념품 구매에 편리합니다. 2층은 의류 브랜드와 다이소와 같은 100엔 샵이 주를 이루고, 3층에는 유니클로, 서점, 어린이 놀이 공간, 푸드코트가 있어 쇼핑, 식사, 가족 동반 방문 모두 편리합니다.\n\n벳푸 시내와 가까워 교통이 편리하며, 무료 주차장이 마련되어 있어 도보나 대중교통으로도 갈 수 있습니다. 생활용품을 빠르게 구매하고 싶거나 여유로운 오후 시간을 보내고 싶을 때 모두 훌륭한 선택입니다.",
                         "externalURL": "http://www.izumi.jp/tenpo/beppu",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -907,7 +907,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.1203760000276!2d131.4853258!3d33.3156683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a775b765d5e7%3A0x21200e289a85660c!2sYukemuri%20Observation%20Deck!5e0!3m2!1sen!2sjp!4v1749359600114!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1128",
-                        "highlight": "유케무리 전망대는 벳푸시 갓나와 지역에 위치하며, 벳푸 온천 마을의 장관을 감상하기에 가장 좋은 장소입니다. 전망대에서 바라보면 온천 증기(유케무리)가 땅에서 솟아올라 거리와 골목 사이로 흩날리며 생활감과 역사적 분위기가 가득한 지열 도시 풍경을 그려냅니다. 특히 이른 아침과 해 질 녘에 가장 매력적입니다.\n\n이곳은 사진 애호가와 풍경 감상객에게 적합할 뿐만 아니라, 벳푸 온천 문화를 이해하기 위한 추천 시작점입니다. 날씨가 맑을 때는 벳푸만과 주변 산 풍경을 멀리서도 조망할 수 있어 많은 여행객들이 지옥순례 전후로 들르는 곳이기도 합니다.\n\n자가용으로 방문할 경우, 전망대에는 주차장이 마련되어 있습니다. 또한 인근의 유명한 식당 카메마사 스시와 함께 일정을 계획할 수도 있습니다.",
+                        "highlight": "유케무리 전망대는 벳푸시 갓나와 지역에 위치하며, 벳푸 온천 마을의 장관을 감상하기에 가장 좋은 장소입니다. 전망대에서 바라보면 온천 증기(유케무리)가 땅에서 솟아올라 거리와 ���목 사이로 흩날리며 생활감과 역사적 분위기가 가득한 지열 도시 풍경을 그려냅니다. 특히 이른 아침과 해 질 녘에 가장 매력적입니다.\n\n이곳은 사진 애호가와 풍경 감상객에게 적합할 뿐만 아니라, 벳푸 온천 문화를 이해하기 위한 추천 시작점입니다. 날씨가 맑을 때는 벳푸만과 주변 산 풍경을 멀리서도 조망할 수 있어 많은 여행객들이 지옥순례 전후로 들르는 곳이기도 합니다.\n\n자가용으로 방문할 경우, 전망대에는 주차장이 마련되어 있습니다. 또한 인근의 유명한 식당 카메마사 스시와 함께 일정을 계획할 수도 있습니다.",
                         "externalURL": "https://www.city.beppu.oita.jp/sisetu/sangyou_kankou/yukemuri.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
