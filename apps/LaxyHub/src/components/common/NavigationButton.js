@@ -19,49 +19,48 @@ const NavigationButton = ({
 }) => {
   return (
     <Grid item {...gridProps} sx={{ textAlign: 'center' }}>
-      <Paper 
-        elevation={1} 
-        sx={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          p: { xs: 0.75, sm: 1.5 },
-          borderRadius: '50%',
-          width: { xs: 56, sm: 63 },
-          height: { xs: 56, sm: 63 },
-          mx: 'auto',
-          border: `3px solid ${colors.primary[200]}`, // Using #5FBCC4
-          backgroundColor: 'transparent',
-          boxShadow: '0 3px 6px rgba(0,0,0,0.1)',
-          cursor: disabled ? 'default' : 'pointer',
-          opacity: disabled ? 0.6 : 1,
-          transition: 'all 0.3s ease',
-          '&:hover': disabled ? {} : {
-            transform: 'translateY(-2px)',
-            boxShadow: `0 4px 12px rgba(95, 188, 196, 0.3)`,
-            backgroundColor: 'rgba(95, 188, 196, 0.05)',
-          },
-          ...paperProps.sx
-        }}
-        onClick={disabled ? undefined : onClick}
-        {...paperProps}
-      >
-        {iconUrl ? (
-          <Box 
-            component="img" 
-            src={iconUrl} 
-            alt={iconAlt || label}
-            sx={{ 
-              width: { xs: 20, sm: iconSize.xs || 24 }, 
-              height: { xs: 20, sm: iconSize.xs || 24 },
-              color: 'primary.main'
-            }}
-          />
-        ) : (
-          icon
-        )}
-      </Paper>
+      {iconUrl ? (
+        <Box 
+          component="img" 
+          src={iconUrl} 
+          alt={iconAlt || label}
+          sx={{ 
+            width: 63, 
+            height: 63,
+            mx: 'auto',
+            display: 'block',
+            cursor: disabled ? 'default' : 'pointer',
+            opacity: disabled ? 0.6 : 1,
+            transition: 'all 0.3s ease',
+            '&:hover': disabled ? {} : {
+              transform: 'translateY(-2px)',
+            },
+            ...paperProps.sx
+          }}
+          onClick={disabled ? undefined : onClick}
+        />
+      ) : (
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 63,
+            height: 63,
+            mx: 'auto',
+            cursor: disabled ? 'default' : 'pointer',
+            opacity: disabled ? 0.6 : 1,
+            transition: 'all 0.3s ease',
+            '&:hover': disabled ? {} : {
+              transform: 'translateY(-2px)',
+            },
+            ...paperProps.sx
+          }}
+          onClick={disabled ? undefined : onClick}
+        >
+          {icon}
+        </Box>
+      )}
       {label && (
         <Typography 
           variant="caption" 
@@ -70,7 +69,9 @@ const NavigationButton = ({
             mt: { xs: 0.5, sm: 1 }, 
             display: 'block',
             opacity: disabled ? 0.6 : 1,
-            fontSize: { xs: '0.65rem', sm: '0.75rem' },
+            fontFamily: 'Commissioner, sans-serif',
+            fontWeight: 400,
+            fontSize: '16px',
             lineHeight: 1.2,
             maxWidth: { xs: 60, sm: 80 },
             mx: 'auto'

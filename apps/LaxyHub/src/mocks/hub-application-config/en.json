@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:10.324Z",
-        "updatedAt": "2025-07-18T03:51:05.424Z",
-        "publishedAt": "2025-07-17T05:53:31.090Z",
+        "updatedAt": "2025-07-24T01:42:51.425Z",
+        "publishedAt": "2025-07-24T01:42:51.066Z",
         "locale": "en",
         "universalConfig": {
             "id": 275,
@@ -81,9 +81,9 @@
                     "label": "Info",
                     "route": "/info",
                     "icon": {
-                        "id": 45,
-                        "documentId": "b2zhi98woacgvlwrhqp9uin6",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993207/Travel_43_d900d08ec4.svg"
+                        "id": 134,
+                        "documentId": "ombo0ro1g4mb4eoxe7jlm6xw",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/home_71883efcee.svg"
                     }
                 },
                 {
@@ -91,9 +91,9 @@
                     "label": "WiFi",
                     "route": "/info/wifi",
                     "icon": {
-                        "id": 48,
-                        "documentId": "kkb9gay0ml8pvpadtif2ctze",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993218/wifi_02_6e96d6b5d7.svg"
+                        "id": 136,
+                        "documentId": "shsaxh5axl38lpn3e1rdkhxq",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/wifi_7524ba9935.svg"
                     }
                 },
                 {
@@ -101,9 +101,9 @@
                     "label": "Attractions",
                     "route": "/nearby-attractions",
                     "icon": {
-                        "id": 46,
-                        "documentId": "wywjk07k8u0mccx2vblhyh99",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993211/Travel_09_b79b076d3a.svg"
+                        "id": 135,
+                        "documentId": "xfzojkskubw4embqr4pusahf",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/attraction_5c03bd884d.svg"
                     }
                 },
                 {
@@ -111,9 +111,9 @@
                     "label": "Foods",
                     "route": "/nearby-restaurants",
                     "icon": {
-                        "id": 49,
-                        "documentId": "g94ao3prng3aura1zq9fhctg",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993221/Travel_24_98232d72ac.svg"
+                        "id": 137,
+                        "documentId": "heuvx1oitqvtk7grrznu15h5",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/restaurant_31d7d2875f.svg"
                     }
                 },
                 {
@@ -121,9 +121,9 @@
                     "label": "Tours",
                     "route": "/tours",
                     "icon": {
-                        "id": 40,
-                        "documentId": "zbe6m7jmqfrdhpvk1zenucyo",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993187/map_02_627a502bcc.svg"
+                        "id": 133,
+                        "documentId": "bgy78q860mn9pu9j5ihmi2h4",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/laxy_guide_ca15b8e003.svg"
                     }
                 }
             ]

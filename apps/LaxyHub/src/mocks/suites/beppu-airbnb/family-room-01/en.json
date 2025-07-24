@@ -24,21 +24,21 @@
             "wifi": [
                 {
                     "id": 1222,
-                    "network": "Airbnb3",
-                    "password": "beppuairbnb"
+                    "network": "Beppu Story 1",
+                    "password": "beppustory"
                 },
                 {
                     "id": 1223,
-                    "network": "Airbnb4",
-                    "password": "beppuairbnb"
+                    "network": "Beppu Story 2",
+                    "password": "beppustory"
                 }
             ],
             "ownedBy": {
                 "id": 1,
                 "documentId": "sryg01oy5y4rbisxyhzujue9",
                 "slug": "beppu-airbnb",
-                "label": "Beppu Story",
-                "greeting": "Welcome to Beppu Story!",
+                "label": "Beppu Airbnb",
+                "greeting": "Welcome to Beppu!",
                 "nativeLanguageCode": "ja",
                 "avatar": {
                     "id": 15,
