@@ -13,7 +13,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useLanguage } from '../../context/LanguageContext';
 import { getSuiteData } from '../../utils/suiteUtils';
 import { getHubConfigByLanguage } from '../../mocks/hub-application-config';
-import { PAGE_LAYOUTS, CONTENT_PADDING } from '../../config/layout';
+import { PAGE_LAYOUTS } from '../../config/layout';
 
 const FAQInfo = () => {
   const params = useParams();
@@ -33,10 +33,9 @@ const FAQInfo = () => {
   const faqItems = suite.faq || [];
 
   return (
-    <Container {...PAGE_LAYOUTS.FAQInfo}>
+    <Container {...PAGE_LAYOUTS.FAQInfo} sx={{ px: 3 }}> {/* 24px horizontal margin for whole content */}
       <PageHeader title={pageTitle} />
-      <Box sx={{ ...CONTENT_PADDING.standard }}>
-        {faqItems.map((faqItem, index) => (
+      {faqItems.map((faqItem, index) => (
           <Accordion 
             key={faqItem.id || index} 
             sx={{ 
@@ -67,22 +66,22 @@ const FAQInfo = () => {
                 <Box 
                   sx={{ 
                     lineHeight: 1.8,
-                    '& p': { mb: 2 },
+                    textAlign: 'justify',
+                    '& p': { mb: 2, textAlign: 'justify' },
                     '& strong': { fontWeight: 'bold', color: 'primary.main' },
                     '& ul, & ol': { pl: 2, mb: 2 },
-                    '& li': { mb: 1 }
+                    '& li': { mb: 1, textAlign: 'justify' }
                   }}
                   dangerouslySetInnerHTML={{ __html: faqItem.answer }}
                 />
               ) : (
-                <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
+                <Typography variant="body1" sx={{ lineHeight: 1.6, textAlign: 'justify' }}>
                   {faqItem.answer}
                 </Typography>
               )}
             </AccordionDetails>
           </Accordion>
         ))}
-      </Box>
     </Container>
   );
 };

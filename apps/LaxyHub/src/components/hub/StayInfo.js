@@ -114,15 +114,16 @@ const StayInfo = () => {
               display: 'flex',
               alignItems: 'center',
               px: 2,
-              py: 1
+              py: 1.5
             }}
           >
             <IconButton
               onClick={handleBackClick}
               sx={{ 
                 p: 1,
+                px: 1.5,
                 backdropFilter: 'blur(8px)',
-                mr: 2,
+                mr: 1,
                 '&:hover': {
                   backgroundColor: 'rgba(255, 255, 255, 1)'
                 }

@@ -39,12 +39,6 @@ export const createThemeFromConfig = (universalConfig, themeName = 'beppu-airbnb
     components,
     // Add custom styles to the theme
     custom: {
-      ...custom,
-      navigationButton: {
-        ...custom.navigationButton,
-        border: `3px solid ${colors.primary[200]}`,
-        '&:hover': custom.navigationButton.hover,
-      },
     },
   });
 

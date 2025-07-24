@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { 
   Box, 
   Container, 
-  Button
+  Button,
+  useTheme
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
@@ -16,6 +17,7 @@ import { trackLanguageChange, trackButtonClick, trackNavigation } from '../utils
 const LanguagePage = () => {
   const { language, setLanguage } = useLanguage();
   const navigate = useNavigate();
+  const theme = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState(language);
   
   // Store the referrer path when component mounts
@@ -87,7 +89,7 @@ const LanguagePage = () => {
   };
   
   return (
-    <Container {...PAGE_LAYOUTS.LanguagePage} sx={{ display: 'flex', flexDirection: 'column', pb: 0 }}>
+    <Container {...PAGE_LAYOUTS.LanguagePage} sx={{ display: 'flex', flexDirection: 'column', pb: 0, px: 3 }}>
       <PageHeader title={heading} />
       
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -98,7 +100,8 @@ const LanguagePage = () => {
             showHeader={false}
             showArrow={false}
             selectedValue={selectedLanguage}
-            sx={{ mb: 0, mx: 3.5 }}
+            sx={{ mb: 0, px: 1 }}
+            tickColor={theme.palette.primary.light} // Using primary[100] for tick sign
           />
         </Box>
         
@@ -123,7 +126,15 @@ const LanguagePage = () => {
               py: 1.5,
               borderRadius: 16,
               fontWeight: 600,
-              minHeight: 48
+              minHeight: 48,
+              backgroundColor: theme.palette.primary.light, // Using primary[100] color
+              '&:hover': {
+                backgroundColor: theme.palette.primary.light,
+                opacity: 0.9
+              },
+              '&:disabled': {
+                backgroundColor: theme.palette.action.disabled
+              }
             }}
           >
             {applyButtonLabel}

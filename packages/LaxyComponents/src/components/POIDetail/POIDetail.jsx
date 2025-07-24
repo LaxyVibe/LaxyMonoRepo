@@ -7,7 +7,8 @@ import {
   Rating,
   Chip,
   Button,
-  CircularProgress
+  CircularProgress,
+  useTheme
 } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
@@ -71,6 +72,7 @@ const POIDetail = ({
   const { poiSlug, suiteId } = useParams();
   const { suiteId: routeSuiteId } = routeParams;
   const navigate = useNavigate();
+  const theme = useTheme();
   
   const [poi, setPOI] = useState(null);
   const [nativePOI, setNativePOI] = useState(null);
@@ -194,7 +196,7 @@ const POIDetail = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{
-                      color: 'primary.main',
+                      color: theme.palette.primary.light,
                       textDecoration: 'underline',
                       '&:hover': {
                         textDecoration: 'none'
@@ -226,7 +228,8 @@ const POIDetail = ({
             fontFamily: 'Commissioner, sans-serif',
             fontWeight: 400,
             fontSize: '16px',
-            lineHeight: 1.6
+            lineHeight: 1.6,
+            textAlign: 'justify'
           }}
         >
           {renderTextWithLineBreaks(text)}
@@ -248,6 +251,7 @@ const POIDetail = ({
             fontWeight: 400,
             fontSize: '16px',
             lineHeight: 1.6,
+            textAlign: 'justify',
             mb: 1
           }}
         >
@@ -262,7 +266,7 @@ const POIDetail = ({
             minWidth: 'auto',
             fontSize: '14px',
             fontWeight: 500,
-            color: 'primary.main',
+            color: theme.palette.primary.light,
             textTransform: 'none',
             '&:hover': {
               backgroundColor: 'transparent',
@@ -316,14 +320,12 @@ const POIDetail = ({
           pageLayouts={pageLayouts}
           trackNavigation={trackNavigation}
         />
-        <Container {...pageLayouts.POIDetail}>
-          <Box sx={{ ...contentPadding.standard, p: 3 }}>
-            <Paper elevation={3} sx={{ p: 3, textAlign: 'center', backgroundColor: 'error.light' }}>
-              <RestaurantIcon sx={{ fontSize: 60, color: 'error.main', mb: 2 }} />
-              <Typography variant="h6" color="error.contrastText">Error</Typography>
-              <Typography color="error.contrastText">{error}</Typography>
-            </Paper>
-          </Box>
+        <Container {...pageLayouts.POIDetail} sx={{ px: 3 }}>
+          <Paper elevation={3} sx={{ p: 3, textAlign: 'center', backgroundColor: 'error.light' }}>
+            <RestaurantIcon sx={{ fontSize: 60, color: 'error.main', mb: 2 }} />
+            <Typography variant="h6" color="error.contrastText">Error</Typography>
+            <Typography color="error.contrastText">{error}</Typography>
+          </Paper>
         </Container>
       </Box>
     );
@@ -340,7 +342,7 @@ const POIDetail = ({
       />
       
       {/* Main Content Card */}
-      <Container {...pageLayouts.POIDetail} sx={{ position: 'relative', mt: -8 }}>
+      <Container {...pageLayouts.POIDetail} sx={{ position: 'relative', mt: -8, px: 0 }}> {/* Remove horizontal padding for full width */}
         <Paper 
           elevation={0} 
           sx={{ 
@@ -349,12 +351,13 @@ const POIDetail = ({
             position: 'relative',
             zIndex: 10,
             backgroundColor: '#F5F5F5', // Neutral/100 background
-            p: 3,
-            ...contentPadding.standard
+            px: 3, // 24px horizontal margin for whole content
+            py: 3
+            // Removed contentPadding.standard to prevent override
           }}
         >
           {/* POI Label */}
-          <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', mt: 3 }}>
+          <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
             <Typography variant="h6" component="h1" sx={{ 
               fontFamily: 'Commissioner, sans-serif',
               fontWeight: 700,
@@ -442,9 +445,7 @@ const POIDetail = ({
                       backgroundColor: 'rgba(0, 0, 0, 0.04)',
                       borderRadius: 1
                     },
-                    px: 1,
                     py: 2,
-                    mx: -1,
                     ...(poi.externalURL || poi.dial ? {
                       borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
                       mb: 0
@@ -458,10 +459,10 @@ const POIDetail = ({
                         component="img"
                         src={pageConfig.addressIcon.url}
                         alt="Address"
-                        sx={{ width: 24, height: 24, mr: 1, color: 'primary.main' }}
+                        sx={{ width: 24, height: 24, mr: 1, color: theme.palette.primary.light }}
                       />
                     ) : (
-                      <Box sx={{ width: 24, height: 24, bgcolor: 'primary.main', borderRadius: '50%', mr: 1 }} />
+                      <Box sx={{ width: 24, height: 24, bgcolor: theme.palette.primary.light, borderRadius: '50%', mr: 1 }} />
                     )}
                     <Typography 
                       variant="body2" 
@@ -470,8 +471,9 @@ const POIDetail = ({
                         fontFamily: 'Commissioner, sans-serif',
                         fontWeight: 400,
                         fontSize: '16px',
+                        textAlign: 'justify',
                         '&:hover': {
-                          color: 'primary.main'
+                          color: theme.palette.primary.light
                         }
                       }}
                     >
@@ -494,9 +496,7 @@ const POIDetail = ({
                   sx={{ 
                     display: 'flex', 
                     alignItems: 'center',
-                    px: 1,
                     py: 2,
-                    mx: -1,
                     ...(poi.dial ? {
                       borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
                       mb: 0
@@ -508,10 +508,10 @@ const POIDetail = ({
                       component="img"
                       src={pageConfig.urlIcon.url}
                       alt="Website"
-                      sx={{ width: 24, height: 24, mr: 1, color: 'primary.main' }}
+                      sx={{ width: 24, height: 24, mr: 1, color: theme.palette.primary.light }}
                     />
                   ) : (
-                    <Box sx={{ width: 24, height: 24, bgcolor: 'primary.main', borderRadius: '50%', mr: 1 }} />
+                    <Box sx={{ width: 24, height: 24, bgcolor: theme.palette.primary.light, borderRadius: '50%', mr: 1 }} />
                   )}
                   <Button 
                     variant="text" 
@@ -524,7 +524,11 @@ const POIDetail = ({
                       justifyContent: 'flex-start',
                       fontFamily: 'Commissioner, sans-serif',
                       fontWeight: 400,
-                      fontSize: '16px'
+                      fontSize: '16px',
+                      color: '#423B3C',
+                      '&:hover': {
+                        color: '#423B3C'
+                      }
                     }}
                   >
                     {extractDomain(poi.externalURL)}
@@ -538,12 +542,10 @@ const POIDetail = ({
                   sx={{ 
                     display: 'flex', 
                     alignItems: 'center',
-                    px: 1,
-                    py: 2,
-                    mx: -1
+                    py: 2
                   }}
                 >
-                  <PhoneIcon sx={{ width: 24, height: 24, color: 'primary.main', mr: 1 }} />
+                  <PhoneIcon sx={{ width: 24, height: 24, color: theme.palette.primary.light, mr: 1 }} />
                   <Button 
                     variant="text" 
                     href={`tel:${poi.dial}`}
@@ -553,7 +555,11 @@ const POIDetail = ({
                       justifyContent: 'flex-start',
                       fontFamily: 'Commissioner, sans-serif',
                       fontWeight: 400,
-                      fontSize: '16px'
+                      fontSize: '16px',
+                      color: '#423B3C',
+                      '&:hover': {
+                        color: '#423B3C'
+                      }
                     }}
                   >
                     {poi.dial}
@@ -573,7 +579,7 @@ const POIDetail = ({
                     fontWeight: 600,
                     fontSize: '18px',
                     fontFamily: 'Inter, sans-serif',
-                    color: '#328188'
+                    color: theme.palette.primary.light 
                   }}
                 >
                   {pageConfig?.recommendationHeading}
@@ -590,7 +596,8 @@ const POIDetail = ({
                       objectFit: 'cover',
                       border: '2px solid #fff',
                       boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                      flexShrink: 0
+                      flexShrink: 0,
+                      marginRight: 2
                     }} 
                   />
                 )}

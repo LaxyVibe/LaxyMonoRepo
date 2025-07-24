@@ -44,7 +44,7 @@ const POIHeader = ({
         sx={{ 
           position: 'relative',
           width: '100%',
-          height: 300,
+          aspectRatio: '16/9',
           overflow: 'hidden',
           zIndex: 1
         }}
@@ -76,7 +76,7 @@ const POIHeader = ({
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.8) 100%)',
+            background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.5) 100%)',
             zIndex: 2
           }}
         />
