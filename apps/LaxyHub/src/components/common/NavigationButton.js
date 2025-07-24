@@ -73,7 +73,8 @@ const NavigationButton = ({
             fontWeight: 400,
             fontSize: '16px',
             lineHeight: 1.2,
-            maxWidth: { xs: 60, sm: 80 },
+            textAlign: 'center',
+            width: '100%',
             mx: 'auto'
           }}
         >
