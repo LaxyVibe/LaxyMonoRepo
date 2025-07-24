@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Paper, Typography, Grid } from '@mui/material';
-import { colors } from '../../config/theme';
 
 /**
  * Reusable navigation button component with consistent styling

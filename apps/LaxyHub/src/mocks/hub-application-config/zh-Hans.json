@@ -3,34 +3,129 @@
         "id": 2,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:13.423Z",
-        "updatedAt": "2025-07-24T02:32:58.613Z",
-        "publishedAt": "2025-07-18T03:34:47.343Z",
+        "updatedAt": "2025-07-24T05:41:57.906Z",
+        "publishedAt": "2025-07-24T04:15:00.404Z",
         "locale": "zh-Hans",
         "universalConfig": {
-            "id": 305,
+            "id": 327,
+            "themeOptions": [
+                {
+                    "name": "beppu-airbnb",
+                    "colors": {
+                        "text": {
+                            "primary": "#333333",
+                            "secondary": "#666666"
+                        },
+                        "third": {
+                            "100": "#fd4ee8",
+                            "200": "#fd87ac",
+                            "300": "#f2ba6f",
+                            "400": "#ed9d33",
+                            "500": "#cd8d12",
+                            "600": "#90580d"
+                        },
+                        "primary": {
+                            "50": "#f0f9fa",
+                            "100": "#a39ddd",
+                            "200": "#5fbcc4",
+                            "300": "#46b2bb",
+                            "400": "#328188",
+                            "500": "#215458",
+                            "600": "#133033"
+                        },
+                        "secondary": {
+                            "100": "#fc6dcd",
+                            "200": "#f9ad9b",
+                            "300": "#f57c5f",
+                            "400": "#f24b24",
+                            "500": "#cb310c",
+                            "600": "#a82209"
+                        },
+                        "background": {
+                            "paper": "#ffffff",
+                            "default": "#f5f5f7"
+                        }
+                    },
+                    "custom": {
+                        "navigationButton": {
+                            "hover": {
+                                "boxShadow": "0 4px 12px rgba(95, 188, 196, 0.3)",
+                                "transform": "translateY(-2px)",
+                                "backgroundColor": "rgba(95, 188, 196, 0.05)"
+                            },
+                            "width": 63,
+                            "border": "3px solid #5fbcc4",
+                            "cursor": "pointer",
+                            "height": 63,
+                            "display": "flex",
+                            "alignItems": "center",
+                            "transition": "all 0.3s ease",
+                            "borderRadius": "50%",
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "backgroundColor": "#ffffff"
+                        }
+                    },
+                    "components": {
+                        "MuiPaper": {
+                            "defaultProps": {
+                                "elevation": 0
+                            },
+                            "styleOverrides": {
+                                "root": {
+                                    "borderRadius": 8
+                                }
+                            }
+                        },
+                        "MuiButton": {
+                            "styleOverrides": {
+                                "root": {
+                                    "textTransform": "none"
+                                }
+                            }
+                        }
+                    },
+                    "typography": {
+                        "h5": {
+                            "fontWeight": 700
+                        },
+                        "h6": {
+                            "fontWeight": 600
+                        },
+                        "fontFamily": "\"Segoe UI\", \"Roboto\", \"Helvetica Neue\", sans-serif",
+                        "headerTitle": {
+                            "color": "#3B7B7B",
+                            "fontSize": "32px",
+                            "textAlign": "center",
+                            "fontFamily": "\"Playfair Display\", serif",
+                            "fontWeight": 900
+                        }
+                    }
+                }
+            ],
             "releasedLanguages": [
                 {
-                    "id": 1190,
+                    "id": 1303,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 1192,
+                    "id": 1302,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 1193,
+                    "id": 1296,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 1194,
+                    "id": 1305,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 1195,
+                    "id": 1297,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -81,9 +176,9 @@
                     "label": "资讯",
                     "route": "/info",
                     "icon": {
-                        "id": 45,
-                        "documentId": "b2zhi98woacgvlwrhqp9uin6",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993207/Travel_43_d900d08ec4.svg"
+                        "id": 134,
+                        "documentId": "ombo0ro1g4mb4eoxe7jlm6xw",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/home_71883efcee.svg"
                     }
                 },
                 {
@@ -91,9 +186,9 @@
                     "label": "Wi-Fi",
                     "route": "/info/wifi",
                     "icon": {
-                        "id": 48,
-                        "documentId": "kkb9gay0ml8pvpadtif2ctze",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993218/wifi_02_6e96d6b5d7.svg"
+                        "id": 136,
+                        "documentId": "shsaxh5axl38lpn3e1rdkhxq",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/wifi_7524ba9935.svg"
                     }
                 },
                 {
@@ -101,9 +196,9 @@
                     "label": "景点",
                     "route": "/nearby-attractions",
                     "icon": {
-                        "id": 46,
-                        "documentId": "wywjk07k8u0mccx2vblhyh99",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993211/Travel_09_b79b076d3a.svg"
+                        "id": 135,
+                        "documentId": "xfzojkskubw4embqr4pusahf",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/attraction_5c03bd884d.svg"
                     }
                 },
                 {
@@ -111,16 +206,20 @@
                     "label": "饮食",
                     "route": "/nearby-restaurants",
                     "icon": {
-                        "id": 49,
-                        "documentId": "g94ao3prng3aura1zq9fhctg",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993221/Travel_24_98232d72ac.svg"
+                        "id": 137,
+                        "documentId": "heuvx1oitqvtk7grrznu15h5",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/restaurant_31d7d2875f.svg"
                     }
                 },
                 {
                     "id": 26,
                     "label": "导览团",
                     "route": "/tours",
-                    "icon": null
+                    "icon": {
+                        "id": 133,
+                        "documentId": "bgy78q860mn9pu9j5ihmi2h4",
+                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1753321291/laxy_guide_ca15b8e003.svg"
+                    }
                 }
             ]
         },
