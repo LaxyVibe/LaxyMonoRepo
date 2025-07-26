@@ -285,7 +285,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.760326954975!2d131.50500399999999!3d33.28271600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6de987686f1%3A0x80977dcb31a9e37e!2z44Ks44K544OIIOWIpeW6nOW6lw!5e0!3m2!1sen!2sjp!4v1749359278056!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 570-021-065",
-                        "highlight": "Gusto 别府店是日本知名的家庭餐厅连锁店“Gusto”在别府的分店。这家餐厅提供多样化的菜单选择，从日式料理到西式餐点应有尽有，包括汉堡排、意大利面、沙拉和各种甜点。无论是早餐、午餐还是晚餐，都是当地居民和游客轻松用餐的好去处。餐厅通常营业时间很长，能满足不同时段的用餐需求，提供一个舒适便利的用餐环境。您可以在这里享用美味且价格实惠的家庭式料理。",
+                        "highlight": "Gusto 别府店是日本知名的家庭餐厅连锁店“Gusto”在别府的分店。这家餐厅提供多样化的菜单选择，从日式料理到西式餐点应有尽有，包���汉堡排、意大利面、沙拉和各种甜点。无论是早餐、午餐还是晚餐，都是当地居民和游客轻松用餐的好去处。餐厅通常营业时间很长，能满足不同时段的用餐需求，提供一个舒适便利的用餐环境。您可以在这里享用美味且价格实惠的家庭式料理。",
                         "externalURL": null,
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -503,7 +503,7 @@
                     {
                         "id": 118,
                         "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                        "slug": "Asami-Shrine",
+                        "slug": "Hachiman-Asami-Shrine",
                         "label": "八幡朝见神社",
                         "address": "〒874-0812 大分县别府市朝见2丁目15-19",
                         "addressURL": null,
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 29,
@@ -571,7 +571,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2953375788084!2d131.50515289999998!3d33.2849357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6ded9706d85%3A0xc114a1dd39d3335!2sMatogahama%20Park!5e0!3m2!1sen!2sjp!4v1749359474655!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1111",
-                        "highlight": "的ヶ浜公园位于别府市北的ヶ浜町，是一座紧邻海岸的开放型市民公园，拥有开阔的视野与宁静的氛围，是当地居民与旅客喜爱的散步与休憩地点。\n\n公园面朝别府湾，沿岸设有步道，非常适合早晨慢跑、傍晚散步或欣赏日出与海景。场地宽敞平坦，绿意盎然，是遛狗、野餐、带小孩放电的理想场所。更重要的是，这里可携带宠物同行，对于有毛小孩的旅客来说非常友善。\n\n由于邻近市区与海边，步行可达多个温泉设施与餐饮店，位置便利，是串联别府生活风景的一部分。不论是清晨的海风还是夜晚的宁静，皆令人感受到别府独有的悠闲魅力。",
+                        "highlight": "的ヶ浜公园位于别府市北的ヶ浜町，是一座紧邻海岸的开放型市民公园，拥有开阔的视野与宁静的氛围，是当地居民与旅客喜爱的散步与休憩地点。\n\n公园面朝别府湾，沿岸设有步道，非���适合早晨慢跑、傍晚散步或欣赏日出与海景。场地宽敞平坦，绿意盎然，是遛狗、野餐、带小孩放电的理想场所。更重要的是，这里可携带宠物同行，对于有毛小孩的旅客来说非常友善。\n\n由于邻近市区与海边，步行可达多个温泉设施与餐饮店，位置便利，是串联别府生活风景的一部分。不论是清晨的海风还是夜晚的宁静，皆令人感受到别府独有的悠闲魅力。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -851,7 +851,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.296645477282!2d131.53556319999998!3d33.258725399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a139253d6ab5%3A0x39c434d349a8835a!2sOita%20Marine%20Palace%20Aquarium%20%22Umitamago%22!5e0!3m2!1sen!2sjp!4v1749359562419!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-534-1010",
-                        "highlight": "大分海洋水族馆海之卵位于大分县神崎地区的海岸边，是一座以海洋生物展示与互动体验为主题的大型水族馆，也是九州地区亲子旅游的热门景点之一。该馆以其新颖的建筑外观与多样化的展览空间闻名，并致力于结合娱乐与海洋教育，打造寓教于乐的观光体验。\n\n馆内拥有丰富的展示内容，包括热带鱼、企鹅、海狮、海豚、魟鱼等多种海洋生物。游客可观赏到精彩的海狮与海豚表演，还能在触摸池中亲手触摸海星与贝类，深受小朋友与家庭旅客喜爱。\n\n水族馆内设有纪念品商店、咖啡区与户外景观步道，是一处全天候适合参观的综合性休闲设施。馆外即是海岸步道，可串联前往邻近的高崎山自然动物园，一起安排成半日至一日的旅游行程。",
+                        "highlight": "大分海洋水族馆海之卵位于大分县神崎地区的海岸边，是一座以海洋生物展示与互动体验为主题的大型水族馆，也是九州地区亲子旅游的热门景点之一。该馆以其新颖的建筑外观与多样化的展览空间闻名，并致力于结合娱乐与海洋教育，打造寓教于乐的观光体验。\n\n馆内拥有丰富的展示内容，包括热带鱼、企鹅、海狮、海豚、魟鱼等多种海洋生物。游客可观赏到精彩的海狮与海豚表演，��能在触摸池中亲手触摸海星与贝类，深受小朋友与家庭旅客喜爱。\n\n水族馆内设有纪念品商店、咖啡区与户外景观步道，是一处全天候适合参观的综合性休闲设施。馆外即是海岸步道，可串联前往邻近的高崎山自然动物园，一起安排成半日至一日的旅游行程。",
                         "externalURL": "https://www.umitamago.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 26,

@@ -427,7 +427,7 @@ function TourCover() {
             ...commonStyles.button, 
             ...commonStyles.startButton,
             width: '100%',
-            mb: { xs: 4, sm: 2 }, // Add bottom margin for mobile browser toolbar
+            mb: { xs: 6, sm: 4, md: 3 }, // Add larger bottom margin for mobile browser toolbar
           }}
           onClick={handleStartTour}
           disabled={isLoading}

@@ -7,7 +7,8 @@ import {
   Box,
   IconButton,
   Snackbar,
-  Button
+  Button,
+  useTheme
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import WifiIcon from '@mui/icons-material/Wifi';
@@ -23,6 +24,7 @@ const WifiDialog = ({ open, onClose, suiteId }) => {
   const [copiedNetworkName, setCopiedNetworkName] = useState('');
   const [selectedNetwork, setSelectedNetwork] = useState(null);
   const { language } = useLanguage();
+  const theme = useTheme();
   
   // Get hub configuration for current language
   const hubConfig = getHubConfigByLanguage(language);
@@ -85,7 +87,7 @@ const WifiDialog = ({ open, onClose, suiteId }) => {
               height: 120, 
               borderRadius: '50%', 
               border: '8px solid',
-              borderColor: 'primary.main',
+              borderColor: theme.palette.primary.light,
               backgroundColor: 'transparent',
               display: 'flex', 
               alignItems: 'center', 
@@ -94,7 +96,7 @@ const WifiDialog = ({ open, onClose, suiteId }) => {
               mb: 3
             }}
           >
-            <WifiIcon sx={{ fontSize: 60, color: 'primary.main' }} />
+            <WifiIcon sx={{ fontSize: 60, color: theme.palette.primary.light }} />
           </Box>
 
           {/* Network Display */}
@@ -116,7 +118,13 @@ const WifiDialog = ({ open, onClose, suiteId }) => {
                     sx={{ 
                       borderRadius: '37px',
                       textTransform: 'none',
-                      fontSize: '16px'
+                      fontSize: '16px',
+                      borderColor: theme.palette.primary.light,
+                      color: theme.palette.primary.light,
+                      '&:hover': {
+                        backgroundColor: 'primary.50',
+                        borderColor: theme.palette.primary.light
+                      }
                     }}
                   >
                     {(hubConfig?.data?.pageWiFi?.clipboardButton?.label || 'Copy Password for "{{value}}"').replace('{{value}}', network.network)}
@@ -132,6 +140,12 @@ const WifiDialog = ({ open, onClose, suiteId }) => {
                     borderRadius: '37px',
                     textTransform: 'none',
                     fontSize: '16px',
+                    borderColor: theme.palette.primary.light,
+                    color: theme.palette.primary.light,
+                    '&:hover': {
+                      backgroundColor: 'primary.50',
+                      borderColor: theme.palette.primary.light
+                    },
                     mb: index < wifiNetworks.length - 1 ? 1 : 0
                   }}
                 >

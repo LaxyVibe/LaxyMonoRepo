@@ -223,8 +223,8 @@
                     {
                         "id": 22,
                         "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                        "slug": "Asami-Shrine",
-                        "label": "Asami Shrine",
+                        "slug": "Hachiman-Asami-Shrine",
+                        "label": "Hachiman Asami Shrine",
                         "address": "2-15-19 Asami, Beppu, Oita 874-0812, Japan",
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.8040574276943!2d131.4951489!3d33.27162169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6934ad40397%3A0x6477dc4b0952a412!2sHachiman%20Asami%20Shrine!5e0!3m2!1sen!2sjp!4v1749359524312!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
@@ -233,7 +233,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 6,
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 6,
