@@ -38,7 +38,7 @@
                 "documentId": "sryg01oy5y4rbisxyhzujue9",
                 "slug": "beppu-airbnb",
                 "label": "Beppu Airbnb",
-                "greeting": "���迎來到別府！",
+                "greeting": "歡��來到別府！",
                 "nativeLanguageCode": "ja",
                 "avatar": {
                     "id": 15,
@@ -503,17 +503,17 @@
                     {
                         "id": 117,
                         "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                        "slug": "Asami-Shrine",
+                        "slug": "Hachiman-Asami-Shrine",
                         "label": "八幡朝見神社",
                         "address": "〒874-0812 大分縣別府市朝見2丁目15-19",
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.8040574276943!2d131.4951489!3d33.27162169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6934ad40397%3A0x6477dc4b0952a412!2sHachiman%20Asami%20Shrine!5e0!3m2!1sen!2sjp!4v1749359524312!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-23-1408",
-                        "highlight": "八幡朝見神社是別府市歷史最悠久、規模最大的神社之一，擁有超過千年的歷史，是祭祀八幡大神的莊嚴神域。神社坐落於朝見山麓，自古以來便是當地居民祈求健康、平安、家庭和諧的信仰中心。\n\n境內氣氛寧靜，綠蔭環繞，��築風格古樸典雅，鳥居、石燈籠、神橋與主殿等處處散發著歲月痕跡。春季櫻花綻放時，整個神社更顯浪漫祥和，是賞花與拍照的絕佳地點。\n\n此外，這裡還有一處被譽為「長壽之水」的湧泉，是許多當地人會特地前來汲取的名水。無論是觀光、參拜、還是散步沉澱心靈，八幡朝見神社都是深入認識別府歷史與文化的理想之地。",
+                        "highlight": "八幡朝見神社是別府市歷史最悠久、規模最大的神社之一，擁有超過千年的歷史，是祭祀八幡大神的莊嚴神域。神社坐落於朝見山麓，自古以來便是當地居民祈求健康、平安、家庭和諧的信仰中心。\n\n境內氣氛寧靜，綠蔭環繞，建築風格古樸典雅，鳥居、石燈籠、神橋與主殿等處處散發著歲月痕跡。春季櫻花綻放時，整個神社更顯浪漫祥和，是賞花與拍照的絕佳地點。\n\n此外，這裡還有一處被譽為「長壽之水」的湧泉，是許多當地人會特地前來汲取的名水。無論是觀光、參拜、還是散步沉澱心靈，八幡朝見神社都是深入認識別府歷史與文化的理想之地。",
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 28,
@@ -683,7 +683,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.7712648138936!2d131.4137658!3d33.35092509999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a82560d12c2f%3A0x6f9e5e00fb890acd!2sKyushu%20Wildlife%20Park%20African%20Safari!5e0!3m2!1sen!2sjp!4v1749359580506!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 978-48-2331",
-                        "highlight": "九州自然動物公園，又名「African Safari」，是一座位於大分縣宇佐市的廣闊野生動物園，以自由放養方式展示非洲草原風格的動物生態，是親子與動物愛好者不可錯過的旅遊亮點。\n\n園區最大特色是搭乘鐵籠裝甲的「叢林巴士」，可在專屬路線中近距離觀察獅子、大象、長頸鹿、斑馬、駱駝等動物，還可以親手餵食，帶來極具臨場感的野生動物互動體驗。除了叢林巴士外，也設有步行區與小型動物觸摸園，適合各年齡層遊客悠閒參觀。\n\n園內附設商店、餐飲區與便利的停車場，亦提供與大分市、別府市間接駁的交通方案，是安排一日親子郊遊或團體旅遊的理想景點。",
+                        "highlight": "九州自然動物公園，又名「African Safari」，是一座位於大分縣宇佐市的廣闊野生動物園，以自由放養方式展示非洲草原風格的動物生態，是親子與動物愛好者不可錯過的旅遊亮點。\n\n園區最大特色是搭乘鐵籠裝甲的「叢林巴士」，可在專屬路線中近距離觀察獅子、大象、長頸鹿、斑馬、駱駝等動物，還可以親手餵食，帶來極具臨場感的野生動物互動體驗。除了叢林巴士外，也設有步行區與小型動物觸摸園，適合各年齡層遊客悠閒參觀。\n\n園內附設商店、餐飲區與便利的停車��，亦提供與大分市、別府市間接駁的交通方案，是安排一日親子郊遊或團體旅遊的理想景點。",
                         "externalURL": "https://africansafari.co.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 27,

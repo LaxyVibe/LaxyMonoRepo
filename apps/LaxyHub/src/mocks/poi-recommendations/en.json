@@ -1,6 +1,38 @@
 {
     "data": [
         {
+            "id": 232,
+            "documentId": "du5v45uq039828tvu2hbq1oq",
+            "recommendation": "This is the time when Beppu's largest hot spring festival is held. Annually, it takes place over five days, usually from around March 30th to April 3rd (the exact dates may vary slightly each year). During this period, you can enjoy a festive atmosphere in various parts of Beppu City.\n\nThe biggest highlight is that all municipal hot springs are opened to the public for free! Additionally, there's a mountain burning event where an entire mountain is set ablaze, praying for good health and prosperity throughout the year.",
+            "kmFromStay": null,
+            "weightInNearbyRestaurants": 0,
+            "weightInNearbyAttractions": 0,
+            "weightInHighlight": -1,
+            "poi": {
+                "id": 26,
+                "documentId": "c7j2oppvcojte9if27e22xue",
+                "slug": "Beppu-Hatto-Onsen-Festival",
+                "label": "Beppu Hatto Onsen Festival (Late March–Early April)",
+                "address": null,
+                "highlight": "The Beppu Hatto Onsen Festival is the largest hot spring festival in the area, typically lasting five days from late March to early April. During this period, many municipal hot springs offer free admission, and the entire town is filled with a joyous atmosphere. The festivities include parades, traditional performances, and the unique \"\"Yu-Kake Matsuri\"\" (Hot Water Splashing Festival), where participants splash hot spring water onto the crowd, creating an incredibly lively scene.\n\nAnother unique event is the Ogiyama Fire Festival, a ceremony where fires are set on Mount Ogiyama to pray for health, longevity, and prosperity throughout the year. However, please note that this fire festival usually takes place in early February, on a different date from the Onsen Festival, and is a spectacular sight unique to Beppu's winter.",
+                "externalURL": null,
+                "type": "attraction",
+                "tag_labels": [
+                    {
+                        "id": 1,
+                        "documentId": "xd02cfhqrxhr35klrjghebhi",
+                        "name": "Event",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 70,
+                    "documentId": "su3ta56s79trfrd2nu3n6hsd",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993291/Beppu_Hatto_Onsen_Festival_a9473eeefc.jpg"
+                }
+            }
+        },
+        {
             "id": 1,
             "documentId": "fqo1h0out7mhbu3510at2l4x",
             "recommendation": "This Meiji-era onsen offers a retro atmosphere and a unique sand bath experience. Staff gently cover you with warm sand, providing a pleasantly warm sensation. It's a memorable and traditional Japanese bathing experience. ",
@@ -359,38 +391,6 @@
             }
         },
         {
-            "id": 3,
-            "documentId": "lpo90tb4pgei3cfzi4qu8o9c",
-            "recommendation": "This is the time when Beppu's largest hot spring festival is held. Annually, it takes place over five days, usually from around March 30th to April 3rd (the exact dates may vary slightly each year). During this period, you can enjoy a festive atmosphere in various parts of Beppu City.\n\nThe biggest highlight is that all municipal hot springs are opened to the public for free! Additionally, there's a \"mountain burning\" event where an entire mountain is set ablaze, praying for good health and prosperity throughout the year.",
-            "kmFromStay": null,
-            "weightInNearbyRestaurants": 0,
-            "weightInNearbyAttractions": 1,
-            "weightInHighlight": 0,
-            "poi": {
-                "id": 26,
-                "documentId": "c7j2oppvcojte9if27e22xue",
-                "slug": "Beppu-Hatto-Onsen-Festival",
-                "label": "Beppu Hatto Onsen Festival (Late March–Early April)",
-                "address": null,
-                "highlight": "The Beppu Hatto Onsen Festival is the largest hot spring festival in the area, typically lasting five days from late March to early April. During this period, many municipal hot springs offer free admission, and the entire town is filled with a joyous atmosphere. The festivities include parades, traditional performances, and the unique \"\"Yu-Kake Matsuri\"\" (Hot Water Splashing Festival), where participants splash hot spring water onto the crowd, creating an incredibly lively scene.\n\nAnother unique event is the Ogiyama Fire Festival, a ceremony where fires are set on Mount Ogiyama to pray for health, longevity, and prosperity throughout the year. However, please note that this fire festival usually takes place in early February, on a different date from the Onsen Festival, and is a spectacular sight unique to Beppu's winter.",
-                "externalURL": null,
-                "type": "attraction",
-                "tag_labels": [
-                    {
-                        "id": 1,
-                        "documentId": "xd02cfhqrxhr35klrjghebhi",
-                        "name": "Event",
-                        "color": "GREY"
-                    }
-                ],
-                "coverPhoto": {
-                    "id": 70,
-                    "documentId": "su3ta56s79trfrd2nu3n6hsd",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993291/Beppu_Hatto_Onsen_Festival_a9473eeefc.jpg"
-                }
-            }
-        },
-        {
             "id": 28,
             "documentId": "ei0v8kxm0tfy13hv7ai23yrj",
             "recommendation": "Located at a higher elevation, this observatory offers one of the best panoramic views of Beppu. You can see the entire city, Beppu Bay, and even Mount Tsurumi on a clear day. It’s a great place to enjoy sunrise or sunset that very peaceful and photogenic. There’s ample parking and space to sit and relax with the view. Perfect for ending your day with a breathtaking scenic moment. ",
@@ -497,8 +497,8 @@
             "poi": {
                 "id": 22,
                 "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                "slug": "Asami-Shrine",
-                "label": "Asami Shrine",
+                "slug": "Hachiman-Asami-Shrine",
+                "label": "Hachiman Asami Shrine",
                 "address": "2-15-19 Asami, Beppu, Oita 874-0812, Japan",
                 "highlight": "\"Hachiman Asami Shrine is one of Beppu City's oldest and largest shrines, boasting over a thousand years of history. It is a solemn sanctuary dedicated to Hachiman-okami. Nestled at the foot of Mount Asami, it has long been a spiritual center where locals pray for health, safety, and family harmony.\n\nThe shrine grounds exude a peaceful atmosphere, surrounded by lush greenery. The architecture is rustic and elegant, with torii gates, stone lanterns, sacred bridges, and the main hall all bearing the marks of time. In spring, when the cherry blossoms bloom, the entire shrine becomes even more romantic and serene, making it an excellent spot for flower viewing and photography.\n\nFurthermore, there is a spring here known as the Water of Longevity, a famous natural spring that many locals specially come to draw water from. Whether for sightseeing, worship, or a tranquil stroll for introspection, Hachiman Asami Shrine is an ideal place to deeply explore Beppu's history and culture.\"",
                 "externalURL": "http://www.asami.or.jp/",
@@ -515,6 +515,38 @@
                     "id": 32,
                     "documentId": "mjqr2uqo8dnjjiao94f4xut8",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993159/Asami_Shrine_e8e00db78f.jpg"
+                }
+            }
+        },
+        {
+            "id": 26,
+            "documentId": "zrye4vm58kewzmsqd6302084",
+            "recommendation": "Explore the famous “Hells of Beppu, unique hot spring spots with boiling ponds and steam vents. Each “Jigoku has a distinct color and atmosphere, like the cobalt-blue Umi Jigoku or red Chinoike. You’ll see bubbling mud, geysers, and even crocodiles in one of the areas. A must-see for first-time visitors to Beppu. Don’t forget your camera. The sights are surreal and memorable! ",
+            "kmFromStay": null,
+            "weightInNearbyRestaurants": 0,
+            "weightInNearbyAttractions": 0,
+            "weightInHighlight": 5,
+            "poi": {
+                "id": 31,
+                "documentId": "f4fwpb81h7i0fqrbgosmkdh6",
+                "slug": "Jigoku-Hell-Tour",
+                "label": "Jigoku Hell Tour",
+                "address": "559-1 Kannawa, Beppu, Oita 874-0000, Japan",
+                "highlight": "The Beppu Hells Tour is one of Beppu's most iconic sightseeing routes, combining hot spring viewing with cultural themes to create a unique visual and sensory experience. Unlike typical hot springs focused on bathing, the Hells Tour is centered on observing the spectacular wonders of hot springs, featuring multiple distinct hells that allow visitors to fully appreciate the mystery and grandeur of geothermal activity.\n\nThe Hells Tour encompasses eight main hot spring attractions: Umi Jigoku (Sea Hell), Chinoike Jigoku (Blood Pond Hell), Oniyama Jigoku (Demon Mountain Hell), Shiraike Jigoku (White Pond Hell), Tatsumaki Jigoku (Spout Hell), Yama Jigoku (Mountain Hell), Onishi Bouzu Jigoku (Demon Stone Monk Hell), and Kamado Jigoku (Cooking Pot Hell). Each location offers different geothermal phenomena and exhibits; some are vivid red like blood, others are deep blue like the sea. There are even crocodile breeding areas and geothermal steaming food experiences, making it a diverse sightseeing route that blends nature with culture.\n\nSome hells are a bit far apart, so it's recommended to use city buses or drive. You can also purchase a Hells Tour pass to visit all eight at a discounted price. It's suitable for a half-day to full-day in-depth tour.",
+                "externalURL": "https://www.beppu-jigoku.com/",
+                "type": "attraction",
+                "tag_labels": [
+                    {
+                        "id": 5,
+                        "documentId": "y0fm6ubj5q6j89tv7xchn360",
+                        "name": "Top Attractions",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 16,
+                    "documentId": "z8iyfrx4xc70tni8fu6z30i8",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993107/Jigoku_Hell_Tour_e70335560f.jpg"
                 }
             }
         },
@@ -777,38 +809,6 @@
                     "id": 59,
                     "documentId": "sl3agayy164c9neg14tzwe0n",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993255/Takasaki_Mountain_Monkey_Park_7563ebf6b2.jpg"
-                }
-            }
-        },
-        {
-            "id": 26,
-            "documentId": "zrye4vm58kewzmsqd6302084",
-            "recommendation": "Explore the famous “Hells of Beppu, unique hot spring spots with boiling ponds and steam vents. Each “Jigoku has a distinct color and atmosphere, like the cobalt-blue Umi Jigoku or red Chinoike. You’ll see bubbling mud, geysers, and even crocodiles in one of the areas. A must-see for first-time visitors to Beppu. Don’t forget your camera. The sights are surreal and memorable! ",
-            "kmFromStay": null,
-            "weightInNearbyRestaurants": 0,
-            "weightInNearbyAttractions": 0,
-            "weightInHighlight": 3,
-            "poi": {
-                "id": 31,
-                "documentId": "f4fwpb81h7i0fqrbgosmkdh6",
-                "slug": "Jigoku-Hell-Tour",
-                "label": "Jigoku Hell Tour",
-                "address": "559-1 Kannawa, Beppu, Oita 874-0000, Japan",
-                "highlight": "The Beppu Hells Tour is one of Beppu's most iconic sightseeing routes, combining hot spring viewing with cultural themes to create a unique visual and sensory experience. Unlike typical hot springs focused on bathing, the Hells Tour is centered on observing the spectacular wonders of hot springs, featuring multiple distinct hells that allow visitors to fully appreciate the mystery and grandeur of geothermal activity.\n\nThe Hells Tour encompasses eight main hot spring attractions: Umi Jigoku (Sea Hell), Chinoike Jigoku (Blood Pond Hell), Oniyama Jigoku (Demon Mountain Hell), Shiraike Jigoku (White Pond Hell), Tatsumaki Jigoku (Spout Hell), Yama Jigoku (Mountain Hell), Onishi Bouzu Jigoku (Demon Stone Monk Hell), and Kamado Jigoku (Cooking Pot Hell). Each location offers different geothermal phenomena and exhibits; some are vivid red like blood, others are deep blue like the sea. There are even crocodile breeding areas and geothermal steaming food experiences, making it a diverse sightseeing route that blends nature with culture.\n\nSome hells are a bit far apart, so it's recommended to use city buses or drive. You can also purchase a Hells Tour pass to visit all eight at a discounted price. It's suitable for a half-day to full-day in-depth tour.",
-                "externalURL": "https://www.beppu-jigoku.com/",
-                "type": "attraction",
-                "tag_labels": [
-                    {
-                        "id": 5,
-                        "documentId": "y0fm6ubj5q6j89tv7xchn360",
-                        "name": "Top Attractions",
-                        "color": "GREY"
-                    }
-                ],
-                "coverPhoto": {
-                    "id": 16,
-                    "documentId": "z8iyfrx4xc70tni8fu6z30i8",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993107/Jigoku_Hell_Tour_e70335560f.jpg"
                 }
             }
         },

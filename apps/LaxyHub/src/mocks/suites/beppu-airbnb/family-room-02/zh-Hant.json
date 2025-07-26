@@ -503,7 +503,7 @@
                     {
                         "id": 117,
                         "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                        "slug": "Asami-Shrine",
+                        "slug": "Hachiman-Asami-Shrine",
                         "label": "八幡朝見神社",
                         "address": "〒874-0812 大分縣別府市朝見2丁目15-19",
                         "addressURL": null,
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-003",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 28,
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-002",
+                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 27,

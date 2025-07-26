@@ -78,7 +78,7 @@ const translations = {
 };
 
 // Default passcode (you can change this or make it configurable)
-const DEFAULT_PASSCODE = '1234';
+const DEFAULT_PASSCODE = '0356';
 
 const HubLanding = ({ clientInfo: initialClientInfo }) => {
   const { language } = useLanguage();

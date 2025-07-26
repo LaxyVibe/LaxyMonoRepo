@@ -7,7 +7,7 @@
             "kmFromStay": null,
             "weightInNearbyRestaurants": 0,
             "weightInNearbyAttractions": 0,
-            "weightInHighlight": 3,
+            "weightInHighlight": 5,
             "poi": {
                 "id": 152,
                 "documentId": "f4fwpb81h7i0fqrbgosmkdh6",
@@ -529,7 +529,7 @@
             "poi": {
                 "id": 119,
                 "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                "slug": "Asami-Shrine",
+                "slug": "Hachiman-Asami-Shrine",
                 "label": "八幡朝見神社",
                 "address": "〒874-0812 大分県別府市朝見２丁目１５−１９",
                 "highlight": "八幡朝見神社は、別府市で最も歴史が古く、規模の大きい神社のひとつで、千年以上もの歴史を持ち、八幡大神を祀る荘厳な神域です。朝見山麓に鎮座し、古くから地元住民が健康、平安、家庭の和合を祈願する信仰の中心地でした。\n\n境内は静寂な雰囲気に包まれ、緑豊かな木々に囲まれています。建築様式は古風で優雅であり、鳥居、石灯籠、神橋、本殿など、至る所に年月の痕跡が漂います。春には桜が咲き誇り、神社全体がよりロマンチックで穏やかな雰囲気に包まれ、花見や写真撮影に最適な場所です。\n\nさらに、境内には「長寿の水」と称される湧き水があり、多くの地元の人々がわざわざ汲みに訪れる名水です。観光、参拝、あるいは心を落ち着ける散策など、八幡朝見神社は別府の歴史と文化を深く知るのに理想的な場所です。",
@@ -660,7 +660,7 @@
                 "slug": "Kamesho-Sushi-Restaurant",
                 "label": "亀正",
                 "address": "〒874-0840 大分県別府市鶴見34番地",
-                "highlight": "「亀正くるくる寿司」は、別府市鶴見地区にある人気の回転寿司店で、新鮮でボリューム満点の寿司ネタが自慢です。ここでは一貫一貫の寿司がネタも厚く、切り方も大きく、味の新鮮さだけでなく見た目も大変満足できるため、多くの地元の人々や観光客にとって「再訪リスト」に入っています。\n\n店内はシンプルな内装で、カウンター席と広々としたファミリー向けのボッ��ス席があり、一人での食事にも家族での会食にも適しています。皿の種類も豊富で、定番のマグロ、サーモン、イカから、その日仕入れた新鮮な海鮮まで、回転で気軽に楽しむことも、直接板前さんに注文することも可能です。\n\nこの店はデリバリーサービスは提供していませんが、店内飲食またはテイクアウトが可能です。非常に人気が高いため、ピーク時には行列ができることが多いので、早めの来店や食事時間を早めることをお勧めします。",
+                "highlight": "「亀正くるくる寿司」は、別府市鶴見地区にある人気の回転寿司店で、新鮮でボリューム満点の寿司ネタが自慢です。ここでは一貫一貫の寿司がネタも厚く、切り方も大きく、味の新鮮さだけでなく見た目も大変満足できるため、多くの地元の人々や観光客にとって「再訪リスト」に入っています。\n\n店内はシンプルな内装で、カウンター席と広々としたファミリー向けのボックス席があり、一人での食事にも家族での会食にも適しています。皿の種類も豊富で、定番のマグロ、サーモン、イカから、その日仕入れた新鮮な海鮮まで、回転で気軽に楽しむことも、直接板前さんに注文することも可能です。\n\nこの店はデリバリーサービスは提供していませんが、店内飲食またはテイクアウトが可能です。非常に人気が高いため、ピーク時には行列ができることが多いので、早めの来店や食事時間を早めることをお勧めします。",
                 "externalURL": "https://instagram.com/kamesho_9696_sushi",
                 "type": "restaurant",
                 "tag_labels": [
@@ -707,38 +707,6 @@
                     "id": 54,
                     "documentId": "v3pgajqtu70x5o79o2hro4mp",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993239/Gusto_Family_Restaurant_e599f80ef5.jpg"
-                }
-            }
-        },
-        {
-            "id": 40,
-            "documentId": "lpo90tb4pgei3cfzi4qu8o9c",
-            "recommendation": "これは別府最大の温泉祭りの開催時期です。\n例年、3月30日から4月3日ごろの5日間にわたって開催されます（開催日は年によって多少前後します）。\n期間中は別府市内の各所でお祭りムードを楽しめます。\n\n最大の特徴は、市営温泉がすべて無料開放されること！\nさらに、山全体を焼き払う「山焼き」イベントも行われ、一年間の無病息災や商売繁盛を祈願します。",
-            "kmFromStay": null,
-            "weightInNearbyRestaurants": 0,
-            "weightInNearbyAttractions": 1,
-            "weightInHighlight": 0,
-            "poi": {
-                "id": 132,
-                "documentId": "c7j2oppvcojte9if27e22xue",
-                "slug": "Beppu-Hatto-Onsen-Festival",
-                "label": "別府八湯温泉まつり（3月下旬〜4月上旬）",
-                "address": null,
-                "highlight": "別府八湯温泉まつりは、地元最大の温泉祭りであり、通常3月末から4月初旬にかけて5日間開催されます。期間中は、多くの市営温泉が無料開放され、街全体が楽しい雰囲気に包まれます。祭典にはパレード、伝統芸能、そして参加者が温泉水を群衆にかけ合うユニークな「湯かけまつり」が含まれ、会場は大変賑わいます。\n\nもう一つの特別な行事は扇山火まつりで、これは扇山に火を放つ儀式であり、一年間の健康、長寿、商売繁盛を祈願するものです。ただし、この火まつりは通常2月初旬に開催され、温泉祭りの日程とは異なります。別府の冬ならではの壮大な光景です。",
-                "externalURL": null,
-                "type": "attraction",
-                "tag_labels": [
-                    {
-                        "id": 11,
-                        "documentId": "xd02cfhqrxhr35klrjghebhi",
-                        "name": "イベント",
-                        "color": "GREY"
-                    }
-                ],
-                "coverPhoto": {
-                    "id": 70,
-                    "documentId": "su3ta56s79trfrd2nu3n6hsd",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993291/Beppu_Hatto_Onsen_Festival_a9473eeefc.jpg"
                 }
             }
         },
@@ -931,6 +899,38 @@
                     "id": 29,
                     "documentId": "xymbmct90lzww2chxijcpq9v",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993150/Yayoi_Tengu_0cfbb6be33.avif"
+                }
+            }
+        },
+        {
+            "id": 236,
+            "documentId": "du5v45uq039828tvu2hbq1oq",
+            "recommendation": "これは別府最大の温泉祭りの開催時期です。\n例年、3月30日から4月3日ごろの5日間にわたって開催されます（開催日は年によって多少前後します）。\n期間中は別府市内の各所でお祭りムードを楽しめます。\n\n最大の特徴は、市営温泉がすべて無料開放されること！\nさらに、山全体を焼き払う「山焼き」イベントも行われ、一年間の無病息災や商売繁盛を祈願します。",
+            "kmFromStay": null,
+            "weightInNearbyRestaurants": 0,
+            "weightInNearbyAttractions": 0,
+            "weightInHighlight": -1,
+            "poi": {
+                "id": 132,
+                "documentId": "c7j2oppvcojte9if27e22xue",
+                "slug": "Beppu-Hatto-Onsen-Festival",
+                "label": "別府八湯温泉まつり（3月下旬〜4月上旬）",
+                "address": null,
+                "highlight": "別府八湯温泉まつりは、地元最大の温泉祭りであり、通常3月末から4月初旬にかけて5日間開催されます。期間中は、多くの市営温泉が無料開放され、街全体が楽しい雰囲気に包まれます。祭典にはパレード、伝統芸能、そして参加者が温泉水を群衆にかけ合うユニークな「湯かけまつり」が含まれ、会場は大変賑わいます。\n\nもう一つの特別な行事は扇山火まつりで、これは扇山に火を放つ儀式であり、一年間の健康、長寿、商売繁盛を祈願するものです。ただし、この火まつりは通常2月初旬に開催され、温泉祭りの日程とは異なります。別府の冬ならではの壮大な光景です。",
+                "externalURL": null,
+                "type": "attraction",
+                "tag_labels": [
+                    {
+                        "id": 11,
+                        "documentId": "xd02cfhqrxhr35klrjghebhi",
+                        "name": "イベント",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 70,
+                    "documentId": "su3ta56s79trfrd2nu3n6hsd",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993291/Beppu_Hatto_Onsen_Festival_a9473eeefc.jpg"
                 }
             }
         },

@@ -513,6 +513,38 @@
             }
         },
         {
+            "id": 234,
+            "documentId": "du5v45uq039828tvu2hbq1oq",
+            "recommendation": "这是别府一年一度最大的温泉节庆活动。\n通常在 3月30日至4月3日 左右举办，为期5天（具体日期每年可能有所变动），在别府各地都能感受到热烈的节日气氛。\n\n活动最大的亮点是：所有市营温泉免费开放！\n还有一个非常特别的仪式——焚烧整座山丘，以祈愿一年平安健康、长寿与事业兴旺，非常壮观",
+            "kmFromStay": null,
+            "weightInNearbyRestaurants": 0,
+            "weightInNearbyAttractions": 0,
+            "weightInHighlight": -1,
+            "poi": {
+                "id": 134,
+                "documentId": "c7j2oppvcojte9if27e22xue",
+                "slug": "Beppu-Hatto-Onsen-Festival",
+                "label": "别府八汤温泉节（3月下旬至4月上旬）",
+                "address": null,
+                "highlight": "别府八汤温泉祭是当地最大的温泉节庆，通常在三月底至四月初为期五天。期间，许多市营温泉免费开放，整个城镇洋溢着欢乐气氛。庆典包含游行、传统表演，以及独特的“泼汤祭”，参与者将温泉水泼洒向人群，场面热闹非凡。\n\n另一独特活动是扇山火祭，这是在扇山上放火的仪式，旨在祈求一年的健康、长寿与生意兴旺。然而，请注意此火祭通常在二月初举行，与温泉祭的日期不同，是别府冬季独有的壮观景象。",
+                "externalURL": null,
+                "type": "attraction",
+                "tag_labels": [
+                    {
+                        "id": 8,
+                        "documentId": "xd02cfhqrxhr35klrjghebhi",
+                        "name": "活动／盛会",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 70,
+                    "documentId": "su3ta56s79trfrd2nu3n6hsd",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993291/Beppu_Hatto_Onsen_Festival_a9473eeefc.jpg"
+                }
+            }
+        },
+        {
             "id": 36,
             "documentId": "cdemz0jtzqzijqkioptpa5fm",
             "recommendation": "这是一家距离住宿地步行仅需3分钟的温泉。只需250日元即可入场。\n\n别府的在地温泉不提供毛巾、香皂、洗发水等用品，建议您从住宿处自行携带。\n（可以参考别府 Airbnb 博客）\nhttps://blog.naver.com/beppu-airbnb/221190748570",
@@ -647,7 +679,7 @@
             "kmFromStay": null,
             "weightInNearbyRestaurants": 0,
             "weightInNearbyAttractions": 0,
-            "weightInHighlight": 3,
+            "weightInHighlight": 5,
             "poi": {
                 "id": 154,
                 "documentId": "f4fwpb81h7i0fqrbgosmkdh6",
@@ -715,7 +747,7 @@
             "poi": {
                 "id": 118,
                 "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
-                "slug": "Asami-Shrine",
+                "slug": "Hachiman-Asami-Shrine",
                 "label": "八幡朝见神社",
                 "address": "〒874-0812 大分县别府市朝见2丁目15-19",
                 "highlight": "\"八幡朝见神社是别府市历史最悠久、规模最大的神社之一，拥有超过千年的历史，是祭祀八幡大神的庄严神域。神社坐落于朝见山麓，自古以来便是当地居民祈求健康、平安、家庭和谐的信仰中心。\n\n境内气氛宁静，绿荫环绕，建筑风格古朴典雅，鸟居、石灯笼、神桥与主殿等处处散发着岁月痕迹。春季樱花绽放时，整个神社更显浪漫祥和，是赏花与拍照的绝佳地点。\n\n此外，这里还有一处被誉为长寿之水的涌泉，是许多当地人会特地前来汲取的名水。无论是观光、参拜、还是散步沉淀心灵，八幡朝见神社都是深入认识别府历史与文化的理想之地。",
@@ -750,7 +782,7 @@
                 "slug": "Jigoku-Steam-Food",
                 "label": "地狱蒸工房 铁轮",
                 "address": "〒874-0041 大分县别府市風呂本5组",
-                "highlight": "地狱蒸工房 铁轮是别府著名的体验型乡土料理餐厅，以利用天然温泉蒸汽进行烹调的地狱蒸料理闻名。这种烹饪方式自江户时代便已流传，将蔬菜、海鲜、肉类等食材放入蒸笼中，直接以地底喷出的高温蒸汽烹熟，不加一滴油水，保留食材原始风味与营养。\n\n工房提供两种体验方式：可选择现场提供的套餐菜单，也可自备食材进行DIY蒸煮（酌收设备使用费）。体验过程亲自动手操作，既有趣又能留下深刻回忆，是家庭、朋友与情侣间热门的别府特色行程。\n\n店内设有宽敞的用餐区，但不提供外带与宅配服务。地点位于��轮温泉区中心，交通便利，是到访别府不可错过的在地体验美食。",
+                "highlight": "地狱蒸工房 铁轮是别府著名的体验型乡土料理餐厅，以利用天然温泉蒸汽进行烹调的地狱蒸料理闻名。这种烹饪方式自江户时代便已流传，将蔬菜、海鲜、肉类等食材放入蒸笼中，直接以地底喷出的高温蒸汽烹熟，不加一滴油水，保留食材原始风味与营养。\n\n工房提供两种体验方式：可选择现场提供的套餐菜单，也可自备食材进行DIY蒸煮（酌收设备使用费）。体验过程亲自动手操作，既有趣又能留下深刻回忆，是家庭、朋友与情侣间热门的别府特色行程。\n\n店内设有宽敞的用餐区，但不提供外带与宅配服务。地点位于铁轮温泉区中心，交通便利，是到访别府不可错过的在地体验美食。",
                 "externalURL": "http://jigokumushi.com/",
                 "type": "restaurant",
                 "tag_labels": [
@@ -797,38 +829,6 @@
                     "id": 64,
                     "documentId": "baw7gjiq544l4i112urpxs0f",
                     "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993271/Tomonaga_Bakery_4f3a049426.jpg"
-                }
-            }
-        },
-        {
-            "id": 42,
-            "documentId": "lpo90tb4pgei3cfzi4qu8o9c",
-            "recommendation": "这是别府一年一度最大的温泉节庆活动。\n通常在 3月30日至4月3日 左右举办，为期5天（具体日期每年可能有所变动），在别府各地都能感受到热烈的节日气氛。\n\n活动最大的亮点是：所有市营温泉免费开放！\n还有一个非常特别的仪式——焚烧整座山丘，以祈愿一年平安健康、长寿与事业兴旺，非常壮观",
-            "kmFromStay": null,
-            "weightInNearbyRestaurants": 0,
-            "weightInNearbyAttractions": 1,
-            "weightInHighlight": 0,
-            "poi": {
-                "id": 134,
-                "documentId": "c7j2oppvcojte9if27e22xue",
-                "slug": "Beppu-Hatto-Onsen-Festival",
-                "label": "别府八汤温泉节（3月下旬至4月上旬）",
-                "address": null,
-                "highlight": "别府八汤温泉祭是当地最大的温泉节庆，通常在三月底至四月初为期五天。期间，许多市营温泉免费开放，整个城镇洋溢着欢乐气氛。庆典包含游行、传统表演，以及独特的“泼汤祭”，参与者将温泉水泼洒向人群，场面热闹非凡。\n\n另一独特活动是扇山火祭，这是在扇山上放火的仪式，旨在祈求一年的健康、长寿与生意兴旺。然而，请注意此火祭通常在二月初举行，与温泉祭的日期不同，是别府冬季独有的壮观景象。",
-                "externalURL": null,
-                "type": "attraction",
-                "tag_labels": [
-                    {
-                        "id": 8,
-                        "documentId": "xd02cfhqrxhr35klrjghebhi",
-                        "name": "活动／盛会",
-                        "color": "GREY"
-                    }
-                ],
-                "coverPhoto": {
-                    "id": 70,
-                    "documentId": "su3ta56s79trfrd2nu3n6hsd",
-                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993291/Beppu_Hatto_Onsen_Festival_a9473eeefc.jpg"
                 }
             }
         },

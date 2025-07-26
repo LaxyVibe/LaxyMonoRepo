@@ -76,6 +76,10 @@ const AddressDisplay = ({
   };
 
   const handleSpeechDialogClose = () => {
+    // Stop any ongoing speech synthesis
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
     setSpeechDialogOpen(false);
   };
 
@@ -165,8 +169,6 @@ const AddressDisplay = ({
           // Add error handling
           utterance.onerror = (event) => {
             console.error('Speech synthesis error:', event.error);
-            setSnackbarMessage('Failed to speak address');
-            setSnackbarOpen(true);
           };
           
           utterance.onend = () => {
@@ -358,8 +360,7 @@ const AddressDisplay = ({
                     alt="Speech"
                     sx={{ 
                       width: 30, 
-                      height: 30,
-                      filter: `brightness(0) saturate(100%) invert(44%) sepia(29%) saturate(1458%) hue-rotate(142deg) brightness(95%) contrast(89%)` // Converts to primary color
+                      height: 30
                     }}
                   />
                 ) : (

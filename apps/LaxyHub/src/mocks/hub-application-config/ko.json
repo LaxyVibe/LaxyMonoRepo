@@ -3,11 +3,11 @@
         "id": 4,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:19.467Z",
-        "updatedAt": "2025-07-24T08:02:09.588Z",
+        "updatedAt": "2025-07-26T04:50:57.026Z",
         "publishedAt": "2025-07-24T04:15:55.344Z",
         "locale": "ko",
         "universalConfig": {
-            "id": 341,
+            "id": 356,
             "themeOptions": [
                 {
                     "name": "beppu-airbnb",
@@ -57,27 +57,27 @@
             ],
             "releasedLanguages": [
                 {
-                    "id": 1371,
+                    "id": 1455,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 1373,
+                    "id": 1451,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 1375,
+                    "id": 1450,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 1372,
+                    "id": 1454,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 1374,
+                    "id": 1452,
                     "label": "한국어",
                     "value": "ko"
                 }
@@ -206,61 +206,37 @@
                     "id": 91,
                     "label": "주소",
                     "route": "/info/address",
-                    "icon": {
-                        "id": 35,
-                        "documentId": "zuctd71mj1t3ewbflg06qhp9",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993169/Icon_3ae9a348e8.svg"
-                    }
+                    "icon": null
                 },
                 {
                     "id": 92,
                     "label": "체크인 & 체크아웃",
                     "route": "/info/check-in-out",
-                    "icon": {
-                        "id": 44,
-                        "documentId": "qxbgqr0zdns48sbirwymeswz",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993203/clock_01_75afb297c8.svg"
-                    }
+                    "icon": null
                 },
                 {
                     "id": 93,
                     "label": "숙소 이용 규칙",
                     "route": "/info/house-rules",
-                    "icon": {
-                        "id": 41,
-                        "documentId": "aeq3xauun70rod09urg9x2eo",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993191/book_03_2384005118.svg"
-                    }
+                    "icon": null
                 },
                 {
                     "id": 94,
                     "label": "편의 시설",
                     "route": "/info/amenities",
-                    "icon": {
-                        "id": 38,
-                        "documentId": "mfzomycxw1znjegg0x8mewu5",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993180/Group_e881416c53.svg"
-                    }
+                    "icon": null
                 },
                 {
                     "id": 95,
                     "label": "자주 묻는 질문",
                     "route": "/info/faq",
-                    "icon": {
-                        "id": 47,
-                        "documentId": "qcmz642lrze1motca93rn3vz",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
-                    }
+                    "icon": null
                 },
                 {
                     "id": 1009,
                     "label": "직접 연락",
                     "route": "/info/direct-contact",
-                    "icon": {
-                        "id": 47,
-                        "documentId": "qcmz642lrze1motca93rn3vz",
-                        "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993214/interface_help_question_circle_circle_faq_frame_help_info_mark_more_query_question_Streamline_Core_a5796d0c61.svg"
-                    }
+                    "icon": null
                 }
             ]
         },
@@ -285,21 +261,9 @@
             "id": 4,
             "recommendationHeading": "추천 목록",
             "highlightHeading": "하이라이트",
-            "addressIcon": {
-                "id": 35,
-                "documentId": "zuctd71mj1t3ewbflg06qhp9",
-                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993169/Icon_3ae9a348e8.svg"
-            },
-            "urlIcon": {
-                "id": 36,
-                "documentId": "fq6hs0uj0pnuexhotksn5iul",
-                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993174/globe_03_259a84a02e.svg"
-            },
-            "dialIcon": {
-                "id": 39,
-                "documentId": "m9x1fxtptmqivknkiaxi974h",
-                "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993184/phone_01ff591bbc.svg"
-            }
+            "addressIcon": null,
+            "urlIcon": null,
+            "dialIcon": null
         }
     },
     "meta": {}
