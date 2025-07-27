@@ -13,7 +13,7 @@ import { trackEvent, trackNavigation, trackButtonClick } from '../../utils/analy
  * Displays the complete audio guide player interface
  */
 export default function AudioGuidePage() {
-  const { tourId, stepId, audioLang } = useParams();
+  const { tourId, stepId, audioLang, poiSlug } = useParams();
   const navigate = useNavigate();
   const { language } = useLanguage();
   const { 

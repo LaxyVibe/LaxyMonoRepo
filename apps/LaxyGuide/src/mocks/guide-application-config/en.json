@@ -3,8 +3,8 @@
         "id": 1,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-06-26T10:28:50.679Z",
-        "updatedAt": "2025-07-23T08:54:11.601Z",
-        "publishedAt": "2025-07-23T08:54:11.499Z",
+        "updatedAt": "2025-07-23T12:27:31.842Z",
+        "publishedAt": "2025-07-23T12:27:31.764Z",
         "locale": "en",
         "universalConfig": {
             "id": 1,
@@ -43,7 +43,7 @@
                 },
                 {
                     "id": 68,
-                    "label": "日本語2",
+                    "label": "日本語",
                     "value": "jpn"
                 },
                 {
@@ -53,7 +53,7 @@
                 },
                 {
                     "id": 70,
-                    "label": "國語",
+                    "label": "中文",
                     "value": "cmn"
                 }
             ]
