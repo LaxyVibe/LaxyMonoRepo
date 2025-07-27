@@ -1,11 +1,44 @@
 {
-    "data": [],
+    "data": [
+        {
+            "id": 100,
+            "documentId": "t9el7436j8a0gtph9sm3zxbm",
+            "legacyTourCode": "JPN-BEPU-TUR-003",
+            "poi": {
+                "id": 116,
+                "documentId": "jd9fe7zsk035bjm6x5n5ap4f",
+                "slug": "Hachiman-Asami-Shrine",
+                "label": "하치만 아사미 신사",
+                "address": "일본 〒874-0812 오이타현 벳푸시 아사미 2초메 15-19",
+                "highlight": "하치만 아사미 신사는 벳푸시에서 가장 유서 깊고 규모가 큰 신사 중 하나로, 천년 이상의 역사를 가지고 있으며 하치만 오카미를 모시는 장엄한 신성한 공간입니다. 신사는 아사미 산기슭에 자리하고 있으며, 예로부터 현지 주민들이 건강, 평안, 가정의 화목을 기원하는 신앙의 중심지였습니다.\n\n경내 분위기는 고요하고 푸른 나무들로 둘러싸여 있으며, 건축 양식은 고풍스럽고 우아합니다. 도리이, 석등, 신교, 본당 등 곳곳에서 세월의 흔적이 느껴집니다. 봄철 벚꽃이 만개하면 신사 전체가 더욱 로맨틱하고 평화로운 분위기를 자아내 꽃놀이와 사진 촬영에 최적의 장소입니다.\n\n또한, 이곳에는 장수(長壽)의 물로 불리는 용천수가 있어 많은 현지인들이 특별히 길어가는 명수입니다. 관광, 참배, 또는 마음을 정화하는 산책 등 어떤 목적으로든 하치만 아사미 신사는 벳푸의 역사와 문화를 깊이 이해하기에 이상적인 장소입니다.",
+                "externalURL": "http://www.asami.or.jp/",
+                "type": "attraction",
+                "nativeLanguageCode": "ja",
+                "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.8040574276943!2d131.4951489!3d33.27162169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6934ad40397%3A0x6477dc4b0952a412!2sHachiman%20Asami%20Shrine!5e0!3m2!1sen!2sjp!4v1749359524312!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+                "dial": "+81 977-23-1408",
+                "addressURL": null,
+                "tag_labels": [
+                    {
+                        "id": 31,
+                        "documentId": "cbe1blfqovxzr7wnb3dce3c8",
+                        "name": "산책",
+                        "color": "GREY"
+                    }
+                ],
+                "coverPhoto": {
+                    "id": 32,
+                    "documentId": "mjqr2uqo8dnjjiao94f4xut8",
+                    "url": "https://res.cloudinary.com/dui2mxeuh/image/upload/v1749993159/Asami_Shrine_e8e00db78f.jpg"
+                }
+            }
+        }
+    ],
     "meta": {
         "pagination": {
             "page": 1,
             "pageSize": 10000,
-            "pageCount": 0,
-            "total": 0
+            "pageCount": 1,
+            "total": 1
         }
     }
 }

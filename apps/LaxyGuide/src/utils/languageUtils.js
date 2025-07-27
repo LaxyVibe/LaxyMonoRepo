@@ -168,7 +168,9 @@ export const extractTextAndAudioLanguageFromPath = (pathname) => {
     // Check for tour patterns that might include audio language
     // Pattern: /:textLang/tour/:tourId/:audioLang/steps
     // Pattern: /:textLang/tour/:tourId/:audioLang/step/:stepId
+    // Pattern: /:textLang/poi/:poiSlug/tour/:tourId/:audioLang/step/:stepId
     if (segments.length >= 4 && segments[1] === 'tour') {
+      // Direct tour pattern: /:textLang/tour/:tourId/:audioLang/...
       const potentialAudioLangCode = segments[3];
       
       // Validate if it's an audio language (not 'steps' or 'step')
@@ -179,6 +181,29 @@ export const extractTextAndAudioLanguageFromPath = (pathname) => {
           audioLangCode = potentialAudioLangCode;
           // Remove both text and audio language from path
           const remainingSegments = [segments[1], segments[2], ...segments.slice(4)];
+          cleanedPathname = '/' + remainingSegments.join('/');
+        } else {
+          // No audio language, just remove text language
+          const remainingSegments = segments.slice(1);
+          cleanedPathname = '/' + remainingSegments.join('/');
+        }
+      } else {
+        // No audio language, just remove text language
+        const remainingSegments = segments.slice(1);
+        cleanedPathname = '/' + remainingSegments.join('/');
+      }
+    } else if (segments.length >= 6 && segments[1] === 'poi' && segments[3] === 'tour') {
+      // POI tour pattern: /:textLang/poi/:poiSlug/tour/:tourId/:audioLang/step/:stepId
+      const potentialAudioLangCode = segments[5];
+      
+      // Validate if it's an audio language (not 'step')
+      if (potentialAudioLangCode !== 'step') {
+        // Check if it's a valid audio language code (eng, jpn, kor, cmn)
+        const validAudioLanguages = ['eng', 'jpn', 'kor', 'cmn'];
+        if (validAudioLanguages.includes(potentialAudioLangCode)) {
+          audioLangCode = potentialAudioLangCode;
+          // Remove both text and audio language from path: poi/:poiSlug/tour/:tourId/step/:stepId
+          const remainingSegments = [segments[1], segments[2], segments[3], segments[4], ...segments.slice(6)];
           cleanedPathname = '/' + remainingSegments.join('/');
         } else {
           // No audio language, just remove text language

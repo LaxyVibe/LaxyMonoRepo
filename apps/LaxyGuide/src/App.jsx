@@ -53,6 +53,26 @@ function AudioLanguageRedirect() {
   return <Navigate to={`${newPath}${search}`} replace />;
 }
 
+// Audio language redirect component for POI tour routes without audio language
+function POIAudioLanguageRedirect() {
+  const { pathname, search } = useLocation();
+  const { langCode, poiSlug, tourId } = useParams();
+  
+  // Default audio language based on text language
+  const defaultAudioLang = mapTextToAudioLanguage(langCode || DEFAULT_LANGUAGE);
+  
+  // Check if this is a step route without audio language
+  if (pathname.includes('/step/')) {
+    const stepId = pathname.split('/step/')[1];
+    const newPath = `/${langCode}/poi/${poiSlug}/tour/${tourId}/${defaultAudioLang}/step/${stepId}`;
+    return <Navigate to={`${newPath}${search}`} replace />;
+  }
+  
+  // If it's not a route we recognize, redirect to POI cover
+  const newPath = `/${langCode}/poi/${poiSlug}`;
+  return <Navigate to={`${newPath}${search}`} replace />;
+}
+
 // Analytics-enabled wrapper component
 function AppWithAnalytics() {
   usePageTracking();
@@ -63,7 +83,8 @@ function AppWithAnalytics() {
       <Route path="/language" element={<LanguagePage />} />
       <Route path="/:langCode" element={<GuideLanding />} />
       <Route path="/:langCode/poi/:poiSlug" element={<POICover />} />
-      <Route path="/:langCode/poi/:poiSlug/tour/:tourId/step/:stepId" element={<AudioGuidePage />} />
+      <Route path="/:langCode/poi/:poiSlug/tour/:tourId/:audioLang/step/:stepId" element={<AudioGuidePage />} />
+      <Route path="/:langCode/poi/:poiSlug/tour/:tourId/step/:stepId" element={<POIAudioLanguageRedirect />} />
       <Route path="/:langCode/poi/:poiSlug/details" element={<POIDetailGuide />} />
 
       <Route path="/:langCode/tour/:tourId" element={<TourCover />} />
