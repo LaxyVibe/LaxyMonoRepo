@@ -475,7 +475,7 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
               // Use POI recommendations data with weightInHighlight !== -1
               poiRecommendationsData ? poiRecommendationsData.data
                 .filter(item => item.weightInHighlight !== -1)
-                .sort((a, b) => a.weightInHighlight - b.weightInHighlight)
+                .sort((a, b) => b.weightInHighlight - a.weightInHighlight)
                 .slice(0, 6) // Show top 6 highlighted POIs
                 .map(item => ({
                   id: item.poi.id,
