@@ -312,7 +312,7 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
     <Container {...PAGE_LAYOUTS.SuiteLanding}>
       <SuiteLandingHeader title={suiteData?.details?.data?.[0]?.ownedBy?.label} suiteId={suiteId} />
       
-      <Box sx={{ ...CONTENT_PADDING.standard, py: 3 }}>
+      <Box sx={{ ...CONTENT_PADDING.standard, py: 2 }}>
         <>
           {/* Greeting Section */}
           {suiteData?.details?.data?.[0]?.ownedBy && (
@@ -320,7 +320,6 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
               display: 'flex', 
               alignItems: 'center', 
               px: 0.5,
-              pt: 1,
               pb: 2.5,
             }}>
               {suiteData.details.data[0].ownedBy.avatar && (
@@ -399,17 +398,19 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
             </Typography>
           )}
           
-          <Grid 
-            container 
-            spacing={{ xs: 0.25, sm: 0.5 }} 
-            justifyContent="space-between" 
+          <Box 
             sx={{ 
-              mt: 1, 
-              mx: { xs: 2, sm: 4 },
-              // Ensure buttons stay on same line even on very small screens
-              '& .MuiGrid-item': {
-                display: 'flex',
-                justifyContent: 'center'
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+              mt: 1,
+              mx: { xs: 1, sm: 2 },
+              gap: 2, // Minimum 8px margin between buttons
+              flexWrap: 'nowrap',
+              minWidth: 0, // Allow flex items to shrink below their minimum content size
+              '& > *': {
+                flex: '1 1 0', // Equal flex basis with ability to grow and shrink
+                minWidth: 0, // Allow items to shrink below content size
               }
             }}
           >
@@ -420,7 +421,6 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
                 iconAlt="Info"
                 label={sectionLabels.infoLabel}
                 onClick={handleStayInfoClick}
-                gridProps={{ xs: 2.4 }}
               />
             )}
             
@@ -431,7 +431,6 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
                 iconAlt="WiFi"
                 label={sectionLabels.wifiLabel}
                 onClick={handleWifiInfoClick}
-                gridProps={{ xs: 2.4 }}
               />
             )}
             
@@ -442,7 +441,6 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
                 iconAlt="Attractions"
                 label={sectionLabels.attractionsShortLabel}
                 onClick={handleAttractionsClick}
-                gridProps={{ xs: 2.4 }}
               />
             )}
             
@@ -453,7 +451,6 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
                 iconAlt="Restaurants"
                 label={sectionLabels.restaurantsShortLabel}
                 onClick={handleRestaurantsClick}
-                gridProps={{ xs: 2.4 }}
               />
             )}
             
@@ -464,10 +461,9 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
                 iconAlt="Tours"
                 label={sectionLabels.toursLabel}
                 onClick={handleToursClick}
-                gridProps={{ xs: 2.4 }}
               />
             )}
-          </Grid>
+          </Box>
           {/* Highlighted POIs Section */}
           <HighlightedPOIsSection 
             heading={hubConfig?.data?.pageSearch?.highlightedListHeading}

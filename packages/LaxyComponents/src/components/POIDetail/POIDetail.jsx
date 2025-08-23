@@ -342,7 +342,7 @@ const POIDetail = ({
       />
       
       {/* Main Content Card */}
-      <Container {...pageLayouts.POIDetail} sx={{ position: 'relative', mt: -8, px: 0 }}> {/* Remove horizontal padding for full width */}
+      <Container {...pageLayouts.POIDetail} sx={{ position: 'relative', mt: -4, px: 0 }}> {/* Remove horizontal padding for full width */}
         <Paper 
           elevation={0} 
           sx={{ 
