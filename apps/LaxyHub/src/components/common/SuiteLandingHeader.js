@@ -97,8 +97,7 @@ const SuiteLandingHeader = ({ title, showBackButton = false, suiteId = null }) =
         justifyContent: 'space-between', 
         alignItems: 'center', 
         px: 2,
-        py: 1,
-        borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
+        pt: 1,
       }}
     >
       {/* Left icon */}

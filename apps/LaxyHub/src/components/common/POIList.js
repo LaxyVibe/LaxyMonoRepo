@@ -34,8 +34,15 @@ const POIListItem = ({ poi, isHost, onPOIClick, hostTagLabel = 'Host' }) => {
       sx={{
         cursor: 'pointer',
         transition: 'all 0.3s ease',
+        borderBottom: '1px solid #e0e0e0',
+        marginBottom: 2,
+        paddingBottom: 2,
         '&:hover': {
           transform: 'translateY(-2px)',
+        },
+        '&:last-child': {
+          borderBottom: 'none',
+          marginBottom: 0,
         }
       }}
       onClick={() => onPOIClick(poi)}
@@ -173,14 +180,21 @@ const POIListItem = ({ poi, isHost, onPOIClick, hostTagLabel = 'Host' }) => {
  */
 const POIListSkeleton = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       {[...Array(3)].map((_, index) => (
         <Box key={index} sx={{ 
           display: 'flex', 
           alignItems: 'flex-start', 
           height: 'auto',
           flexDirection: 'row',
-          gap: 2
+          gap: 2,
+          borderBottom: '1px solid #e0e0e0',
+          marginBottom: 2,
+          paddingBottom: 2,
+          '&:last-child': {
+            borderBottom: 'none',
+            marginBottom: 0,
+          }
         }}>
           {/* Image Skeleton */}
           <Skeleton 
@@ -323,7 +337,7 @@ const POIList = ({
             {noResultsFoundText}
           </Typography>
         ) : (
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             {dataItems.map((item) => {
               const poi = item.poi;
               const isHost = isHostRecommended(poi.slug);

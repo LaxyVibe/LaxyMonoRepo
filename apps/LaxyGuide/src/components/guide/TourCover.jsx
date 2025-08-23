@@ -44,7 +44,7 @@ const commonStyles = {
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 2, sm: 3 },
+    pb: { xs: 18, sm: 16, md: 14 }, // Add more space for fixed button container
   },
   title: {
     textAlign: 'center',
@@ -389,19 +389,27 @@ function TourCover() {
         </Typography>
       </Box>
       
+      {/* Fixed Button Container */}
       <Box
         sx={{
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          backdropFilter: 'blur(10px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           gap: { xs: 2, sm: 3 },
-          pb: { xs: 3, sm: 4 },
+          py: { xs: 2, sm: 3 },
           px: { xs: 2, sm: 3, md: 4 },
-          zIndex: 2,
+          zIndex: 10,
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
         }}
       >
         {/* Audio Language Select */}
-        <FormControl sx={{ width: '100%', ...commonStyles.audioSelect }}>
+        <FormControl sx={{ width: '100%', maxWidth: '400px', ...commonStyles.audioSelect }}>
           <InputLabel id="audio-language-label">{audioLanguageLabel}</InputLabel>
           <Select
             labelId="audio-language-label"
@@ -427,7 +435,7 @@ function TourCover() {
             ...commonStyles.button, 
             ...commonStyles.startButton,
             width: '100%',
-            mb: { xs: 6, sm: 4, md: 3 }, // Add larger bottom margin for mobile browser toolbar
+            maxWidth: '400px',
           }}
           onClick={handleStartTour}
           disabled={isLoading}
