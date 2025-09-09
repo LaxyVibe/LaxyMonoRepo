@@ -2,7 +2,7 @@
  * Audio Guide Player Component
  * Main component for playing audio guides with subtitles and images
  */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import {
   Box,
   Typography,
@@ -58,25 +58,91 @@ const AudioGuidePlayer = ({ onClose }) => {
   const subtitleContainerRef = useRef(null);
   const manualScrollTimerRef = useRef(null);
   const currentSubtitleRef = useRef(null);
+  const lastLoadedSubtitleUrlRef = useRef(null);
+  const lastStepIdRef = useRef(null);
+  const isLoadingSubtitlesRef = useRef(false);
+
+  // Extract stable values to prevent unnecessary re-renders
+  const currentStepId = currentStep?.id || null;
+  const currentSubtitleUrl = currentStep?.subtitleUrl || null;
+  const currentImages = currentStep?.images || [];
+
+  // Memoized loadSubtitles function
+  const loadSubtitles = useCallback(async (subtitleUrl) => {
+    // Prevent concurrent loads
+    if (isLoadingSubtitlesRef.current) {
+      console.log('🎬 Already loading subtitles, skipping');
+      return;
+    }
+    
+    console.log('🎬 Fetching subtitles from:', subtitleUrl);
+    isLoadingSubtitlesRef.current = true;
+    
+    try {
+      const response = await fetch(subtitleUrl);
+      console.log('🎬 Subtitle response status:', response.status);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const srtContent = await response.text();
+      console.log('🎬 Raw SRT content length:', srtContent.length);
+      
+      // Test the SRT validation
+      const isValid = isValidSRT(srtContent);
+      console.log('🎬 SRT validation result:', isValid);
+      
+      const parsedSubtitles = parseSRT(srtContent);
+      console.log('🎬 Parsed subtitles count:', parsedSubtitles.length);
+      
+      if (parsedSubtitles.length === 0) {
+        console.warn('🎬 No subtitles parsed! Raw content:', srtContent.substring(0, 200));
+      }
+      
+      setSubtitles(parsedSubtitles);
+    } catch (error) {
+      console.error('🎬 Failed to load subtitles:', error);
+      setSubtitles([]);
+    } finally {
+      isLoadingSubtitlesRef.current = false;
+    }
+  }, []);
 
   // Load subtitles when step changes
   useEffect(() => {
-    console.log('🎬 Step changed, currentStep:', currentStep);
-    console.log('🎬 Subtitle URL:', currentStep?.subtitleUrl);
-    if (currentStep?.subtitleUrl) {
-      loadSubtitles(currentStep.subtitleUrl);
+    console.log('🎬 Step effect triggered:', {
+      currentStepId,
+      currentSubtitleUrl,
+      lastStepId: lastStepIdRef.current,
+      lastSubtitleUrl: lastLoadedSubtitleUrlRef.current
+    });
+    
+    // Update step tracking
+    lastStepIdRef.current = currentStepId;
+    
+    if (currentSubtitleUrl) {
+      // Only load if it's a different subtitle URL
+      if (currentSubtitleUrl !== lastLoadedSubtitleUrlRef.current) {
+        console.log('🎬 Loading new subtitle URL:', currentSubtitleUrl);
+        lastLoadedSubtitleUrlRef.current = currentSubtitleUrl;
+        loadSubtitles(currentSubtitleUrl);
+      } else {
+        console.log('🎬 Subtitle URL unchanged, skipping load');
+      }
     } else {
       console.log('🎬 No subtitle URL found, clearing subtitles');
-      setSubtitles([]);
-      setCurrentSubtitle('');
+      if (lastLoadedSubtitleUrlRef.current !== null) {
+        lastLoadedSubtitleUrlRef.current = null;
+        setSubtitles([]);
+        setCurrentSubtitle('');
+      }
     }
-  }, [currentStep?.subtitleUrl]);
+  }, [currentSubtitleUrl, loadSubtitles]); // Only depend on the URL, not the step ID
 
   // Update current subtitle and image based on time
   useEffect(() => {
     updateCurrentSubtitle();
     updateCurrentImage();
-  }, [currentTime, subtitles, currentStep?.images]);
+  }, [currentTime, subtitles, currentImages]);
 
   // Auto-scroll subtitle container to current subtitle
   useEffect(() => {
@@ -107,39 +173,6 @@ const AudioGuidePlayer = ({ onClose }) => {
     };
   }, []);
 
-  const loadSubtitles = async (subtitleUrl) => {
-    console.log('🎬 Loading subtitles from:', subtitleUrl);
-    try {
-      const response = await fetch(subtitleUrl);
-      console.log('🎬 Subtitle response status:', response.status);
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      const srtContent = await response.text();
-      console.log('🎬 Raw SRT content length:', srtContent.length);
-      console.log('🎬 Raw SRT content preview:', srtContent.substring(0, 400));
-      
-      // Test the SRT validation
-      const isValid = isValidSRT(srtContent);
-      console.log('🎬 SRT validation result:', isValid);
-      
-      const parsedSubtitles = parseSRT(srtContent);
-      console.log('🎬 Parsed subtitles count:', parsedSubtitles.length);
-      console.log('🎬 First few parsed subtitles:', parsedSubtitles.slice(0, 3));
-      
-      if (parsedSubtitles.length === 0) {
-        console.warn('🎬 No subtitles parsed! Checking raw content structure...');
-        const lines = srtContent.split('\n');
-        console.log('🎬 First 10 lines of SRT:', lines.slice(0, 10));
-      }
-      
-      setSubtitles(parsedSubtitles);
-    } catch (error) {
-      console.error('🎬 Failed to load subtitles:', error);
-      setSubtitles([]);
-    }
-  };
-
   const updateCurrentSubtitle = () => {
     let newIndex = -1;
     for (let i = 0; i < subtitles.length; i++) {
@@ -157,19 +190,14 @@ const AudioGuidePlayer = ({ onClose }) => {
   };
 
   const updateCurrentImage = () => {
-    if (!currentStep?.images) {
-      console.log('🖼️ No images in currentStep:', currentStep);
+    if (!currentImages || currentImages.length === 0) {
       return;
     }
     
-    console.log('🖼️ Checking images for time:', currentTime);
-    console.log('🖼️ Available images:', currentStep.images);
-    
-    const image = currentStep.images.find(
+    const image = currentImages.find(
       img => currentTime >= img.startTimestamp && currentTime <= img.endTimestamp
     );
     
-    console.log('🖼️ Found image:', image);
     setCurrentImage(image?.url || null);
   };
 

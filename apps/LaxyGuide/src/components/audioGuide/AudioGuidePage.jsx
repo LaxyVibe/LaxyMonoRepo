@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Box, IconButton, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -27,135 +27,136 @@ export default function AudioGuidePage() {
     loadAudioGuide,
     goToStep,
     audioLanguage,
-    audioLanguageRefreshKey,
     setAudioLanguage,
     clearAudioGuide,
     pause
   } = useAudioGuide();
 
+  // Refs to prevent redundant operations
+  const initializedRef = useRef(false);
+  const lastLoadedConfigRef = useRef(null);
+
   // Extract audio language from URL or use default
   const { textLangCode, audioLangCode } = extractTextAndAudioLanguageFromPath(window.location.pathname);
   const urlAudioLanguage = getValidAudioLanguageCode(audioLang || audioLangCode);
 
-  // Set audio language immediately on component mount if it's different
-  React.useLayoutEffect(() => {
-    if (urlAudioLanguage !== audioLanguage) {
-      console.log('🔍 AudioGuidePage setting audio language immediately:', urlAudioLanguage);
-      setAudioLanguage(urlAudioLanguage);
-    }
-  }, []); // Only run once on mount
+  // Memoize the configuration that determines if we need to load/reload
+  const currentConfig = useMemo(() => ({
+    tourId,
+    language,
+    audioLanguage: urlAudioLanguage,
+    stepId
+  }), [tourId, language, urlAudioLanguage, stepId]);
 
-  // Set audio language from URL
-  React.useEffect(() => {
-    if (urlAudioLanguage !== audioLanguage) {
-      console.log('🔍 AudioGuidePage audio language change detected, clearing guide and setting new language:', urlAudioLanguage);
-      // Stop current audio and clear guide state for clean reload
-      pause();
-      clearAudioGuide();
-      setAudioLanguage(urlAudioLanguage);
-    }
-  }, [urlAudioLanguage, audioLanguage, setAudioLanguage, pause, clearAudioGuide]);
-
-  // Debug logging for URL parameters and state
-  console.log('🔍 AudioGuidePage Debug:');
-  console.log('  tourId from URL:', tourId);
-  console.log('  stepId from URL:', stepId);
-  console.log('  language:', language);
-  console.log('  currentGuide:', currentGuide);
-  console.log('  currentStep:', currentStep);
-  console.log('  steps length:', steps?.length);
-  console.log('  isLoading:', isLoading);
-  console.log('  error:', error);
-
-  React.useEffect(() => {
-    console.log('🔍 AudioGuidePage useEffect #1 triggered:');
-    console.log('  tourId:', tourId);
-    console.log('  isLoading:', isLoading);
-    console.log('  currentGuide:', currentGuide);
-    console.log('  currentGuide?.tourCode:', currentGuide?.tourCode);
-    console.log('  currentGuide?.currentLanguage:', currentGuide?.currentLanguage);
-    console.log('  currentGuide?.audioLanguage:', currentGuide?.audioLanguage);
-    console.log('  language:', language);
-    console.log('  urlAudioLanguage:', urlAudioLanguage);
+  // Single effect to handle all initialization and config changes
+  useEffect(() => {
+    const configKey = `${currentConfig.tourId}-${currentConfig.language}-${currentConfig.audioLanguage}`;
+    const lastConfigKey = lastLoadedConfigRef.current;
     
-    // Only load if we have a tourId but either:
-    // 1. No guide loaded
-    // 2. Wrong tour loaded  
-    // 3. Wrong UI language
-    // 4. Wrong audio language (this is the key fix)
-    const needsToLoad = tourId && !isLoading && 
-        (!currentGuide || 
-         currentGuide.tourCode !== tourId || 
-         currentGuide.currentLanguage !== language ||
-         currentGuide.audioLanguage !== urlAudioLanguage);
-         
-    if (needsToLoad) {
-      console.log('🔍 Loading audio guide with tourId:', tourId, 'language:', language, 'audioLanguage:', urlAudioLanguage);
-      loadAudioGuide(tourId, language).catch(console.error);
-    } else {
-      console.log('🔍 Not loading audio guide. Reason:');
-      console.log('  - No tourId:', !tourId);
-      console.log('  - Is loading:', isLoading);
-      console.log('  - Guide already loaded for this tour:', currentGuide?.tourCode === tourId);
-      console.log('  - UI Language matches:', currentGuide?.currentLanguage === language);
-      console.log('  - Audio Language matches:', currentGuide?.audioLanguage === urlAudioLanguage);
-    }
-  }, [tourId, currentGuide, isLoading, language, urlAudioLanguage, audioLanguageRefreshKey]); // Add refresh key dependency
+    console.log('🔍 AudioGuidePage effect triggered:', {
+      currentConfig,
+      configKey,
+      lastConfigKey,
+      isLoading,
+      hasGuide: !!currentGuide,
+      guideMatches: currentGuide?.tourCode === currentConfig.tourId &&
+                   currentGuide?.currentLanguage === currentConfig.language &&
+                   currentGuide?.audioLanguage === currentConfig.audioLanguage
+    });
 
-  React.useEffect(() => {
-    console.log('🔍 AudioGuidePage useEffect #2 triggered:');
-    console.log('  stepId:', stepId);
-    console.log('  steps:', steps);
-    console.log('  currentStepIndex:', currentStepIndex);
-    
-    // If we have a stepId in the URL and steps are loaded, set the current step
-    if (stepId && steps && steps.length > 0) {
-      console.log('🔍 Looking for step with ID:', stepId);
-      console.log('🔍 Available step IDs:', steps.map(step => step.id));
+    // Skip if no tour ID
+    if (!currentConfig.tourId) {
+      return;
+    }
+
+    // Skip if already loading
+    if (isLoading) {
+      return;
+    }
+
+    // Skip if we already processed this exact configuration
+    if (configKey === lastConfigKey) {
+      console.log('🔍 Already processed this config, skipping');
       
-      const targetStepIndex = steps.findIndex(step => step.id.toString() === stepId.toString());
-      console.log('🔍 Found step at index:', targetStepIndex);
-      
-      if (targetStepIndex !== -1) {
-        // Always go to the step if found, regardless of current index
-        // This ensures the correct step is loaded even if indices match
-        console.log('🔍 Going to step index:', targetStepIndex);
-        goToStep(targetStepIndex);
+      // Only handle step navigation if guide is loaded and matches
+      if (currentGuide &&
+          currentGuide.tourCode === currentConfig.tourId &&
+          currentGuide.currentLanguage === currentConfig.language &&
+          currentGuide.audioLanguage === currentConfig.audioLanguage &&
+          currentConfig.stepId && steps && steps.length > 0) {
         
-        // Track step view
-        trackEvent('audio_step_view', {
-          category: 'Audio Guide',
-          label: `${tourId}-step-${stepId}`,
-          tour_id: tourId,
-          step_id: stepId,
-          step_index: targetStepIndex,
-          audio_language: urlAudioLanguage
+        const targetStepIndex = steps.findIndex(step => step.id.toString() === currentConfig.stepId.toString());
+        
+        console.log('🔍 Step navigation check:', {
+          stepId: currentConfig.stepId,
+          targetStepIndex,
+          currentStepIndex,
+          stepsLength: steps.length
         });
+        
+        if (targetStepIndex !== -1 && targetStepIndex !== currentStepIndex) {
+          console.log('🔍 Navigating to step:', targetStepIndex);
+          goToStep(targetStepIndex);
+          
+          // Track step view
+          trackEvent('audio_step_view', {
+            category: 'Audio Guide',
+            label: `${currentConfig.tourId}-step-${currentConfig.stepId}`,
+            tour_id: currentConfig.tourId,
+            step_id: currentConfig.stepId,
+            step_index: targetStepIndex,
+            audio_language: currentConfig.audioLanguage
+          });
+        }
       }
+      return;
     }
-  }, [stepId, steps, currentStepIndex]); // Removed goToStep to prevent infinite loop
 
-  // Refresh current step when audio language changes
-  React.useEffect(() => {
-    // Wait for tour data to be reloaded with new audio language, then refresh current step
-    if (stepId && steps && steps.length > 0 && currentGuide && 
-        currentGuide.audioLanguage === urlAudioLanguage) {
-      console.log('🔍 AudioGuidePage checking if step needs refresh after tour reload:', {
-        stepId,
-        hasSteps: steps.length > 0,
-        guideAudioLang: currentGuide.audioLanguage,
-        urlAudioLang: urlAudioLanguage,
-        currentStepId: currentStep?.id
-      });
-      
-      // Find the target step again and go to it to refresh with new audio language
-      const targetStepIndex = steps.findIndex(step => step.id.toString() === stepId.toString());
-      if (targetStepIndex !== -1 && targetStepIndex !== currentStepIndex) {
-        console.log('🔍 AudioGuidePage re-going to step after tour reload:', targetStepIndex);
-        goToStep(targetStepIndex);
-      }
+    // Set audio language synchronously before loading
+    if (urlAudioLanguage !== audioLanguage) {
+      console.log('🔍 Setting audio language to:', urlAudioLanguage);
+      setAudioLanguage(urlAudioLanguage);
     }
-  }, [stepId, steps, currentGuide, urlAudioLanguage, currentStep, currentStepIndex, goToStep]);
+
+    // Check if current guide matches the required configuration
+    const guideMatches = currentGuide &&
+      currentGuide.tourCode === currentConfig.tourId &&
+      currentGuide.currentLanguage === currentConfig.language &&
+      currentGuide.audioLanguage === currentConfig.audioLanguage;
+
+    // Load guide if config changed or guide doesn't match
+    if (!guideMatches) {
+      console.log('🔍 Config changed or guide mismatch, loading audio guide:', currentConfig);
+
+      // Clear current guide and load new one
+      if (currentGuide) {
+        pause();
+        clearAudioGuide();
+      }
+
+      lastLoadedConfigRef.current = configKey;
+      
+      // Don't auto-load first step if we have a specific step ID in the URL
+      const autoLoadFirstStep = !currentConfig.stepId;
+      console.log('🔍 autoLoadFirstStep:', autoLoadFirstStep, 'stepId:', currentConfig.stepId);
+      
+      loadAudioGuide(currentConfig.tourId, currentConfig.language, currentConfig.audioLanguage, autoLoadFirstStep).catch(console.error);
+    }
+  }, [
+    currentConfig,
+    currentGuide,
+    isLoading,
+    steps,
+    currentStepIndex,
+    urlAudioLanguage,
+    audioLanguage,
+    setAudioLanguage,
+    loadAudioGuide,
+    goToStep,
+    pause,
+    clearAudioGuide
+  ]);
+
 
   const handleBackClick = () => {
     trackButtonClick('Back', 'audio-guide-page');
