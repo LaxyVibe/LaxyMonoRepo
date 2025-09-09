@@ -17,8 +17,8 @@ export const loadLegacyTourData = async (tourId, environment = 'dev') => {
   try {
     // Load both index.json and content.json
     const [indexRes, contentRes] = await Promise.all([
-      fetch(`${s3BaseUrl}index.json`),
-      fetch(`${s3BaseUrl}content.json`)
+      // fetch(`${s3BaseUrl}index.json`),
+      // fetch(`${s3BaseUrl}content.json`)
     ]);
     
     if (!indexRes.ok || !contentRes.ok) {

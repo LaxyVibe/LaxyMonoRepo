@@ -12,22 +12,13 @@ export function AudioGuideProvider({ children }) {
   const [currentStep, setCurrentStep] = useState(null);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   
-  // Audio language state (separate from UI language) - no longer use cookie as default
+  // Audio language state (separate from UI language)
   const [audioLanguage, setAudioLanguageState] = useState('eng'); // Default to English audio
   
-  // Force refresh counter to trigger reload even when audio language is the same
-  const [audioLanguageRefreshKey, setAudioLanguageRefreshKey] = useState(0);
-  
-  // Wrapper function to update state only (no more cookie dependency)
-  const setAudioLanguage = useCallback((newAudioLanguage, forceRefresh = false) => {
-    console.log('🔍 Setting audio language:', newAudioLanguage, 'forceRefresh:', forceRefresh);
+  // Wrapper function to update audio language
+  const setAudioLanguage = useCallback((newAudioLanguage) => {
+    console.log('🔍 Setting audio language:', newAudioLanguage);
     setAudioLanguageState(newAudioLanguage);
-    
-    // If forcing refresh or language actually changed, increment refresh key
-    if (forceRefresh) {
-      console.log('🔍 Forcing audio language refresh');
-      setAudioLanguageRefreshKey(prev => prev + 1);
-    }
   }, []);
   
   // Audio playback state
@@ -183,7 +174,7 @@ export function AudioGuideProvider({ children }) {
     
     // Use the UI language for step data, but audio language is already set in context
     // getStepDataForLanguage will use audioLanguage from context for audio content
-    const stepData = getStepDataForLanguage(step, currentGuide.currentLanguage, currentGuide.s3BaseUrl);
+    const stepData = getStepDataForLanguage(step, currentGuide.currentLanguage, currentGuide.s3BaseUrl, currentGuide.audioLanguage);
     console.log('🔍 Step data for UI language with audio language context:', stepData);
     
     setCurrentStepIndex(stepIndex);
@@ -200,26 +191,20 @@ export function AudioGuideProvider({ children }) {
   };
 
   // Load audio guide
-  const loadAudioGuide = useCallback(async (tourCodeOrGuideData, language = 'en') => {
+  const loadAudioGuide = useCallback(async (tourCodeOrGuideData, language = 'en', targetAudioLanguage = null, autoLoadFirstStep = true) => {
     try {
+      // Use the passed target audio language or fall back to current state
+      const effectiveAudioLanguage = targetAudioLanguage || audioLanguage;
+      
       console.log('🔍 AudioGuideContext loadAudioGuide called:');
       console.log('  tourCodeOrGuideData:', tourCodeOrGuideData);
       console.log('  language:', language);
-      console.log('  currentGuide?.tourCode:', currentGuide?.tourCode);
-      console.log('  currentGuide?.currentLanguage:', currentGuide?.currentLanguage);
+      console.log('  targetAudioLanguage:', targetAudioLanguage);
+      console.log('  effectiveAudioLanguage:', effectiveAudioLanguage);
+      console.log('  autoLoadFirstStep:', autoLoadFirstStep);
       
       setIsLoading(true);
       setError(null); // Clear any previous errors
-      
-      // Check if we're already loading this exact tour in this language with this audio language
-      if (typeof tourCodeOrGuideData === 'string' && 
-          currentGuide?.tourCode === tourCodeOrGuideData && 
-          currentGuide?.currentLanguage === language &&
-          currentGuide?.audioLanguage === audioLanguage) {
-        console.log('🔍 Tour already loaded with same audio language, skipping reload');
-        setIsLoading(false);
-        return;
-      }
       
       let guideData;
       
@@ -272,19 +257,19 @@ export function AudioGuideProvider({ children }) {
           let title = 'Untitled Step';
           if (typeof poi.label === 'object' && poi.label !== null) {
             // Try audio language first, then fallbacks
-            title = poi.label[audioLanguage] || poi.label['eng'] || poi.label['en'] || 
+            title = poi.label[effectiveAudioLanguage] || poi.label['eng'] || poi.label['en'] || 
                     poi.label[Object.keys(poi.label)[0]] || 'Untitled Step';
           } else if (typeof poi.label === 'string') {
             title = poi.label;
           }
           
-          console.log(`🔍 POI ${index} - Title extracted for audioLanguage '${audioLanguage}':`, title);
+          console.log(`🔍 POI ${index} - Title extracted for audioLanguage '${effectiveAudioLanguage}':`, title);
           
           // Extract image data with timing information from audio language structure
           let images = [];
           if (poi.image) {
-            const langImages = poi.image[audioLanguage] || poi.image['eng'] || poi.image[Object.keys(poi.image)[0]];
-            console.log(`🖼️ POI ${index} - Raw image data for ${audioLanguage}:`, langImages);
+            const langImages = poi.image[effectiveAudioLanguage] || poi.image['eng'] || poi.image[Object.keys(poi.image)[0]];
+            console.log(`🖼️ POI ${index} - Raw image data for ${effectiveAudioLanguage}:`, langImages);
             if (langImages && Array.isArray(langImages)) {
               images = langImages.map(img => ({
                 url: img.url || img,
@@ -332,22 +317,29 @@ export function AudioGuideProvider({ children }) {
         guideData = tourCodeOrGuideData;
       }
       
-      console.log('🔍 Setting currentGuide with UI language:', language, 'and audioLanguage:', audioLanguage);
+      console.log('🔍 Setting currentGuide with UI language:', language, 'and audioLanguage:', effectiveAudioLanguage);
       const updatedGuideData = { 
         ...guideData, 
         currentLanguage: language,
-        audioLanguage: audioLanguage // Track which audio language was used for step content
+        audioLanguage: effectiveAudioLanguage // Track which audio language was used for step content
       };
       setCurrentGuide(updatedGuideData);
       
       if (guideData?.guide?.steps && guideData.guide.steps.length > 0) {
-        console.log('🔍 Going to step 0, steps available:', guideData.guide.steps.length);
-        // Manually set the first step since goToStep relies on currentGuide state which hasn't updated yet
-        const firstStep = guideData.guide.steps[0];
-        const stepData = getStepDataForLanguage(firstStep, language, guideData.s3BaseUrl);
-        setCurrentStepIndex(0);
-        setCurrentStep(stepData);
-        loadStepAudio(stepData);
+        if (autoLoadFirstStep) {
+          console.log('🔍 Auto-loading step 0, steps available:', guideData.guide.steps.length);
+          // Manually set the first step since goToStep relies on currentGuide state which hasn't updated yet
+          const firstStep = guideData.guide.steps[0];
+          const stepData = getStepDataForLanguage(firstStep, language, guideData.s3BaseUrl, effectiveAudioLanguage);
+          setCurrentStepIndex(0);
+          setCurrentStep(stepData);
+          loadStepAudio(stepData);
+        } else {
+          console.log('🔍 Guide loaded, but not auto-loading first step. Steps available:', guideData.guide.steps.length);
+          // Just set the index and step to null, let the page handle step navigation
+          setCurrentStepIndex(-1);
+          setCurrentStep(null);
+        }
       } else {
         console.log('🔍 No steps available, setting currentStep to null');
         setCurrentStep(null);
@@ -362,7 +354,7 @@ export function AudioGuideProvider({ children }) {
       setError(error.message || 'Failed to load audio guide');
       throw error; // Re-throw so calling code can handle it
     }
-  }, [audioLanguage, audioLanguageRefreshKey]); // Include refresh key to trigger reload when forced
+  }, [audioLanguage]); // Simplified dependencies
 
   // Clear audio guide
   const clearAudioGuide = () => {
@@ -377,7 +369,9 @@ export function AudioGuideProvider({ children }) {
   };
 
   // Helper function (import this from legacyDataAdapter)
-  const getStepDataForLanguage = (step, uiLanguage, s3BaseUrl) => {
+  const getStepDataForLanguage = (step, uiLanguage, s3BaseUrl, targetAudioLanguage = null) => {
+    const effectiveAudioLanguage = targetAudioLanguage || audioLanguage;
+    
     const languageMap = {
       'en': 'eng',
       'ja': 'jpn',
@@ -386,12 +380,12 @@ export function AudioGuideProvider({ children }) {
       'zh-Hans': 'chs'
     };
     
-    const legacyLangCode = languageMap[audioLanguage] || audioLanguage;
+    const legacyLangCode = languageMap[effectiveAudioLanguage] || effectiveAudioLanguage;
     
     console.log('🎭 getStepDataForLanguage called:');
     console.log('  step:', step);
     console.log('  uiLanguage:', uiLanguage);
-    console.log('  audioLanguage:', audioLanguage);
+    console.log('  effectiveAudioLanguage:', effectiveAudioLanguage);
     console.log('  legacyLangCode:', legacyLangCode);
     console.log('  step.subtitle:', step.subtitle);
     console.log('  step.subtitle?.[legacyLangCode]:', step.subtitle?.[legacyLangCode]);
@@ -447,7 +441,6 @@ export function AudioGuideProvider({ children }) {
     isLoading,
     error,
     audioLanguage,
-    audioLanguageRefreshKey, // Export refresh key for components that need to detect forced refreshes
     tourData: currentGuide, // Alias for compatibility
     steps: currentGuide?.guide?.steps || [], // Direct access to steps
     tourTitle: (() => {
