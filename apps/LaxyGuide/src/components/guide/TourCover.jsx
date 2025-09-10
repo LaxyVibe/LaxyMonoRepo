@@ -44,7 +44,7 @@ const commonStyles = {
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 18, sm: 16, md: 14 }, // Add more space for fixed button container
+    pb: { xs: 20, sm: 22, md: 24 }, // Add bottom padding to account for floating controls
   },
   title: {
     textAlign: 'center',
@@ -396,16 +396,18 @@ function TourCover() {
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
-          backdropFilter: 'blur(10px)',
+          background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.3) 90%, transparent 100%)',
+          backdropFilter: 'blur(8px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           gap: { xs: 2, sm: 3 },
-          py: { xs: 2, sm: 3 },
+          pb: { xs: 3, sm: 4 },
+          pt: { xs: 2, sm: 3 },
           px: { xs: 2, sm: 3, md: 4 },
           zIndex: 10,
-          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+          maxWidth: '100vw',
+          boxSizing: 'border-box',
         }}
       >
         {/* Audio Language Select */}
