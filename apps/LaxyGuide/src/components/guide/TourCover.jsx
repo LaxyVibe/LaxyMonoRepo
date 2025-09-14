@@ -442,7 +442,7 @@ function TourCover() {
           onClick={handleStartTour}
           disabled={isLoading}
         >
-          {isLoading ? 'Loading...' : nextLabel}
+          {isLoading ? 'Loading...' : nextLabel + ' ▶'}
         </Button>
       </Box>
       
