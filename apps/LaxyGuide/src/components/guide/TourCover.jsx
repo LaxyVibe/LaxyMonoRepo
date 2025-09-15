@@ -17,13 +17,16 @@ const getS3BaseUrl = (legacyTourCode) => {
 // Common styles
 const commonStyles = {
   container: {
-    minHeight: { xs: '100dvh', sm: '100vh' }, // Use dvh on mobile for better viewport handling
+    height: '100vh',
+    minHeight: '100vh',
+    maxHeight: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
+    overflow: 'hidden',
   },
   overlay: {
     position: 'absolute',
@@ -38,20 +41,20 @@ const commonStyles = {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: { xs: 'center', sm: 'flex-end' }, // Center on mobile, flex-end on larger screens
+    justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    py: { xs: 8, sm: 3 }, // More vertical padding on mobile
-    minHeight: { xs: '60vh', sm: 'auto' }, // Ensure minimum height on mobile
+    pt: { xs: 8, sm: 10 }, // Add top padding for logo space
+    pb: { xs: 1, sm: 2 }, // Minimal bottom padding
   },
   title: {
     textAlign: 'center',
     textTransform: 'uppercase',
     mb: 1,
-    fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+    fontSize: { xs: '1.25rem', sm: '2rem', md: '2.5rem' }, // Smaller on mobile
   },
   jpnTitle: {
     textAlign: 'center',
@@ -60,7 +63,7 @@ const commonStyles = {
     opacity: 0.9,
   },
   subtitle: {
-    mb: { xs: 3, sm: 4 },
+    mb: { xs: 2, sm: 3 }, // Reduced margin
     fontSize: { xs: '0.875rem', sm: '1rem' },
     px: { xs: 1, sm: 2 },
   },
@@ -390,15 +393,15 @@ function TourCover() {
         </Typography>
       </Box>
       
-      {/* Controls Container - Normal flow */}
+      {/* Controls Container - Compact for mobile */}
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: { xs: 2, sm: 3 },
-          pb: { xs: 4, sm: 4 }, // More bottom padding on mobile
-          pt: { xs: 2, sm: 0 }, // Add top padding on mobile
+          gap: { xs: 1.5, sm: 2 }, // Reduced gap
+          pb: { xs: 2, sm: 3 }, // Reduced bottom padding
+          pt: { xs: 0, sm: 1 }, // Minimal top padding
           px: { xs: 2, sm: 3, md: 4 },
           zIndex: 2,
         }}
