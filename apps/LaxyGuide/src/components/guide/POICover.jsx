@@ -17,16 +17,13 @@ const getS3BaseUrl = (legacyTourCode) => {
 // Common styles
 const commonStyles = {
   container: {
-    height: '100vh',
     minHeight: '100vh',
-    maxHeight: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    overflow: 'hidden',
   },
   overlay: {
     position: 'absolute',
@@ -41,20 +38,19 @@ const commonStyles = {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     textAlign: 'center',
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    pt: { xs: 8, sm: 10 }, // Add top padding for logo space
-    pb: { xs: 1, sm: 2 }, // Minimal bottom padding
+    pb: { xs: 2, sm: 3 },
   },
   title: {
     textAlign: 'center',
     textTransform: 'uppercase',
     mb: 1,
-    fontSize: { xs: '1.25rem', sm: '2rem', md: '2.5rem' }, // Smaller on mobile
+    fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
   },
   jpnTitle: {
     textAlign: 'center',
@@ -63,7 +59,7 @@ const commonStyles = {
     opacity: 0.9,
   },
   subtitle: {
-    mb: { xs: 2, sm: 3 }, // Reduced margin
+    mb: { xs: 3, sm: 4 },
     fontSize: { xs: '0.875rem', sm: '1rem' },
     px: { xs: 1, sm: 2 },
   },
@@ -397,21 +393,19 @@ function POICover() {
         </Typography>
       </Box>
       
-      {/* Controls Container - Compact for mobile */}
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: { xs: 1.5, sm: 2 }, // Reduced gap
-          pb: { xs: 2, sm: 3 }, // Reduced bottom padding
-          pt: { xs: 0, sm: 1 }, // Minimal top padding
+          gap: { xs: 2, sm: 3 },
+          pb: { xs: 10, sm: 6 },
           px: { xs: 2, sm: 3, md: 4 },
           zIndex: 2,
         }}
       >
         {/* Audio Language Select */}
-        <FormControl sx={{ width: '100%', maxWidth: '400px', ...commonStyles.audioSelect }}>
+        <FormControl sx={{ width: '100%', ...commonStyles.audioSelect }}>
           <InputLabel id="audio-language-label">{audioLanguageLabel}</InputLabel>
           <Select
             labelId="audio-language-label"
@@ -437,7 +431,7 @@ function POICover() {
             ...commonStyles.button, 
             ...commonStyles.startButton,
             width: '100%',
-            maxWidth: '400px',
+            mb: { xs: 6, sm: 4, md: 3 }, // Add larger bottom margin for mobile browser toolbar
           }}
           onClick={handleStartTour}
           disabled={isLoading}
