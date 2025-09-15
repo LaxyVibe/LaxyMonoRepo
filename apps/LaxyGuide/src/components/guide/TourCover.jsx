@@ -17,7 +17,7 @@ const getS3BaseUrl = (legacyTourCode) => {
 // Common styles
 const commonStyles = {
   container: {
-    minHeight: '100vh',
+    minHeight: { xs: '100dvh', sm: '100vh' }, // Use dvh on mobile for better viewport handling
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -38,13 +38,14 @@ const commonStyles = {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: { xs: 'center', sm: 'flex-end' }, // Center on mobile, flex-end on larger screens
     alignItems: 'center',
     textAlign: 'center',
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 2, sm: 3 }, // Reduced padding since controls are not fixed
+    py: { xs: 8, sm: 3 }, // More vertical padding on mobile
+    minHeight: { xs: '60vh', sm: 'auto' }, // Ensure minimum height on mobile
   },
   title: {
     textAlign: 'center',
@@ -396,7 +397,8 @@ function TourCover() {
           flexDirection: 'column',
           alignItems: 'center',
           gap: { xs: 2, sm: 3 },
-          pb: { xs: 3, sm: 4 },
+          pb: { xs: 4, sm: 4 }, // More bottom padding on mobile
+          pt: { xs: 2, sm: 0 }, // Add top padding on mobile
           px: { xs: 2, sm: 3, md: 4 },
           zIndex: 2,
         }}
