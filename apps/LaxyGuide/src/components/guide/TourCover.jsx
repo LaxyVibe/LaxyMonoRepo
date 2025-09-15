@@ -44,7 +44,7 @@ const commonStyles = {
     color: 'white',
     zIndex: 2,
     px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 20, sm: 22, md: 24 }, // Add bottom padding to account for floating controls
+    pb: { xs: 2, sm: 3 }, // Reduced padding since controls are not fixed
   },
   title: {
     textAlign: 'center',
@@ -389,25 +389,16 @@ function TourCover() {
         </Typography>
       </Box>
       
-      {/* Fixed Button Container */}
+      {/* Controls Container - Normal flow */}
       <Box
         sx={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.3) 90%, transparent 100%)',
-          backdropFilter: 'blur(8px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           gap: { xs: 2, sm: 3 },
           pb: { xs: 3, sm: 4 },
-          pt: { xs: 2, sm: 3 },
           px: { xs: 2, sm: 3, md: 4 },
-          zIndex: 10,
-          maxWidth: '100vw',
-          boxSizing: 'border-box',
+          zIndex: 2,
         }}
       >
         {/* Audio Language Select */}
@@ -442,7 +433,7 @@ function TourCover() {
           onClick={handleStartTour}
           disabled={isLoading}
         >
-          {isLoading ? 'Loading...' : nextLabel + ' ▶'}
+          {isLoading ? 'Loading...' : nextLabel}
         </Button>
       </Box>
       
