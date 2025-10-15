@@ -32,8 +32,7 @@ export default function AudioGuidePage() {
     pause
   } = useAudioGuide();
 
-  // Refs to prevent redundant operations
-  const initializedRef = useRef(false);
+  // Ref to track last processed config to avoid redundant work
   const lastLoadedConfigRef = useRef(null);
 
   // Extract audio language from URL or use default
@@ -74,38 +73,29 @@ export default function AudioGuidePage() {
       return;
     }
 
-    // Skip if we already processed this exact configuration
+    // If we've already processed this config, still ensure we navigate to the right step
     if (configKey === lastConfigKey) {
-      console.log('🔍 Already processed this config, skipping');
-      
-      // Only handle step navigation if guide is loaded and matches
-      if (currentGuide &&
-          currentGuide.tourCode === currentConfig.tourId &&
-          currentGuide.currentLanguage === currentConfig.language &&
-          currentGuide.audioLanguage === currentConfig.audioLanguage &&
-          currentConfig.stepId && steps && steps.length > 0) {
-        
-        const targetStepIndex = steps.findIndex(step => step.id.toString() === currentConfig.stepId.toString());
-        
-        console.log('🔍 Step navigation check:', {
-          stepId: currentConfig.stepId,
-          targetStepIndex,
-          currentStepIndex,
-          stepsLength: steps.length
-        });
-        
+      console.log('🔍 Already processed this config, ensure step navigation');
+      if (
+        currentGuide &&
+        currentGuide.tourCode === currentConfig.tourId &&
+        currentGuide.currentLanguage === currentConfig.language &&
+        currentGuide.audioLanguage === currentConfig.audioLanguage &&
+        currentConfig.stepId && steps && steps.length > 0
+      ) {
+        const targetStepIndex = steps.findIndex(
+          (step) => step.id.toString() === currentConfig.stepId.toString()
+        );
         if (targetStepIndex !== -1 && targetStepIndex !== currentStepIndex) {
-          console.log('🔍 Navigating to step:', targetStepIndex);
+          console.log('🔍 Navigating to step (processed config):', targetStepIndex);
           goToStep(targetStepIndex);
-          
-          // Track step view
           trackEvent('audio_step_view', {
             category: 'Audio Guide',
             label: `${currentConfig.tourId}-step-${currentConfig.stepId}`,
             tour_id: currentConfig.tourId,
             step_id: currentConfig.stepId,
             step_index: targetStepIndex,
-            audio_language: currentConfig.audioLanguage
+            audio_language: currentConfig.audioLanguage,
           });
         }
       }
@@ -141,6 +131,32 @@ export default function AudioGuidePage() {
       console.log('🔍 autoLoadFirstStep:', autoLoadFirstStep, 'stepId:', currentConfig.stepId);
       
       loadAudioGuide(currentConfig.tourId, currentConfig.language, currentConfig.audioLanguage, autoLoadFirstStep).catch(console.error);
+    } else {
+      // Guide matches current config; mark as processed and handle step navigation
+      lastLoadedConfigRef.current = configKey;
+
+      if (currentConfig.stepId && steps && steps.length > 0) {
+        const targetStepIndex = steps.findIndex(
+          (step) => step.id.toString() === currentConfig.stepId.toString()
+        );
+        console.log('🔍 Step navigation (guide matched):', {
+          stepId: currentConfig.stepId,
+          targetStepIndex,
+          currentStepIndex,
+          stepsLength: steps.length,
+        });
+        if (targetStepIndex !== -1 && targetStepIndex !== currentStepIndex) {
+          goToStep(targetStepIndex);
+          trackEvent('audio_step_view', {
+            category: 'Audio Guide',
+            label: `${currentConfig.tourId}-step-${currentConfig.stepId}`,
+            tour_id: currentConfig.tourId,
+            step_id: currentConfig.stepId,
+            step_index: targetStepIndex,
+            audio_language: currentConfig.audioLanguage,
+          });
+        }
+      }
     }
   }, [
     currentConfig,

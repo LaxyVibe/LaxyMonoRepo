@@ -241,6 +241,45 @@ export function AudioGuideProvider({ children }) {
           indexResponse.json(),
           contentResponse.json()
         ]);
+
+        // Merge Strapi narrations (new API) into legacy content.json (poiList) so view layer remains unchanged
+        // Mapping: narration.legacyStepCode -> poi.id, add field poi.content
+        try {
+          const uiToStrapiLocale = {
+            en: 'en',
+            ja: 'ja',
+            ko: 'ko',
+            'zh-Hans': 'zh-Hans',
+            'zh-Hant': 'zh-Hant'
+          };
+          const strapiLocale = uiToStrapiLocale[language] || 'en';
+          const STRAPI_BASE = 'https://laxy-studio-strapi-c1d6d20cbc41.herokuapp.com';
+          const narrationsUrl = `${STRAPI_BASE}/api/poi-guides/?populate=narrations&locale=${encodeURIComponent(strapiLocale)}&filters[legacyTourCode][$eq]=${encodeURIComponent(tourCode)}`;
+          console.log('🔗 Fetching Strapi narrations:', narrationsUrl);
+          const narrationsRes = await fetch(narrationsUrl);
+          if (narrationsRes.ok) {
+            const narrationsJson = await narrationsRes.json();
+            const narrations = narrationsJson?.data?.[0]?.narrations || [];
+            console.log('🧩 Strapi narrations count:', narrations.length);
+            if (Array.isArray(contentData?.poiList) && narrations.length > 0) {
+              const mapByStep = new Map();
+              narrations.forEach(n => {
+                if (n?.legacyStepCode) mapByStep.set(n.legacyStepCode, n);
+              });
+              contentData.poiList = contentData.poiList.map(poi => {
+                const match = mapByStep.get(poi?.id);
+                if (match && match.content != null) {
+                  return { ...poi, content: match.content };
+                }
+                return poi;
+              });
+            }
+          } else {
+            console.warn('⚠️ Failed to fetch Strapi narrations:', narrationsRes.status, narrationsRes.statusText);
+          }
+        } catch (mergeErr) {
+          console.warn('⚠️ Skipping narrations merge due to error:', mergeErr);
+        }
         
         console.log('🔍 Fetched data:');
         console.log('  indexData:', indexData);
@@ -283,7 +322,9 @@ export function AudioGuideProvider({ children }) {
           const step = {
             id: poi.id,
             title: title,
-            description: title, // Using title as description since it's not separate
+            // Keep using title for description for now; content is merged into poi.content (if present)
+            description: title,
+            content: poi.content || null,
             audio: poi.audio, // Keep the full audio object with all languages
             subtitle: poi.subtitle, // Keep the full subtitle object with all languages
             images: images,
@@ -422,6 +463,7 @@ export function AudioGuideProvider({ children }) {
       id: step.id,
       title: step.title,
       description: step.description,
+      content: step.content || null,
       audioUrl: audioUrl,
       subtitleUrl: subtitleUrl,
       images: processedImages,
