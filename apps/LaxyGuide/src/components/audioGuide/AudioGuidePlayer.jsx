@@ -322,6 +322,30 @@ const AudioGuidePlayer = ({ onClose }) => {
           maxHeight: 'calc(65vh - 200px)', // Ensure space for controls
         }}
       >
+        {/* Optional Step Content (from Strapi), shown above subtitles */}
+        {currentStep?.content ? (
+          <Box sx={{
+            color: 'white',
+            px: 3,
+            pt: 2,
+            pb: 1,
+          }}>
+            <Typography
+              variant="body1"
+              sx={{
+                textAlign: 'justify',
+                lineHeight: 1.6,
+                fontSize: 'clamp(14px, 3.8vw, 16px)',
+                fontFamily: 'Inter',
+                opacity: 0.9,
+                whiteSpace: 'pre-wrap'
+              }}
+            >
+              {currentStep.content}
+            </Typography>
+          </Box>
+        ) : null}
+
         {/* Subtitles Container */}
         <Box
           ref={subtitleContainerRef}
