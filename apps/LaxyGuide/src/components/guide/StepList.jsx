@@ -227,8 +227,21 @@ function StepList() {
       audio_language: urlAudioLanguage
     });
     trackNavigation('Step List', 'Audio Guide Step', 'step_click');
-    
-    navigate(`/${langCode}/tour/${tourId}/${urlAudioLanguage}/step/${step.id}`);
+
+    // Decide destination: content page if step has content, otherwise audio guide page
+    const hasContent = (() => {
+      const raw = step?.content;
+      if (!raw) return false;
+      if (typeof raw !== 'string') return !!raw; // treat non-string truthy as having content
+      const text = raw
+        .replace(/<[^>]*>/g, ' ') // strip HTML tags
+        .replace(/&nbsp;/gi, ' ') // replace nbsp
+        .trim();
+      return text.length > 0;
+    })();
+
+    const base = `/${langCode}/tour/${tourId}/${urlAudioLanguage}/step/${step.id}`;
+    navigate(hasContent ? `${base}/content` : base);
   };
 
   const handleGoBack = () => {
