@@ -13,6 +13,7 @@ import StepList from './components/guide/StepList.jsx';
 import LanguagePage from './components/LanguagePage.jsx';
 import MiniAudioPlayer from './components/audioGuide/MiniAudioPlayer.jsx';
 import AudioGuidePage from './components/audioGuide/AudioGuidePage.jsx';
+import StepContentPage from './components/audioGuide/StepContentPage.jsx';
 import usePageTracking from './hooks/usePageTracking.js';
 
 // Language redirect component
@@ -83,15 +84,19 @@ function AppWithAnalytics() {
       <Route path="/language" element={<LanguagePage />} />
       <Route path="/:langCode" element={<GuideLanding />} />
       <Route path="/:langCode/poi/:poiSlug" element={<POICover />} />
-      <Route path="/:langCode/poi/:poiSlug/tour/:tourId/:audioLang/step/:stepId" element={<AudioGuidePage />} />
+  <Route path="/:langCode/poi/:poiSlug/tour/:tourId/:audioLang/step/:stepId" element={<AudioGuidePage />} />
+  <Route path="/:langCode/poi/:poiSlug/tour/:tourId/:audioLang/step/:stepId/content" element={<StepContentPage />} />
       <Route path="/:langCode/poi/:poiSlug/tour/:tourId/step/:stepId" element={<POIAudioLanguageRedirect />} />
+  <Route path="/:langCode/poi/:poiSlug/tour/:tourId/step/:stepId/content" element={<POIAudioLanguageRedirect />} />
       <Route path="/:langCode/poi/:poiSlug/details" element={<POIDetailGuide />} />
 
       <Route path="/:langCode/tour/:tourId" element={<TourCover />} />
       <Route path="/:langCode/tour/:tourId/:audioLang/steps" element={<StepList />} />
       <Route path="/:langCode/tour/:tourId/:audioLang/step/:stepId" element={<AudioGuidePage />} />
+      <Route path="/:langCode/tour/:tourId/:audioLang/step/:stepId/content" element={<StepContentPage />} />
       <Route path="/:langCode/tour/:tourId/steps" element={<AudioLanguageRedirect />} />
       <Route path="/:langCode/tour/:tourId/step/:stepId" element={<AudioLanguageRedirect />} />
+      <Route path="/:langCode/tour/:tourId/step/:stepId/content" element={<AudioLanguageRedirect />} />
       <Route path="*" element={<DefaultLanguageRedirect />} />
     </Routes>
   );

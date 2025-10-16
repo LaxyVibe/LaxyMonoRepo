@@ -2,8 +2,7 @@
  * Audio Guide Player Component
  * Main component for playing audio guides with subtitles and images
  */
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import DOMPurify from 'dompurify';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   Box,
   Typography,
@@ -63,21 +62,7 @@ const AudioGuidePlayer = ({ onClose }) => {
   const lastStepIdRef = useRef(null);
   const isLoadingSubtitlesRef = useRef(false);
 
-  // Memoize sanitized HTML for optional step content
-  const sanitizedStepHtml = useMemo(() => {
-    const html = currentStep?.content || '';
-    if (!html) return '';
-    return DOMPurify.sanitize(html, {
-      ALLOWED_TAGS: [
-        'p', 'br', 'strong', 'em', 'b', 'i', 'u', 'ul', 'ol', 'li',
-        'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'div', 'img', 'a'
-      ],
-      ALLOWED_ATTR: [
-        'href', 'src', 'alt', 'title', 'target', 'rel', 'width', 'height',
-        'loading', 'decoding'
-      ]
-    });
-  }, [currentStep?.content]);
+  // Step content is now shown on StepContentPage; no content rendering here
 
   // Extract stable values to prevent unnecessary re-renders
   const currentStepId = currentStep?.id || null;
@@ -339,48 +324,7 @@ const AudioGuidePlayer = ({ onClose }) => {
           maxHeight: 'calc(65vh - 200px)', // Ensure space for controls
         }}
       >
-        {/* Optional Step Content (from Strapi), shown above subtitles */}
-        {sanitizedStepHtml ? (
-          <Box
-            sx={{
-              color: 'white',
-              px: 3,
-              pt: 2,
-              pb: 1,
-              '& img': {
-                maxWidth: '100%',
-                height: 'auto',
-                borderRadius: '8px',
-                display: 'block',
-                margin: '12px auto'
-              },
-              '& p, & div, & span, & li': {
-                textAlign: 'justify',
-                lineHeight: 1.6,
-                fontSize: 'clamp(14px, 3.8vw, 16px)',
-                fontFamily: 'Inter',
-                opacity: 0.9,
-              },
-              '& a': {
-                color: '#7fd9df',
-                textDecoration: 'underline'
-              },
-              '& h1, & h2, & h3, & h4, & h5, & h6': {
-                marginTop: '0.8em',
-                marginBottom: '0.4em',
-                lineHeight: 1.3
-              }
-            }}
-            dangerouslySetInnerHTML={{ __html: sanitizedStepHtml }}
-            onClick={(e) => {
-              const target = e.target;
-              if (target && target.tagName === 'A') {
-                target.setAttribute('target', '_blank');
-                target.setAttribute('rel', 'noopener noreferrer');
-              }
-            }}
-          />
-        ) : null}
+        {/* Step textual content has been moved to the dedicated content page */}
 
         {/* Subtitles Container */}
         <Box

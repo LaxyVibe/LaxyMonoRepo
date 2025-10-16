@@ -1,7 +1,8 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Typography, Slider } from '@mui/material';
 import { useAudioGuide } from '../../context/AudioGuideContext';
+import { extractLanguageFromPath } from '../../utils/languageUtils';
 
 // S3 Base URL configuration for tour content
 const getS3BaseUrl = (legacyTourCode) => {
@@ -118,6 +119,7 @@ const commonStyles = {
 };
 export default function MiniAudioPlayer() {
   const location = useLocation();
+  const navigate = useNavigate();
   const {
     isPlaying,
     currentTime,
@@ -128,7 +130,8 @@ export default function MiniAudioPlayer() {
     seekTo,
     clearAudioGuide,
     tourTitle,
-    tourData
+    tourData,
+    audioLanguage
   } = useAudioGuide();
 
   // Don't show mini player if no audio is loaded
@@ -136,12 +139,16 @@ export default function MiniAudioPlayer() {
     return null;
   }
 
+  // Determine if current path is the content-only page
+  const isContentPage = location.pathname.includes('/content');
+
   // Don't show mini player on AudioGuidePage (full player page), TourCover page, or POICover page
-  if (location.pathname.includes('/step/') || 
+  const isFullAudioGuidePage = location.pathname.includes('/step/') && !isContentPage;
+  if (isFullAudioGuidePage || 
       location.pathname.includes('/audio-guide/') || 
       location.pathname.includes('/details') ||
-      location.pathname.match(/\/[^/]+\/poi\/[^/]+$/) || // Matches /:langCode/poi/:poiSlug pattern
-      location.pathname.match(/\/[^/]+\/tour\/[^/]+$/) // Matches /:langCode/tour/:tourId pattern (TourCover)
+    location.pathname.match(/\/[^/]+\/poi\/[^/]+$/) || // Matches /:langCode/poi/:poiSlug pattern
+    location.pathname.match(/\/[^/]+\/tour\/[^/]+$/) // Matches /:langCode/tour/:tourId pattern (TourCover)
   ) {
     return null;
   }
@@ -155,7 +162,21 @@ export default function MiniAudioPlayer() {
   };
 
   const handleSeek = (event, newValue) => {
+    event.stopPropagation();
     seekTo(newValue);
+  };
+
+  // Navigate to full audio guide page when clicking the main area of the mini player
+  const handleOpenFullPlayer = () => {
+    try {
+      const { langCode } = extractLanguageFromPath(location.pathname);
+      const tourId = tourData?.tourCode;
+      const stepId = currentStep?.id;
+      if (!langCode || !tourId || !stepId || !audioLanguage) return;
+      navigate(`/${langCode}/tour/${tourId}/${audioLanguage}/step/${stepId}`);
+    } catch (e) {
+      // no-op
+    }
   };
 
   const formatTime = (seconds) => {
@@ -193,7 +214,7 @@ export default function MiniAudioPlayer() {
   return (
     <Box sx={commonStyles.container}>
       {/* Main content with image, title and play button */}
-      <Box sx={commonStyles.innerContainer}>
+      <Box sx={commonStyles.innerContainer} onClick={handleOpenFullPlayer}>
         <Box 
           component="img"
           src={imageUrl}
@@ -219,7 +240,7 @@ export default function MiniAudioPlayer() {
         <Box sx={commonStyles.playButtonContainer}>
           <Box
             component="button"
-            onClick={handlePlayPause}
+            onClick={(e) => { e.stopPropagation(); handlePlayPause(); }}
             sx={{
               ...commonStyles.playButton,
               background: 'none',
@@ -246,7 +267,7 @@ export default function MiniAudioPlayer() {
       </Box>
       
       {/* Progress bar at the bottom edge of the card */}
-      <Box sx={commonStyles.progressContainer}>
+      <Box sx={commonStyles.progressContainer} onClick={(e) => e.stopPropagation()}>
         <Slider
           size="small"
           value={currentTime || 0}
