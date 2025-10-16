@@ -3,8 +3,8 @@
         "id": 36,
         "documentId": "nqao9h5mk47k7jau1gj9e093",
         "createdAt": "2025-07-02T13:26:04.129Z",
-        "updatedAt": "2025-07-23T08:45:10.811Z",
-        "publishedAt": "2025-07-23T08:45:10.761Z",
+        "updatedAt": "2025-08-03T02:29:47.927Z",
+        "publishedAt": "2025-08-03T02:29:47.888Z",
         "locale": "ko",
         "universalConfig": {
             "id": 68,
@@ -27,7 +27,7 @@
                 },
                 {
                     "id": 82,
-                    "label": "國語",
+                    "label": "中文",
                     "value": "cmn"
                 }
             ]
