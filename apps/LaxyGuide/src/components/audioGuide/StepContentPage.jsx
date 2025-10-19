@@ -96,6 +96,31 @@ export default function StepContentPage() {
     });
   }, [currentStep?.content]);
 
+  // If there is no content available for this step (after loading), redirect to player
+  useEffect(() => {
+    if (!isLoading && currentGuide && currentStep && !sanitizedStepHtml) {
+      const aLang = urlAudioLanguage || audioLang || 'eng';
+      if (langCode && tourId && stepId) {
+        navigate(`/${langCode}/tour/${tourId}/${aLang}/step/${stepId}`, { replace: true });
+      }
+    }
+  }, [isLoading, currentGuide, currentStep, sanitizedStepHtml, langCode, tourId, stepId, urlAudioLanguage, audioLang, navigate]);
+
+  // Derive hero image and step number
+  const heroImageUrl = useMemo(() => {
+    const imgs = currentStep?.images || [];
+    if (!imgs.length) return null;
+    const first = imgs[0];
+    if (typeof first === 'string') return first;
+    if (first && typeof first === 'object' && first.url) return first.url;
+    return null;
+  }, [currentStep?.images]);
+
+  const stepNumberPadded = useMemo(() => {
+    if (!currentStep?.order) return null;
+    return String(currentStep.order).padStart(3, '0');
+  }, [currentStep?.order]);
+
   const handleBackClick = () => {
     // Prefer validated audio language for steps route
     const aLang = urlAudioLanguage || audioLang || 'eng';
@@ -106,6 +131,41 @@ export default function StepContentPage() {
     } else {
       navigate(-1);
     }
+  };
+
+  // Navigate to a related step (content page if available)
+  const handleRelatedClick = (step) => {
+    const aLang = urlAudioLanguage || audioLang || 'eng';
+    const hasContent = (() => {
+      const raw = step?.content;
+      if (!raw) return false;
+      if (typeof raw !== 'string') return !!raw;
+      const text = raw.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/gi, ' ').trim();
+      return text.length > 0;
+    })();
+    const base = `/${langCode}/tour/${tourId}/${aLang}/step/${step.id}`;
+    navigate(hasContent ? `${base}/content` : base);
+  };
+
+  // Compute related steps (previous and next)
+  const relatedSteps = useMemo(() => {
+    if (!steps || steps.length === 0 || currentStepIndex == null) return [];
+    const items = [];
+    if (currentStepIndex > 0) items.push(steps[currentStepIndex - 1]);
+    if (currentStepIndex < steps.length - 1) items.push(steps[currentStepIndex + 1]);
+    return items;
+  }, [steps, currentStepIndex]);
+
+  const getImageForStep = (step) => {
+    const imgs = step?.images || [];
+    if (!imgs.length) return null;
+    const first = imgs[0];
+    const raw = typeof first === 'string' ? first : (first && typeof first === 'object' ? first.url : null);
+    if (!raw) return null;
+    // Make absolute using S3 base URL when needed
+    const isAbsolute = /^https?:\/\//i.test(raw);
+    const base = currentGuide?.s3BaseUrl || '';
+    return isAbsolute ? raw : (base ? `${base}${raw}` : null);
   };
 
   if (isLoading && !currentGuide) {
@@ -127,31 +187,71 @@ export default function StepContentPage() {
   // Layout with padding bottom to make room for the mini player
   return (
     <Box sx={{ backgroundColor: '#ffffff', minHeight: '100vh', pb: '96px', display: 'flex', flexDirection: 'column' }}>
-      {/* Header with Back button to Step List */}
-      <Box sx={{ 
-        position: 'sticky', top: 0, zIndex: 20,
-        backgroundColor: '#fff',
-        borderBottom: '1px solid rgba(0,0,0,0.08)',
-        px: 2, py: 1.5,
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between'
-      }}>
-        <IconButton 
-          onClick={handleBackClick}
-          sx={{ color: '#222', backgroundColor: 'rgba(0,0,0,0.04)', '&:hover': { backgroundColor: 'rgba(0,0,0,0.08)' } }}
-          aria-label="Back to steps"
-        >
-          <ArrowBackIcon />
-        </IconButton>
-        <Typography 
-          variant="h6" 
-          sx={{ color: '#111', fontWeight: 600, textAlign: 'center', flex: 1, mx: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
-        >
-          {currentStep?.title || 'Step Content'}
-        </Typography>
-        <Box sx={{ width: 48 }} />
-      </Box>
+      {/* Hero image with overlay back button; if no image, render a slim top bar back button */}
+      {heroImageUrl ? (
+        <Box sx={{ width: '100%', position: 'relative', bgcolor: '#000' }}>
+          <Box
+            component="img"
+            src={heroImageUrl}
+            alt={currentStep?.title || 'Artwork'}
+            sx={{ width: '100%', height: { xs: 220, sm: 280 }, objectFit: 'cover', display: 'block' }}
+          />
+          <IconButton
+            onClick={handleBackClick}
+            aria-label="Back to steps"
+            sx={{
+              position: 'absolute',
+              top: { xs: 10, sm: 12 },
+              left: { xs: 10, sm: 12 },
+              color: '#fff',
+              backgroundColor: 'rgba(0,0,0,0.4)',
+              '&:hover': { backgroundColor: 'rgba(0,0,0,0.6)' }
+            }}
+          >
+            <ArrowBackIcon />
+          </IconButton>
+        </Box>
+      ) : (
+        <Box sx={{ px: 1.5, py: 1 }}>
+          <IconButton
+            onClick={handleBackClick}
+            aria-label="Back to steps"
+            sx={{ color: '#222', backgroundColor: 'rgba(0,0,0,0.04)', '&:hover': { backgroundColor: 'rgba(0,0,0,0.08)' } }}
+          >
+            <ArrowBackIcon />
+          </IconButton>
+        </Box>
+      )}
 
-      <Box sx={{ maxWidth: 900, width: '100%', mx: 'auto', px: 2, py: 3, flex: 1 }}>
+      {/* Content */}
+      <Box sx={{ maxWidth: 900, width: '100%', mx: 'auto', px: 2, py: 2, flex: 1 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25, mb: 1.25 }}>
+          {stepNumberPadded && (
+            <Box sx={{
+              backgroundColor: '#46B2BB',
+              color: '#fff',
+              px: 1.25,
+              py: 0.25,
+              borderRadius: '10px',
+              fontWeight: 700,
+              fontSize: 12,
+              lineHeight: '18px',
+              minWidth: 44,
+              textAlign: 'center'
+            }}>
+              {stepNumberPadded}
+            </Box>
+          )}
+          <Typography variant="h5" sx={{ color: '#111', fontWeight: 700 }}>
+            {currentStep?.title || 'Untitled'}
+          </Typography>
+        </Box>
+
+        {/* Highlight heading */}
+        <Typography variant="subtitle1" sx={{ color: '#111', fontWeight: 700, mb: 1 }}>
+          Highlight
+        </Typography>
+
         {sanitizedStepHtml ? (
           <Box
             sx={{
@@ -165,9 +265,9 @@ export default function StepContentPage() {
               },
               '& p, & div, & span, & li': {
                 textAlign: 'justify',
-                lineHeight: 1.7,
-                fontSize: '16px',
-                fontFamily: 'Inter',
+                lineHeight: 1.8,
+                fontSize: 16,
+                fontFamily: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'
               },
               '& a': {
                 color: '#0aa',
@@ -189,9 +289,65 @@ export default function StepContentPage() {
             }}
           />
         ) : (
-          <Typography variant="h5" sx={{ color: '#222' }}>
+          <Typography variant="body1" sx={{ color: '#444' }}>
             {currentStep?.title || 'Step content coming soon'}
           </Typography>
+        )}
+
+        {/* Related section */}
+        {relatedSteps.length > 0 && (
+          <Box sx={{ mt: 3 }}>
+            <Typography variant="subtitle1" sx={{ color: '#111', fontWeight: 700, mb: 1.25 }}>
+              Related
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 1.5, overflowX: 'auto', pb: 1 }}>
+              {relatedSteps
+                .map((s) => ({ step: s, img: getImageForStep(s) }))
+                .filter((x) => !!x.img)
+                .map(({ step: s, img }) => (
+                  <Box
+                    key={s.id}
+                    onClick={() => handleRelatedClick(s)}
+                    sx={{
+                      minWidth: 180,
+                      borderRadius: 10,
+                      border: '1px solid rgba(0,0,0,0.08)',
+                      overflow: 'hidden',
+                      cursor: 'pointer',
+                      backgroundColor: '#fff',
+                      boxShadow: '0 1px 2px rgba(0,0,0,0.06)'
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={img}
+                      alt={s.title || 'Related'}
+                      sx={{ width: '100%', height: 110, objectFit: 'cover', display: 'block' }}
+                    />
+                    <Box sx={{ p: 1 }}>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 0.5 }}>
+                        <Box sx={{
+                          backgroundColor: '#46B2BB',
+                          color: '#fff',
+                          borderRadius: '8px',
+                          fontSize: 10,
+                          px: 0.75,
+                          py: 0.25,
+                          fontWeight: 700,
+                          minWidth: 38,
+                          textAlign: 'center'
+                        }}>
+                          {String(s.order || '').padStart(3, '0')}
+                        </Box>
+                        <Typography sx={{ fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {s.title || 'Step'}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                ))}
+            </Box>
+          </Box>
         )}
       </Box>
     </Box>
