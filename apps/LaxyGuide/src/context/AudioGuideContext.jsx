@@ -245,6 +245,8 @@ export function AudioGuideProvider({ children }) {
         // Merge Strapi narrations (new API) into legacy content.json (poiList) so view layer remains unchanged
         // Mapping: narration.legacyStepCode -> poi.id, add field poi.content
         try {
+          // Content should follow the UI/TEXT language of the current view
+          // Map UI languages -> Strapi locales
           const uiToStrapiLocale = {
             en: 'en',
             ja: 'ja',
@@ -254,12 +256,48 @@ export function AudioGuideProvider({ children }) {
           };
           const strapiLocale = uiToStrapiLocale[language] || 'en';
           const STRAPI_BASE = 'https://laxy-studio-strapi-c1d6d20cbc41.herokuapp.com';
-          const narrationsUrl = `${STRAPI_BASE}/api/poi-guides/?populate=narrations&locale=${encodeURIComponent(strapiLocale)}&filters[legacyTourCode][$eq]=${encodeURIComponent(tourCode)}`;
+          const buildUrl = (loc) => `${STRAPI_BASE}/api/poi-guides/?populate=narrations&locale=${encodeURIComponent(loc)}&filters[legacyTourCode][$eq]=${encodeURIComponent(tourCode)}`;
+          const buildNarrationsUrl = (loc) => `${STRAPI_BASE}/api/narrations?locale=${encodeURIComponent(loc)}&filters[poiGuide][legacyTourCode][$eq]=${encodeURIComponent(tourCode)}&pagination[pageSize]=500`;
+          let narrationsLocaleTried = strapiLocale;
+          let narrationsUrl = buildUrl(narrationsLocaleTried);
           console.log('🔗 Fetching Strapi narrations:', narrationsUrl);
-          const narrationsRes = await fetch(narrationsUrl);
+          let narrationsRes = await fetch(narrationsUrl);
           if (narrationsRes.ok) {
-            const narrationsJson = await narrationsRes.json();
-            const narrations = narrationsJson?.data?.[0]?.narrations || [];
+            let narrationsJson = await narrationsRes.json();
+            // Extract narrations from either a flattened array or standard Strapi v4 shape
+            const extractNarrations = (json) => {
+              // 1) Flattened: data[0].narrations -> [{ legacyStepCode, content }]
+              const flat = json?.data?.[0]?.narrations;
+              if (Array.isArray(flat)) return flat;
+              // 2) Standard v4: data[0].attributes.narrations.data -> [{ attributes: { legacyStepCode, content } }]
+              const standard = json?.data?.[0]?.attributes?.narrations?.data;
+              if (Array.isArray(standard)) {
+                return standard.map(n => ({
+                  legacyStepCode: n?.attributes?.legacyStepCode,
+                  content: n?.attributes?.content
+                })).filter(n => n.legacyStepCode);
+              }
+              return [];
+            };
+            let narrations = extractNarrations(narrationsJson);
+            // If none found via populated guide, try querying narrations collection directly
+            if ((!Array.isArray(narrations) || narrations.length === 0)) {
+              const directUrl = buildNarrationsUrl(strapiLocale);
+              console.log('🔎 No narrations from guide payload, trying direct narrations API:', directUrl);
+              const directRes = await fetch(directUrl);
+              if (directRes.ok) {
+                const directJson = await directRes.json();
+                const directList = Array.isArray(directJson?.data) ? directJson.data : [];
+                narrations = directList.map(n => ({
+                  legacyStepCode: n?.attributes?.legacyStepCode,
+                  content: n?.attributes?.content
+                })).filter(n => n.legacyStepCode);
+              }
+            }
+            // No fallback to other languages; if locale has no narrations, leave content empty
+            if ((!Array.isArray(narrations) || narrations.length === 0)) {
+              console.log('ℹ️ No narrations found for locale; skipping content fallback.');
+            }
             console.log('🧩 Strapi narrations count:', narrations.length);
             if (Array.isArray(contentData?.poiList) && narrations.length > 0) {
               const mapByStep = new Map();
