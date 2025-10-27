@@ -9,6 +9,7 @@ export const SUPPORTED_LANGUAGES = [
   'ko', // Korean
   'zh-Hant', // Traditional Chinese
   'zh-Hans', // Simplified Chinese
+  'fr', // French
 ];
 
 // Default language to use when no language is specified
@@ -176,7 +177,7 @@ export const extractTextAndAudioLanguageFromPath = (pathname) => {
       // Validate if it's an audio language (not 'steps' or 'step')
       if (potentialAudioLangCode !== 'steps' && potentialAudioLangCode !== 'step') {
         // Check if it's a valid audio language code (eng, jpn, kor, cmn)
-        const validAudioLanguages = ['eng', 'jpn', 'kor', 'cmn'];
+        const validAudioLanguages = ['eng', 'jpn', 'kor', 'cmn', 'fra'];
         if (validAudioLanguages.includes(potentialAudioLangCode)) {
           audioLangCode = potentialAudioLangCode;
           // Remove both text and audio language from path
@@ -199,7 +200,7 @@ export const extractTextAndAudioLanguageFromPath = (pathname) => {
       // Validate if it's an audio language (not 'step')
       if (potentialAudioLangCode !== 'step') {
         // Check if it's a valid audio language code (eng, jpn, kor, cmn)
-        const validAudioLanguages = ['eng', 'jpn', 'kor', 'cmn'];
+        const validAudioLanguages = ['eng', 'jpn', 'kor', 'cmn', 'fra'];
         if (validAudioLanguages.includes(potentialAudioLangCode)) {
           audioLangCode = potentialAudioLangCode;
           // Remove both text and audio language from path: poi/:poiSlug/tour/:tourId/step/:stepId
@@ -230,7 +231,7 @@ export const extractTextAndAudioLanguageFromPath = (pathname) => {
 };
 
 // List of supported audio language codes
-export const SUPPORTED_AUDIO_LANGUAGES = ['eng', 'jpn', 'kor', 'cmn'];
+export const SUPPORTED_AUDIO_LANGUAGES = ['eng', 'jpn', 'kor', 'cmn', 'fra'];
 
 /**
  * Check if the provided audio language code is supported
