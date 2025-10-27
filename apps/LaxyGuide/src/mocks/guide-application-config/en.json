@@ -55,6 +55,11 @@
                     "id": 70,
                     "label": "中文",
                     "value": "cmn"
+                },
+                {
+                    "id": 71,
+                    "label": "Français",
+                    "value": "fra"
                 }
             ]
         },

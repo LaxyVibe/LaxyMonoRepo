@@ -456,7 +456,8 @@ export function AudioGuideProvider({ children }) {
       'ja': 'jpn',
       'ko': 'kor',
       'zh-Hant': 'cht',
-      'zh-Hans': 'chs'
+      'zh-Hans': 'chs',
+      'fra': 'fra'
     };
     
     const legacyLangCode = languageMap[effectiveAudioLanguage] || effectiveAudioLanguage;

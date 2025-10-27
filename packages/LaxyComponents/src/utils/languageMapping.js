@@ -9,7 +9,8 @@ export const TEXT_TO_AUDIO_LANGUAGE_MAP = {
   'ja': 'jpn', 
   'ko': 'kor',
   'zh-Hant': 'cmn',
-  'zh-Hans': 'cmn'
+  'zh-Hans': 'cmn',
+  'fr': 'fra'
 };
 
 // Audio language to text language mapping (reverse mapping)
@@ -17,7 +18,8 @@ export const AUDIO_TO_TEXT_LANGUAGE_MAP = {
   'eng': 'en',
   'jpn': 'ja',
   'kor': 'ko', 
-  'cmn': 'zh-Hant' // Default to traditional Chinese for cmn
+  'cmn': 'zh-Hant',
+  'fra': 'fr'
 };
 
 /**
