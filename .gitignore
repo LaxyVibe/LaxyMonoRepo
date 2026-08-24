@@ -46,3 +46,9 @@ Thumbs.db
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
 test-output
+
+# Local Netlify folder
+.netlify
+
+# Recovered Netlify deploy artifact
+/deploy-699c04058418db5ea9ada3bb/

@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1437,
+                    "id": 1587,
                     "network": "Suite 201 2.4G",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1438,
+                    "id": 1589,
                     "network": "Suite 201 5G",
                     "password": "beppuairbnb"
                 }
@@ -201,7 +201,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.5067376287343!2d131.50581929999998!3d33.2794036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6dc86628019%3A0x660c877a77932490!2sRobata%20Jin!5e0!3m2!1sen!2sjp!4v1749359241111!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1768",
-                        "highlight": "「ろばた仁」是一間位於別府市北濱的溫馨日式居酒屋，以親切的服務與溫暖氛圍深受在地人與旅客喜愛。店內提供多樣酒類，包括啤酒、日本酒與燒酌，並搭配各式美味下酒菜。\n\n料理以天婦羅與新鮮海鮮料理為主，無論是想小酌幾杯，還是與朋友家人共度一段悠閒時光，都非常適合。這裡僅提供內用服務，不支援外送，是一處適合坐下來慢慢享受的居酒屋空間。",
+                        "highlight": "「ろばた仁」是一間位於別府市北濱的溫馨日式居酒屋，以親切的服務與溫暖氛圍深受在地人與旅客喜愛。店內提供多樣酒類，包括啤酒、日本酒與燒酌，並搭���各式美味下酒菜。\n\n料理以天婦羅與新鮮海鮮料理為主，無論是想小酌幾杯，還是與朋友家人共度一段悠閒時光，都非常適合。這裡僅提供內用服務，不支援外送，是一處適合坐下來慢慢享受的居酒屋空間。",
                         "externalURL": "http://robata-jin.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -369,7 +369,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.2602628035274!2d131.4821036!3d33.3120107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a70a3edc6e65%3A0xd691cc2f33149c83!2sTaichishoten%20Beppuyamanamiten!5e0!3m2!1sen!2sjp!4v1749359328438!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-67-0876",
-                        "highlight": "「太一商店 別府やまな��店」是位於別府市北中的人氣拉麵店，以份量豪邁、湯頭濃厚的「二郎系拉麵」風格受到饕客青睞。店舖設計簡潔實用，座位寬敞，適合一人用餐，也適合朋友相約一同大口吃麵。\n\n湯頭以豚骨為基底，融合濃郁醬油風味，油脂豐厚卻不膩口。麵條採用粗捲麵，彈性十足，搭配大量豆芽菜、捲心菜與厚切叉燒，讓人吃得非常過癮。還能依個人喜好加蒜、加背脂、加量，打造專屬你的客製化拉麵。\n\n此外，店家亦提供外帶服務，是喜歡重口味與飽足感拉麵愛好者的必訪名店之一。",
+                        "highlight": "「太一商店 別府やまなみ店」是位於別府市北中的人氣拉麵店，以份量豪邁、湯頭濃厚的「二郎系拉麵」風格受到饕客青睞。店舖設計簡潔實用，座位寬敞，適合一人用餐，也適合朋友相約一同大口吃麵。\n\n湯頭以豚骨為基底，融合濃郁醬油風味，油脂豐厚卻不膩口。麵條採用粗捲麵，彈性十足，搭配大量豆芽菜、捲心菜與厚切叉燒，讓人吃得非常過癮。還能依個人喜好加蒜、加背脂、加量，打造專屬你的客製化拉麵。\n\n此外，店家亦提供外帶服務，是喜歡重口味與飽足感拉麵愛好者的必訪名店之一。",
                         "externalURL": "http://taichi-shouten.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 28,
@@ -627,7 +627,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3912072576054!2d131.5474087!3d33.256249200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1115d167fe9%3A0xba67a416773d5b1c!2sTanoura%20beach!5e0!3m2!1sen!2sjp!4v1749359533520!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-537-5638",
-                        "highlight": "田ノ浦ビーチ是位於大分市神崎地區的人氣海濱景點，以寧靜宜人的氛圍與便利設施聞名。這裡設有人工築起的緩坡沙灘與防波堤，適合散步、戲水、以及在傍晚欣賞壯麗的夕陽景色。\n\n海灘對面有一座小型人工島公園，透過步行橋可輕鬆前往，島上配有兒童遊具與座椅，成為家庭客與情侶散步拍照的熱門場所。沿岸的長廊步道平坦好走，是慢跑、帶寵物散步與放空放鬆的理想空間。\n\n在夏季，海灘開放給民眾遊泳，水質乾淨，適合抓魚、觀察小生物，也有洗手間與淋浴等基礎設施。此地區也開放寵物同行，是愛狗人士的友���沙灘選擇。",
+                        "highlight": "田ノ浦ビーチ是位於大分市神崎地區的人氣海濱景點，以寧靜宜人的氛圍與便利設施聞名。這裡設有人工築起的緩坡沙灘與防波堤，適合散步、戲水、以及在傍晚欣賞壯麗的夕陽景色。\n\n海灘對面有一座小型人工島公園，透過步行橋可輕鬆前往，島上配有兒童遊具與座椅，成為家庭客與情侶散步拍照的熱門場所。沿岸的長廊步道平坦好走，是慢跑、帶寵物散步與放空放鬆的理想空間。\n\n在夏季，海灘開放給民眾遊泳，水質乾淨，適合抓魚、觀察小生物，也有洗手間與淋浴等基礎設施。此地區也開放寵物同行，是愛狗人士的友善沙灘選擇。",
                         "externalURL": "https://www.city.oita.oita.jp/o177/tanoura_syoukai.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -771,7 +771,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,
@@ -823,7 +823,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然動物園位於大分市神崎地區，是一座以野生��猴（日本猕猴）為主角的自然動物公園，也是九州地區最具代表性的親子戶外景點之一。園內的猴群生活在天然山林中，遊客可近距離觀察牠們自然生活的樣貌，體驗人與動物共處的和諧氛圍。\n\n這裡以無柵欄設計聞名，猴子們可自由在園區活動，十分活潑且不怕人。除了觀看猴群的生活，園方還會安排定時餵食解說，幫助旅客了解猴子的習性與群體行為，特別受親子與生態愛好者歡迎。\n\n園區附設有購票處、簡單的紀念品商店與資訊展覽空間，可作為教育性旅遊的理想場域。園區與「大分海洋水族館 うみたまご」相鄰，可安排成半日至一日的連線觀光行程。",
+                        "highlight": "高崎山自然動物園位於大分市神崎地區，是一座以野生獼猴（日本猕猴）為主角的自然動物公園，也是九州地區最具代表性的親子戶外景點之一。園內的猴群生活在天然山林中，遊客可近距離觀察牠們自然生活的樣貌，體驗人與動物共處的和諧氛圍。\n\n這裡以無柵欄設計聞名，猴子們可自由在園區活動，十分活潑且不怕人。除了觀看猴群的生活，園方還會安排定時餵食解說，幫助旅客了解猴子的習性與群體行為，特別受親子與生態愛好者歡迎。\n\n園區附設有購票處、簡單的紀念品商店與資訊展覽空間，可作為教育性旅遊的理想場域。園區與「大分海洋水族館 うみたまご」相鄰，可安排成半日至一日的連線觀光行程。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 27,

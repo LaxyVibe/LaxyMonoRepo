@@ -1,0 +1,14 @@
+{
+  "clientId": "beppu-airbnb",
+  "availableSuites": [
+    "family-room-01",
+    "family-room-02",
+    "family-room-03",
+    "family-room-04",
+    "premium-suite-01",
+    "premium-suite-02",
+    "premium-suite-00"
+  ],
+  "currentSuite": "premium-suite-00",
+  "sourceDeployId": "699c04058418db5ea9ada3bb"
+}

@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1483,
+                    "id": 1568,
                     "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1484,
+                    "id": 1569,
                     "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 30,
@@ -705,7 +705,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "別府市では毎年7月の最後の週末に、盛大な夏まつりが開催されます。この3日間のイベントは地元の一大行事であり、別府に賑やかで華やかなお祭りムードをもたらします。\n\n祭りの期間中、市街地には数多くの屋台が出店し、様々な美味しい屋台料理や飲み物が提供され、市民や観光客が食事と楽しみを存分に味わうことができます。\n\nイベントのクライマックスは日曜日で、当日は約2時間の日本伝統の踊りパレードが行われます。そして最も期待されるのは、夜8時頃から約1時間行われる別府湾花火大会で、夜空に打ち上げられる鮮やかな花火は、まさに壮観な光景です。祭りには多くの人が訪れるため、この時期の別府の宿泊料金は通常、一年で最も高価な時期の一つとなるため、早めの計画をお勧めします。",
+                        "highlight": "別府市では毎年7月の最後の週末に、盛大な夏まつりが開催されます。この3日間のイベントは地元の一大行事であり、別府に賑やかで華やかなお祭りムードをもたらします。\n\n祭りの期間中、市街地には数多くの屋台が出店し、様々な美味しい屋台料理や飲み物が提供され、市民や観光客が食事と楽しみを存分に味わうことができます。\n\nイベントのクライマックスは日曜日で、当日は約2時間の日本伝統の踊りパレードが行われます。そして最も期待されるのは、夜8時頃から約1時間行われる別府湾花火大会で、夜空に打ち上げられる鮮やかな花火は、まさに壮観な光景です。祭りには多くの人が訪れるため、この時期の別府の宿泊料金は通���、一年で最も高価な時期の一つとなるため、早めの計画をお勧めします。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -733,7 +733,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "別府ではクリスマス期間の土曜日と日曜日に、盛大な冬の祭典「べっぷクリスマスHanabiファンタジア」が開催されます。この2日間のイベントは、別府の冬の一大ハイライトです。\n\n7月末の夏まつりの花火が一日限りであるのとは異なり、この時期の花火大会は2夜連続で別府の夜空を彩り、その景色は格別に魅力的で壮観です。イベント会場には豊富な屋台が設置され、様々な美味しい軽食や飲み物が提供され、訪れる人々は祭りの雰囲気を楽しみながら、美味しい食事を堪能できます。\n\nこの冬の祭典は非常に人気が高いため、別府市内の宿泊施設はすぐに満室になる傾向があります。そのため、ご旅行を計画されるお客様は、このロマンチックで素晴らしいクリスマス花火の饗宴にスムーズに参加できるよう、必ず2ヶ月前までに宿泊施設の予約を完了することをお勧めします。",
+                        "highlight": "別府ではクリスマス期間の土曜日と日曜日に、盛大な冬の祭典「べっぷクリスマスHanabiファンタジア」が開催されます。この2日間のイベントは、別府の冬の一大ハイライトです。\n\n7月末の夏まつりの花火が一日限りであるのとは異なり、この時期の��火大会は2夜連続で別府の夜空を彩り、その景色は格別に魅力的で壮観です。イベント会場には豊富な屋台が設置され、様々な美味しい軽食や飲み物が提供され、訪れる人々は祭りの雰囲気を楽しみながら、美味しい食事を堪能できます。\n\nこの冬の祭典は非常に人気が高いため、別府市内の宿泊施設はすぐに満室になる傾向があります。そのため、ご旅行を計画されるお客様は、このロマンチックで素晴らしいクリスマス花火の饗宴にスムーズに参加できるよう、必ず2ヶ月前までに宿泊施設の予約を完了することをお勧めします。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -765,7 +765,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 24,
@@ -933,7 +933,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 24,

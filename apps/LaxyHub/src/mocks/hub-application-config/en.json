@@ -3,11 +3,11 @@
         "id": 1,
         "documentId": "au3e8t9cegnebahml864mmss",
         "createdAt": "2025-06-15T13:47:10.324Z",
-        "updatedAt": "2025-07-26T04:50:56.748Z",
+        "updatedAt": "2025-08-03T03:40:10.377Z",
         "publishedAt": "2025-07-26T04:50:56.468Z",
         "locale": "en",
         "universalConfig": {
-            "id": 320,
+            "id": 389,
             "themeOptions": [
                 {
                     "name": "beppu-airbnb",
@@ -57,27 +57,27 @@
             ],
             "releasedLanguages": [
                 {
-                    "id": 1262,
+                    "id": 1611,
                     "label": "English",
                     "value": "en"
                 },
                 {
-                    "id": 1268,
+                    "id": 1612,
                     "label": "繁體中文",
                     "value": "zh-Hant"
                 },
                 {
-                    "id": 1267,
+                    "id": 1615,
                     "label": "简体中文",
                     "value": "zh-Hans"
                 },
                 {
-                    "id": 1269,
+                    "id": 1613,
                     "label": "日本語",
                     "value": "ja"
                 },
                 {
-                    "id": 1270,
+                    "id": 1614,
                     "label": "한국어",
                     "value": "ko"
                 }

@@ -280,7 +280,7 @@ const SuiteLanding = ({ clientInfo: initialClientInfo }) => {
     trackNavigation('suite_landing', 'tours', 'navigation_button');
     
     // Open hardcoded tour URL in new tab
-    const tourUrl = `https://guide.laxy.travel/${language}/tour/JPN-BEPU-TUR-001`;
+    const tourUrl = `https://guide.laxy.studio/${language}/tour/JPN-BEPU-TUR-001`;
     window.open(tourUrl, '_blank');
   };
 

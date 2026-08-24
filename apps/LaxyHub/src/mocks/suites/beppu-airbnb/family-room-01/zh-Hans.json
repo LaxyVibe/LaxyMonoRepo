@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1464,
+                    "id": 1558,
                     "network": "Beppu Story 1",
                     "password": "beppustory"
                 },
                 {
-                    "id": 1465,
+                    "id": 1559,
                     "network": "Beppu Story 2",
                     "password": "beppustory"
                 }
@@ -111,7 +111,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.289058650653!2d131.4726!3d33.28510000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a65c95c88521%3A0x2b1c619b643d0a36!2sThe%20Aqua%20Garden!5e0!3m2!1sen!2sjp!4v1749359230971!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "0977-24-1141",
-                        "highlight": "The Aqua Garden 是位于别府杉乃井酒店内的著名水疗乐园，结合了温泉疗愈与度假风情，为旅客带来绝佳的放松体验。设施包含露天温泉水池、发光喷泉、瀑布墙与视觉特效等，不仅适合情侣与家庭同游，也非常适合喜爱夜间浪漫氛围的旅人。\n\n游客无需住宿杉乃井酒店也可单独购票入场，因此深受一日游旅客喜���。尤其夜晚点灯与水上表演搭配背景音乐，营造出别府难得一见的幻想景色，是拍照与放松身心的热门选择。",
+                        "highlight": "The Aqua Garden 是位于别府杉乃井酒店内的著名水疗乐园，结合了温泉疗愈与度假风情，为旅客带来绝佳的放松体验。设施包含露天温泉水池、发光喷泉、瀑布墙与视觉特效等，不仅适合情侣与家庭同游，也非常适合喜爱夜间浪漫氛围的旅人。\n\n游客无需住宿杉乃井酒店也可单独购票入场，因此深受一日游旅客喜爱。尤其夜晚点灯与水上表演搭配背景音乐，营造出别府难得一见的幻想景色，是拍照与放松身心的热门选择。",
                         "externalURL": "https://www.suginoi-hotel.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -285,7 +285,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.760326954975!2d131.50500399999999!3d33.28271600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6de987686f1%3A0x80977dcb31a9e37e!2z44Ks44K544OIIOWIpeW6nOW6lw!5e0!3m2!1sen!2sjp!4v1749359278056!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 570-021-065",
-                        "highlight": "Gusto 别府店是日本知名的家庭餐厅连锁店“Gusto”在别府的分店。这家餐厅提供多样化的菜单选择，从日式料理到西式餐点应有尽有，包括汉堡排、意大利面、沙拉和各种甜点。无论是早餐、午餐还是晚餐，都是当地居民和游客轻松用餐的好去处。餐厅通常营业时间很长，能满足不同时段的用餐需求，提供一个舒适便利的用餐环境。您可以在这里享用美味且价格实惠的家庭式料理。",
+                        "highlight": "Gusto 别府店是日本知名的家庭餐厅连锁店“Gusto”在别府的分店。这家餐厅提供多样化的菜单选择，从日式料理到西式餐点应有尽有，包括汉���排、意大利面、沙拉和各种甜点。无论是早餐、午餐还是晚餐，都是当地居民和游客轻松用餐的好去处。餐厅通常营业时间很长，能满足不同时段的用餐需求，提供一个舒适便利的用餐环境。您可以在这里享用美味且价格实惠的家庭式料理。",
                         "externalURL": null,
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -453,7 +453,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.5431976589944!2d131.5028965!3d33.2784494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6c2b7f05fd1%3A0x4db01432deac96d9!2z54S844Go44KK5YehIOavjeWutg!5e0!3m2!1sen!2sjp!4v1749359265680!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-26-6006",
-                        "highlight": "烧鸟凡 母家是别府市北滨一带极具人气的日式烧鸟居酒屋，店内设有掘式座席与包厢空间，氛围雅致又具隐私性，非常适合朋友聚餐或小酌放松。\n\n店内主打香气四溢的炭火串烧（焼き鳥），并搭配各式新鲜海鲜料理与小菜。除了美味佳肴，这里也备有丰富的地酒与烧酎选择，能满足讲究品味的客人，是体验地道日式居酒屋��化的绝佳场所。",
+                        "highlight": "烧鸟凡 母家是别府市北滨一带极具人气的日式烧鸟居酒屋，店内设有掘式座席与包厢空间，氛围雅致又具隐私性，非常适合朋友聚餐或小酌放松。\n\n店内主打香气四溢的炭火串烧（焼き鳥），并搭配各式新鲜海鲜料理与小菜。除了美味佳肴，这里也备有丰富的地酒与烧酎选择，能满足讲究品味的客人，是体验地道日式居酒屋文化的绝佳场所。",
                         "externalURL": "http://www.yakitoribon.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 29,
@@ -571,7 +571,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2953375788084!2d131.50515289999998!3d33.2849357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6ded9706d85%3A0xc114a1dd39d3335!2sMatogahama%20Park!5e0!3m2!1sen!2sjp!4v1749359474655!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1111",
-                        "highlight": "的ヶ浜公园位于别府市北的ヶ浜町，是一座紧邻海岸的开放型市民公园，拥有开阔的视野与宁静的氛围，是当地居民与旅客喜爱的散步与休憩地点。\n\n公园面朝别府湾，沿岸设有步道，非常适合早晨慢跑、傍晚散步或欣赏日出与海景。场地宽敞平坦，绿意盎然，是遛狗、野餐、带小孩放电的理想场所。更重要的是，这里可携带宠物同行，对于有毛小孩的旅客来说非常友善。\n\n由于邻近市区与海边，步行可达多个温泉设施与餐饮店，位置便利，是串联别府生活风景的一部分。不论是清晨的海风还是夜晚的宁静，皆令人感受到别府独有的悠闲魅力。",
+                        "highlight": "的ヶ浜公园位于别府市北的ヶ浜町，是一座紧邻海岸的开放型市民公园，拥有开阔的视野与宁静的氛围，是当地居民与旅客喜爱的散步与休憩地点。\n\n公园面朝别府湾，沿岸设有步道，���常适合早晨慢跑、傍晚散步或欣赏日出与海景。场地宽敞平坦，绿意盎然，是遛狗、野餐、带小孩放电的理想场所。更重要的是，这里可携带宠物同行，对于有毛小孩的旅客来说非常友善。\n\n由于邻近市区与海边，步行可达多个温泉设施与餐饮店，位置便利，是串联别府生活风景的一部分。不论是清晨的海风还是夜晚的宁静，皆令人感受到别府独有的悠闲魅力。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -771,7 +771,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 26,
@@ -935,11 +935,11 @@
                         "addressURL": "https://maps.app.goo.gl/5D4uGjgT4yrQqRRH6",
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13333.921741904012!2d131.47289302622787!3d33.33239620465208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a77fd2917bd1%3A0xd06079ba4f45b67d!2sHachiman%20Kamado%20shrine!5e0!3m2!1sen!2sjp!4v1752474700052!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81-977-66-1633",
-                        "highlight": "位于别府的八幡灶门神社，创建于公元727年，深深植根于当地关于八幡神和恶鬼的传说。相传恶鬼被挑战在黎明前筑起100级石阶，却在完成99级后便匆忙逃离，这些石阶至今仍通往神社，见证了当年仓促建造的痕迹。近年来，这座神社因其与主角炭治郎同为“灶门”之名、神社驱逐恶鬼的传说、“灶门神乐”之舞以及象征性的龙之描绘等多项元素，成为动画《鬼灭之刃》粉丝们热门的“圣地”。这也使得古老传统与现代流行文化在此独特融合。",
+                        "highlight": "位于别府的八幡灶门神社，创建于公元727年，深深植根于当地关于八幡神和恶鬼的传说。相传恶鬼被挑战在黎明前��起100级石阶，却在完成99级后便匆忙逃离，这些石阶至今仍通往神社，见证了当年仓促建造的痕迹。近年来，这座神社因其与主角炭治郎同为“灶门”之名、神社驱逐恶鬼的传说、“灶门神乐”之舞以及象征性的龙之描绘等多项元素，成为动画《鬼灭之刃》粉丝们热门的“圣地”。这也使得古老传统与现代流行文化在此独特融合。",
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 26,
