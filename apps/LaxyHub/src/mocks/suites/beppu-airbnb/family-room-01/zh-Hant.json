@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1463,
+                    "id": 1554,
                     "network": "Beppu Story 1",
                     "password": "beppustory"
                 },
                 {
-                    "id": 1466,
+                    "id": 1555,
                     "network": "Beppu Story 2",
                     "password": "beppustory"
                 }
@@ -38,7 +38,7 @@
                 "documentId": "sryg01oy5y4rbisxyhzujue9",
                 "slug": "beppu-airbnb",
                 "label": "Beppu Airbnb",
-                "greeting": "歡��來到別府！",
+                "greeting": "歡迎來到別府！",
                 "nativeLanguageCode": "ja",
                 "avatar": {
                     "id": 15,
@@ -285,7 +285,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.760326954975!2d131.50500399999999!3d33.28271600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6de987686f1%3A0x80977dcb31a9e37e!2z44Ks44K544OIIOWIpeW6nOW6lw!5e0!3m2!1sen!2sjp!4v1749359278056!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 570-021-065",
-                        "highlight": "ガスト 別府店是日本知名的家庭餐廳連鎖店「Gusto」在別府的分店。這家餐廳提供多樣化的菜單選擇，從日式料理到西式餐點應有盡有，包括漢堡排、義大利麵、沙拉和各種甜點。無論是早餐、午餐還是晚餐，都是當地居民和遊客輕鬆用餐的好去處。餐廳通常營業時間很長，能滿足不同時段的用餐需求，提供一個舒適便利的用餐環境。您可以在這裡享用美味且價格實惠的家庭式料理。",
+                        "highlight": "ガスト 別府店是日本知名的家庭餐廳連鎖店「Gusto」在別府的分店。這家餐廳提��多樣化的菜單選擇，從日式料理到西式餐點應有盡有，包括漢堡排、義大利麵、沙拉和各種甜點。無論是早餐、午餐還是晚餐，都是當地居民和遊客輕鬆用餐的好去處。餐廳通常營業時間很長，能滿足不同時段的用餐需求，提供一個舒適便利的用餐環境。您可以在這裡享用美味且價格實惠的家庭式料理。",
                         "externalURL": "https://www.skylark.co.jp/gusto/?utm_source=gt&utm_medium=gmb&utm_campaign=brandtop-Oita",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 28,
@@ -683,7 +683,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.7712648138936!2d131.4137658!3d33.35092509999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a82560d12c2f%3A0x6f9e5e00fb890acd!2sKyushu%20Wildlife%20Park%20African%20Safari!5e0!3m2!1sen!2sjp!4v1749359580506!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 978-48-2331",
-                        "highlight": "九州自然動物公園，又名「African Safari」，是一座位於大分縣宇佐市的廣闊野生動物園，以自由放養方式展示非洲草原風格的動物生態，是親子與動物愛好者不可錯過的旅遊亮點。\n\n園區最大特色是搭乘鐵籠裝甲的「叢林巴士」，可在專屬路線中近距離觀察獅子、大象、長頸鹿、斑馬、駱駝等動物，還可以親手餵食，帶來極具臨場感的野生動物互動體驗。除了叢林巴士外，也設有步行區與小型動物觸摸園，適合各年齡層遊客悠閒參觀。\n\n園內附設商店、餐飲區與便利的停車��，亦提供與大分市、別府市間接駁的交通方案，是安排一日親子郊遊或團體旅遊的理想景點。",
+                        "highlight": "九州自然動物公園，又名「African Safari」，是一座位於大分縣宇佐市的廣闊野生動物園，以自由放養方式展示非洲草原風格的動物生態，是親子與動物愛好者不可錯過的旅遊亮點。\n\n園區最大特色是搭乘鐵籠裝甲的「叢林巴士」，可在專屬路線中近距離觀察獅子、大象、長頸鹿、斑馬、駱駝等動物，還可以親手餵食，帶來極具臨場感的野生動物互動體驗。除了叢林巴士外，也設有步行區與小型動物觸摸園，適合各年齡層遊客悠閒參觀。\n\n園內附設商店、餐飲區與便利的停車場，亦提供與大分市、別府市間接駁的交通方案，是安排一日親子郊遊或團體旅遊的理想景點。",
                         "externalURL": "https://africansafari.co.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -771,7 +771,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 27,

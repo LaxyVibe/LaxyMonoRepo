@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1481,
+                    "id": 1570,
                     "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1480,
+                    "id": 1571,
                     "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 31,
@@ -739,7 +739,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": null,
-                        "highlight": "벳푸는 크리스마�� 주말 토요일과 일요일에 성대한 겨울 축제인 벳푸 크리스마스 하나비 판타지아(べっぷクリスマスHanabiファンタジア)를 개최합니다. 이 이틀간의 행사는 벳푸 겨울의 주요 볼거리입니다.\n\n7월 말의 여름 축제 불꽃놀이가 하루만 진행되는 것과 달리, 이 시기의 불꽃놀이 대회는 이틀 연속 벳푸의 밤하늘을 밝히며 더욱 매력적이고 장관을 이룹니다. 행사 현장에는 풍부한 야타이(포장마차)가 설치되어 다양한 맛있는 먹거리와 음료를 제공하여 방문객들이 축제 분위기를 즐기면서 미식의 즐거움을 만끽할 수 있습니다.\n\n이 겨울 축제는 큰 인기를 끌기 때문에 벳푸 시내 숙박 시설은 빠르게 만실이 됩니다. 따라서 방문을 계획하는 여행객들은 이 낭만적이고 멋진 크리스마스 불꽃 축제에 원활하게 참여할 수 있도록 최소 두 달 전에 숙소를 예약하는 것을 강력히 권장합니다.",
+                        "highlight": "벳푸는 크리스마스 주말 토요일과 일요일에 성대한 겨울 축제인 벳푸 크리스마스 하나비 판타지아(べっぷクリスマスHanabiファンタジア)를 개최합니다. 이 이틀간의 행사는 벳푸 겨울의 주요 볼거리입니다.\n\n7월 말의 여름 축제 불꽃놀이가 하루만 진행되는 것과 달리, 이 시기의 불꽃놀이 대회는 이틀 연속 벳푸의 밤하늘을 밝히며 더욱 매력적이고 장관을 이룹니다. 행사 현장에는 풍부한 야타이(포장마차)가 설치되어 다양한 맛있는 먹거리와 음료를 제공하여 방문객들이 축제 분위기를 즐기면서 미식의 즐거움을 만끽할 수 있습니다.\n\n이 겨울 축제는 큰 인기를 끌기 때문에 벳푸 시내 숙박 시설은 빠르게 만실이 됩니다. 따라서 방문을 계획하는 여행객들은 이 낭만적이고 멋진 크리스마스 불꽃 축제에 원활하게 참여할 수 있도록 최소 두 달 전에 숙소를 예약하는 것을 강력히 권장합니다.",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -771,7 +771,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 25,

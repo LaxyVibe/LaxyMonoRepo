@@ -11,7 +11,7 @@
             "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4395542950692!2d131.5044823!3d33.2811618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a79f8bcc9bdd%3A0x6265dcb4b7a8c0c8!2z5Yil5bqc44K544OI44O844Oq44O84oWh!5e0!3m2!1sja!2sjp!4v1749357483667!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "checkInOut": "<p>入住: 下午 3:00 後<br>退房: 上午 10:00 前</p>\n<p>我們很高興提供便捷的提早入住和延遲退房選擇。根據客房供應情況和入住率，我們可提供最少三小時的提早入住和最多三小時的延遲退房。請注意，這些服務每小時將收取 1,000 日圓的額外費用。我們將很樂意協助您進行必要的安排。 :)</p>",
             "amenities": "<div class=\"ewa-rteLine\">- 淋浴</div>\n<div class=\"ewa-rteLine\">- 洗髮乳、潤髮乳和沐浴乳</div>\n<div class=\"ewa-rteLine\">- 吹風機</div>\n<div class=\"ewa-rteLine\">- 免治馬桶</div>\n<div class=\"ewa-rteLine\">- 洗衣機</div>\n<div class=\"ewa-rteLine\">- 餐具</div>\n<div class=\"ewa-rteLine\">- 桌子</div>\n<div class=\"ewa-rteLine\">- 空調</div>",
-            "directContact": null,
+            "directContact": "<ul class=\"ak-ul\" data-indent-level=\"1\">\n<li>\n<p data-renderer-start-pos=\"184\">Instagram @ kakaotalk_beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"221\">KakaoTalk @ beppuairbnb</p>\n</li>\n<li>\n<p data-renderer-start-pos=\"248\">LINE @ beppuairbnb</p>\n</li>\n</ul>",
             "houseRules": "<div class=\"ewa-rteLine\">\n<div class=\"ewa-rteLine\">-最多可入住4位房客</div>\n<div class=\"ewa-rteLine\">- 禁止攜帶寵物</div>\n<div class=\"ewa-rteLine\">-禁止吸煙</div>\n</div>",
             "slider": [
                 {
@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1487,
+                    "id": 1582,
                     "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1492,
+                    "id": 1583,
                     "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
@@ -285,7 +285,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.760326954975!2d131.50500399999999!3d33.28271600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6de987686f1%3A0x80977dcb31a9e37e!2z44Ks44K544OIIOWIpeW6nOW6lw!5e0!3m2!1sen!2sjp!4v1749359278056!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 570-021-065",
-                        "highlight": "ガスト 別府店是日本知名的家庭餐廳連鎖店「Gusto」在別府的分店。這家餐廳提供多樣化的菜單選擇，從日式料理到西式餐點應有盡有，包括漢堡排、義大利麵、沙拉和各種甜點。無論是早餐、午餐還是晚餐，都是當地居民和遊客輕鬆用餐的好去處。餐廳通常營業時間很長，能滿足不同時段的用餐���求，提供一個舒適便利的用餐環境。您可以在這裡享用美味且價格實惠的家庭式料理。",
+                        "highlight": "ガスト 別府店是日本知名的家庭餐廳連鎖店「Gusto」在別府的分店。這家餐廳提供多樣化的菜單選擇，從日式料理到西式餐點應有盡有，包括漢堡排、義大利麵、沙拉和各種甜點。無論是早餐、午餐還是晚餐，都是當地居民和遊客輕鬆用餐的好去處。餐廳通常營業時間很長，能滿足不同時段的用餐需求，提供一個舒適便利的用餐環境。您可以在這裡享用美味且價格實惠的家庭式料理。",
                         "externalURL": "https://www.skylark.co.jp/gusto/?utm_source=gt&utm_medium=gmb&utm_campaign=brandtop-Oita",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 28,
@@ -571,7 +571,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.2953375788084!2d131.50515289999998!3d33.2849357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6ded9706d85%3A0xc114a1dd39d3335!2sMatogahama%20Park!5e0!3m2!1sen!2sjp!4v1749359474655!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1111",
-                        "highlight": "「的ヶ浜公園」位於別府市北的ヶ浜町，是一座緊鄰海岸的開放型市民公園，擁有開闊的視野與寧靜的氛圍，是當地居民與旅客喜愛的散步與休憩地點。\n\n公園面朝別府灣，沿岸設有步道，非常適合早晨慢跑、傍���散步或欣賞日出與海景。場地寬敞平坦，綠意盎然，是遛狗、野餐、帶小孩放電的理想場所。更重要的是，這裡可攜帶寵物同行，對於有毛小孩的旅客來說非常友善。\n\n由於鄰近市區與海邊，步行可達多個溫泉設施與餐飲店，位置便利，是串聯別府生活風景的一部分。不論是清晨的海風還是夜晚的寧靜，皆令人感受到別府獨有的悠閒魅力。",
+                        "highlight": "「的ヶ浜公園」位於別府市北的ヶ浜町，是一座緊鄰海岸的開放型市民公園，擁有開闊的視野與寧靜的氛圍，是當地居民與旅客喜愛的散步與休憩地點。\n\n公園面朝別府灣，沿岸設有步道，非常適合早晨慢跑、傍晚散步或欣賞日出與海景。場地寬敞平坦，綠意盎然，是遛狗、野餐、帶小孩放電的理想場所。更重要的是，這裡可攜帶寵物同行，對於有毛小孩的旅客來說非常友善。\n\n由於鄰近市區與海邊，步行可達多個溫泉設施與餐飲店，位置便利，是串聯別府生活風景的一部分。不論是清晨的海風還是夜晚的寧靜，皆令人感受到別府獨有的悠閒魅力。",
                         "externalURL": null,
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -771,7 +771,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 27,
@@ -907,7 +907,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.1203760000276!2d131.4853258!3d33.3156683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a775b765d5e7%3A0x21200e289a85660c!2sYukemuri%20Observation%20Deck!5e0!3m2!1sen!2sjp!4v1749359600114!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1128",
-                        "highlight": "湯煙展望台位於別府市鐵輪地區，是欣賞別府溫泉鄉壯觀景致的絕佳地點。從展望台望去，可見溫泉蒸氣（湯煙）自地面騰起、於街巷間縷縷飄散，勾勒出一幅充滿生活感與歷史氛圍的地熱城市風景，尤其清晨與黃昏時分最為迷人。\n\n此地不僅適合攝影愛好者與觀景遊客，也是了解別府溫泉文化的推薦起點。天氣晴朗時，還能遠眺別府灣與周邊山景，成為許多遊客前往地獄巡禮前或後的順遊地點。\n\n若是自駕前來，展望台設有停車場；亦可結合附近的名店「亀正壽司」行程，一併造訪。",
+                        "highlight": "湯煙展望台位於別府市鐵輪地區，是欣賞別府溫泉鄉壯觀景致的絕佳地點。從展望台望去，可見溫泉蒸氣（湯煙）自地面騰起、於街巷間縷縷飄散，勾勒出一幅充滿生活感與歷史氛圍的地熱城市風景，尤其清晨與黃昏時分最為迷人。\n\n此地不僅適合攝影愛好者與觀景遊客，也是了解別府溫泉文化的推薦起點。天氣晴朗時，還能遠眺別府灣與周邊山景，成為許多遊客前往地獄巡禮前或後的順遊地點。\n\n若是自駕前來，展望台設有停車場；亦可結合附近的名店���亀正壽司」行程，一併造訪。",
                         "externalURL": "https://www.city.beppu.oita.jp/sisetu/sangyou_kankou/yukemuri.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -939,7 +939,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 27,

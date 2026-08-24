@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1485,
+                    "id": 1578,
                     "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1486,
+                    "id": 1579,
                     "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
@@ -369,7 +369,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.2602628035274!2d131.4821036!3d33.3120107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a70a3edc6e65%3A0xd691cc2f33149c83!2sTaichishoten%20Beppuyamanamiten!5e0!3m2!1sen!2sjp!4v1749359328438!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-67-0876",
-                        "highlight": "「太一商店 別府やまなみ店」は、別府市北中にある人気のラーメン店で、豪快な量と濃厚なスープが特徴の「二郎系ラーメン」スタイルが食通に愛されています。店舗デザインはシンプルで実用的で、座席も広々としており、一人での食事にも、友人と一緒にガッツリ食べるのにも適しています。\n\nスープは豚骨をベースに濃厚な醤油の風味が融合しており、脂がたっぷりながらもく��くありません。麺は太めのちぢれ麺で弾力があり、たっぷりのもやし、キャベツ、厚切りチャーシューと共に、非常に食べ応えがあります。さらに、お好みでニンニク、背脂、増量なども可能で、自分だけのカスタマイズラーメンを作ることができます。\n\nまた、テイクアウトサービスも提供しており、濃厚な味とボリューム感を好むラーメン愛好家にとって必訪の名店の一つです。",
+                        "highlight": "「太一商店 別府やまなみ店」は、別府市北中にある人気のラーメン店で、豪快な量と濃厚なスープが特徴の「二郎系ラーメン」スタイルが食通に愛されています。店舗デザインはシンプルで実用的で、座席も広々としており、一人での食事にも、友人と一緒にガッツリ食べるのにも適しています。\n\nスープは豚骨をベースに濃厚な醤油の風味が融合しており、脂がたっぷりながらもくどくありません。麺は太めのちぢれ麺で弾力があり、たっぷりのもやし、キャベツ、厚切りチャーシューと共に、非常に食べ応えがあります。さらに、お好みでニンニク、背脂、増量なども可能で、自分だけのカスタマイズラーメンを作ることができます。\n\nまた、テイクアウトサービスも提供しており、濃厚な味とボリューム感を好むラーメン愛好家にとって必訪の名店の一つです。",
                         "externalURL": "http://taichi-shouten.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 30,
@@ -537,7 +537,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4244488848994!2d131.4910055!3d33.28155710000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6f020482965%3A0x9e5d27cb752123a8!2sBeppu%20Park!5e0!3m2!1sen!2sjp!4v1749359512569!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1473",
-                        "highlight": "別府公園は、別府市中心部で最大の都市緑地で、広大な敷地と四季折々の景色が広がり、地元住民や観光客がリラックスしたり、朝の運動をしたり、家族で散歩したりする人気の場所です。園内には広々とした芝生、竹林、松林の遊歩道、そして春には満開の桜や梅林があり、写真撮影や花見に理想的な場所です。\n\n自然景観のほかにも、公園は地元のイベントや祭りの会場としてもよく利用され、祭りの期間中は賑やかな雰囲気になりますが、平日は静かで落ち着いており、別府の生活のリズムを深く体験するのに良い場所です。園内の遊歩道は緩やかで歩きやすく、ジョギング、犬の散歩、ピクニック、木陰での休憩に適しています。\n\n別府公園は年間を通して柵がなく開放されており、犬同伴も可能で、ペット連れの家族に非常に優しい場所です。市街地に近く、交通アクセスも便利で、朝でも夕方でも、ここで自然と都市が融合した心地よいリズムを感じることができます。",
+                        "highlight": "別府公園は、別府市中心部で最大の都市緑地で、広大な敷地と四季折々の景色が広がり、地元住民や観光客がリラック���したり、朝の運動をしたり、家族で散歩したりする人気の場所です。園内には広々とした芝生、竹林、松林の遊歩道、そして春には満開の桜や梅林があり、写真撮影や花見に理想的な場所です。\n\n自然景観のほかにも、公園は地元のイベントや祭りの会場としてもよく利用され、祭りの期間中は賑やかな雰囲気になりますが、平日は静かで落ち着いており、別府の生活のリズムを深く体験するのに良い場所です。園内の遊歩道は緩やかで歩きやすく、ジョギング、犬の散歩、ピクニック、木陰での休憩に適しています。\n\n別府公園は年間を通して柵がなく開放されており、犬同伴も可能で、ペット連れの家族に非常に優しい場所です。市街地に近く、交通アクセスも便利で、朝でも夕方でも、ここで自然と都市が融合した心地よいリズムを感じることができます。",
                         "externalURL": "http://www.city.beppu.oita.jp/sisetu/kouen_tyuusyajyou/03kouen_03-01beppu.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -765,7 +765,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 24,
@@ -817,7 +817,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.313444949981!2d131.5328036!3d33.25828549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a1386bb372c3%3A0xfa8325f5ccb225ff!2sTakasakiyama%20Natural%20Zoological%20Garden!5e0!3m2!1sen!2sjp!4v1749359553556!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 97-532-5010",
-                        "highlight": "高崎山自然動物園は大分市神崎地区��位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
+                        "highlight": "高崎山自然動物園は大分市神崎地区に位置する、野生のニホンザルを主役とした自然動物公園で、九州地方を代表する親子向けアウトドアスポットの一つです。園内のサルたちは天然の山林で生活しており、来園者は間近で彼らの自然な姿を観察し、人と動物が共存する調和のとれた雰囲気を体験できます。\n\nここは柵のないデザインで有名で、サルたちは園内を自由に活動し、非常に活発で人を恐れません。サルの生活を観察するだけでなく、園側は定時給餌の解説も行い、来園者がサルの習性や群れ行動を理解するのに役立ち、特に親子連れや生態愛好家に人気です。\n\n園内にはチケット売り場、簡単な土産物店、情報展示スペースがあり、教育的な観光の場としても理想的です。園は「大分マリーンパレス水族館 うみたまご」に隣接しており、半日または一日かけての連携観光コースとして計画できます。",
                         "externalURL": "http://www.takasakiyama.jp/takasakiyama/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -933,7 +933,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 24,

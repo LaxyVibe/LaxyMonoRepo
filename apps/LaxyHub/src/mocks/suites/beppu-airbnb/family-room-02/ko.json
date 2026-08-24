@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1471,
+                    "id": 1566,
                     "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1472,
+                    "id": 1567,
                     "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
@@ -369,7 +369,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.2602628035274!2d131.4821036!3d33.3120107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a70a3edc6e65%3A0xd691cc2f33149c83!2sTaichishoten%20Beppuyamanamiten!5e0!3m2!1sen!2sjp!4v1749359328438!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-67-0876",
-                        "highlight": "타이치 쇼텐 벳푸 야마나미점은 벳푸시 키타나카에 위치한 인기 라멘집으로, 푸짐한 양과 진한 국물의 '지로계 라멘' 스타일로 미식가들에게 사랑받고 있습니다. 매장 디자인은 간결하고 실용적이며, 좌석이 넓어 혼밥하기에도 좋고 친구와 함께 푸짐한 라멘을 즐기기에도 적합합니다.\n\n육수는 돼지뼈를 기반으로 진한 간장 맛이 어우러져 기름기가 풍부하면서도 느끼하지 않습니다. 면은 굵은 곱슬면으로 쫄깃한 식감을 자랑하며, 푸짐한 숙주나물, 양배추, 두툼한 차슈와 함께 제공되어 매우 만족스러운 식사를 할 수 있습니다. 또한, 개인 취향에 따라 마늘, 등지방, 면 양을 추가하여 나만의 커스터마이징 라멘을 만들 수도 있습��다.\n\n이 외에도, 이 가게는 포장 서비스도 제공하며, 진한 맛과 푸짐한 라멘을 좋아하는 사람들에게는 꼭 방문해야 할 명소 중 하나입니다.",
+                        "highlight": "타이치 쇼텐 벳푸 야마나미점은 벳푸시 키타나카에 위치한 인기 라멘집으로, 푸짐한 양과 진한 국물의 '지로계 라멘' 스타일로 미식가들에게 사랑받고 있습니다. 매장 디자인은 간결하고 실용적이며, 좌석이 넓어 혼밥하기에도 좋고 친구와 함께 푸짐한 라멘을 즐기기에도 적합합니다.\n\n육수는 돼지뼈를 기반으로 진한 간장 맛이 어우러져 기름기가 풍부하면서도 느끼하지 않습니다. 면은 굵은 곱슬면으로 쫄깃한 식감을 자랑하며, 푸짐한 숙주나물, 양배추, 두툼한 차슈와 함께 제공되어 매우 만족스러운 식사를 할 수 있습니다. 또한, 개인 취향에 따라 마늘, 등지방, 면 양을 추가하여 나만의 커스터마이징 라멘을 만들 수도 있습니다.\n\n이 외에도, 이 가게는 포장 서비스도 제공하며, 진한 맛과 푸짐한 라멘을 좋아하는 사람들에게는 꼭 방문해야 할 명소 중 하나입니다.",
                         "externalURL": "http://taichi-shouten.com/",
                         "type": "restaurant",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 31,
@@ -537,7 +537,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.4244488848994!2d131.4910055!3d33.28155710000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a6f020482965%3A0x9e5d27cb752123a8!2sBeppu%20Park!5e0!3m2!1sen!2sjp!4v1749359512569!5m2!1sen!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                         "dial": "+81 977-21-1473",
-                        "highlight": "벳푸 공원은 벳푸 시 중심부에 위치한 가장 넓은 도시 녹지 공간으로, 드넓은 부지와 사계절 각기 다른 풍경을 자랑하며 현지 주민과 여행객이 휴식을 취하고 아침 운동을 하며 가족과 함께 산책하기 좋은 인기 장소입니다. 공원 내에는 넓은 잔디밭, 대나무 숲, 소나무 산책로, 그리고 봄철 만개하는 벚꽃과 매화 숲이 조성되어 있어 사진 촬영 및 꽃 구경에 이상적인 곳입니다.\n\n자연 경관 외에도 공원은 종종 지역 행사나 축제 장소로 활용되어 축제 기간에는 활기찬 분위기를, 평일에는 고요하고 평화로운 분위기를 선사하여 벳푸의 생활 리듬을 깊이 체험하기 좋은 곳입니다. 공원 내 산책로는 완만하고 걷기 편하여 조깅, 강아지 산책, 피크닉 또는 나무 그늘 아래에서 휴식을 취하기에 적합합니다.\n\n벳푸 공원은 연중 울타리 없이 개방되며, 반려견 동반이 가능하여 반려동물 가족에게 매우 친화적입니다. 시내와 인접하여 교통이 편리하며, 아침이든 저녁이든 자연과 도시가 어우러지는 편안한 리듬을 이곳에서 느낄 수 있습니다.",
+                        "highlight": "벳푸 공원은 벳푸 시 중심부에 위치한 가장 넓은 도시 녹지 공간으로, 드넓은 부지와 사계절 각��� 다른 풍경을 자랑하며 현지 주민과 여행객이 휴식을 취하고 아침 운동을 하며 가족과 함께 산책하기 좋은 인기 장소입니다. 공원 내에는 넓은 잔디밭, 대나무 숲, 소나무 산책로, 그리고 봄철 만개하는 벚꽃과 매화 숲이 조성되어 있어 사진 촬영 및 꽃 구경에 이상적인 곳입니다.\n\n자연 경관 외에도 공원은 종종 지역 행사나 축제 장소로 활용되어 축제 기간에는 활기찬 분위기를, 평일에는 고요하고 평화로운 분위기를 선사하여 벳푸의 생활 리듬을 깊이 체험하기 좋은 곳입니다. 공원 내 산책로는 완만하고 걷기 편하여 조깅, 강아지 산책, 피크닉 또는 나무 그늘 아래에서 휴식을 취하기에 적합합니다.\n\n벳푸 공원은 연중 울타리 없이 개방되며, 반려견 동반이 가능하여 반려동물 가족에게 매우 친화적입니다. 시내와 인접하여 교통이 편리하며, 아침이든 저녁이든 자연과 도시가 어우러지는 편안한 리듬을 이곳에서 느낄 수 있습니다.",
                         "externalURL": "http://www.city.beppu.oita.jp/sisetu/kouen_tyuusyajyou/03kouen_03-01beppu.html",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -771,7 +771,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 25,
