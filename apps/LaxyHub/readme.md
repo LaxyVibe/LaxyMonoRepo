@@ -9,8 +9,8 @@ LaxyHub serves as the main hub for discovering local attractions, managing trave
 ## Technology Stack
 
 - **Frontend**: React 18, Material-UI (MUI)
-- **Build Tool**: React Scripts (Create React App)
-- **Testing**: Jest, React Testing Library
+- **Build Tool**: Vite
+- **Testing**: Vitest, React Testing Library
 - **Styling**: CSS, Material-UI theming
 - **Monorepo**: Nx workspace
 - **Package Manager**: npm
@@ -34,7 +34,7 @@ LaxyHub serves as the main hub for discovering local attractions, managing trave
    npx nx serve laxy-hub
    ```
    
-   The application will be available at `http://localhost:4200`
+   The application will be available at `http://localhost:3000`
 
 ### Available Commands
 
@@ -78,13 +78,34 @@ The application runs on port 4200 in development mode and supports hot reloading
 
 ## Build & Deployment
 
-To create a production build:
+To create and validate a production build from the monorepo root:
 
 ```bash
-npx nx build laxy-hub
+npm run build:hub
 ```
 
 The build artifacts will be stored in the `apps/LaxyHub/build/` directory.
+
+The build runs two safeguards automatically:
+
+- It uses the committed public GA fallback `G-102C698SDQ` when
+  `VITE_GA_LAXY_HUB_MEASUREMENT_ID` is not set. The environment variable can
+  still override the fallback.
+- It fails if the compiled entry asset does not contain the expected GA ID or
+  if any Japanese JSON source contains Unicode replacement characters (`�`).
+
+Netlify Git-triggered builds are disabled for LaxyHub. Pushing or merging code
+does not update production. To create a manual draft deploy:
+
+```bash
+cd apps/LaxyHub
+npm run build
+npx netlify deploy --no-build --dir "$(pwd)/build"
+```
+
+Check the draft URL before promoting that same deploy in Netlify. Always keep
+`--no-build`: the uploaded files must be the exact bundle that passed the local
+post-build checks.
 
 ## Contributing
 

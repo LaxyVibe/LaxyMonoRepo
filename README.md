@@ -20,6 +20,9 @@ To create a production bundle:
 npx nx build laxy-hub
 ```
 
+See the [LaxyHub app guide](apps/LaxyHub/readme.md) for its production checks and
+manual Netlify deployment workflow.
+
 To see all available targets to run for a project, run:
 
 ```sh
