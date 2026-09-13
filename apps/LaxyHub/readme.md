@@ -74,7 +74,7 @@ apps/LaxyHub/
 
 ## Environment
 
-The application runs on port 4200 in development mode and supports hot reloading for efficient development.
+The application runs on port 3000 in development mode and supports hot reloading for efficient development.
 
 ## Build & Deployment
 
