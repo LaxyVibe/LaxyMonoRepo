@@ -23,12 +23,12 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1483,
+                    "id": 1568,
                     "network": "Beppu Airbnb 3",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1484,
+                    "id": 1569,
                     "network": "Beppu Airbnb 4",
                     "password": "beppuairbnb"
                 }
@@ -229,7 +229,7 @@
                         "addressURL": null,
                         "addressEmbedHTML": null,
                         "dial": "+81 570-200-465",
-                        "highlight": "「ドン・キホーテ 別府店」は、日本で有名なディスカウントストアチェーンの一つで、別府市中心部に位置し、多種多様な商品を提供しています。観光客や地元住民が愛用する超人気で便利なショッピングスポットです。\n\n店内は商品が豊富で、お菓子、日用品、ドラッグストア製品、家電、おもちゃから、旅行用品、衣料品、靴、お土産まで、ほぼ何でも揃っています。独特の棚の配置はまるで迷路にいるような感覚で、買い物をするたびに新たな発見があり、ショッピングプロセスは楽しさに満ちています。\n\n特に外国人観光客に人気があり、常設の免税カウンターも設けられ、多言語表示やフレンドリーなサービスも提供されています。旅行に必要なものをワンストップで揃えたい、あるいは手頃な価格で掘り出し物を見つけたいなら、ここは間違いなく訪れ���べき選択肢の一つです。",
+                        "highlight": "「ドン・キホーテ 別府店」は、日本で有名なディスカウントストアチェーンの一つで、別府市中心部に位置し、多種多様な商品を提供しています。観光客や地元住民が愛用する超人気で便利なショッピングスポットです。\n\n店内は商品が豊富で、お菓子、日用品、ドラッグストア製品、家電、おもちゃから、旅行用品、衣料品、靴、お土産まで、ほぼ何でも揃っています。独特の棚の配置はまるで迷路にいるような感覚で、買い物をするたびに新たな発見があり、ショッピングプロセスは楽しさに満ちています。\n\n特に外国人観光客に人気があり、常設の免税カウンターも設けられ、多言語表示やフレンドリーなサービスも提供されています。旅行に必要なものをワンストップで揃えたい、あるいは手頃な価格で掘り出し物を見つけたいなら、ここは間違いなく訪れるべき選択肢の一つです。",
                         "externalURL": "https://www.donki.com/store/shop_detail.php?shop_id=650",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
@@ -513,7 +513,7 @@
                         "externalURL": "http://www.asami.or.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Asami-Shrine",
+                        "laxyURL": "https://guide-v0.laxy.studio/en/poi/Hachiman-Asami-Shrine",
                         "tag_labels": [
                             {
                                 "id": 30,
@@ -765,7 +765,7 @@
                         "externalURL": "https://www.beppu-jigoku.com/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/tour/JPN-BEPU-TUR-001",
+                        "laxyURL": "https://guide-v0.laxy.studio/en/tour/JPN-BEPU-TUR-001",
                         "tag_labels": [
                             {
                                 "id": 24,
@@ -933,7 +933,7 @@
                         "externalURL": "http://hachimannkamado.sub.jp/",
                         "type": "attraction",
                         "nativeLanguageCode": "ja",
-                        "laxyURL": "https://guide.laxy.travel/en/poi/Hachiman-Kamado-Shrine",
+                        "laxyURL": "https://guide-v0.laxy.studio/en/poi/Hachiman-Kamado-Shrine",
                         "tag_labels": [
                             {
                                 "id": 24,

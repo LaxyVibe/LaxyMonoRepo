@@ -1,10 +1,10 @@
 {
     "data": [
         {
-            "id": 147,
-            "documentId": "uwlhp9m10ne63hmryquyrir0",
-            "name": "premium-suite-01",
-            "label": "Premium Suite 1",
+            "id": 170,
+            "documentId": "efu5jfxfjclxhu0lucwtmito",
+            "name": "premium-suite-00",
+            "label": "Premium Suite 2",
             "headline": null,
             "address": "〒874-0934 大分県別府市駅前本町8-17Nouvelle",
             "addressURL": "https://maps.app.goo.gl/oz4tgL46mvXGsFAY7",
@@ -23,13 +23,13 @@
             "faq": [],
             "wifi": [
                 {
-                    "id": 1591,
-                    "network": "Suite 201 2.4G",
+                    "id": 1674,
+                    "network": "WiFI 24.G",
                     "password": "beppuairbnb"
                 },
                 {
-                    "id": 1590,
-                    "network": "Suite 201 5G",
+                    "id": 1675,
+                    "network": "WiFi 5G",
                     "password": "beppuairbnb"
                 }
             ],

@@ -1,9 +1,13 @@
 // Google Analytics utility functions
 
 // Configuration
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_LAXY_HUB_MEASUREMENT_ID || 'GA_MEASUREMENT_ID_NOT_SET';
+// Google Analytics measurement IDs are public identifiers. Keep the production
+// default in source so a manually uploaded build cannot silently disable GA when
+// the local shell does not have Netlify's environment variables.
+const DEFAULT_GA_MEASUREMENT_ID = 'G-102C698SDQ';
+const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_LAXY_HUB_MEASUREMENT_ID || DEFAULT_GA_MEASUREMENT_ID;
 const isProduction = import.meta.env.MODE === 'production';
-const isAnalyticsEnabled = isProduction && GA_MEASUREMENT_ID !== 'GA_MEASUREMENT_ID_NOT_SET';
+const isAnalyticsEnabled = isProduction;
 
 // Queue for events before GA is loaded
 let eventQueue = [];
