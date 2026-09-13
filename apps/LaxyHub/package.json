@@ -23,6 +23,7 @@
     "start": "vite",
     "prebuild": "node scripts/generate-local-config.js",
     "build": "vite build",
+    "postbuild": "node scripts/verify-production-build.js",
     "preview": "vite preview",
     "test": "vitest",
     "fetch-api": "node scripts/fetch-api-data.js"
